@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  repo: TUNAFE/Website
+  # Path to your Github repository (blanked out on purpose)
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: "src/pages"
+public_folder: "pages"
+
+collections:
+  - name: "empty"
+    label: "Empty"
+    folder: "src/pages"
+    create: true
+    slug: ""
+    fields:
+      - {label: "Title" ,name: "title", widget:"string" , required:"true" }
