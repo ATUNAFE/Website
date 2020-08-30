@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export default (props) => {
 
-  const { filename, type = 'default', alt, sizes = '(max-width: 250px) 200px, (max-width: 450px) 400px, 800px' , style = "{{maxHeight:'80px', maxWidth: '80px' }}"} = props;
+  const { filename, alt, sizes = '(max-width: 250px) 200px, (max-width: 450px) 400px, 800px' , style = "{{margin:`0`}}"} = props;
 
   const images = useStaticQuery(graphql`
     query ImageQuery {
@@ -12,13 +12,8 @@ export default (props) => {
         edges {
           node {
             relativePath
-            default: childImageSharp {
+             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-            square: childImageSharp {
-              fluid(maxWidth: 600, maxHeight: 600) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -29,6 +24,7 @@ export default (props) => {
   `);
 
   const image = images.data.edges.find(n => {
+  console.log(style);
     return n.node.relativePath.includes(filename);
   });
 
@@ -37,10 +33,9 @@ export default (props) => {
   }
 
   return (
-    <Img alt={alt} fluid={{
-      ...image.node[type].fluid,
+    <Img alt={alt} style= {style} fluid={{
+      ...image.node.childImageSharp.fluid,
       sizes: sizes,
-      style: style,
     }} />
   )
 }
