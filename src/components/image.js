@@ -1,32 +1,46 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
- */
+export default (props) => {
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+  const { filename, type = 'default', alt, sizes = '(max-width: 250px) 200px, (max-width: 450px) 400px, 800px' , style = "{{maxHeight:'80px', maxWidth: '80px' }}"} = props;
+
+  const images = useStaticQuery(graphql`
+    query ImageQuery {
+      data: allFile {
+        edges {
+          node {
+            relativePath
+            default: childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+            square: childImageSharp {
+              fluid(maxWidth: 600, maxHeight: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
-  `)
+  `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  const image = images.data.edges.find(n => {
+    return n.node.relativePath.includes(filename);
+  });
+
+  if (!image) {
+    return null;
+  }
+
+  return (
+    <Img alt={alt} fluid={{
+      ...image.node[type].fluid,
+      sizes: sizes,
+      style: style,
+    }} />
+  )
 }
-
-export default Image
