@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export default (props) => {
 
-  const { filename, alt, sizes = '(max-width: 250px) 200px, (max-width: 450px) 400px, 800px' , style = "{{margin:`0`}}"} = props;
+  const { filename, alt, sizes = '(max-width: 250px) 200px, (max-width: 450px) 400px, 800px' , style = {margin:`0`}} = props;
 
   const images = useStaticQuery(graphql`
     query ImageQuery {

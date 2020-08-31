@@ -4,31 +4,61 @@ import React from "react"
 
 import Image from "./image"
 
+import "./concept.css"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `var(--light)`,
+      padding: '0.5rem',
+      borderBottomStyle: 'solid',
+      borderBottomWidth: '0.2rem',
+      borderColor: 'var(--green)',
     }}
   >
-    <div
+    <div 
       style={{
-        maxWidth: 960,
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between'
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      {/* acho que há uma forma de isolar estes elementos do header como se fossem componentes que extendem o Link*/}
+        <Link
+          to="/"
+        >
+          <Image filename="LogofTUNAFE.png" style={{margin:'0', height:'50'}}/>
+        </Link>
+
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: 'var(--dark-grey)',
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
-          <Image filename="LogofTUNAFE.png" style={{margin:`100px`,}}/>
+          Sobre Nós
         </Link>
-      </h1>
+
+        <Link
+          to="/"
+          style={{
+            color: 'var(--dark-grey)',
+            textDecoration: `none`,
+          }}
+        >
+          Eventos
+        </Link>
+
+        <Link
+          to="/"
+          style={{
+            color: 'var(--dark-grey)',
+            textDecoration: `none`,
+          }}
+        >
+          Música
+        </Link>
     </div>
   </header>
 )
