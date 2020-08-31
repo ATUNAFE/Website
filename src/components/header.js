@@ -18,16 +18,16 @@ const Header = ({ siteTitle }) => (
   >
     <div 
       style={{
-        flex:1,
+        flex: 1,
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
       }}
     >
       {/* acho que há uma forma de isolar estes elementos do header como se fossem componentes que extendem o Link*/}
         <Link
           to="/"
         >
-          <Image filename="LogofTUNAFE.png" style={{margin:'0', height:'50'}}/>
+          <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'50px' , minWidth:'70px',}}/>
         </Link>
 
         <Link
@@ -35,6 +35,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: 'var(--dark-grey)',
             textDecoration: `none`,
+            alignContent: 'center'
           }}
         >
           Sobre Nós
