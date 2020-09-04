@@ -19,6 +19,7 @@ const Header = ({ siteTitle }) => (
     <div 
       style={{
         flex: 1,
+        display: 'flex',
         flexDirection:'row',
         justifyContent:'space-between',
       }}
@@ -27,7 +28,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
         >
-          <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'50px' , minWidth:'70px',}}/>
+          <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'50px' , minWidth:'70px', maxHeight:'60px', maxWidth:'80px',}}/>
         </Link>
 
         <Link
