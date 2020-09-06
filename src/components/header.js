@@ -4,6 +4,8 @@ import React from "react"
 
 import Image from "./image"
 
+import HeaderLink from "./header_link"
+
 import "./concept.css"
 
 const Header = ({ siteTitle }) => (
@@ -22,45 +24,37 @@ const Header = ({ siteTitle }) => (
         display: 'flex',
         flexDirection:'row',
         justifyContent:'space-between',
+        alignItems: 'center',
+        padding: '0 2rem'
       }}
     >
-      {/* acho que há uma forma de isolar estes elementos do header como se fossem componentes que extendem o Link*/}
+      <div 
+        style={{
+          flexBasis:'54%',
+          display:'flex',
+          justifyContent:'flex-end'
+        }}
+      >
         <Link
-          to="/"
+            to="/"
         >
-          <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'50px' , minWidth:'70px', maxHeight:'60px', maxWidth:'80px',}}/>
+            <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'4rem' , minWidth:'5.5rem', maxHeight:'4rem', maxWidth:'5.5rem',}}/>
         </Link>
-
-        <Link
-          to="/"
-          style={{
-            color: 'var(--dark-grey)',
-            textDecoration: `none`,
-            alignContent: 'center'
-          }}
-        >
-          Sobre Nós
-        </Link>
-
-        <Link
-          to="/"
-          style={{
-            color: 'var(--dark-grey)',
-            textDecoration: `none`,
-          }}
-        >
-          Eventos
-        </Link>
-
-        <Link
-          to="/"
-          style={{
-            color: 'var(--dark-grey)',
-            textDecoration: `none`,
-          }}
-        >
-          Música
-        </Link>
+      </div>
+        
+      <div
+        style={{
+          padding:'1rem 0',
+          flexBasis: '30%',
+          display:'flex',
+          justifyContent:'space-around'
+        }}
+      >
+        <HeaderLink link="/" context="Sobre Nós"/>
+        <HeaderLink link="/" context="Eventos"/>
+        <HeaderLink link="/" context="Música"/>
+      </div>
+        
     </div>
   </header>
 )
