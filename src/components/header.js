@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Grid from '@material-ui/core/Grid';
+
 import Image from "./image"
 
 import HeaderLink from "./header_link"
@@ -18,7 +20,36 @@ const Header = ({ siteTitle }) => (
       borderColor: 'var(--green)',
     }}
   >
-    <div 
+    <Grid container spacing={3}>
+      <Grid container item xs 
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        {/* <p style={{color: 'var(--dark-grey)', fontWeight: 'bolder', fontSize: '2rem', margin:'0'}}>A TUNAFE</p> */}
+      </Grid>
+      <Grid container item xs 
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+          <Link
+              to="/"
+          >
+              <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'4rem' , minWidth:'5.5rem', maxHeight:'4rem', maxWidth:'5.5rem',}}/>
+          </Link>
+      </Grid>
+      <Grid container item xs 
+        direction="row"
+        justify='space-around'
+        alignItems="center"
+      >
+          <HeaderLink link="/" context="Sobre Nós"/>
+          <HeaderLink link="/" context="Eventos"/>
+          <HeaderLink link="/" context="Música"/>
+      </Grid>
+    </Grid>
+    {/* <div 
       style={{
         flex: 1,
         display: 'flex',
@@ -54,8 +85,7 @@ const Header = ({ siteTitle }) => (
         <HeaderLink link="/" context="Eventos"/>
         <HeaderLink link="/" context="Música"/>
       </div>
-        
-    </div>
+    </div> */}
   </header>
 )
 
