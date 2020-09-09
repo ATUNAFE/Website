@@ -8,20 +8,10 @@ import Image from "./image"
 
 import Menu from "./menu"
 
-import "./concept.css"
-
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `var(--light)`,
-      padding: '0.5rem',
-      borderBottomStyle: 'solid',
-      borderBottomWidth: '0.2rem',
-      borderColor: 'var(--green)',
-    }}
-  >
-    <Grid container spacing={3}>
-      <Grid container item xs 
+  <header>
+    <Grid container spacing={3} style={{margin:'0', padding:'0', width:'100%'}}>
+      <Grid container item xs
         direction="row"
         justify="center"
         alignItems="center"

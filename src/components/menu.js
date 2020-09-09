@@ -19,7 +19,7 @@ function Menu() {
     const anchorRef = React.useRef(null);
 
     const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
+        setOpen(prevOpen => !prevOpen);
     };
     
     const handleClose = (event) => {
@@ -30,18 +30,11 @@ function Menu() {
         setOpen(false);
     };
 
-    const handleListKeyDown = (event) => {
-        if (event.key === 'Tab') {
-          event.preventDefault();
-          setOpen(false);
-        }
-    };
-
     const prevOpen = React.useRef(open);
 
     React.useEffect(() => {
         if (prevOpen.current === true && open === false) {
-        anchorRef.current.focus();
+            anchorRef.current.focus();
         }
 
         prevOpen.current = open;
@@ -62,37 +55,37 @@ function Menu() {
                 direction="row"
                 justify='flex-end'
                 alignItems="center"
-                style={{paddingRight:'2rem'}}
             >
                 <Button
                     ref={anchorRef}
                     aria-controls={open ? 'menu-list-grow' : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
+                    style={{marginRight:'1rem'}}
                     >
                     <MenuIcon />
                 </Button>
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-                {({ TransitionProps, placement }) => (
+                {({ TransitionProps }) => (
                     <Grow
-                    {...TransitionProps}
-                    style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom', backgroundColor:'var(--light)', marginTop:'1.6rem' }}
+                        {...TransitionProps}
+                        style={{ backgroundColor:'var(--light)', marginTop:'1.8rem' }}
                     >
-                    <Paper>
-                        <ClickAwayListener onClickAway={handleClose}>
-                        <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                            <MenuItem onClick={handleClose}>
-                                <HeaderLink link="/" context="Sobre Nós"/>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <HeaderLink link="/" context="Eventos"/>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <HeaderLink link="/" context="Música"/>
-                            </MenuItem>
-                        </MenuList>
-                        </ClickAwayListener>
-                    </Paper>
+                        <Paper>
+                            <ClickAwayListener onClickAway={handleClose}>
+                                <MenuList autoFocusItem={open} id="menu-list-grow">
+                                    <MenuItem onClick={handleClose}>
+                                        <HeaderLink link="/" context="Sobre Nós"/>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        <HeaderLink link="/" context="Eventos"/>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        <HeaderLink link="/" context="Música"/>
+                                    </MenuItem>
+                                </MenuList>
+                            </ClickAwayListener>
+                        </Paper>
                     </Grow>
                 )}
                 </Popper>
