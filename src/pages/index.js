@@ -14,7 +14,7 @@ const IndexPage = () => (
     <div style={{ maxWidth: `200px`, marginBottom: `1.45rem` }}>
       <Image filename="gatsby-astronaut.png"/>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
+    <Link to="/music/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )

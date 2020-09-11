@@ -46,9 +46,9 @@ function Menu() {
                     justify='space-around'
                     alignItems="center"
                 >
-                    <HeaderLink link="/" context="Sobre Nós"/>
-                    <HeaderLink link="/" context="Eventos"/>
-                    <HeaderLink link="/" context="Música"/>
+                    <HeaderLink link="/aboutUs" context="Sobre Nós"/>
+                    <HeaderLink link="/events" context="Eventos"/>
+                    <HeaderLink link="/music" context="Música"/>
                 </Grid>
     }
     return <Grid container item xs 
