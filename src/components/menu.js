@@ -62,10 +62,10 @@ function Menu() {
                     aria-haspopup="true"
                     onClick={handleToggle}
                     style={{marginRight:'1rem'}}
-                    >
+                >
                     <MenuIcon />
                 </Button>
-                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal >
                 {({ TransitionProps }) => (
                     <Grow
                         {...TransitionProps}
