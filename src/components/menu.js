@@ -46,7 +46,7 @@ function Menu() {
                     justify='space-around'
                     alignItems="center"
                 >
-                    <HeaderLink link="/aboutUs" context="Sobre Nós"/>
+                    <HeaderLink link="/aboutus" context="Sobre Nós"/>
                     <HeaderLink link="/events" context="Eventos"/>
                     <HeaderLink link="/music" context="Música"/>
                 </Grid>
@@ -75,13 +75,13 @@ function Menu() {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow">
                                     <MenuItem onClick={handleClose}>
-                                        <HeaderLink link="/" context="Sobre Nós"/>
+                                        <HeaderLink link="/aboutus" context="Sobre Nós"/>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <HeaderLink link="/" context="Eventos"/>
+                                        <HeaderLink link="/events" context="Eventos"/>
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <HeaderLink link="/" context="Música"/>
+                                        <HeaderLink link="/music" context="Música"/>
                                     </MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
