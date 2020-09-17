@@ -24,7 +24,6 @@ export default (props) => {
   `);
 
   const image = images.data.edges.find(n => {
-  console.log(style);
     return n.node.relativePath.includes(filename);
   });
 
