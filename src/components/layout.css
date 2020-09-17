@@ -17,7 +17,7 @@ header{
   padding: 0;
   border-bottom-style: solid;
   border-bottom-width: 0.2rem;
-  border-color: var(--green);
+  border-color: #AB4924;
 }
 
 .headerLink{
