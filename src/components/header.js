@@ -8,7 +8,7 @@ import Image from "./image"
 
 import Menu from "./menu"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <Grid container spacing={3} style={{margin:'0', padding:'0', width:'100%'}}>
       <Grid container item xs
@@ -16,7 +16,6 @@ const Header = ({ siteTitle }) => (
         justify="center"
         alignItems="center"
       >
-        {/* <p style={{color: 'var(--dark-grey)', fontWeight: 'bolder', fontSize: '2rem', margin:'0'}}>A TUNAFE</p> */}
       </Grid>
       <Grid container item xs 
         direction="row"
@@ -26,7 +25,7 @@ const Header = ({ siteTitle }) => (
           <Link
               to="/"
           >
-              <Image filename="LogofTUNAFE.png" style={{margin:'0', minHeight:'4rem' , minWidth:'5.5rem', maxHeight:'4rem', maxWidth:'5.5rem',}}/>
+              <Image filename="logofTUNAFE.png" style={{margin:'0', minHeight:'4rem' , minWidth:'5.5rem', maxHeight:'4rem', maxWidth:'5.5rem',}}/>
           </Link>
       </Grid>
       <Menu/>

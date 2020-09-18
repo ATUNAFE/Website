@@ -34,9 +34,9 @@ const Banner = (props) => {
           fluid={{
             ...image.node.childImageSharp.fluid
           }}
-          style={{height: '80vh', width: '100%'}}
+          style={{height:'40vh', width: '100%', filter: 'saturate(50%)',
+        }}
         >
-          OI PLEASE WORK
         </BackgroundImage>
 }
 
