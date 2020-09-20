@@ -7,12 +7,17 @@ import Banner from "../components/banner"
 const HomePage = () => (
   <Layout>
     <SEO title="Home" />
+    <div className="homepageBanner" 
+      style={{backgroundColor:'var(--dark-grey)', display:'flex', justifyContent:'center'}}
+    >
+      <Banner picturePath="tunafe.png" style={{filter: 'saturate(50%)'}}>
+        <h1>Tuna Feminina de Engenharia</h1>
+      </Banner>
+    </div>
     <div
       style={{backgroundColor:'var(--dark-grey)', display:'flex', justifyContent:'center'}}
     >
-      <Banner className="homepageBanner" picturePath="tunafe.png">
-        
-      </Banner>
+
     </div>
   </Layout>
 )

@@ -51,3 +51,8 @@ footer{
 main{
   margin-top: 5.5rem;
 }
+
+.banner{
+  height: calc(100vh - 88px);
+  width: 100%;
+}

@@ -34,9 +34,9 @@ const Banner = (props) => {
           fluid={{
             ...image.node.childImageSharp.fluid
           }}
-          style={{height:'40vh', width: '100%', filter: 'saturate(50%)',
-        }}
+          style={props.style}
         >
+            {props.children}
         </BackgroundImage>
 }
 
