@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 :root{
-  --green: #00893b;
+  --tunafe-green: #00893b;
   --engineer: #8c2d19;
-  --black: #000000;
   --dark-grey: #3b4045;
-  --light: #ececec;
-  --white: #ffffff;
+  --tunafe-light: #ececec;
 }
 
 html{

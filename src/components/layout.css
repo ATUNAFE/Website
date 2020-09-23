@@ -12,16 +12,69 @@ body {
 }
 
 header{
-  background: var(--light);
+  background: var(--tunafe-light);
   margin: 0;
   padding: 0;
-  border-bottom: 0.1rem solid #ccc;
-  box-shadow: 0 10px 5px -5px #000;
+  border-bottom: 0.15rem solid var(--tunafe-green);
   width: 100%;
   position: fixed;
   z-index:99999;
   top: 0;
 }
+
+#siteMenu{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+#mobileMenu{
+  display: none;
+}
+
+#menuIcon{
+  background-color: transparent;
+  color: var(--dark-grey);
+  border: 0;
+}
+#menuIcon:hover{
+  background-color: var(--dark-grey);
+  color: var(--tunafe-light);
+}
+#menuIcon.dropdown-toggle::after{
+  display: none;
+}
+
+#menu{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  min-width: 8rem;
+  min-height: 10rem;
+  margin-top: 1.43rem;
+  background-color: var(--tunafe-light);
+  border: 0;
+}
+
+header, #menu{
+  box-shadow: 0 5px 5px 0px #000;
+}
+
+.headerLink{
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-weight: bold;
+  font-size: larger;
+}
+.headerLink:hover{
+  text-decoration: none;
+  color: var(--engineer);
+}
+
+/* footer */
 
 footer{
   background-color: var(--dark-grey);
@@ -33,26 +86,57 @@ footer{
   bottom: 0;
   left:0;
   right:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.headerLink{
-  font-family: 'Source Sans Pro', sans-serif;
-  text-decoration: none;
-  color: var(--dark-grey);
-  font-weight: bold;
-  font-size: larger;
+footer p{
+  margin: 0;
 }
+
+/* --- Content --- */
 
 #pageContent{
   padding: 0;
   margin: 0;
+  padding-bottom: 3.5rem;
 }
 
 main{
-  margin-top: 5.5rem;
+  margin-top: 5rem;
 }
 
 .banner{
   height: calc(100vh - 88px);
   width: 100%;
+}
+
+#HomepageBanner h1{
+  position: absolute;
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  font-size: 3rem;
+  color: #FFFFFF;
+  text-shadow: 2px 2px var(--dark-grey);
+  text-transform: uppercase;
+  text-align: right;
+  transition: 0.5s;
+  opacity: 0.6;
+  /* -webkit-background-clip: text; */
+}
+#HomepageBanner h1:hover {
+  
+}
+
+@media only screen and (max-width: 890px) {
+  #siteMenu{
+    display: none;
+  }
+  #mobileMenu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
