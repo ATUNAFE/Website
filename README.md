@@ -30,20 +30,27 @@ A linguagem utilizada para o desenvolvimento do WebSite é JavaScript, recorrend
 
 ### Hosting e deploy
 O hosting é feito pelo Netlify, através da conta da TUNAFE.
+
 Produto final encontra-se no link tunafe.netlify.app.
+
 O Netlify e o GatsbyJS permitem a manutenção do site através da adição e edição de ficheiros Markdown, a ser feita no .
 
 ### Manutenção de conteúdos
 A manutenção de conteúdos é efetuada pelo NetlifyCMS. 
+
 Para aceder à página de edição, é necessário aceder ao link https://tunafe.fe.up.pt/admin. De seguida é necessário efetuar o login com os respetivos dados.
 
 Após estes passos, para adicionar conteúdo é só seguir o seguinte tutorial:
+
 --depois quando o site estiver ok, fazer video e descrever os passos--
+
 
 Este gestor de conteúdo vai guardar ficheiros com extensão .md, permitindo que o Netlify atualize o site com a nova informação. A estrutura destes ficheiros pode ser visualizada nos Templates abaixo descritos.
 
 #### Templates
 Os templates para criação de conteúdo podem ser encontrados na seguinte [pasta](https://drive.google.com/drive/folders/1Sfv-94U855Ri0-k1TZlKiZD9Vs2DxOVI?usp=sharing) do google drive.
+
+
 **Importante:** No ficheiro “INSTRUCOES.md” encontram-se regras a seguir na conceção do conteúdo através dos templates.
 
 #### Onde colocar cada ficheiro
