@@ -25,6 +25,21 @@ Comunicação com o CICA(2020):
 #### Wireframe
 ![wireframe](https://user-images.githubusercontent.com/38894031/123664804-96ccd180-d82f-11eb-98de-bf3ef71a19ac.jpg)
 
+#### Mockups
+> Footer
+![Screenshot_2021-06-28_18-17-32](https://user-images.githubusercontent.com/38894031/123677695-583e1380-d83d-11eb-86b2-48b4b83b00d3.png)
+
+> Header
+![Screenshot_2021-06-28_18-20-27](https://user-images.githubusercontent.com/38894031/123677891-8de2fc80-d83d-11eb-9cab-5dae819385f2.png)
+
+> Home page
+
+> Sobre Nós
+
+> Eventos
+
+> Música
+
 ### Linguagem
 A linguagem utilizada para o desenvolvimento do WebSite é JavaScript, recorrendo à framework open-source baseada em React, GatsbyJS. Esta destaca-se pela excelência na concepção de sites estáticos.
 
