@@ -2,7 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-export default (props) => {
+const Image = (props) => {
+// export default (props) => {
 
   const { filename, alt, style = {margin:`0`}} = props;
 
@@ -37,3 +38,5 @@ export default (props) => {
     }} />
   )
 }
+
+export default Image;

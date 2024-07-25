@@ -1,12 +1,12 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 
 const HomePage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <div id="HomepageBanner"
       style={{backgroundColor:'var(--dark-grey)', display:'flex', justifyContent:'center'}}
     >
