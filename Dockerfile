@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY package*.json .
 
-RUN yarn global add gatsby-cli
+RUN yarn global add gatsby-cli && \
+    yarn global add prettier
 
 RUN yarn install
 
