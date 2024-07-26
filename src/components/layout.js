@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <div id="pageContent">
         <main>{children}</main>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
