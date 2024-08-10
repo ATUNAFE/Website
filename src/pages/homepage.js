@@ -15,7 +15,7 @@ const HomePage = () => (
         justifyContent: "center",
       }}
     >
-      <Banner picturePath="tunafe.jpeg">
+      <Banner picturePath="tunafe.jpg">
         <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1>
       </Banner>
     </div>

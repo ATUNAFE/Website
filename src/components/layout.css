@@ -12,14 +12,14 @@ body {
 }
 
 header{
-  background: var(--tunafe-light);
+  background-color: #000;
+  opacity: 0.85;
   margin: 0;
   padding: 0;
   border-bottom: 0.15rem solid var(--tunafe-green);
   width: 100%;
   position: fixed;
   z-index:99999;
-  top: 0;
 }
 
 #siteMenu{
@@ -103,10 +103,6 @@ footer p{
   padding-bottom: 3.5rem;
 }
 
-main{
-  margin-top: 5rem;
-}
-
 .banner{
   height: calc(100vh - 88px);
   width: 100%;
@@ -126,6 +122,7 @@ main{
   opacity: 0.6;
   /* -webkit-background-clip: text; */
 }
+
 #HomepageBanner h1:hover {
   
 }
