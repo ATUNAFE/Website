@@ -10,7 +10,7 @@
     "ajv": "^8.17.1",
     "bootstrap": "^5.3.3",
     "gatsby": "^5.13.7",
-    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.13.1",
     "decap-cms-app": "^3.0.4",
     "gatsby-plugin-decap-cms": "^4.0.4",
@@ -23,6 +23,9 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.2.1"
+  },
+  "resolutions": {
+    "graphql": "^15.5.0"
   },
   "scripts": {
     "build": "gatsby build",
