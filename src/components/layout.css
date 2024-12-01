@@ -11,18 +11,18 @@ body {
   position: relative;
 }
 
-header{
-  background-color: #000;
-  opacity: 0.85;
-  margin: 0;
-  padding: 0;
-  border-bottom: 0.15rem solid var(--tunafe-green);
-  width: 100%;
-  position: fixed;
-  z-index:99999;
+.content {
+    margin-top: 100px; /* Push content below the header */
+  }
+  
+.content-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-#siteMenu{
+
+.siteMenu{
   display:flex;
   justify-content:space-around;
   align-items:center;

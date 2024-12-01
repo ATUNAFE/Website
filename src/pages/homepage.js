@@ -16,7 +16,7 @@ const HomePage = () => (
       }}
     >
       <Banner picturePath="tunafe.jpg">
-        <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1>
+        {/* <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1> */}
       </Banner>
     </div>
     <div
