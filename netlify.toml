@@ -1,0 +1,9 @@
+[build]
+  command = "docker build -f Dockerfile.prod -t gatsby-prod:1.0 . && docker run -p 8000:8000 gatsby-prod:1.0"
+  publish = "public"
+
+[context.production]
+  command = "docker build -f Dockerfile.prod -t gatsby-prod:1.0 . && docker run -p 8000:8000 gatsby-prod:1.0"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
