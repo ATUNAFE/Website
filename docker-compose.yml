@@ -2,16 +2,9 @@ services:
   dev:
     build:
       context: .
+      dockerfile: Dockerfile.dev
     volumes:
       - ./src:/app/src
     ports:
       - 8000:8000
-
-  prod:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    ports:
-      - "8000:8000"
-    environment:
-      NODE_ENV: production
+      
