@@ -7,7 +7,7 @@ import { Dropdown, Col, Row, Container} from 'react-bootstrap';
 import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
 
-const backgroundColor = 'rgba(245, 245, 245, 0.4)';
+const backgroundColor = 'rgba(245, 245, 245, 0.5)';
 
 const Header = () => (
 
@@ -38,14 +38,7 @@ const Header = () => (
               />
             </Link>
           </Col>
-          <Col id="siteMenu" style={{
-              alignContent: 'center', 
-              display: 'flex',
-              justifyContent:'space-around',
-              alignItems: 'center',
-              fontSize: '20px',
-              fontWeight: 'bolder',
-          }}>
+          <Col id="siteMenu">
               <HeaderLink link="/aboutus" context="Sobre Nós" />
               <HeaderLink link="/events" context="Eventos" />
               <HeaderLink link="/music" context="Música" />
