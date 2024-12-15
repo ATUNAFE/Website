@@ -6,6 +6,7 @@ import Banner from "../components/banner"
 
 const HomePage = () => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
+    const [isDropdownVisible2, setDropdownVisible2] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
@@ -89,14 +90,32 @@ const HomePage = () => {
                 <img
                 src={require("../images/Dory.png").default}
                 alt="Dropdown Content Image"
-                style={{ width: "150px" , height: "auto", margin: "0" }}
+                style={{ width: "160px" , height: "160px", margin: "0" }}
                 />
                 <div style={{ marginLeft: "2rem" }}>
                     <p style={{ fontWeight: "bold", color: "white", fontFamily: "'Source Sans Pro', sans-serif", fontSize: "22px" }}>Doryae C♯ius OptiPeculiaris P⭘lyphónicus</p>
                     <p style={{ color: "white", fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 300, margin: 0 }}>Nome: Ângela Filipa Ribeiro Coelho</p>
                     <p style={{ color: "white", fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 300, margin: 0 }}>Mestrado: Mestrado Integrado em Engenharia Informática e Computação</p>
+                    <p style={{ color: "white", fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 300, margin: 0 }}>Madrinha: Nobis ArsDonum YOSarcóMinuciosus Assertivus</p>
+                    <div style={{ display: "flex", alignItems: "center", marginTop: "10px" }}>
+                      <img
+                        src={require("../images/MagisterCor.png").default}
+                        alt="Small Icon"
+                        style={{ width: "40px", height: "40px", marginRight: "10px"}} // Increase marginRight to add more space
+                      />
+                      <img
+                        src={require("../images/BandolimCor.png").default}
+                        alt="Second Small Icon"
+                        style={{ width: "40px", height: "40px", marginRight: "5px"}}
+                      />
+                      <img
+                        src={require("../images/ContrabaixoCor.png").default}
+                        alt="Third Small Icon"
+                        style={{ width: "40px", height: "40px"}}
+                      />
+                    </div>
                 </div>
-            </div>
+            </div> 
           )}
         </div>
         </div>
