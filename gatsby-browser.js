@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-import { initNetlifyIdentity } from './src/netlify-identity';
+import { initNetlifyIdentity } from './src/scripts/netlify-identity';
 
 export const onClientEntry = () => {
   initNetlifyIdentity();
