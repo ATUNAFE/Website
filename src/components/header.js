@@ -7,7 +7,7 @@ import { Dropdown, Col, Row, Container} from 'react-bootstrap';
 import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
 
-const backgroundColor = 'rgba(245, 245, 245, 0.5)';
+const backgroundColor = 'rgba(245, 245, 245, 0.75)';
 
 const Header = () => (
 
