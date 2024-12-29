@@ -6,10 +6,46 @@ import Seo from "../components/seo";
 
 import xv from "../images/15_XVTIET_2017.png"
 import xvi from "../images/16_XVITIET_2019.jpg"
+import xvii from "../images/CartazXVII_v1c.png"
 
 const eventsData = [
   {
     edition: "XVII Tudo Isto é Tuna",
+    date: "26 e 27 de Novembro de 2021",
+    location: "Casa de Vilar",
+    participants: [
+      "ATITUNA – Tuna Feminina da Faculdade de Psicologia e Ciências da Educação da UP",
+      "Legislatuna – Tuna Feminina da Faculdade de Direito da UP",
+      "TAFNUP – Tuna Académica Feminina de Nutrição da UP",
+      "TFB – Tuna Feminina de Biomédicas",
+    ],
+    extraParticipants: [
+      "TEUP – Tuna de Engenharia da U. P.",
+      "TUNAFE – Tuna Feminina de Engenharia da U.P.",
+    ],
+    prizes: [
+      "Melhor Claque - TAFNUP",
+      "Melhor Pandeireta - Legislatuna",
+      "Melhor Porta-estandarte - TFB",
+      "Melhor Solista - Legislatuna",
+      "Melhor Instrumental - TFB",
+      "Tuna mais Tuga - TFB",
+      "Tuna mais Solidária - TAFNUP",
+      "Tuna mais Tuna - ATITUNA",
+      "Melhor Tuna - Legislatuna",
+    ],
+    jury: [
+      "Raquel Ribeiro (AndôrBiuleta)",
+      "Sérgio Luí­s Pinto (Jet Lee)",
+      "(Jinx)",
+      "Professora Maria Inês Carvalho",
+      "Sofia Malheiro (FotoMIX)",
+    ],
+    presentation: "Pedro Silva (Rodas)",
+    image: xvii,
+  },
+  {
+    edition: "XVI Tudo Isto é Tuna",
     date: "8 e 9 de Março de 2019",
     location: "Grande Auditório da FEUP",
     participants: [
@@ -57,14 +93,14 @@ const eventsData = [
       "TUNAFE – Tuna Feminina de Engenharia da U.P.",
     ],
     prizes: [
-      "Melhor claque - Legislatuna",
-      "Melhor pandeireta - Legislatuna",
-      "Melhor porta-estandarte - Legislatuna",
-      "Melhor solista - TeSuna",
+      "Melhor Claque - Legislatuna",
+      "Melhor Pandeireta - Legislatuna",
+      "Melhor Porta-estandarte - Legislatuna",
+      "Melhor Solista - TeSuna",
       "Melhor Instrumental - TeSuna",
-      "Tuna mais tuna - Tuna Feminina de Medicina do Porto",
-      "Melhor banda sonora - TeSuna",
-      "MELHOR TUNA - Legislatuna",
+      "Tuna mais Tuna - Tufemed",
+      "Melhor Banda Sonora - TeSuna",
+      "Melhor Tuna - Legislatuna",
     ],
     jury: [
       "Sofia Braga (Sporte)",
