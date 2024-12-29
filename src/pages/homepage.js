@@ -15,19 +15,10 @@ const HomePage = () => (
         justifyContent: "center",
       }}
     >
-      <Banner picturePath="bem-me-quer.png">
-        {/* <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1> */}
-      </Banner>
+    <Banner picturePath="bem-me-quer.png"/>
     </div>
-    <div
-      style={{
-        backgroundColor: "var(--light)",
-        display: "flex",
-        justifyContent: "center",
-        padding: "1rem",
-      }}
-    >
-      <h2>Comunicados</h2>
+    <div class="homepage-block">
+      <h2>Queres juntar-te a nós? Aparece num dos nossos <a class="engineer-section-link" href="aboutus">ensaios</a>.</h2>
     </div>
     <div
       style={{

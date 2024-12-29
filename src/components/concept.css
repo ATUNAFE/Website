@@ -2,11 +2,13 @@
 
 :root{
   --tunafe-green: #00893b;
+  --tunafe-green-light: #6DB28B;
   --engineer: #8c2d19;
+  --engineer-light: #995345;
   --dark-grey: #3b4045;
   --tunafe-light: #ececec;
 }
 
 html{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro';
 }

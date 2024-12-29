@@ -21,6 +21,32 @@ body {
   height: auto;
 }
 
+.engineer-section-link:link {
+  color: var(--tunafe-light);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.engineer-section-link:visited {
+  color: var(--tunafe-light);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.engineer-section-link:hover {
+  color: var(--tunafe-green-light);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.homepage-block {
+  background-color: var(--engineer-light);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--tunafe-light);
+  font-family: 'Source Sans Pro';
+}
 
 #siteMenu{
   display:flex;
@@ -66,7 +92,7 @@ header, #menu{
 }
 
 .headerLink{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro';
   text-decoration: none;
   color: var(--dark-grey);
   font-weight: bold;
