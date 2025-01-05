@@ -15,3 +15,14 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: members
+    label: Members
+    folder: content/members
+    create: true
+    fields:
+      - { name: nome, label: Nome }
+      - { name: nomeCivil, label: NomeCivil }
+      - { name: curso, label: Curso }
+      - { name: madrinha, label: Madrinha }
+      - { name: instrumentos, label: Instrumentos }
+      - { name: foto, label: Foto }
