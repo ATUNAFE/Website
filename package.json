@@ -25,7 +25,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^5.2.1",
     "graphql": "^16.0.0",
-    "netlify-identity-widget": "^1.9.1"
+    "netlify-identity-widget": "^1.9.1",
+    "react-slideshow-image": "^4.3.2"
   },
   "devDependencies": {
     "prettier": "^2.7.1"

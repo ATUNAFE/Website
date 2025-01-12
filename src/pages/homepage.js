@@ -3,8 +3,10 @@ import Seo from "../components/seo"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import Slideshow from "../components/slideshow"
 
 const HomePage = () => (
+
   <Layout>
     <Seo title="Home" />
     <div
@@ -35,8 +37,7 @@ const HomePage = () => (
         color: "white",
       }}
     >
-      <h2>Sobre nós</h2>
-      <h2> Vem para a tuna feminina de engenharia</h2>
+      <Slideshow />
     </div>
     <div
       style={{
