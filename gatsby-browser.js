@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import netlifyIdentity from 'netlify-identity-widget';
 
-// You can delete this file if you're not using it
+export const onRouteUpdate = ({ location }) => {
+  if (location.pathname === '/admin/') {
+    netlifyIdentity.init();
+  }
+};

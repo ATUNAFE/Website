@@ -2,7 +2,7 @@ import React from "react"
 import Seo from "../components/seo"
 
 import Layout from "../components/layout"
-import Banner from "../components/banner"
+//import Banner from "../components/banner"
 
 const HomePage = () => (
   <Layout>
@@ -15,9 +15,10 @@ const HomePage = () => (
         justifyContent: "center",
       }}
     >
-      <Banner picturePath="tunafe.jpeg">
+
+{/*       <Banner picturePath="tunafe.jpeg">
         <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1>
-      </Banner>
+      </Banner> */}
     </div>
     <div
       style={{
