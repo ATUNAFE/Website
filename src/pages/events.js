@@ -118,7 +118,9 @@ const styles = {
   pageTitle: {
     textAlign: "center",
     marginBottom: "40px",
-    fontWeight: "bold",
+    fontSize: "50px",
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: "500",
   },
   eventsList: {
     display: "flex",
@@ -129,32 +131,53 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    padding: "20px",
-    borderRadius: "8px",
+    padding: "100px",
+    borderRadius: "10x",
     backgroundColor: isEven ? "#f9f9f9" : "#995345",
     color: isEven ? "#000000" : "#ffffff",
+    marginBottom: "20px",
   }),
   eventDetails: {
     flex: 1,
-    // textAlign: "left",  // Títulos agora alinhados à esquerda
     display: "flex",
+    maxHeight: "500px",
     flexDirection: "column",
     justifyContent: "space-between", 
+    fontSize: "17px",
+    fontFamily: "Source Sans Pro, sans-serif",
   },
   eventPoster: {
     flex: "1 1 300px",
-    //marginRight: "5px", // Espaço entre a imagem e o texto
     textAlign: "center",
   },
   posterImage: {
-    width: "100%", // Imagem ocupa 100% do seu contêiner, mas com limite de tamanho
-    maxWidth: "500px",  // Limita a largura máxima da imagem
+    width: "100%",
+    maxWidth: "450px",
     height: "auto",
     borderRadius: "8px",
+    marginBottom: "20px",
+  },
+  eventDetailsText: {
+    margin: "4px 0", 
+    fontSize: "14px",
+  },
+  subsectionTitle: {
+    marginTop: "10px",
+    fontSize: "18px",
+    fontFamily: "Montserrat, sans-serif",
+    marginBottom: "0", // Remove the bottom margin here
   },
   sectionTitle: {
-    fontWeight: "bold",
+    textAlign: "left", 
+    fontWeight: "500",
+    fontFamily: "Montserrat, sans-serif",
+    fontSize: "50px",
     marginTop: "20px",
+    marginBottom: "150px",
+  },
+  noBulletPoints: {
+    listStyleType: "none",
+    paddingLeft: 0,
   },
 };
 
@@ -166,54 +189,55 @@ const Events = () => (
     <div style={styles.eventsList}>
       {eventsData.map((event, index) => (
         <div
-          key={index}
-          style={styles.eventItem(index % 2 === 0)}
-        >
-          <div style={styles.eventPoster}>
-            <img
-              src={event.image}
-              style={styles.posterImage}
-            />
-          </div>
-          <div style={styles.eventDetails}>
-            <h2>{event.edition}</h2>
-            <p><strong>Data:</strong> {event.date}</p>
-            <p><strong>Local:</strong> {event.location}</p>
-            <div>
-              <p style={styles.sectionTitle}>Tunas Participantes:</p>
-              <ul>
-                {event.participants.map((participant, i) => (
-                  <li key={i}>{participant}</li>
-                ))}
-              </ul>
-              <p style={styles.sectionTitle}>Tunas Extra-Concurso:</p>
-              <ul>
-                {event.extraParticipants.map((extra, i) => (
-                  <li key={i}>{extra}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p style={styles.sectionTitle}>Prémios atribuídos:</p>
-              <ul>
-                {event.prizes.map((prize, i) => (
-                  <li key={i}>{prize}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p style={styles.sectionTitle}>Júri:</p>
-              <ul>
-                {event.jury.map((member, i) => (
-                  <li key={i}>{member}</li>
-                ))}
-              </ul>
-            </div>
-            <p style={styles.sectionTitle}>
-              Apresentação: {event.presentation}
-            </p>
-          </div>
+        key={index}
+        style={styles.eventItem(index % 2 === 0)}
+      >
+        <div style={styles.eventPoster}>
+          <h2 style={styles.sectionTitle}>{event.edition}</h2>
+          <img
+            src={event.image}
+            style={styles.posterImage}
+          />
+          <p style={styles.eventDetailsText}><strong>{event.date}</strong></p>
+          <p style={styles.eventDetailsText}><strong>{event.location}</strong></p>
         </div>
+        <div style={styles.eventDetails}>
+          <div>
+            <p style={styles.subsectionTitle}>Tunas Participantes:</p>
+            <ul style={styles.noBulletPoints}>
+              {event.participants.map((participant, i) => (
+                <li key={i}>{participant}</li>
+              ))}
+            </ul>
+            <p style={styles.subsectionTitle}>Tunas Extra-Concurso:</p>
+            <ul style={styles.noBulletPoints}>
+              {event.extraParticipants.map((extra, i) => (
+                <li key={i}>{extra}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p style={styles.subsectionTitle}>Prémios atribuídos:</p>
+            <ul style={styles.noBulletPoints}>
+              {event.prizes.map((prize, i) => (
+                <li key={i}>{prize}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p style={styles.subsectionTitle}>Júri:</p>
+            <ul style={styles.noBulletPoints}>
+              {event.jury.map((member, i) => (
+                <li key={i}>{member}</li>
+              ))}
+            </ul>
+          </div>
+          <p style={styles.subsectionTitle}> Apresentação </p>
+            <ul style={styles.noBulletPoints}>
+              <li>{event.presentation}</li>
+            </ul>
+        </div>
+      </div>      
       ))}
     </div>
     <Link to="/">Voltar para a página inicial</Link>
