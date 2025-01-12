@@ -21,7 +21,7 @@ collections:
     create: true
     fields:
       - { name: nome, label: Nome }
-      - { name: nomeCivil, label: NomeCivil }
+      - { name: nomeCivil, label: Nome Civil }
       - { name: curso, label: Curso }
       - { name: madrinha, label: Madrinha }
       - { name: instrumentos, label: Instrumentos }
