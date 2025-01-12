@@ -2,7 +2,7 @@ import React from "react"
 import Seo from "../components/seo"
 
 import Layout from "../components/layout"
-//import Banner from "../components/banner"
+import Image from "../components/image"
 
 const HomePage = () => (
   <Layout>
@@ -16,7 +16,10 @@ const HomePage = () => (
       }}
     >
 
-    {/* // <Banner picturePath="bem-me-quer.png"/> */}
+    <Image
+      filename="bem-me-quer.JPG"
+      style={{ margin: "0", width: "100%" }}
+    />
 
     </div>
     <div class="homepage-block">
