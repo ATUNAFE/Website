@@ -6,23 +6,25 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blog"
     create: true
+    identifier_field: name
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
-  - name: members
-    label: Members
-    folder: content/members
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Members"
+    name: "members"
+    folder: "_content/members"
     create: true
+    identifier_field: name
     fields:
-      - { name: nome, label: Nome }
-      - { name: nomeCivil, label: Nome Civil }
-      - { name: curso, label: Curso }
-      - { name: madrinha, label: Madrinha }
-      - { name: instrumentos, label: Instrumentos }
-      - { name: foto, label: Foto }
+      - {label: "Nome" , name: "name"}
+      - {label: "NomeCivil", name: "nameC"}
+      - {label: "Curso", name: "course"}
+      - {label: "Madrinha", name: "godmother"}
+      - {label: "Instrumentos", name: "instruments"}
+      - {label: "Foto", name: "picture"}
