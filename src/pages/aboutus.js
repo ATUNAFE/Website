@@ -4,14 +4,19 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import logo from '../images/LogoTunafe.png'
+import Banner from "../components/banner"
+
 
 const AboutUs = () => (
   <Layout>
     <Seo title="AboutUs" />
+    <Banner picturePath="tunafe.jpg">
+        {/* <h1>Tuna Feminina de Engenharia da Universidade do Porto</h1> */}
+      </Banner>
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
-
+    
     <section className="Historial">
 
       <div>
@@ -41,6 +46,8 @@ Acima de qualquer norma ou regra é essencial a paixão pelo conjunto que a tuna
       </div>
 
     </section>
+
+    
   </Layout>
 )
 

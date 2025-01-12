@@ -80,7 +80,7 @@ header, #menu{
 /* footer */
 
 footer{
-  background-color: var(--dark-grey);
+  background-color: #262626;
   color: var(--white);
   font: 0.8rem;
   text-align: center;
@@ -96,6 +96,14 @@ footer{
 
 footer p{
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+footer h4{
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900; /* Bold */
 }
 
 /* --- Content --- */
