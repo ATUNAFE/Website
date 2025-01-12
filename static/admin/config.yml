@@ -2,17 +2,39 @@ backend:
   name: git-gateway
   repo: TUNAFE/Website
   # Path to your Github repository (blanked out on purpose)
-  branch: master
+  branch: feature/collections
 
 publish_mode: editorial_workflow
-media_folder: "src/pages"
-public_folder: "pages"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "empty"
     label: "Empty"
-    folder: "src/pages"
+    folder: "_content/empty"
     create: true
     slug: ""
     fields:
       - {label: "Title" ,name: "title", widget:"string" , required:"true" }
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blog"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Members"
+    name: "members"
+    folder: "_content/members"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Nome" , name: "name"}
+      - {label: "NomeCivil", name: "nameC"}
+      - {label: "Curso", name: "course"}
+      - {label: "Madrinha", name: "godmother"}
+      - {label: "Instrumentos", name: "instruments"}
+      - {label: "Foto", name: "picture"}
