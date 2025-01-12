@@ -2,7 +2,7 @@ import React from "react"
 import Seo from "../components/seo"
 
 import Layout from "../components/layout"
-import Banner from "../components/banner"
+//import Banner from "../components/banner"
 
 const HomePage = () => (
   <Layout>
@@ -15,7 +15,9 @@ const HomePage = () => (
         justifyContent: "center",
       }}
     >
-    <Banner picturePath="bem-me-quer.png"/>
+
+    {/* // <Banner picturePath="bem-me-quer.png"/> */}
+
     </div>
     <div class="homepage-block">
       <h2>Queres juntar-te a nós? Aparece num dos nossos <a class="engineer-section-link" href="aboutus">ensaios</a>.</h2>
