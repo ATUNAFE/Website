@@ -2,17 +2,196 @@ backend:
   name: git-gateway
   repo: TUNAFE/Website
   # Path to your Github repository (blanked out on purpose)
-  branch: master
+  branch: feature/collections
 
 publish_mode: editorial_workflow
-media_folder: "src/pages"
-public_folder: "pages"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
-  - name: "empty"
-    label: "Empty"
-    folder: "src/pages"
+  # sobre-nos/membros
+  - label: "Magister"
+    name: "magister"
+    folder: "_content/sobre-nos/membros/atualmente/magister"
     create: true
-    slug: ""
+    identifier_field: name
+    slug: "{{name}}" # the default for the slug is the identifier_field
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "Title" ,name: "title", widget:"string" , required:"true" }
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Atuais Mestre-Tunas"
+    name: "atuais-mestre-tunas"
+    folder: "_content/sobre-nos/membros/atualmente/mestre-tunas"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Atuais Tunas"
+    name: "atuais-tunas"
+    folder: "_content/sobre-nos/membros/atualmente/tunas"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Atuais Caloiras"
+    name: "atuais-caloiras"
+    folder: "_content/sobre-nos/membros/atualmente/caloiras"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Antigas Mestre-Tunas"
+    name: "antigas-mestre-tunas"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/mestre-tunas"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course', 'date']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Antigas Tunas"
+    name: "antigas-tunas"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/tunas"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  - label: "Antigas Caloiras"
+    name: "antigas-caloiras"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/caloiras"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['date', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{date}} - {{name}} - {{instruments}} - {{course}}"
+    fields:
+      - {label: "Data entrada/subida", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
+      - {label: "Foto", name: "picture", widget: "string"}
+  # sobre-nos/historial
+  - label: "Historial"
+    name: "historial"
+    folder: "_content/sobre-nos/historial"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Imagem" , name: "picture", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+  # sobre-nos/padrinhos
+  - label: "Padrinhos"
+    name: "padrinhos"
+    folder: "_content/sobre-nos/padrinhos"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Imagem" , name: "picture", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+  # homepage
+  - label: "Contactos"
+    name: "contactos"
+    folder: "_content/homepage/contactos"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Nome RP" , name: "nameRP", widget: "string"}
+      - {label: "Contacto RP" , name: "mobileRP", widget: "string"}
+      - {label: "Nome Magister", name: "nameMagister", widget: "string"}
+      - {label: "Contacto Magister", name: "mobileMagister", widget: "string"}
+      - {label: "Email TUNAFE", name: "email", widget: "string"}
+      - {label: "Morada TUNAFE", name: "address", widget: "string"}
+  - label: "Ensaios"
+    name: "ensaios"
+    folder: "_content/homepage/ensaios"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Dias da semana" , name: "weekDays", widget: "string"}
+      - {label: "Sala de ensaio" , name: "rehearsalRoom", widget: "string"}
+      - {label: "Sala da Tuna", name: "tunaRoom", widget: "string"}
+      - {label: "Hora inicio ensaio", name: "startTime", widget: "string"}
+      - {label: "Hora fim ensaio", name: "finishTime", widget: "string"}
+  # musica/repertorio
+  - label: "Repertório"
+    name: "repertorio"
+    folder: "_content/musica/repertorio"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['name', 'author']  # use dot notation for nested fields
+    summary: "{{name}} - {{album}} - {{author}}"
+    fields:
+      - {label: "Titulo da musica", name: "name", widget: "string"}
+      - {label: "Album", name: "album", widget: "string", required: false}
+      - {label: "Autor/autora", name: "author", widget: "string", required: false}
+      - {label: "Link youtube", name: "youtube", widget: "string", required: false}
+      - {label: "Imagem" , name: "picture", widget: "string", required: false}
+      - {label: "Descrição", name: "body", widget: "markdown", required: false}
