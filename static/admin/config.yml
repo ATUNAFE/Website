@@ -19,14 +19,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Atuais Mestre-Tunas"
     name: "atuais-mestre-tunas"
     folder: "_content/sobre-nos/membros/atualmente/mestre-tunas"
@@ -36,14 +36,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Atuais Tunas"
     name: "atuais-tunas"
     folder: "_content/sobre-nos/membros/atualmente/tunas"
@@ -53,14 +53,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Atuais Caloiras"
     name: "atuais-caloiras"
     folder: "_content/sobre-nos/membros/atualmente/caloiras"
@@ -70,14 +70,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Antigas Mestre-Tunas"
     name: "antigas-mestre-tunas"
     folder: "_content/sobre-nos/membros/sempre-tunafas/mestre-tunas"
@@ -87,14 +87,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Antigas Tunas"
     name: "antigas-tunas"
     folder: "_content/sobre-nos/membros/sempre-tunafas/tunas"
@@ -104,14 +104,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true"}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   - label: "Antigas Caloiras"
     name: "antigas-caloiras"
     folder: "_content/sobre-nos/membros/sempre-tunafas/caloiras"
@@ -121,14 +121,14 @@ collections:
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
     summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number" , required: "true"}
-      - {label: "Nome" , name: "name", widget: "string" , required: "true"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string" , required: "true"}
-      - {label: "NomeCivil", name: "nameC", widget: "string" , required: "true"}
-      - {label: "Curso", name: "course", widget: "string" , required: "true"}
-      - {label: "Madrinha", name: "godmother", widget: "string" , required: "true"}
-      - {label: "Instrumentos", name: "instruments", widget: "list" , required: "true", default: ["Acordeão","Pandeireta"]}
-      - {label: "Foto", name: "picture", widget: "string" , required: "true"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Nome" , name: "name", widget: "string"}
+      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
+      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Curso", name: "course", widget: "string"}
+      - {label: "Madrinha", name: "godmother", widget: "string"}
+      - {label: "Instrumentos", name: "instruments", widget: "list"}
+      - {label: "Foto", name: "picture", widget: "string"}
   # homepage
   - label: "Contactos"
     name: "contactos"
@@ -137,13 +137,13 @@ collections:
     identifier_field: fileName
     slug: "{{fileName}}"
     fields:
-      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string" , required: "true"}
-      - {label: "Nome RP" , name: "nameRP", widget: "string" , required: "true"}
-      - {label: "Contacto RP" , name: "mobileRP", widget: "string" , required: "true"}
-      - {label: "Nome Magister", name: "nameMagister", widget: "string" , required: "true"}
-      - {label: "Contacto Magister", name: "mobileMagister", widget: "string" , required: "true"}
-      - {label: "Email TUNAFE", name: "email", widget: "string" , required: "true"}
-      - {label: "Morada TUNAFE", name: "address", widget: "string" , required: "true"}
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Nome RP" , name: "nameRP", widget: "string"}
+      - {label: "Contacto RP" , name: "mobileRP", widget: "string"}
+      - {label: "Nome Magister", name: "nameMagister", widget: "string"}
+      - {label: "Contacto Magister", name: "mobileMagister", widget: "string"}
+      - {label: "Email TUNAFE", name: "email", widget: "string"}
+      - {label: "Morada TUNAFE", name: "address", widget: "string"}
   - label: "Ensaios"
     name: "ensaios"
     folder: "_content/homepage/ensaios"
@@ -151,9 +151,9 @@ collections:
     identifier_field: fileName
     slug: "{{fileName}}"
     fields:
-      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string" , required: "true"}
-      - {label: "Dias da semana" , name: "weekDays", widget: "string" , required: "true"}
-      - {label: "Sala de ensaio" , name: "rehearsalRoom", widget: "string" , required: "true"}
-      - {label: "Sala da Tuna", name: "tunaRoom", widget: "string" , required: "true"}
-      - {label: "Hora inicio ensaio", name: "startTime", widget: "string" , required: "true"}
-      - {label: "Hora fim ensaio", name: "finishTime", widget: "string" , required: "true"}
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Dias da semana" , name: "weekDays", widget: "string"}
+      - {label: "Sala de ensaio" , name: "rehearsalRoom", widget: "string"}
+      - {label: "Sala da Tuna", name: "tunaRoom", widget: "string"}
+      - {label: "Hora inicio ensaio", name: "startTime", widget: "string"}
+      - {label: "Hora fim ensaio", name: "finishTime", widget: "string"}
