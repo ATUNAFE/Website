@@ -1,8 +1,8 @@
 ---
 fileNumber: 2
-name: Radaris
+name: Radar
 nameFull: Radaris Pizzitaiti∫ â3lotropicus HopV7erdis
-nameC: Joana Maria Oliveira Mendes
+nameC: Joana Mendes
 course: Eng. Química
 godmother: ZÉNis Staterátis EruditusSussurradus Matrio$kus
 instruments: Violino, Contrabaixo
