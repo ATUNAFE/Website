@@ -9,6 +9,7 @@ media_folder: "static/img"
 public_folder: "/img"
 
 collections:
+  # sobre-nos/membros
   - label: "Magister"
     name: "magister"
     folder: "_content/sobre-nos/membros/atualmente/magister"
@@ -114,3 +115,19 @@ collections:
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
       - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
       - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  # homepage
+  - label: "Contactos"
+    name: "contactos"
+    folder: "_content/homepage"
+    create: true
+    identifier_field: fileType
+    slug: "{{fileType}}"
+    fields:
+      - {label: "TipoDeFicheiro", name: "fileType", widget:"string" , required:"true"}
+      - {label: "NomeRP" , name: "nameRP", widget:"string" , required:"true"}
+      - {label: "ContactoRP" , name: "mobileRP", widget:"string" , required:"true"}
+      - {label: "NomeMagister", name: "nameMagister", widget:"string" , required:"true"}
+      - {label: "ContactoMagister", name: "mobileMagister", widget:"string" , required:"true"}
+      - {label: "EmailTUNAFE", name: "email", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "MoradaTUNAFE", name: "address", widget:"string" , required:"true"}
