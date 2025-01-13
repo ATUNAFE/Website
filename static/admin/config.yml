@@ -15,7 +15,9 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/magister"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
+    slug: "{{fileNumber}}-{{slug}}" # the default for the slug is the identifier_field
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -30,7 +32,9 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/mestre-tunas"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}" # the default for the slug is the identifier_field
+    slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -46,6 +50,8 @@ collections:
     create: true
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -61,6 +67,8 @@ collections:
     create: true
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -76,6 +84,8 @@ collections:
     create: true
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -92,7 +102,7 @@ collections:
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
     sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "Resumo: {{fileNumber}} - {{name}} - {{course}}"
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -108,6 +118,8 @@ collections:
     create: true
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
