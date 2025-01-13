@@ -120,14 +120,26 @@ collections:
     name: "contactos"
     folder: "_content/homepage"
     create: true
-    identifier_field: fileType
-    slug: "{{fileType}}"
+    identifier_field: fileName
+    slug: "{{fileName}}"
     fields:
-      - {label: "TipoDeFicheiro", name: "fileType", widget:"string" , required:"true"}
-      - {label: "NomeRP" , name: "nameRP", widget:"string" , required:"true"}
-      - {label: "ContactoRP" , name: "mobileRP", widget:"string" , required:"true"}
-      - {label: "NomeMagister", name: "nameMagister", widget:"string" , required:"true"}
-      - {label: "ContactoMagister", name: "mobileMagister", widget:"string" , required:"true"}
-      - {label: "EmailTUNAFE", name: "email", widget:"string" , required:"true"}
-      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
-      - {label: "MoradaTUNAFE", name: "address", widget:"string" , required:"true"}
+      - {label: "Titulo do Ficheiro", name: "fileName", widget:"string" , required:"true"}
+      - {label: "Nome RP" , name: "nameRP", widget:"string" , required:"true"}
+      - {label: "Contacto RP" , name: "mobileRP", widget:"string" , required:"true"}
+      - {label: "Nome Magister", name: "nameMagister", widget:"string" , required:"true"}
+      - {label: "Contacto Magister", name: "mobileMagister", widget:"string" , required:"true"}
+      - {label: "Email TUNAFE", name: "email", widget:"string" , required:"true"}
+      - {label: "Morada TUNAFE", name: "address", widget:"string" , required:"true"}
+  - label: "Ensaios"
+    name: "ensaios"
+    folder: "_content/homepage"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget:"string" , required:"true"}
+      - {label: "Dias da semana" , name: "weekDays", widget:"string" , required:"true"}
+      - {label: "Sala de ensaio" , name: "rehearsalRoom", widget:"string" , required:"true"}
+      - {label: "Sala da Tuna", name: "tunaRoom", widget:"string" , required:"true"}
+      - {label: "Hora inicio ensaio", name: "startTime", widget:"string" , required:"true"}
+      - {label: "Hora fim ensaio", name: "finishTime", widget:"string" , required:"true"}
