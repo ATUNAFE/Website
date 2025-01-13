@@ -88,6 +88,7 @@ collections:
     summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
       - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
+      - {label: "Data em que se juntou/subiu", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY", time_format: "HH:mm", hint: "Serve apenas para ordenação. Para pessoas com o mesmo dia, mudar a hora para manter a ordem"}
       - {label: "Nome" , name: "name", widget: "string"}
       - {label: "Nome Completo" , name: "nameFull", widget: "string"}
       - {label: "Nome Civil", name: "nameC", widget: "string"}
@@ -179,3 +180,19 @@ collections:
       - {label: "Sala da Tuna", name: "tunaRoom", widget: "string"}
       - {label: "Hora inicio ensaio", name: "startTime", widget: "string"}
       - {label: "Hora fim ensaio", name: "finishTime", widget: "string"}
+  # musica/repertorio
+  - label: "Repertório"
+    name: "repertorio"
+    folder: "_content/musica/repertorio"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    sortable_fields: ['name', 'author']  # use dot notation for nested fields
+    summary: "{{name}} - {{album}} - {{author}}"
+    fields:
+      - {label: "Titulo da musica", name: "name", widget: "string"}
+      - {label: "Album", name: "album", widget: "string", required: false}
+      - {label: "Autor/autora", name: "author", widget: "string", required: false}
+      - {label: "Link youtube", name: "youtube", widget: "string", required: false}
+      - {label: "Imagem" , name: "picture", widget: "string", required: false}
+      - {label: "Descrição", name: "body", widget: "markdown", required: false}
