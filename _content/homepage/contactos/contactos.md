@@ -1,5 +1,5 @@
 ---
-fileType: 'contactos'
+fileName: 'contactos'
 nameRP: 'Joana Camacho'
 mobileRP: '936 262 274'
 nameMagister: 'Ângela Coelho'

@@ -15,14 +15,14 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/magister"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}" # the default for the slug is the identifier_field
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}" # the default for the slug is the identifier_field
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -32,14 +32,14 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/mestre-tunas"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -49,14 +49,14 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/tunas"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -66,14 +66,14 @@ collections:
     folder: "_content/sobre-nos/membros/atualmente/caloiras"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -83,14 +83,14 @@ collections:
     folder: "_content/sobre-nos/membros/sempre-tunafas/mestre-tunas"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -100,14 +100,14 @@ collections:
     folder: "_content/sobre-nos/membros/sempre-tunafas/tunas"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
@@ -117,18 +117,40 @@ collections:
     folder: "_content/sobre-nos/membros/sempre-tunafas/caloiras"
     create: true
     identifier_field: name
-    slug: "{{fileNumber}}-{{slug}}"
-    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
-    summary: "{{fileNumber}} - {{name}} - {{instruments}} - {{course}}"
+    slug: "{{orderNumber}}-{{slug}}"
+    sortable_fields: ['orderNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "{{orderNumber}} - {{name}} - {{instruments}} - {{course}}"
     fields:
-      - {label: "NumeroFicheiro", name: "fileNumber", widget: "number"}
+      - {label: "Numero de Ordem", name: "orderNumber", widget: "number"}
       - {label: "Nome" , name: "name", widget: "string"}
-      - {label: "NomeCompleto" , name: "nameFull", widget: "string"}
-      - {label: "NomeCivil", name: "nameC", widget: "string"}
+      - {label: "Nome Completo" , name: "nameFull", widget: "string"}
+      - {label: "Nome Civil", name: "nameC", widget: "string"}
       - {label: "Curso", name: "course", widget: "string"}
       - {label: "Madrinha", name: "godmother", widget: "string"}
       - {label: "Instrumentos", name: "instruments", widget: "list", hint: "Lista exemplo: Magister, Bandolim, Contrabaixo"}
       - {label: "Foto", name: "picture", widget: "string"}
+  # sobre-nos/historial
+  - label: "Historial"
+    name: "historial"
+    folder: "_content/sobre-nos/historial"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Imagem" , name: "picture", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+  # sobre-nos/padrinhos
+  - label: "Padrinhos"
+    name: "padrinhos"
+    folder: "_content/sobre-nos/padrinhos"
+    create: true
+    identifier_field: fileName
+    slug: "{{fileName}}"
+    fields:
+      - {label: "Titulo do Ficheiro", name: "fileName", widget: "string"}
+      - {label: "Imagem" , name: "picture", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
   # homepage
   - label: "Contactos"
     name: "contactos"
