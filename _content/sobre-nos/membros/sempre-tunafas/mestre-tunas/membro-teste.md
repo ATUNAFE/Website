@@ -1,6 +1,7 @@
 ---
 fileNumber: '0001'
-name: 'Radaris Pizzitaiti∫  â3lotropicus HopV7erdis'
+name: 'Radar'
+nameFull: 'Radaris Pizzitaiti∫ â3lotropicus HopV7erdis'
 nameC: 'Joana Maria Oliveira Mendes'
 course: 'Eng. Química'
 godmother: 'ZÉNis Staterátis EruditusSussurradus Matrio$kus'

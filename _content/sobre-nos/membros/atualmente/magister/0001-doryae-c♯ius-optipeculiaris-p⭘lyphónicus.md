@@ -1,6 +1,7 @@
 ---
-fileNumber: "0001"
-name: Doryae C♯ius OptiPeculiaris P⭘lyphónicus
+fileNumber: "0001" 
+name: Dory
+nameFull: Doryae C♯ius OptiPeculiaris P⭘lyphónicus
 nameC: Ângela Coelho
 course: Eng. Informática e Computação
 godmother: Nobis ArsDonum YOSarcóMinuciosus Assertivus

@@ -18,6 +18,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -32,6 +33,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -46,6 +48,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -60,6 +63,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -74,6 +78,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -88,6 +93,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
@@ -102,6 +108,7 @@ collections:
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCompleto" , name: "nameFull", widget:"string" , required:"true"}
       - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
       - {label: "Curso", name: "course", widget:"string" , required:"true"}
       - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
