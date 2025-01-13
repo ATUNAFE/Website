@@ -91,6 +91,8 @@ collections:
     create: true
     identifier_field: name
     slug: "{{fileNumber}}-{{slug}}"
+    sortable_fields: ['fileNumber', 'name', 'course']  # use dot notation for nested fields
+    summary: "Resumo: {{fileNumber}} - {{name}} - {{course}}"
     fields:
       - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
       - {label: "Nome" , name: "name", widget:"string" , required:"true"}
@@ -118,7 +120,7 @@ collections:
   # homepage
   - label: "Contactos"
     name: "contactos"
-    folder: "_content/homepage"
+    folder: "_content/homepage/contactos"
     create: true
     identifier_field: fileName
     slug: "{{fileName}}"
@@ -132,7 +134,7 @@ collections:
       - {label: "Morada TUNAFE", name: "address", widget:"string" , required:"true"}
   - label: "Ensaios"
     name: "ensaios"
-    folder: "_content/homepage"
+    folder: "_content/homepage/ensaios"
     create: true
     identifier_field: fileName
     slug: "{{fileName}}"
