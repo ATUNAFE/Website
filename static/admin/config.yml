@@ -9,32 +9,101 @@ media_folder: "static/img"
 public_folder: "/img"
 
 collections:
-  - name: "empty"
-    label: "Empty"
-    folder: "_content/empty"
-    create: true
-    slug: ""
-    fields:
-      - {label: "Title" ,name: "title", widget:"string" , required:"true" }
-  - label: "Blog"
-    name: "blog"
-    folder: "content/blog"
+  - label: "Magister"
+    name: "magister"
+    folder: "_content/sobre-nos/membros/atualmente/magister"
     create: true
     identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Members"
-    name: "members"
-    folder: "_content/members"
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Atuais Mestre-Tunas"
+    name: "atuais-mestre-tunas"
+    folder: "_content/sobre-nos/membros/atualmente/mestre-tunas"
     create: true
     identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}" # the default for the slug is the identifier_field
     fields:
-      - {label: "Nome" , name: "name"}
-      - {label: "NomeCivil", name: "nameC"}
-      - {label: "Curso", name: "course"}
-      - {label: "Madrinha", name: "godmother"}
-      - {label: "Instrumentos", name: "instruments"}
-      - {label: "Foto", name: "picture"}
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Atuais Tunas"
+    name: "atuais-tunas"
+    folder: "_content/sobre-nos/membros/atualmente/tunas"
+    create: true
+    identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
+    fields:
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Atuais Caloiras"
+    name: "atuais-caloiras"
+    folder: "_content/sobre-nos/membros/atualmente/caloiras"
+    create: true
+    identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
+    fields:
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Antigas Mestre-Tunas"
+    name: "antigas-mestre-tunas"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/mestre-tunas"
+    create: true
+    identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
+    fields:
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Antigas Tunas"
+    name: "antigas-tunas"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/tunas"
+    create: true
+    identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
+    fields:
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
+  - label: "Antigas Caloiras"
+    name: "antigas-caloiras"
+    folder: "_content/sobre-nos/membros/sempre-tunafas/caloiras"
+    create: true
+    identifier_field: name
+    slug: "{{fileNumber}}-{{slug}}"
+    fields:
+      - {label: "NumeroFicheiro", name: "fileNumber", widget:"string" , required:"true"}
+      - {label: "Nome" , name: "name", widget:"string" , required:"true"}
+      - {label: "NomeCivil", name: "nameC", widget:"string" , required:"true"}
+      - {label: "Curso", name: "course", widget:"string" , required:"true"}
+      - {label: "Madrinha", name: "godmother", widget:"string" , required:"true"}
+      - {label: "Instrumentos", name: "instruments", widget:"string" , required:"true"}
+      - {label: "Foto", name: "picture", widget:"string" , required:"true"}
