@@ -195,3 +195,16 @@ collections:
       - {label: "Link youtube", name: "youtube", widget: "string", required: false}
       - {label: "Imagem" , name: "picture", widget: "string", required: false}
       - {label: "Descrição", name: "body", widget: "markdown", required: false}
+  # comunicados
+  - label: "Comunicados"
+    name: "comunicados"
+    folder: "_content/comunicados"
+    create: true
+    identifier_field: title
+    slug: "{{title}}{{date}}"
+    sortable_fields: ['title', 'date']  # use dot notation for nested fields
+    summary: "{{title}} - {{date}}"
+    fields:
+      - {label: "Titulo do comunicado", name: "title", widget: "string"}
+      - {label: "Data do evento/comunicado", name: "date", widget: "datetime", default: "{{now}}", date_format: "DD-MM-YYYY"}
+      - {label: "Link foto", name: "foto", widget: "string", required: false}
