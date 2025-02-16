@@ -1,7 +1,8 @@
-import React from "react"
+/* import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import BackgroundImage from "gatsby-background-image"
+import Image from "./image"
+
 
 const Banner = props => {
   const backgroundQuery = useStaticQuery(graphql`
@@ -30,16 +31,21 @@ const Banner = props => {
   }
 
   return (
-    <BackgroundImage
+      /*<Img
       className="banner"
+      //alt={alt}
+      style={props.style}
       fluid={{
         ...image.node.childImageSharp.fluid,
       }}
-      style={props.style}
-    >
-      {props.children}
-    </BackgroundImage>
+    />
+    
+    <Image
+    filename="tunafe.png"
+    style={{ margin: "0.5rem", width: "12rem" }}
+  />
   )
 }
 
 export default Banner
+ */
