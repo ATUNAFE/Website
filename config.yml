@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: dev
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: members
+    label: Members
+    folder: content/members
+    create: true
+    fields:
+      - { name: nome, label: Nome }
+      - { name: nomeCivil, label: NomeCivil }
+      - { name: curso, label: Curso }
+      - { name: madrinha, label: Madrinha }
+      - { name: instrumentos, label: Instrumentos }
+      - { name: foto, label: Foto }

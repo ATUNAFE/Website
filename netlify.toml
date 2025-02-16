@@ -1,0 +1,9 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+
+[context.production]
+  command = "gatsby build"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
