@@ -1,31 +1,35 @@
 # Setup Guide
 
-## Clone git repository
-The first thing you will need to do is to install the GitHub repository which can be found here. To clone it into your machine follow the steps described in [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) according to your operating system and your GitHub version.
+## Clone the Git Repository
+
+The first step is to clone the GitHub repository. Follow the instructions in [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) according to your operating system and GitHub setup.
 
 ## Dependencies
-<!-- To run the project it is required to install some dependencies. Each of them is listed below and there is a description for installing it. -->
 
 ### Docker
-To run the project it is required to install Docker. To do so follow the instructions available on the following pages according to your operating system:
-- [Mac (macOS)](https://docs.docker.com/desktop/install/mac-install/#install-and-run-docker-desktop-on-mac)
-- [Windows](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows)
-- For **Linux** there are two formats of Docker: [Docker Engine](https://docs.docker.com/engine/install/#supported-platforms) and [Docker Desktop](https://docs.docker.com/desktop/install/linux-install/#generic-installation-steps). If you prefer a graphical user interface install Docker Desktop, otherwise, install Docker Engine.
 
+Docker is required to run the project. Follow the appropriate installation instructions for your operating system:
 
-## How to run
+- **Mac (macOS)**: [Install Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/#install-and-run-docker-desktop-on-mac)
+- **Windows**: [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows)
+- **Linux**: There are two installation options:
+  - [Docker Engine](https://docs.docker.com/engine/install/#supported-platforms): Recommended if you prefer using the command line.
+  - [Docker Desktop](https://docs.docker.com/desktop/install/linux-install/#generic-installation-steps): Recommended if you prefer a graphical interface.
+
+## Running the Project
 
 ### Development Environment
-After installing all of the required dependencies, to run the project in a development environment you must open a terminal and insert the following command:
+
+Once all dependencies are installed, you can run the project in a development environment by opening a terminal in the project’s root directory (where the `Dockerfile` is located) and running the appropriate command:
 
 - **Linux**
     ```bash
     bash run.sh
     ```
 
-- **Windows/Mac (macOs)**
+- **Windows/macOS**
     ```bash
     sh run.sh
     ```
 
-To open the website go to [`localhost:8000`](http://localhost:8000/).
+After starting the application, open a browser and navigate to [localhost:8000](http://localhost:8000/) to view the website.
