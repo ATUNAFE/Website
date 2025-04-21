@@ -1,24 +1,15 @@
-<<<<<<< Updated upstream
-=======
 import React from 'react';
 import "../style/layout.css"
 import PropTypes from "prop-types"
 import HeaderLink from './header_link'
 import { Dropdown, Col, Row, Container, Image } from 'react-bootstrap';
->>>>>>> Stashed changes
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 
 import Dropdown from "react-bootstrap/Dropdown"
 
 import { FaBars } from "react-icons/fa"
 import logo from "../images/LogoTunafe.png";
 
-import Image from "./image"
 import HeaderLink from "./header_link"
 
 const Header = () => (
