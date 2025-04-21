@@ -1,16 +1,14 @@
 import React from 'react';
-import "../style/layout.css"
 import PropTypes from "prop-types"
-import HeaderLink from './header_link'
 import { Dropdown, Col, Row, Container, Image } from 'react-bootstrap';
 import { Link } from "gatsby"
-
-import Dropdown from "react-bootstrap/Dropdown"
-
 import { FaBars } from "react-icons/fa"
-import logo from "../images/LogoTunafe.png";
 
-import HeaderLink from "./header_link"
+import HeaderLink from './header_link'
+import logo from "../images/LogoTunafe.png";
+import "../style/layout.css"
+
+const backgroundColor = 'rgba(245, 245, 245, 0.5)';
 
 const Header = () => (
     <header>

@@ -7,6 +7,7 @@ import CollapsibleSection from "../components/CollapsibleSection";
 import Header from "../components/header";
 import membersBackground from "../images/IMG_4101.jpg"
 import iconTunafe from "../images/Instrumentos/Magister.png";
+import Footer from "../components/footer";
 
 const formatInstruments = (instruments) =>
     instruments.split(",")
@@ -43,9 +44,9 @@ const Members = ({ data }) => {
             <div
                 style={{
                     position: "relative",
-                    height: "55vh",  // Set the container to be half the viewport height (adjustable)
-                    overflow: "hidden",  // Hide the top half of the image
-                    width: "100%",  // Ensure it takes the full width
+                    height: "50vh",
+                    overflow: "hidden",
+                    width: "100%"
                 }}
             >
                 <Image
@@ -53,10 +54,10 @@ const Members = ({ data }) => {
                     alt="Members Background"
                     fluid
                     style={{
-                        objectFit: "cover",  // Ensures the image covers the entire container
-                        objectPosition: "bottom",  // Make sure the bottom part is visible
-                        height: "100%",  // Ensure the image fills the height of the container
-                        width: "100%",  // Ensure the image fills the width of the container
+                        objectFit: "cover",
+                        objectPosition: "bottom",
+                        height: "100%",
+                        width: "100%"
                     }}
                 />
 
@@ -66,7 +67,6 @@ const Members = ({ data }) => {
                     style={{
                         top: "50%",
                         transform: "translateY(-50%)",
-                        zIndex: 10,
                         padding: "0 20px",
                     }}
                 >
@@ -74,7 +74,7 @@ const Members = ({ data }) => {
                         <Row className="align-items-center justify-content-center text-center">
                             <Col xs="auto" className="d-flex align-items-center gap-3">
                                 <Image
-                                    src={iconTunafe} // replace with your actual path
+                                    src={iconTunafe}
                                     alt="TUNAFE"
                                     style={{
                                         width: "100px",
@@ -140,8 +140,8 @@ const Members = ({ data }) => {
                         </Col>
                     </Row>
                 </Container>
-
             </div>
+            <Footer />
         </>
     );
 };

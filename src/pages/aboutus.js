@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import logo from "../images/LogoTunafe.png";
 
 const AboutUs = ({ data }) => {
     console.log("[AboutUs] content:");
