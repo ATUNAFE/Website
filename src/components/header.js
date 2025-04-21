@@ -1,3 +1,11 @@
+<<<<<<< Updated upstream
+=======
+import React from 'react';
+import "../style/layout.css"
+import PropTypes from "prop-types"
+import HeaderLink from './header_link'
+import { Dropdown, Col, Row, Container, Image } from 'react-bootstrap';
+>>>>>>> Stashed changes
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
@@ -8,78 +16,75 @@ import Col from "react-bootstrap/Col"
 import Dropdown from "react-bootstrap/Dropdown"
 
 import { FaBars } from "react-icons/fa"
+import logo from "../images/LogoTunafe.png";
 
 import Image from "./image"
 import HeaderLink from "./header_link"
 
 const Header = () => (
-  <header>
-    <Container fluid style={{ margin: "0", padding: "0", width: "100%" }}>
-      <Row style={{ margin: "0", padding: "0" }}>
-        <Col></Col>
-        <Col
-          style={{
-            padding: "0.5rem",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Link to="/">
-            <Image
-              filename="LogoTunafe.png"
-              style={{ margin: "0", width: "5.5rem" }}
-            />
-          </Link>
-        </Col>
-        <Col id="siteMenu">
-          <HeaderLink link="/aboutus" context="Sobre Nós" />
-          <HeaderLink link="/events" context="Eventos" />
-          <HeaderLink link="/music" context="Música" />
-        </Col>
-        <Col id="mobileMenu">
-          <Dropdown>
-            <Dropdown.Toggle id="menuIcon">
-              <FaBars></FaBars>
-            </Dropdown.Toggle>
+    <header>
+        <Container fluid style={{ margin: "0", padding: "0", width: "100%" }}>
+            <Row style={{
+                margin: "0",
+                padding: "0",
+                height: '77px',
+                width: '100%',
+                position: 'fixed',
+                backgroundColor,
+                zIndex: 10,
+                transition: 'backgroundColor 0.5s ease', // Smooth transition
+            }}>
+                <Col></Col>
+                <Col
+                    style={{
+                        padding: "0.5rem",
+                        display: "flex",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Link to="/">
+                        <Image
+                            src={logo}
+                            alt="Logo"
+                            fluid
+                            style={{
+                                maxHeight: "60px", // explicitly limit image height
+                                height: "100%",
+                                width: "auto",
+                                objectFit: "contain",
+                            }}
+                        />
+                    </Link>
+                </Col>
+                <Col id="siteMenu">
+                    <HeaderLink link="/aboutus" context="Sobre Nós" />
+                    <HeaderLink link="/events" context="Eventos" />
+                    <HeaderLink link="/music" context="Música" />
+                </Col>
+                <Col id="mobileMenu">
+                    <Dropdown>
+                        <Dropdown.Toggle id="menuIcon">
+                            <FaBars></FaBars>
+                        </Dropdown.Toggle>
 
-            <Dropdown.Menu id="menu">
-              <HeaderLink link="/aboutus" context="Sobre Nós" />
-              <HeaderLink link="/events" context="Eventos" />
-              <HeaderLink link="/music" context="Música" />
-            </Dropdown.Menu>
-          </Dropdown>
-          {/* <Button variant="outline-secondary"><FaBars></FaBars></Button>
-          <div
-            style={{
-              padding:'1rem',
-              height:'10rem',
-              display: 'flex',
-              flexDirection:'column',
-              justifyContent: 'space-around',
-              alignItems: 'flex-start',
-              backgroundColor: 'var(--tunafe-light)',
-              position:'absolute',
-              top: '5rem',
-              right:'0',
-              borderRadius: '0.5rem'
-            }}
-          >
-            <HeaderLink link="/aboutus" context="Sobre Nós"/>
-            <HeaderLink link="/events" context="Eventos"/>
-            <HeaderLink link="/music" context="Música"/>
-          </div> */}
-        </Col>
-      </Row>
-    </Container>
-  </header>
+                        <Dropdown.Menu id="menu">
+                            <HeaderLink link="/aboutus" context="Sobre Nós" />
+                            <HeaderLink link="/events" context="Eventos" />
+                            <HeaderLink link="/music" context="Música" />
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Col>
+            </Row>
+        </Container>
+    </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }
 
 export default Header

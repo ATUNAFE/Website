@@ -5,3 +5,15 @@
  */
 
 // You can delete this file if you're not using it
+import React from "react";
+
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <link
+      key="google-fonts"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  ]);
+};
+

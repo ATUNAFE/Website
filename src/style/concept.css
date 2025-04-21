@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root{
+    --dark-green: #00893B;
+    --light-green: #6DB28B;
+    --dark-engineer: #892B18;
+    --light-engineer: #995345;
+    --dark-neutral: #2A2A2A;
+    --light-neutral: #F0F0F0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body, p, span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+}

@@ -27,7 +27,6 @@ const HomePage = () => (
         padding: "1rem",
       }}
     >
-      <h2>Comunicados</h2>
     </div>
     <div
       style={{
