@@ -1,19 +1,19 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
-import noPicture from "../images/SemFoto.png";
+import { Card, Col, Row, Image } from "react-bootstrap";
+import noPicture from "../../images/SemFoto.png";
 
 // Import all static instruments icons
-import acordeao from "../images/Instrumentos/AcordeaoCor.png";
-import bandolim from "../images/Instrumentos/BandolimCor.png";
-import cavaquinho from "../images/Instrumentos/CavaquinhoCor.png";
-import contrabaixo from "../images/Instrumentos/ContrabaixoCor.png";
-import estandarte from "../images/Instrumentos/EstandarteCor.png";
-import flauta from "../images/Instrumentos/FlautaCor.png";
-import guitarra from "../images/Instrumentos/GuitarraCor.png";
-import pandeireta from "../images/Instrumentos/PandeiretaCor.png";
-import percussao from "../images/Instrumentos/PercussaoCor.png";
-import violino from "../images/Instrumentos/ViolinoCor.png";
-import magister from "../images/Instrumentos/MagisterCor.png";
+import acordeao from "../../images/Instrumentos/AcordeaoCor.png";
+import bandolim from "../../images/Instrumentos/BandolimCor.png";
+import cavaquinho from "../../images/Instrumentos/CavaquinhoCor.png";
+import contrabaixo from "../../images/Instrumentos/ContrabaixoCor.png";
+import estandarte from "../../images/Instrumentos/EstandarteCor.png";
+import flauta from "../../images/Instrumentos/FlautaCor.png";
+import guitarra from "../../images/Instrumentos/GuitarraCor.png";
+import pandeireta from "../../images/Instrumentos/PandeiretaCor.png";
+import percussao from "../../images/Instrumentos/PercussaoCor.png";
+import violino from "../../images/Instrumentos/ViolinoCor.png";
+import magister from "../../images/Instrumentos/MagisterCor.png";
 
 const instrumentImages = {
     acordeao,
@@ -58,17 +58,17 @@ const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) =>
                         <div className="mt-auto">
                             <Card.Text className="mb-2" style={{
                                 fontSize: "12px"
-                            }}>Nome: {nameC}</Card.Text>
+                            }}>Nome: {nameC || "-"}</Card.Text>
                             <Card.Text className="mb-2" style={{
                                 fontSize: "12px"
-                            }}>Curso: {course}</Card.Text>
+                            }}>Curso: {course || "-"}</Card.Text>
                             <Card.Text className="mb-2" style={{
                                 fontSize: "12px"
-                            }}>Madrinha: {godmother}</Card.Text>
+                            }}>Madrinha: {godmother || "-"}</Card.Text>
 
                             <div className="d-flex gap-2 mt-3 flex-wrap">
                                 {instruments?.map((instrument, index) => (
-                                    <img
+                                    <Image
                                         key={index}
                                         src={instrumentImages[instrument]}
                                         alt={instrument}

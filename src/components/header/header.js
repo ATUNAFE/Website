@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import { Dropdown, Col, Row, Container, Image } from 'react-bootstrap';
 import { Link } from "gatsby";
 import { FaBars } from "react-icons/fa";
@@ -10,7 +9,7 @@ import "../../style/layout.css";
 
 const backgroundColor = 'rgba(245, 245, 245, 0.5)';
 
-const Header = () => (
+const Header = ({ siteTitle = '' }) => (
     <header>
         <Container fluid style={{ margin: "0", padding: "0", width: "100%" }}>
             <Row style={{
@@ -67,13 +66,5 @@ const Header = () => (
         </Container>
     </header>
 );
-
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-    siteTitle: ``,
-};
 
 export default Header;
