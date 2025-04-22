@@ -28,6 +28,45 @@ body {
   height: auto;
 }
 
+.dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--dark-neutral) !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.25rem !important;
+}
+
+.dropdown-menu {
+  margin-top: 15px !important;
+  background-color: rgba(245, 245, 245, 0.5) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--dark-neutral) !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;  /* Shows the dropdown menu when the parent is hovered */
+  visibility: visible !important; /* Ensures visibility */
+  opacity: 1 !important; /* Ensures the dropdown is visible */
+}
+
+/* Remove the dropdown arrow */
+.dropdown-toggle::after {
+  display: none !important; /* Hides the arrow icon */
+}
+
+.dropdown-item:active{
+  color: var(--light-neutral) !important;
+  background-color: var(--dark-neutral) !important;
+}
+
+.dropdown-item:hover{
+  color: var(--dark-neutral) !important;
+  background-color: var(--light-neutral) !important;
+}
+
 #siteMenu {
   display: flex;
   justify-content: space-around;
