@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-import instagramIcon from "../images/Páginas/InstaB.png";
-import facebookIcon from "../images/Páginas/FacebookB.png";
-import youtubeIcon from "../images/Páginas/YoutubeB.png";
-import linkedinIcon from "../images/Páginas/LinkedinB.png";
-import spotifyIcon from "../images/Páginas/SpotifyB.png";
+import instagramIcon from "../../images/Páginas/InstaB.png";
+import facebookIcon from "../../images/Páginas/FacebookB.png";
+import youtubeIcon from "../../images/Páginas/YoutubeB.png";
+import linkedinIcon from "../../images/Páginas/LinkedinB.png";
+import spotifyIcon from "../../images/Páginas/SpotifyB.png";
 
 const FollowUs = () => (
     <Container>

@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import { Dropdown, Col, Row, Container, Image } from 'react-bootstrap';
-import { Link } from "gatsby"
-import { FaBars } from "react-icons/fa"
+import { Link } from "gatsby";
+import { FaBars } from "react-icons/fa";
 
-import HeaderLink from './header_link'
-import logo from "../images/LogoTunafe.png";
-import "../style/layout.css"
+import HeaderLink from './header-link';
+import logo from "../../images/LogoTunafe.png";
+import "../../style/layout.css";
 
 const backgroundColor = 'rgba(245, 245, 245, 0.5)';
 
@@ -66,14 +66,14 @@ const Header = () => (
             </Row>
         </Container>
     </header>
-)
+);
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
     siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

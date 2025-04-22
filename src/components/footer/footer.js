@@ -1,10 +1,10 @@
 import React from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
 
-import "../style/concept.css";
-import logoFeup from "../images/Logos/LogoFEUPbranco.png";
-import logoIPDJ from "../images/Logos/LogoIPDJ.png";
-import logoTunafe from "../images/LogoTunafe.png";
+import "../../style/concept.css";
+import logoFeup from "../../images/Logos/LogoFEUPbranco.png";
+import logoIPDJ from "../../images/Logos/LogoIPDJ.png";
+import logoTunafe from "../../images/LogoTunafe.png";
 import Contacts from "./contacts";
 import FollowUs from "./follow-us";
 

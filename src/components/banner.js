@@ -1,45 +1,87 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Row, Col, Container, Image } from "react-bootstrap"
 
-import BackgroundImage from "gatsby-background-image"
+const Banner = ({
+  title,
+  subtitle,
+  icon,
+  backgroundImage,
+  backgroundColor,
+}) => (
+  	<>
+		<div
+			style={{
+				position: "relative",
+				height: "50vh",
+				overflow: "hidden",
+				width: "100%",
+			}}
+		>
+			<Image
+				src={backgroundImage}
+				alt="Members Background"
+				fluid
+				style={{
+					objectFit: "cover",
+					objectPosition: "bottom",
+					height: "100%",
+					width: "100%",
+				}}
+			/>
 
-const Banner = props => {
-  const backgroundQuery = useStaticQuery(graphql`
-    query BackgroundQuery {
-      data: allFile {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+			{/* Title and Icon Container */}
+			<div
+				className="position-absolute w-100"
+				style={{
+					top: "50%",
+					transform: "translateY(-50%)",
+					padding: "0 20px",
+				}}
+			>
+				<Container>
+					<Row className="align-items-center justify-content-center text-center">
+						<Col xs="auto" className="d-flex align-items-center gap-3">
+							<Image
+								src={icon}
+								alt="TUNAFE"
+								style={{
+									width: "100px",
+									height: "100px",
+									objectFit: "cover",
+								}}
+							/>
+							<h3
+								style={{
+									fontSize: "3rem",
+									fontWeight: "bold",
+									color: "var(--light-neutral)",
+									margin: 0,
+								}}
+							>
+								{title}
+							</h3>
+						</Col>
+					</Row>
+				</Container>
+      		</div>
+    	</div>
+		<Container
+			fluid
+			className="d-flex justify-content-center align-items-center p-5"
+			style={{
+				backgroundColor,
+				color: "var(--light-neutral)",
+			}}
+		>
+			<Row className="w-100 text-center">
+				<Col>
+					<h4>
+						{subtitle}
+					</h4>
+				</Col>
+			</Row>
+		</Container>
+  	</>
+);
 
-  const image = backgroundQuery.data.edges.find(n => {
-    return n.node.relativePath.includes(props.picturePath)
-  })
-
-  if (!image) {
-    return null
-  }
-
-  return (
-    <BackgroundImage
-      className="banner"
-      fluid={{
-        ...image.node.childImageSharp.fluid,
-      }}
-      style={props.style}
-    >
-      {props.children}
-    </BackgroundImage>
-  )
-}
-
-export default Banner
+export default Banner;
