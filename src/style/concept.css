@@ -21,3 +21,11 @@ body, p, span {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
 }
+
+.custom-button {
+    background-color: var(--light-green) !important;
+    border: none !important;
+    color: var(--light-neutral) !important;
+    white-space: normal !important;
+    font-size: 30px !important;
+}
