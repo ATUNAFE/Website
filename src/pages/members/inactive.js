@@ -20,17 +20,80 @@ export const inactiveMembers = graphql`
 				}
 			}
 		}
+		mestreTunas: allMarkdownRemark(
+			filter: {fileAbsolutePath: {regex: "/sobre-nos/membros/antigas/mestreTunas/"}}
+			sort: { frontmatter: { date: ASC } }
+		) {
+			nodes {
+				frontmatter {
+					date
+					name
+					nameC
+					course
+					godmother
+					instruments
+					picture
+				}
+			}
+		}
+		tunas: allMarkdownRemark(
+			filter: {fileAbsolutePath: {regex: "/sobre-nos/membros/antigas/tunas/"}}
+			sort: { frontmatter: { date: ASC } }
+		) {
+			nodes {
+				frontmatter {
+					date
+					name
+					nameC
+					course
+					godmother
+					instruments
+					picture
+				}
+			}
+		}
+		caloiras: allMarkdownRemark(
+			filter: {fileAbsolutePath: {regex: "/sobre-nos/membros/antigas/caloiras/"}}
+			sort: { frontmatter: { date: ASC } }
+		) {
+			nodes {
+				frontmatter {
+					date
+					name
+					nameC
+					course
+					godmother
+					instruments
+					picture
+				}
+			}
+		}
 	}
 `;
 
 const InactiveMembers = () => {
-    const { fundadoras } = useStaticQuery(inactiveMembers);
+    const { fundadoras, mestreTunas, tunas, caloiras } = useStaticQuery(inactiveMembers);
 	
 	const sections = [
 		{
 			collapsible: true,
 			members: formatMembers(fundadoras.nodes),
 			title: "Fundadoras"
+		},
+		{
+			collapsible: true,
+			members: formatMembers(mestreTunas.nodes),
+			title: "Mestre-Tunas"
+		},
+		{
+			collapsible: true,
+			members: formatMembers(tunas.nodes),
+			title: "Tunas"
+		},
+		{
+			collapsible: true,
+			members: formatMembers(caloiras.nodes),
+			title: "Caloiras"
 		}
 	];
 
