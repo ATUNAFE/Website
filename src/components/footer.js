@@ -11,24 +11,26 @@ import FollowUs from "./follow-us";
 const Footer = () => (
 	<footer style={{
 		backgroundColor: "var(--dark-neutral)",
-		color: "var(--light-neutral)"
+		color: "var(--light-neutral)",
+		padding: "2rem 0", // adiciona espaço interno
 	}}>
-		<Container className="p-6" style={{ margin: "0", padding: "0", height: "100%" }}>
+	
+		<Container>
 			{/* Contacts */}
 			<Row className="justify-content-md-center">
-				<Col>
+				<Col xs={12} md={4}>
 					<h5>Contactos</h5>
 					<Contacts />
 				</Col>
 
-				<Col className="d-flex flex-column">
+				<Col xs={12} md={4} className="d-flex flex-column">
   					<h5>Segue-nos</h5>
   					<div className="d-flex flex-column justify-content-center flex-grow-1">
     					<FollowUs />
   					</div>
 				</Col>
 
-				<Col className="d-flex flex-column justify-content-center align-items-start">
+				<Col xs={12} md={4} className="d-flex flex-column justify-content-center align-items-start">
 					<Row className="mb-2 ms-4">
 						<Col xs="6" md="4" className="ps-0 text-start">
 							<Image
@@ -77,8 +79,8 @@ const Footer = () => (
 					</Row>
 				</Col>
 			</Row>
-			<Row>
-				<span>TUNAFE - Desde 1991+1</span>
+			<Row className="text-center">
+				<small>TUNAFE - Desde 1991+1</small>
 			</Row>
 		</Container>
 	</footer>

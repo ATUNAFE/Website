@@ -4,10 +4,9 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 
 import MemberCard from "../components/MemberCard";
 import CollapsibleSection from "../components/CollapsibleSection";
-import Header from "../components/header";
 import membersBackground from "../images/IMG_4101.jpg"
 import iconTunafe from "../images/Instrumentos/Magister.png";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 const formatInstruments = (instruments) =>
     instruments.split(",")
@@ -39,8 +38,7 @@ const Members = ({ data }) => {
 
 
     return (
-        <>
-            <Header />
+        <Layout>
             <div
                 style={{
                     position: "relative",
@@ -116,7 +114,7 @@ const Members = ({ data }) => {
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)"
             }}>
-                <Container>
+                <Container className="mt-4">
                     <Row className="justify-content-center">
                         <Col xs={12} md={10} lg={8}>
                             <CollapsibleSection title="Magister">
@@ -135,14 +133,12 @@ const Members = ({ data }) => {
                                 {renderMembers(caloiras)}
                             </CollapsibleSection>
 
-                            <CollapsibleSection title="Aprendizes..." enabled={false}>
-                            </CollapsibleSection>
+                            <CollapsibleSection title="Aprendizes..." enabled={false} />
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <Footer />
-        </>
+        </Layout>
     );
 };
 
