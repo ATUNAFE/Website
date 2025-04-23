@@ -9,47 +9,50 @@ import spotifyIcon from "../../images/Páginas/SpotifyB.png";
 
 const FollowUs = () => (
     <Container>
-        <Row className="justify-content-md-center m-2">
-            <Col xs lg="2" className="text-end">
+        <h5 className="text-start mb-4" style={{ fontWeight: "bold" }}>Segue-nos</h5>
+        <Row className="justify-content-md-start mb-2">
+            <Col xs="5" md="3" className="text-center">
                 <Image
                     src={instagramIcon}
                     alt="Instagram"
-                    style={{ maxHeight: "40px" }}
+                    style={{ 
+                        height: "45px"
+                    }}
                     fluid
                 />
             </Col>
-            <Col md="auto" className="text-center">
+            <Col xs="5" md="3" className="text-center">
                 <Image
                     src={facebookIcon}
                     alt="Facebook"
-                    style={{ maxHeight: "40px" }}
+                    style={{ maxHeight: "45px" }}
                     fluid
                 />
             </Col>
-            <Col xs lg="2" className="text-start">
+            <Col xs="5" md="3" className="text-center">
                 <Image
                     src={youtubeIcon}
                     alt="Youtube"
-                    style={{ maxHeight: "40px" }}
+                    style={{ maxHeight: "45px" }}
                     fluid
                 />
             </Col>
         </Row>
 
-        <Row className="justify-content-md-center mt-4 mb-2 my-2">
-            <Col xs lg="2" className="text-end">
+        <Row className="justify-content-md-start mt-4 mb-2 my-2">
+            <Col xs="5" md="3" className="text-center">
                 <Image
                     src={linkedinIcon}
                     alt="Linkedin"
-                    style={{ maxHeight: "40px" }}
+                    style={{ maxHeight: "45px" }}
                     fluid
                 />
             </Col>
-            <Col md="auto" className="text-center">
+            <Col xs="5" md="3" className="text-center">
                 <Image
                     src={spotifyIcon}
                     alt="Spotify"
-                    style={{ maxHeight: "40px" }}
+                    style={{ maxHeight: "45px" }}
                     fluid
                 />
             </Col>

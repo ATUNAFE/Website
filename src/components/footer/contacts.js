@@ -8,10 +8,11 @@ import addressIcon from "../../images/Páginas/MoradaB.png";
 // TODO: Tornar os contactos em Markdown para ser editável
 
 const Contacts = () => (
-    <Container style={{ fontSize: "12px" }}>
+    <Container style={{ fontSize: "13px" }}>
+        <h5 className="text-start" style={{ fontWeight: "bold" }}>Contactos</h5>
         {/* RP */ }
         <Row className="align-items-center mb-2" >
-            <Col xs="6" md="4" className="text-end">
+            <Col xs="4" md="2" className="text-center">
                 <Image
                 src={phoneIcon}
                 alt="Phone"
@@ -19,7 +20,7 @@ const Contacts = () => (
                 fluid
                 />
             </Col>
-            <Col xs="12" md="8" className="text-start">
+            <Col xs="14" md="10" className="text-start">
                 <p className="mb-0">Beatriz Remondes (Relações Públicas)</p>
                 <p className="mb-0">917912918</p>
             </Col>
@@ -27,7 +28,7 @@ const Contacts = () => (
 
         {/* Magister */ }
         <Row className="align-items-center mb-2">
-            <Col xs="6" md="4" className="text-end">
+            <Col xs="4" md="2" className="text-center">
                 <Image
                 src={phoneIcon}
                 alt="Phone"
@@ -35,7 +36,7 @@ const Contacts = () => (
                 fluid
                 />
             </Col>
-            <Col xs="12" md="8" className="text-start">
+            <Col xs="14" md="10" className="text-start">
                 <p className="mb-0">Ana Rita Marques (Magister)</p>
                 <p className="mb-0">917912918</p>
             </Col>
@@ -43,7 +44,7 @@ const Contacts = () => (
 
         {/* E-mail */}
         <Row className="align-items-center mb-2">
-            <Col xs="6" md="4" className="text-end">
+            <Col xs="4" md="2" className="text-center">
                 <Image
                 src={mailIcon}
                 alt="Phone"
@@ -51,14 +52,14 @@ const Contacts = () => (
                 fluid
                 />
             </Col>
-            <Col xs="12" md="8" className="text-start">
+            <Col xs="14" md="10" className="text-start">
                 <p className="mb-0">tunafe@fe.up.pt</p>
             </Col>
         </Row>
 
         {/* Morada */ }
         <Row className="align-items-center">
-            <Col xs="6" md="4" className="text-end">
+            <Col xs="4" md="2" className="text-center">
                 <Image
                 src={addressIcon}
                 alt="Phone"
@@ -66,7 +67,7 @@ const Contacts = () => (
                 fluid
                 />
             </Col>
-            <Col xs="12" md="8" className="text-start">
+            <Col xs="14" md="10" className="text-start">
                 <p className="mb-0">Faculdade de Engenharia</p>
                 <p className="mb-0">Rua Dr. Roberto Frias, s/n</p>
                 <p className="mb-0">4200-465 Porto - Portugal</p>

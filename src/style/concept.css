@@ -26,6 +26,13 @@ body, p, span {
     background-color: var(--light-green) !important;
     border: none !important;
     color: var(--light-neutral) !important;
-    white-space: normal !important;
-    font-size: 30px !important;
+    width: 50% !important;
+    height: 100px !important;
+    font-size: x-large !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem !important;
+    border-radius: 15px !important;
 }

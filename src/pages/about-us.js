@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,13 +9,48 @@ import iconTunafe from "../images/Instrumentos/Magister.png";
 import Banner from "../components/banner";
 import History from "../components/about-us/history";
 import AllMembers from "../components/about-us/all-members";
+import Godparents from "../components/about-us/godparents";
+import TIET from "../components/about-us/tiet";
+import Rehearsals from "../components/about-us/rehearsals";
 
-const AboutUs = ({ data }) => {
-	console.log("[AboutUs] content:");
-	console.log(data);
-	const content = data.markdownRemark.html;
-	console.log(content);
+export const aboutUsQuery = graphql`
+    query AboutUsQuery {
+		history: markdownRemark(frontmatter: {fileName: {eq: "historial"}}) {
+			html
+			frontmatter {
+				title
+				citation {
+					text
+					author
+				}
+			}
+		}
+		allMembers: markdownRemark(frontmatter: {fileName: {eq: "todosMembros"}}) {
+			html
+		}
+		godparents: markdownRemark(frontmatter: {fileName: {eq: "padrinhos"}}) {
+			html
+		}
+		tiet: markdownRemark(frontmatter: {fileName: {eq: "tiet"}}) {
+			html
+		}
+		rehearsals: markdownRemark(frontmatter: {fileName: {eq: "ensaios"}}) {
+			html
+			frontmatter {
+				weekDays
+				rehearsalRoom
+				tunaRoom
+				startTime
+				finishTime
+			}
+		}
+	}
+`;
 
+const AboutUs = () => {
+	const { history, allMembers, godparents, tiet, rehearsals } = useStaticQuery(aboutUsQuery);
+	console.log("[HISTORY] history:");
+	console.log(history);
 	return (
 		<Layout>
 			<Banner
@@ -27,12 +62,36 @@ const AboutUs = ({ data }) => {
 			/>
 
 			<div className="py-4" style={{ backgroundColor: "var(--light-neutral)" }}>
-				<History />
+				<History
+					title={history.frontmatter.title}
+					citation={history.frontmatter.citation}
+					html={history.html} 
+				/>
 			</div>
 
 			<div className="py-4" style={{ backgroundColor: "var(--dark-neutral)" }}>
-				<AllMembers />
+				<AllMembers html={allMembers.html} />
 			</div>
+
+			<div className="py-4" style={{ backgroundColor: "var(--light-neutral)" }}>
+				<Godparents html={godparents.html} />
+			</div>
+
+			<div className="py-4" style={{ backgroundColor: "var(--dark-neutral)" }}>
+				<TIET html={tiet.html} />
+			</div>
+
+			<div className="py-4" style={{ backgroundColor: "var(--light-neutral)" }}>
+				<Rehearsals
+					weekDays={rehearsals.frontmatter.weekDays}
+					rehearsalRoom={rehearsals.frontmatter.rehearsalRoom}
+					tunaRoom={rehearsals.frontmatter.tunaRoom}
+					startTime={rehearsals.frontmatter.startTime}
+					finishTime={rehearsals.frontmatter.finishTime}
+					html={rehearsals.html}
+				/>
+			</div>
+
 			{/* <Seo title="AboutUs" />
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>
@@ -56,16 +115,4 @@ const AboutUs = ({ data }) => {
 	);
 }
 
-export default AboutUs
-
-export const aboutUsQuery = graphql`
-query AboutUsQuery {
-  markdownRemark(frontmatter: { fileName: { eq: "historial" } }) {
-    frontmatter {
-      fileName
-    }
-    html
-    id
-  }
-}
-`
+export default AboutUs;

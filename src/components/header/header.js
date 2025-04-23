@@ -59,7 +59,7 @@ const Header = ({ siteTitle = '' }) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="dropdown-menu">
-                <Dropdown.Item className="dropdown-item" href="/404">Historial</Dropdown.Item>
+                <Dropdown.Item className="dropdown-item" href="/aboutus/history">Historial</Dropdown.Item>
                 <Dropdown.Item href="/members/active">Membros</Dropdown.Item>
                 <Dropdown.Item href="/404">Padrinhos</Dropdown.Item>
                 <Dropdown.Item href="/404">Tudo Isto É Tuna</Dropdown.Item>

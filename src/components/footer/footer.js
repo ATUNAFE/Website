@@ -18,19 +18,16 @@ const Footer = () => (
 		<Container>
 			{/* Contacts */}
 			<Row className="justify-content-md-center">
-				<Col xs={12} md={4}>
-					<h5>Contactos</h5>
+				<Col xs={1} />
+				<Col xs={10} md={3}>
 					<Contacts />
 				</Col>
 
-				<Col xs={12} md={4} className="d-flex flex-column">
-  					<h5>Segue-nos</h5>
-  					<div className="d-flex flex-column justify-content-center flex-grow-1">
-    					<FollowUs />
-  					</div>
+				<Col xs={10} md={3} className="d-flex flex-column">
+    				<FollowUs />
 				</Col>
 
-				<Col xs={12} md={4} className="d-flex flex-column justify-content-center align-items-start">
+				<Col xs={10} md={3} className="d-flex flex-column justify-content-center align-items-start">
 					<Row className="mb-2 ms-4">
 						<Col xs="6" md="4" className="ps-0 text-start">
 							<Image
@@ -38,14 +35,14 @@ const Footer = () => (
 								alt="TUNAFE"
 								fluid
 								style={{
-									maxHeight: "70px",
+									maxHeight: "60px",
 									height: "auto",
 									width: "auto",
 									objectFit: "contain",
 								}}
 							/>
 						</Col>
-						<Col xs="12" md="8" className="ps-0 text-start">
+						<Col xs="12" md="8" className="ps-0 pb-2 d-flex flex-column justify-content-end text-start" style={{ fontSize: "12px" }}>
 								<p className="mb-0">Tuna Feminina de Engenharia</p>
 								<p className="mb-0">da Universidade do Porto</p>
 						</Col>
@@ -70,7 +67,7 @@ const Footer = () => (
 							alt="IPDJ"
 							fluid
 							style={{
-								maxHeight: "70px",
+								maxHeight: "60px",
 								height: "auto",
 								width: "auto",
 								objectFit: "contain",
