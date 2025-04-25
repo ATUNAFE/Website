@@ -1,14 +1,9 @@
 import React from "react"
-import { Row, Col, Container, Image } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
+import CustomImage from "./images/image";
 
-const Banner = ({
-  title,
-  subtitle,
-  icon,
-  backgroundImage,
-  backgroundColor,
-}) => (
-  	<>
+const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => (
+	<>
 		<div
 			style={{
 				position: "relative",
@@ -17,10 +12,9 @@ const Banner = ({
 				width: "100%",
 			}}
 		>
-			<Image
-				src={backgroundImage}
+			<CustomImage
+				filename={backgroundImage}
 				alt="Members Background"
-				fluid
 				style={{
 					objectFit: "cover",
 					objectPosition: "bottom",
@@ -41,8 +35,8 @@ const Banner = ({
 				<Container>
 					<Row className="align-items-center justify-content-center text-center">
 						<Col xs="auto" className="d-flex align-items-center gap-3">
-							<Image
-								src={icon}
+							<CustomImage
+								filename={icon}
 								alt="TUNAFE"
 								style={{
 									width: "100px",
@@ -63,8 +57,8 @@ const Banner = ({
 						</Col>
 					</Row>
 				</Container>
-      		</div>
-    	</div>
+			</div>
+		</div>
 		<Container
 			fluid
 			className="d-flex justify-content-center align-items-center p-5"
@@ -81,7 +75,7 @@ const Banner = ({
 				</Col>
 			</Row>
 		</Container>
-  	</>
+	</>
 );
 
 export default Banner;

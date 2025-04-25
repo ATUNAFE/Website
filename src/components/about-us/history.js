@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const History = ({ title, citation, html }) => (
     <div style={{
@@ -9,7 +10,7 @@ const History = ({ title, citation, html }) => (
         backgroundColor: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename="pages/HistorialP.png"
+            filename={IMAGE_FILENAMES.pages.black.historial}
             style={{
                 position: "absolute",
                 top: "50%",
@@ -29,7 +30,7 @@ const History = ({ title, citation, html }) => (
             <Row>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
                     <CustomImage
-                        filename="logos/tunafe.png"
+                        filename={IMAGE_FILENAMES.logos.color.tunafe}
                         alt="TUNAFE"
                     />
                 </Col>

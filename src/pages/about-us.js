@@ -3,15 +3,14 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import logo from "../images/logos/tunafe.png";
 import background from "../images/IMG_4101.jpg";
-import iconTunafe from "../images/Instrumentos/Magister.png";
 import Banner from "../components/banner";
 import History from "../components/about-us/history";
 import AllMembers from "../components/about-us/all-members";
 import Godparents from "../components/about-us/godparents";
 import TIET from "../components/about-us/tiet";
 import Rehearsals from "../components/about-us/rehearsals";
+import { IMAGE_FILENAMES } from "../utils/constants";
 
 export const aboutUsQuery = graphql`
     query AboutUsQuery {
@@ -56,7 +55,7 @@ const AboutUs = () => {
 			<Banner
 				title="Sobre Nós"
 				subtitle={"some"}
-				icon={iconTunafe}
+				icon={IMAGE_FILENAMES.instruments.white.magister}
 				backgroundImage={background}
 				backgroundColor="var(--light-green)"
 			/>

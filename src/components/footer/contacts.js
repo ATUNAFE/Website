@@ -1,23 +1,21 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
-import phoneIcon from "../../images/pages/TelefoneB.png";
-import mailIcon from "../../images/pages/MailB.png";
-import addressIcon from "../../images/pages/MoradaB.png";
+import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 // TODO: Tornar os contactos em Markdown para ser editável
 
 const Contacts = () => (
     <Container style={{ fontSize: "13px" }}>
         <h5 className="text-start" style={{ fontWeight: "bold" }}>Contactos</h5>
-        {/* RP */ }
+        {/* RP */}
         <Row className="align-items-center mb-2" >
             <Col xs="4" md="2" className="text-center">
-                <Image
-                src={phoneIcon}
-                alt="Phone"
-                style={{ maxHeight: "24px" }}
-                fluid
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.telefone}
+                    alt="Phone"
+                // style={{ maxHeight: "24px" }}
                 />
             </Col>
             <Col xs="14" md="10" className="text-start">
@@ -26,14 +24,13 @@ const Contacts = () => (
             </Col>
         </Row>
 
-        {/* Magister */ }
+        {/* Magister */}
         <Row className="align-items-center mb-2">
             <Col xs="4" md="2" className="text-center">
-                <Image
-                src={phoneIcon}
-                alt="Phone"
-                style={{ maxHeight: "24px" }}
-                fluid
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.telefone}
+                    alt="Phone"
+                // style={{ maxHeight: "24px" }}
                 />
             </Col>
             <Col xs="14" md="10" className="text-start">
@@ -45,11 +42,10 @@ const Contacts = () => (
         {/* E-mail */}
         <Row className="align-items-center mb-2">
             <Col xs="4" md="2" className="text-center">
-                <Image
-                src={mailIcon}
-                alt="Phone"
-                style={{ maxHeight: "24px" }}
-                fluid
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.mail}
+                    alt="Phone"
+                    // style={{ maxHeight: "24px" }}
                 />
             </Col>
             <Col xs="14" md="10" className="text-start">
@@ -57,14 +53,13 @@ const Contacts = () => (
             </Col>
         </Row>
 
-        {/* Morada */ }
+        {/* Morada */}
         <Row className="align-items-center">
             <Col xs="4" md="2" className="text-center">
-                <Image
-                src={addressIcon}
-                alt="Phone"
-                style={{ maxHeight: "24px" }}
-                fluid
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.morada}
+                    alt="Phone"
+                    // style={{ maxHeight: "24px" }}
                 />
             </Col>
             <Col xs="14" md="10" className="text-start">

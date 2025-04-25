@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 
 import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const Godparents = ({ html }) => (
     <div style={{
@@ -33,7 +34,7 @@ const Godparents = ({ html }) => (
                 </Col>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
                     <CustomImage
-                        filename="logos/teup.png"
+                        filename={IMAGE_FILENAMES.logos.color.teup}
                         alt="TEUP"
                     />
                 </Col>

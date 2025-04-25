@@ -3,6 +3,7 @@ import { navigate } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const TIET = ({ html }) => (
     <div style={{
@@ -11,7 +12,7 @@ const TIET = ({ html }) => (
         color: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename="pages/TIETB.png"
+            filename={IMAGE_FILENAMES.pages.white.tiet}
             style={{
                 position: "absolute",
                 top: "50%",
@@ -30,7 +31,7 @@ const TIET = ({ html }) => (
             <Row>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
                     <CustomImage
-                        filename="logos/tiet-white.png"
+                        filename={IMAGE_FILENAMES.logos.white.tiet}
                         alt="TIET"
                     />
                 </Col>

@@ -3,6 +3,7 @@ import { navigate } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const AllMembers = ({ html }) => (
     <div style={{
@@ -11,7 +12,7 @@ const AllMembers = ({ html }) => (
         color: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename="pages/MembrosB.png"
+            filename={IMAGE_FILENAMES.pages.white.membros}
             style={{
                 position: "absolute",
                 top: "50%",

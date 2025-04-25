@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 
 import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, html }) => (
     <div style={{
@@ -9,7 +10,7 @@ const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, 
         backgroundColor: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename="pages/EnsaiosP.png"
+            filename={IMAGE_FILENAMES.pages.black.ensaios}
             style={{
                 position: "absolute",
                 top: "50%",

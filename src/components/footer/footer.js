@@ -1,12 +1,11 @@
 import React from "react";
-import { Row, Col, Image, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 import "../../style/concept.css";
-import logoFeup from "../../images/logos/feup-white.png";
-import logoIPDJ from "../../images/logos/ipdj.png";
-import logoTunafe from "../../images/tunafe.png";
 import Contacts from "./contacts";
 import FollowUs from "./follow-us";
+import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const Footer = () => (
 	<footer style={{
@@ -30,10 +29,9 @@ const Footer = () => (
 				<Col xs={10} md={3} className="d-flex flex-column justify-content-center align-items-start">
 					<Row className="mb-2 ms-4">
 						<Col xs="6" md="4" className="ps-0 text-start">
-							<Image
-								src={logoTunafe}
+							<CustomImage
+								filename={IMAGE_FILENAMES.logos.color.tunafe}
 								alt="TUNAFE"
-								fluid
 								style={{
 									maxHeight: "60px",
 									height: "auto",
@@ -48,11 +46,10 @@ const Footer = () => (
 						</Col>
 					</Row>
 					<Row className="mb-2 ms-4">
-						<Image
-							className="ps-0"
-							src={logoFeup}
+						<CustomImage
+							// className="ps-0"
+							filename={IMAGE_FILENAMES.logos.white.feup}
 							alt="FEUP"
-							fluid
 							style={{
 								maxHeight: "70px",
 								height: "auto",
@@ -62,10 +59,9 @@ const Footer = () => (
 						/>
 					</Row>
 					<Row className="ms-4">
-						<Image
-							src={logoIPDJ}
+						<CustomImage
+							filename={IMAGE_FILENAMES.logos.color.ipdj}
 							alt="IPDJ"
-							fluid
 							style={{
 								maxHeight: "60px",
 								height: "auto",

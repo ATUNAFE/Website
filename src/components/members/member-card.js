@@ -1,33 +1,9 @@
 import React from "react";
-import { Card, Col, Row, Image } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import noPicture from "../../images/SemFoto.png";
 
-// Import all static instruments icons
-import acordeao from "../../images/Instrumentos/AcordeaoCor.png";
-import bandolim from "../../images/Instrumentos/BandolimCor.png";
-import cavaquinho from "../../images/Instrumentos/CavaquinhoCor.png";
-import contrabaixo from "../../images/Instrumentos/ContrabaixoCor.png";
-import estandarte from "../../images/Instrumentos/EstandarteCor.png";
-import flauta from "../../images/Instrumentos/FlautaCor.png";
-import guitarra from "../../images/Instrumentos/GuitarraCor.png";
-import pandeireta from "../../images/Instrumentos/PandeiretaCor.png";
-import percussao from "../../images/Instrumentos/PercussaoCor.png";
-import violino from "../../images/Instrumentos/ViolinoCor.png";
-import magister from "../../images/Instrumentos/MagisterCor.png";
-
-const instrumentImages = {
-    acordeao,
-    bandolim,
-    cavaquinho,
-    contrabaixo,
-    estandarte,
-    flauta,
-    guitarra,
-    pandeireta,
-    percussao,
-    violino,
-    magister
-};
+import { IMAGE_FILENAMES } from "../../utils/constants";
+import CustomImage from "../images/image";
 
 const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) => {
     return (
@@ -68,11 +44,10 @@ const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) =>
 
                             <div className="d-flex gap-2 mt-3 flex-wrap">
                                 {instruments?.map((instrument, index) => (
-                                    <Image
+                                    <CustomImage
                                         key={index}
-                                        src={instrumentImages[instrument]}
+                                        filename={IMAGE_FILENAMES.instruments.color[instrument]}
                                         alt={instrument}
-                                        title={instrument}
                                         style={{
                                             width: "30px",
                                             height: "30px",

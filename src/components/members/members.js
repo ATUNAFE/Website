@@ -4,10 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import MemberCard from "./member-card";
 import CollapsibleSection from "./collapsible-section";
 import membersBackground from "../../images/IMG_4101.jpg"
-import iconTunafe from "../../images/Instrumentos/Magister.png";
 import Layout from "../layout";
 import Banner from "../banner";
-
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const Members = ({ subtitle, sections }) => {
 
@@ -33,7 +32,7 @@ const Members = ({ subtitle, sections }) => {
             <Banner
                 title="Sobre Nós"
                 subtitle={subtitle}
-                icon={iconTunafe}
+                icon={IMAGE_FILENAMES.instruments.white.magister}
                 backgroundImage={membersBackground}
                 backgroundColor="var(--light-green)"
              />

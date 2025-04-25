@@ -1,59 +1,51 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
-import instagramIcon from "../../images/pages/InstaB.png";
-import facebookIcon from "../../images/pages/FacebookB.png";
-import youtubeIcon from "../../images/pages/YoutubeB.png";
-import linkedinIcon from "../../images/pages/LinkedinB.png";
-import spotifyIcon from "../../images/pages/SpotifyB.png";
+import CustomImage from "../images/image";
+import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const FollowUs = () => (
     <Container>
         <h5 className="text-start mb-4" style={{ fontWeight: "bold" }}>Segue-nos</h5>
         <Row className="justify-content-md-start mb-2">
             <Col xs="5" md="3" className="text-center">
-                <Image
-                    src={instagramIcon}
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.instagram}
                     alt="Instagram"
-                    style={{ 
-                        height: "45px"
-                    }}
-                    fluid
+                    // style={{ 
+                    //     height: "45px"
+                    // }}
                 />
             </Col>
             <Col xs="5" md="3" className="text-center">
-                <Image
-                    src={facebookIcon}
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.facebook}
                     alt="Facebook"
-                    style={{ maxHeight: "45px" }}
-                    fluid
+                    // style={{ maxHeight: "45px" }}
                 />
             </Col>
             <Col xs="5" md="3" className="text-center">
-                <Image
-                    src={youtubeIcon}
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.youtube}
                     alt="Youtube"
-                    style={{ maxHeight: "45px" }}
-                    fluid
+                    // style={{ maxHeight: "45px" }}
                 />
             </Col>
         </Row>
 
         <Row className="justify-content-md-start mt-4 mb-2 my-2">
             <Col xs="5" md="3" className="text-center">
-                <Image
-                    src={linkedinIcon}
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.linkedin}
                     alt="Linkedin"
-                    style={{ maxHeight: "45px" }}
-                    fluid
+                    // style={{ maxHeight: "45px" }}
                 />
             </Col>
             <Col xs="5" md="3" className="text-center">
-                <Image
-                    src={spotifyIcon}
+                <CustomImage
+                    filename={IMAGE_FILENAMES.pages.white.spotify}
                     alt="Spotify"
-                    style={{ maxHeight: "45px" }}
-                    fluid
+                    // style={{ maxHeight: "45px" }}
                 />
             </Col>
         </Row>
