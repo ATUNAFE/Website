@@ -9,8 +9,8 @@ const SingleImageCarousel = ({ images, withControls = true, withIndicators = fal
         interval={3000}
         controls={withControls}
         indicators={withIndicators}
-        prevIcon={<FaChevronLeft style={{ left: "400px" }} className={`custom-carousel-prev ${invertedColors ? "custom-carousel-icon-inverted" : "custom-carousel-icon"}`} />}
-        nextIcon={<FaChevronRight style={{ right: "400px" }} className={`custom-carousel-next ${invertedColors ? "custom-carousel-icon-inverted" : "custom-carousel-icon"}`} />}
+        prevIcon={<FaChevronLeft style={{ left: "300px" }} className={`custom-carousel-prev ${invertedColors ? "custom-carousel-icon-inverted" : "custom-carousel-icon"}`} />}
+        nextIcon={<FaChevronRight style={{ right: "300px" }} className={`custom-carousel-next ${invertedColors ? "custom-carousel-icon-inverted" : "custom-carousel-icon"}`} />}
     >
         {images.map((image, index) => (
             <Carousel.Item key={index} style={{ height: "600px" }}>
