@@ -1,8 +1,8 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
-import membersImage from "../../images/Páginas/MembrosB.png";
+import CustomImage from "../images/image";
 
 const AllMembers = ({ html }) => (
     <div style={{
@@ -10,8 +10,8 @@ const AllMembers = ({ html }) => (
         backgroundColor: "var(--dark-neutral)",
         color: "var(--light-neutral)"
     }}>
-        <Image
-            src={membersImage}
+        <CustomImage
+            filename="pages/MembrosB.png"
             style={{
                 position: "absolute",
                 top: "50%",

@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-import phoneIcon from "../../images/Páginas/TelefoneB.png";
-import mailIcon from "../../images/Páginas/MailB.png";
-import addressIcon from "../../images/Páginas/MoradaB.png";
+import phoneIcon from "../../images/pages/TelefoneB.png";
+import mailIcon from "../../images/pages/MailB.png";
+import addressIcon from "../../images/pages/MoradaB.png";
 
 // TODO: Tornar os contactos em Markdown para ser editável
 

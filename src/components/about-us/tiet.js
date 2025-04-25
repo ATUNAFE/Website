@@ -1,13 +1,8 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
-import logoTiet from "../../images/Logos/TIETBranco.png";
-import tietImage from "../../images/Páginas/TIETB.png";
-import someImage from "../../images/IMG_4101.jpg";
-
-import "../../style/concept.css";
-
+import CustomImage from "../images/image";
 
 const TIET = ({ html }) => (
     <div style={{
@@ -15,8 +10,8 @@ const TIET = ({ html }) => (
         backgroundColor: "var(--dark-neutral)",
         color: "var(--light-neutral)"
     }}>
-        <Image
-            src={tietImage}
+        <CustomImage
+            filename="pages/TIETB.png"
             style={{
                 position: "absolute",
                 top: "50%",
@@ -34,14 +29,9 @@ const TIET = ({ html }) => (
             </Row>
             <Row>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
-                    <Image
-                        src={logoTiet}
+                    <CustomImage
+                        filename="logos/tiet-white.png"
                         alt="TIET"
-                        fluid
-                        style={{
-                            height: "auto",
-                            width: "auto",
-                        }}
                     />
                 </Col>
                 <Col xs={12} md={8} className="d-flex flex-column justify-content-center align-items-center">

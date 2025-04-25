@@ -1,18 +1,15 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
-import logoTunafe from "../../images/LogoTunafe.png";
-import historyImage from "../../images/Páginas/HistorialP.png";
-import someImage from "../../images/IMG_4101.jpg";
-
+import CustomImage from "../images/image";
 
 const History = ({ title, citation, html }) => (
     <div style={{
         position: "relative",
         backgroundColor: "var(--light-neutral)"
     }}>
-        <Image
-            src={historyImage}
+        <CustomImage
+            filename="pages/HistorialP.png"
             style={{
                 position: "absolute",
                 top: "50%",
@@ -31,14 +28,9 @@ const History = ({ title, citation, html }) => (
             </Row>
             <Row>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
-                    <Image
-                        src={logoTunafe}
+                    <CustomImage
+                        filename="logos/tunafe.png"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            height: "auto",
-                            width: "auto",
-                        }}
                     />
                 </Col>
                 <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
@@ -55,86 +47,44 @@ const History = ({ title, citation, html }) => (
             </Row>
             <Row className="mt-4">
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
 
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
 
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
 
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
 
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
 
                 <Col xs={3} md={2}>
-                    <Image
-                        src={someImage}
+                    <CustomImage
+                        filename="IMG_4101.jpg"
                         alt="TUNAFE"
-                        fluid
-                        style={{
-                            maxHeight: "150px",
-                            height: "auto",
-                            width: "auto",
-                            objectFit: "contain",
-                        }}
                     />
                 </Col>
             </Row>

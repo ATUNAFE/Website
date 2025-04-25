@@ -4,7 +4,9 @@ title: 'Historial'
 citation:
     text: '"Se, ser estudante, é ter ânsia em saber e espírito jovem, ser tuno será exaltar em música e canto o ânimo de ser estudante e o vigor da juventude, virtudes a deverem ser permanentes e sem idade!"'
     author: 'Aureliano da Fonseca'
-picture: ''
+watermark: ''
+picture: './logos/tunafe.png'
+carousel: ''
 ---
 A Tuna Feminina de Engenharia da Universidade do Porto foi fundada a 3 de Novembro de 1991+1 por um grupo de alunas da Faculdade de Engenharia da Universidade do Porto que tinham em comum o gosto pela música e pela boémia estudantil. Constituída por alunas dos vários cursos ministrados na FEUP, a TUNAFE conjuga o respeito pela tradição académica com a alegria em fazer música e a irreverência estudantil. Representa para todos os elementos desta Tuna uma oportunidade de crescimento pessoal e um escape para uma vida universitária, por vezes tão exigente.
 

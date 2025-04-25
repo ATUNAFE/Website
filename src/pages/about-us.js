@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import logo from "../images/LogoTunafe.png";
+import logo from "../images/logos/tunafe.png";
 import background from "../images/IMG_4101.jpg";
 import iconTunafe from "../images/Instrumentos/Magister.png";
 import Banner from "../components/banner";

@@ -1,15 +1,15 @@
 import React from "react";
-import { Container, Row, Image } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
-import rehearsalImage from "../../images/Páginas/EnsaiosP.png";
+import CustomImage from "../images/image";
 
 const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, html }) => (
     <div style={{
         position: "relative",
         backgroundColor: "var(--light-neutral)"
     }}>
-        <Image
-            src={rehearsalImage}
+        <CustomImage
+            filename="pages/EnsaiosP.png"
             style={{
                 position: "absolute",
                 top: "50%",
@@ -36,9 +36,9 @@ const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, 
             <Row className="justify-content-center align-items-center mb-4" style={{ fontWeight: "bold" }}>
                 <h2 className="text-center">
                     <span>Aparece na sala </span>
-                    <span style={{ color: "var(--light-engineer)"}}>{rehearsalRoom}</span>
+                    <span style={{ color: "var(--light-engineer)" }}>{rehearsalRoom}</span>
                     <span> ou na </span>
-                    <span style={{ color: "var(--light-engineer)"}}>{tunaRoom}</span>
+                    <span style={{ color: "var(--light-engineer)" }}>{tunaRoom}</span>
                 </h2>
             </Row>
             <Row className="justify-content-center align-items-center mb-4">

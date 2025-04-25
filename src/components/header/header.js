@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { FaBars } from "react-icons/fa";
 
 import HeaderLink from './header-link';
-import logo from "../../images/LogoTunafe.png";
+import logo from "../../images/logos/tunafe.png";
 import "../../style/layout.css";
 
 const backgroundColor = 'rgba(245, 245, 245, 0.5)';
