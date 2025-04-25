@@ -3,17 +3,39 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import background from "../images/IMG_4101.jpg"
 import Banner from "../components/banner"
 import History from "../components/about-us/history"
 import AllMembers from "../components/about-us/all-members"
 import Godparents from "../components/about-us/godparents"
 import TIET from "../components/about-us/tiet"
 import Rehearsals from "../components/about-us/rehearsals"
-import { IMAGE_FILENAMES } from "../utils/constants"
 
 export const aboutUsQuery = graphql`
   query AboutUsQuery {
+  	aboutUs: markdownRemark(frontmatter: {fileName: {eq: "sobreNos" } }) {
+		frontmatter {
+			title
+			background {
+				color
+				image {
+					src
+					alt
+				}
+			}
+			icon {
+        		src
+        		alt
+      		}
+			subtitles {
+				text
+				anchor
+				icon {
+					src
+					alt
+				}
+			}
+		}
+	}
     history: markdownRemark(frontmatter: { fileName: { eq: "historial" } }) {
       html
       frontmatter {
@@ -91,23 +113,22 @@ export const aboutUsQuery = graphql`
 `
 
 const AboutUs = () => {
-	const { history, allMembers, godparents, tiet, rehearsals } = useStaticQuery(aboutUsQuery);
-	console.log("[all members]");
-	console.log(allMembers);
+	const { aboutUs, history, allMembers, godparents, tiet, rehearsals } = useStaticQuery(aboutUsQuery);
 
 	return (
 		<Layout>
 			<Banner
-				title="Sobre Nós"
-				subtitle={"some"}
-				icon={IMAGE_FILENAMES.instruments.white.magister}
-				backgroundImage={background}
-				backgroundColor="var(--light-green)"
+				title={aboutUs.frontmatter.title}
+				subtitles={aboutUs.frontmatter.subtitles}
+				icon={aboutUs.frontmatter.icon}
+				backgroundImage={aboutUs.frontmatter.background.image}
+				backgroundColor={aboutUs.frontmatter.background.color}
 			/>
 
 			<div className="d-flex flex-column">
 				{/* History */}
 				<div
+					id="historial"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--light-neutral)" }}
 				>
@@ -123,6 +144,7 @@ const AboutUs = () => {
 
 				{/* All Members */}
 				<div
+					id="membros"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--dark-neutral)" }}
 				>
@@ -135,6 +157,7 @@ const AboutUs = () => {
 
 				{/* Godparents */}
 				<div
+					id="padrinhos"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--light-neutral)" }}
 				>
@@ -147,6 +170,7 @@ const AboutUs = () => {
 
 				{/* TIET */}
 				<div
+					id="tiet"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--dark-neutral)" }}
 				>
@@ -160,6 +184,7 @@ const AboutUs = () => {
 
 				{/* Rehearsals */}
 				<div
+					id="nesaios"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--light-neutral)" }}
 				>

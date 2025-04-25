@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import CustomImage from "./images/image";
 
-const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => (
+const Banner = ({ title, subtitles, icon, backgroundImage, backgroundColor }) => (
 	<>
 		<div
 			style={{
@@ -13,13 +13,14 @@ const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => 
 			}}
 		>
 			<CustomImage
-				src={backgroundImage}
-				alt="Members Background"
-				style={{
-					objectFit: "cover",
-					objectPosition: "bottom",
-					height: "100%",
-					width: "100%",
+				src={backgroundImage.src}
+				alt={backgroundImage.alt}
+				style={{ height: '100%', width: '100%' }}
+				imgStyle={{
+					objectFit: 'cover',
+					objectPosition: 'bottom',
+					height: '100%',
+					width: '100%',
 				}}
 			/>
 
@@ -36,8 +37,8 @@ const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => 
 					<Row className="align-items-center justify-content-center text-center">
 						<Col xs="auto" className="d-flex align-items-center gap-3">
 							<CustomImage
-								src={icon}
-								alt="TUNAFE"
+								src={icon.src}
+								alt={icon.alt}
 								style={{
 									width: "100px",
 									height: "100px",
@@ -67,13 +68,36 @@ const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => 
 				color: "var(--light-neutral)",
 			}}
 		>
-			<Row className="w-100 text-center">
-				<Col>
-					<h4>
-						{subtitle}
-					</h4>
-				</Col>
-			</Row>
+			{subtitles.map((subtitle, index) => (
+				<Row
+					key={index}
+					className="w-100 align-items-center justify-content-center"
+					onClick={() => {
+						const el = document.getElementById(subtitle.anchor)
+						if (el) {
+						  const yOffset = -80 // ajusta conforme a altura do teu header
+						  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+					  
+						  window.scrollTo({ top: y, behavior: "smooth" })
+						}
+					  }}
+					  
+					style={{ cursor: "pointer" }}
+				>
+					<Col xs="auto" className="d-flex align-items-center justify-content-center me-3">
+						<CustomImage
+							src={subtitle.icon.src}
+							alt={subtitle.icon.alt}
+							style={{ width: "50px", height: "50px" }}
+							imgStyle={{ objectFit: "cover" }}
+						/>
+					</Col>
+					<Col xs="auto" className="d-flex align-items-center justify-content-center">
+						<h4 className="mb-0">{subtitle.text}</h4>
+					</Col>
+				</Row>
+			))}
+
 		</Container>
 	</>
 );
