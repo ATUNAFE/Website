@@ -7,68 +7,84 @@ import FollowUs from "./follow-us";
 import CustomImage from "../images/image";
 import { IMAGE_FILENAMES } from "../../utils/constants";
 
-const Footer = () => (
+const Footer = ({ magister, rp, email, address, socialMedia }) => (
 	<footer style={{
 		backgroundColor: "var(--dark-neutral)",
 		color: "var(--light-neutral)",
-		padding: "2rem 0", // adiciona espaço interno
+		padding: "2rem 0",
 	}}>
-	
+
 		<Container>
 			{/* Contacts */}
 			<Row className="justify-content-md-center">
 				<Col xs={1} />
 				<Col xs={10} md={3}>
-					<Contacts />
+					<Contacts
+						magister={magister}
+						rp={rp}
+						email={email}
+						address={address}
+					/>
 				</Col>
 
 				<Col xs={10} md={3} className="d-flex flex-column">
-    				<FollowUs />
+					<FollowUs
+						socialMedia={socialMedia}
+					/>
 				</Col>
 
 				<Col xs={10} md={3} className="d-flex flex-column justify-content-center align-items-start">
-					<Row className="mb-2 ms-4">
-						<Col xs="6" md="4" className="ps-0 text-start">
+
+					<Row className="mb-3 align-items-center">
+						<Col xs="auto" md="auto" className="ps-0 pe-1">
 							<CustomImage
 								src={IMAGE_FILENAMES.logos.color.tunafe}
 								alt="TUNAFE"
 								style={{
-									maxHeight: "60px",
+									width: "70px",
 									height: "auto",
-									width: "auto",
+								}}
+								imgStyle={{
 									objectFit: "contain",
 								}}
 							/>
 						</Col>
-						<Col xs="12" md="8" className="ps-0 pb-2 d-flex flex-column justify-content-end text-start" style={{ fontSize: "12px" }}>
-								<p className="mb-0">Tuna Feminina de Engenharia</p>
-								<p className="mb-0">da Universidade do Porto</p>
+						<Col xs="auto" md="auto" className="ps-0 text-start" style={{ fontSize: "12px" }}>
+							<p className="mb-0">Tuna Feminina de Engenharia</p>
+							<p className="mb-0">da Universidade do Porto</p>
 						</Col>
 					</Row>
-					<Row className="mb-2 ms-4">
-						<CustomImage
-							// className="ps-0"
-							src={IMAGE_FILENAMES.logos.white.feup}
-							alt="FEUP"
-							style={{
-								maxHeight: "70px",
-								height: "auto",
-								width: "auto",
-								objectFit: "contain",
-							}}
-						/>
+
+					<Row className="mb-3 align-items-center">
+						<Col xs="auto" md="auto" className="ps-0">
+							<CustomImage
+								src={IMAGE_FILENAMES.logos.white.feup}
+								alt="FEUP"
+								style={{
+									width: "160px",
+									height: "auto",
+								}}
+								imgStyle={{
+									objectFit: "contain",
+								}}
+							/>
+						</Col>
 					</Row>
-					<Row className="ms-4">
-						<CustomImage
-							src={IMAGE_FILENAMES.logos.color.ipdj}
-							alt="IPDJ"
-							style={{
-								maxHeight: "60px",
-								height: "auto",
-								width: "auto",
-								objectFit: "contain",
-							}}
-						/>
+
+					<Row className="align-items-center">
+						<Col xs="auto" md="auto" className="ps-0">
+							<CustomImage
+								src={IMAGE_FILENAMES.logos.color.ipdj}
+								alt="IPDJ"
+								style={{
+									width: "200px",
+									height: "auto",
+								}}
+								imgStyle={{
+									objectFit: "contain",
+								}}
+							/>
+						</Col>
 					</Row>
 				</Col>
 			</Row>

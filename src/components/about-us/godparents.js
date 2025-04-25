@@ -2,7 +2,6 @@ import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 
 import CustomImage from "../images/image"
-import { IMAGE_FILENAMES } from "../../utils/constants"
 
 const Godparents = ({ title, image, html }) => (
     <div
@@ -38,6 +37,8 @@ const Godparents = ({ title, image, html }) => (
                                     (e.target.style.textDecoration = "underline")
                                 }
                                 onMouseLeave={e => (e.target.style.textDecoration = "none")}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Sabe mais sobre a TEUP
                             </a>

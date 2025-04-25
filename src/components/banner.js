@@ -75,7 +75,7 @@ const Banner = ({ title, subtitles, icon, backgroundImage, backgroundColor }) =>
 					onClick={() => {
 						const el = document.getElementById(subtitle.anchor)
 						if (el) {
-						  const yOffset = -75 // ajusta conforme a altura do teu header
+						  const yOffset = -75
 						  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
 					  
 						  window.scrollTo({ top: y, behavior: "smooth" })

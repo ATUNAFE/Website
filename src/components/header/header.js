@@ -84,7 +84,7 @@ const Header = ({ siteTitle = "" }) => {
 								>
 									Historial
 								</Dropdown.Item>
-								<Dropdown.Item href="/members/active">Membros</Dropdown.Item>
+								<Dropdown.Item href="/about-us#membros">Membros</Dropdown.Item>
 								<Dropdown.Item href="/about-us#padrinhos">Padrinhos</Dropdown.Item>
 								<Dropdown.Item href="/about-us#tiet">Tudo Isto É Tuna</Dropdown.Item>
 								<Dropdown.Item href="/about-us#ensaios">Ensaios</Dropdown.Item>
@@ -112,4 +112,4 @@ const Header = ({ siteTitle = "" }) => {
 	)
 }
 
-export default Header
+export default Header;

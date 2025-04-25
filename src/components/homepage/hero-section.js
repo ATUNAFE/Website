@@ -18,7 +18,7 @@ const HeroSection = ({ title, description, backgroundImage }) => (
             style={{ height: "100%", width: "100%" }}
             imgStyle={{
                 objectFit: "cover",
-                objectPosition: "50% 15%", // ou "50% 20%" para mais controlo
+                objectPosition: "50% 15%",
                 height: "100%",
                 width: "100%",
             }}
@@ -76,7 +76,7 @@ const HeroSection = ({ title, description, backgroundImage }) => (
                         xs={8}
                         md={4}
                         className="d-flex flex-column text-md-start text-center"
-                        style={{ marginTop: "auto" }} // empurra mais para baixo dentro da row
+                        style={{ marginTop: "auto" }}
                     >
                         <p
                             style={{
