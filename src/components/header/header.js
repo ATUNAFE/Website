@@ -38,7 +38,7 @@ const Header = ({ siteTitle = '' }) => {
 					>
 						<Link to="/">
 							<CustomImage
-								filename={IMAGE_FILENAMES.logos.color.tunafe}
+								src={IMAGE_FILENAMES.logos.color.tunafe}
 								alt="TUNAFE"
 							// style={{
 							//   maxHeight: "60px",

@@ -2,15 +2,16 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import CustomImage from "../images/image";
-import { IMAGE_FILENAMES } from "../../utils/constants";
+import MultiImageCarousel from "../multi-image-carousel";
 
-const History = ({ title, citation, html }) => (
+const History = ({ title, citation, watermark, image, carousel, html }) => (
     <div style={{
         position: "relative",
         backgroundColor: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename={IMAGE_FILENAMES.pages.black.historial}
+            src={watermark.src}
+            alt={watermark.alt}
             style={{
                 position: "absolute",
                 top: "50%",
@@ -30,8 +31,8 @@ const History = ({ title, citation, html }) => (
             <Row>
                 <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
                     <CustomImage
-                        filename={IMAGE_FILENAMES.logos.color.tunafe}
-                        alt="TUNAFE"
+                        src={image.src}
+                        alt={image.alt}
                     />
                 </Col>
                 <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
@@ -47,47 +48,7 @@ const History = ({ title, citation, html }) => (
                 </Col>
             </Row>
             <Row className="mt-4">
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
-
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
-
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
-
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
-
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
-
-                <Col xs={3} md={2}>
-                    <CustomImage
-                        filename="IMG_4101.jpg"
-                        alt="TUNAFE"
-                    />
-                </Col>
+                <MultiImageCarousel images={carousel} />
             </Row>
         </Container>
     </div>

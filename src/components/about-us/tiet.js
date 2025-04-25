@@ -1,18 +1,20 @@
-import React from "react";
-import { navigate } from "gatsby";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React from "react"
+import { navigate } from "gatsby"
+import { Container, Row, Col, Button } from "react-bootstrap"
 
-import CustomImage from "../images/image";
-import { IMAGE_FILENAMES } from "../../utils/constants";
+import CustomImage from "../images/image"
 
-const TIET = ({ html }) => (
-    <div style={{
-        position: "relative",
-        backgroundColor: "var(--dark-neutral)",
-        color: "var(--light-neutral)"
-    }}>
+const TIET = ({ title, watermark, image, html }) => (
+    <div
+        style={{
+            position: "relative",
+            backgroundColor: "var(--dark-neutral)",
+            color: "var(--light-neutral)",
+        }}
+    >
         <CustomImage
-            filename={IMAGE_FILENAMES.pages.white.tiet}
+            src={watermark.src}
+            alt={watermark.alt}
             style={{
                 position: "absolute",
                 top: "50%",
@@ -26,29 +28,44 @@ const TIET = ({ html }) => (
         />
         <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
             <Row>
-                <h3>Tudo Isto É Tuna</h3>
+                <h3>{title}</h3>
             </Row>
             <Row>
-                <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
-                    <CustomImage
-                        filename={IMAGE_FILENAMES.logos.white.tiet}
-                        alt="TIET"
-                    />
+                <Col
+                    xs={6}
+                    md={4}
+                    className="d-flex flex-column justify-content-center align-items-center"
+                >
+                    <CustomImage src={image.src} alt={image.alt} />
                 </Col>
-                <Col xs={12} md={8} className="d-flex flex-column justify-content-center align-items-center">
+                <Col
+                    xs={12}
+                    md={8}
+                    className="d-flex flex-column justify-content-center align-items-center"
+                >
                     <Row>
-                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                        <div style={{ textAlign: "justify" }}>
+                            <div dangerouslySetInnerHTML={{ __html: html }} />
+                        </div>
                     </Row>
-                    <Row>
-                        <Button className="custom-button"
-                            onClick={() => navigate("/")}>
-                            <h4 className="button-text">Edições</h4>
-                        </Button>
+                    <Row className="d-flex justify-content-center mt-3">
+                        <Col className="d-flex justify-content-center p-0">
+                            <Button
+                                className="custom-button"
+                                onClick={() => navigate("/")}
+                                style={{
+                                    height: "60px",
+                                    width: "120%"
+                                }}
+                            >
+                                <h5 className="button-text" style={{ margin: 0 }}>Edições</h5>
+                            </Button>
+                        </Col>
                     </Row>
                 </Col>
             </Row>
         </Container>
     </div>
-);
+)
 
-export default TIET;
+export default TIET

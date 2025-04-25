@@ -46,7 +46,7 @@ const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) =>
                                 {instruments?.map((instrument, index) => (
                                     <CustomImage
                                         key={index}
-                                        filename={IMAGE_FILENAMES.instruments.color[instrument]}
+                                        src={IMAGE_FILENAMES.instruments.color[instrument]}
                                         alt={instrument}
                                         style={{
                                             width: "30px",

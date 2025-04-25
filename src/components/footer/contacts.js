@@ -13,7 +13,7 @@ const Contacts = () => (
         <Row className="align-items-center mb-2" >
             <Col xs="4" md="2" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.telefone}
+                    src={IMAGE_FILENAMES.pages.white.telefone}
                     alt="Phone"
                 // style={{ maxHeight: "24px" }}
                 />
@@ -28,7 +28,7 @@ const Contacts = () => (
         <Row className="align-items-center mb-2">
             <Col xs="4" md="2" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.telefone}
+                    src={IMAGE_FILENAMES.pages.white.telefone}
                     alt="Phone"
                 // style={{ maxHeight: "24px" }}
                 />
@@ -43,7 +43,7 @@ const Contacts = () => (
         <Row className="align-items-center mb-2">
             <Col xs="4" md="2" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.mail}
+                    src={IMAGE_FILENAMES.pages.white.mail}
                     alt="Phone"
                     // style={{ maxHeight: "24px" }}
                 />
@@ -57,7 +57,7 @@ const Contacts = () => (
         <Row className="align-items-center">
             <Col xs="4" md="2" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.morada}
+                    src={IMAGE_FILENAMES.pages.white.morada}
                     alt="Phone"
                     // style={{ maxHeight: "24px" }}
                 />

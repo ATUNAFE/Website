@@ -30,7 +30,7 @@ const Footer = () => (
 					<Row className="mb-2 ms-4">
 						<Col xs="6" md="4" className="ps-0 text-start">
 							<CustomImage
-								filename={IMAGE_FILENAMES.logos.color.tunafe}
+								src={IMAGE_FILENAMES.logos.color.tunafe}
 								alt="TUNAFE"
 								style={{
 									maxHeight: "60px",
@@ -48,7 +48,7 @@ const Footer = () => (
 					<Row className="mb-2 ms-4">
 						<CustomImage
 							// className="ps-0"
-							filename={IMAGE_FILENAMES.logos.white.feup}
+							src={IMAGE_FILENAMES.logos.white.feup}
 							alt="FEUP"
 							style={{
 								maxHeight: "70px",
@@ -60,7 +60,7 @@ const Footer = () => (
 					</Row>
 					<Row className="ms-4">
 						<CustomImage
-							filename={IMAGE_FILENAMES.logos.color.ipdj}
+							src={IMAGE_FILENAMES.logos.color.ipdj}
 							alt="IPDJ"
 							style={{
 								maxHeight: "60px",

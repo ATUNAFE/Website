@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
-:root{
+:root {
     --dark-green: #00893B;
     --light-green: #6DB28B;
     --dark-engineer: #892B18;
@@ -26,8 +26,6 @@ body, p, span {
     background-color: var(--light-green) !important;
     border: none !important;
     color: var(--light-neutral) !important;
-    width: 50% !important;
-    height: 100px !important;
     font-size: x-large !important;
     display: flex !important;
     align-items: center;
@@ -35,4 +33,38 @@ body, p, span {
     text-align: center;
     padding: 0.5rem !important;
     border-radius: 15px !important;
+    margin: 10px auto;
+}
+
+.custom-carousel-icon {
+    color: var(--light-neutral);
+    font-size: 2.5rem;
+    background: var(--dark-neutral);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.custom-carousel-prev {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-carousel-next {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+
+    .custom-carousel-prev,
+    .custom-carousel-next {
+        left: 10px !important;
+        right: 10px !important;
+    }
 }

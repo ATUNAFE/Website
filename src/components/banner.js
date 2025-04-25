@@ -13,7 +13,7 @@ const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => 
 			}}
 		>
 			<CustomImage
-				filename={backgroundImage}
+				src={backgroundImage}
 				alt="Members Background"
 				style={{
 					objectFit: "cover",
@@ -36,7 +36,7 @@ const Banner = ({ title, subtitle, icon, backgroundImage, backgroundColor }) => 
 					<Row className="align-items-center justify-content-center text-center">
 						<Col xs="auto" className="d-flex align-items-center gap-3">
 							<CustomImage
-								filename={icon}
+								src={icon}
 								alt="TUNAFE"
 								style={{
 									width: "100px",

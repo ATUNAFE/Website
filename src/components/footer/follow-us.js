@@ -10,7 +10,7 @@ const FollowUs = () => (
         <Row className="justify-content-md-start mb-2">
             <Col xs="5" md="3" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.instagram}
+                    src={IMAGE_FILENAMES.pages.white.instagram}
                     alt="Instagram"
                     // style={{ 
                     //     height: "45px"
@@ -19,14 +19,14 @@ const FollowUs = () => (
             </Col>
             <Col xs="5" md="3" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.facebook}
+                    src={IMAGE_FILENAMES.pages.white.facebook}
                     alt="Facebook"
                     // style={{ maxHeight: "45px" }}
                 />
             </Col>
             <Col xs="5" md="3" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.youtube}
+                    src={IMAGE_FILENAMES.pages.white.youtube}
                     alt="Youtube"
                     // style={{ maxHeight: "45px" }}
                 />
@@ -36,14 +36,14 @@ const FollowUs = () => (
         <Row className="justify-content-md-start mt-4 mb-2 my-2">
             <Col xs="5" md="3" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.linkedin}
+                    src={IMAGE_FILENAMES.pages.white.linkedin}
                     alt="Linkedin"
                     // style={{ maxHeight: "45px" }}
                 />
             </Col>
             <Col xs="5" md="3" className="text-center">
                 <CustomImage
-                    filename={IMAGE_FILENAMES.pages.white.spotify}
+                    src={IMAGE_FILENAMES.pages.white.spotify}
                     alt="Spotify"
                     // style={{ maxHeight: "45px" }}
                 />

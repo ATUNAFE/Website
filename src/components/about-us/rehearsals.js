@@ -2,15 +2,15 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 
 import CustomImage from "../images/image";
-import { IMAGE_FILENAMES } from "../../utils/constants";
 
-const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, html }) => (
+const Rehearsals = ({ title, watermark, weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, html }) => (
     <div style={{
         position: "relative",
         backgroundColor: "var(--light-neutral)"
     }}>
         <CustomImage
-            filename={IMAGE_FILENAMES.pages.black.ensaios}
+            src={watermark.src}
+            alt={watermark.alt}
             style={{
                 position: "absolute",
                 top: "50%",
@@ -24,7 +24,7 @@ const Rehearsals = ({ weekDays, rehearsalRoom, tunaRoom, startTime, finishTime, 
         />
         <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
             <Row>
-                <h3>Ensaios</h3>
+                <h3>{title}</h3>
             </Row>
             <Row>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
