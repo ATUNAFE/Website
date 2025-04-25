@@ -117,6 +117,7 @@ const AboutUs = () => {
 
 	return (
 		<Layout>
+			<Seo title={aboutUs.frontmatter.title} />
 			<Banner
 				title={aboutUs.frontmatter.title}
 				subtitles={aboutUs.frontmatter.subtitles}
@@ -184,7 +185,7 @@ const AboutUs = () => {
 
 				{/* Rehearsals */}
 				<div
-					id="nesaios"
+					id="ensaios"
 					className="section d-flex align-items-center justify-content-center py-5"
 					style={{ backgroundColor: "var(--light-neutral)" }}
 				>

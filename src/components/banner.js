@@ -62,7 +62,7 @@ const Banner = ({ title, subtitles, icon, backgroundImage, backgroundColor }) =>
 		</div>
 		<Container
 			fluid
-			className="d-flex justify-content-center align-items-center p-5"
+			className="d-flex justify-content-center align-items-center py-5"
 			style={{
 				backgroundColor,
 				color: "var(--light-neutral)",
@@ -75,7 +75,7 @@ const Banner = ({ title, subtitles, icon, backgroundImage, backgroundColor }) =>
 					onClick={() => {
 						const el = document.getElementById(subtitle.anchor)
 						if (el) {
-						  const yOffset = -80 // ajusta conforme a altura do teu header
+						  const yOffset = -75 // ajusta conforme a altura do teu header
 						  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
 					  
 						  window.scrollTo({ top: y, behavior: "smooth" })
@@ -84,11 +84,11 @@ const Banner = ({ title, subtitles, icon, backgroundImage, backgroundColor }) =>
 					  
 					style={{ cursor: "pointer" }}
 				>
-					<Col xs="auto" className="d-flex align-items-center justify-content-center me-3">
+					<Col xs="auto" className="d-flex align-items-center justify-content-center">
 						<CustomImage
 							src={subtitle.icon.src}
 							alt={subtitle.icon.alt}
-							style={{ width: "50px", height: "50px" }}
+							style={{ width: "40px", height: "40px" }}
 							imgStyle={{ objectFit: "cover" }}
 						/>
 					</Col>

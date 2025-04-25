@@ -3,12 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import MemberCard from "./member-card";
 import CollapsibleSection from "./collapsible-section";
-import membersBackground from "../../images/IMG_4101.jpg"
 import Layout from "../layout";
 import Banner from "../banner";
-import { IMAGE_FILENAMES } from "../../utils/constants";
 
-const Members = ({ subtitle, sections }) => {
+const Members = ({ title, subtitles, icon, backgroundImage, backgroundColor, sections }) => {
 
     const renderMembers = (members) => (
         <div className="d-flex flex-column gap-3">
@@ -30,11 +28,11 @@ const Members = ({ subtitle, sections }) => {
     return (
         <Layout>
             <Banner
-                title="Sobre Nós"
-                subtitle={subtitle}
-                icon={IMAGE_FILENAMES.instruments.white.magister}
-                backgroundImage={membersBackground}
-                backgroundColor="var(--light-green)"
+                title={title}
+                subtitles={subtitles}
+                icon={icon}
+                backgroundImage={backgroundImage}
+                backgroundColor={backgroundColor}
              />
             <div className="p-6 pt-2" style={{
                 backgroundColor: "var(--dark-neutral)",

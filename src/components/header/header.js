@@ -1,52 +1,68 @@
-import React, { useState } from 'react';
-import { Dropdown, Col, Row, Container } from 'react-bootstrap';
-import { Link } from "gatsby";
-import { FaBars } from "react-icons/fa";
+import React, { useState } from "react"
+import { Dropdown, Col, Row, Container } from "react-bootstrap"
+import { Link } from "gatsby"
+import { FaBars } from "react-icons/fa"
 
-import HeaderLink from './header-link';
-import "../../style/layout.css";
-import CustomImage from '../images/image';
-import { IMAGE_FILENAMES } from '../../utils/constants';
+import HeaderLink from "./header-link"
+import "../../style/layout.css"
+import CustomImage from "../images/image"
+import { IMAGE_FILENAMES } from "../../utils/constants"
 
-const backgroundColor = 'rgba(245, 245, 245, 0.5)';
+const backgroundColor = "rgba(245, 245, 245, 0.5)"
 
-const Header = ({ siteTitle = '' }) => {
-	const [dropdownOpen, setDropdownOpen] = useState(false);
+const Header = ({ siteTitle = "" }) => {
+	const [dropdownOpen, setDropdownOpen] = useState(false)
 
-	const toggleDropdown = () => setDropdownOpen(prevState => !prevState); // Toggle dropdown open/close
+	const toggleDropdown = () => setDropdownOpen(prevState => !prevState) // Toggle dropdown open/close
 
 	return (
 		<header>
 			<Container fluid style={{ margin: "0", padding: "0", width: "100%" }}>
-				<Row style={{
-					margin: "0",
-					padding: "0",
-					height: '77px',
-					width: '100%',
-					position: 'fixed',
-					backgroundColor,
-					zIndex: 10,
-					transition: 'backgroundColor 0.5s ease',
-				}}>
+				<Row
+					style={{
+						margin: "0",
+						padding: "0",
+						height: "77px",
+						width: "100%",
+						position: "fixed",
+						backgroundColor,
+						zIndex: 10,
+						transition: "backgroundColor 0.5s ease",
+					}}
+				>
 					<Col></Col>
 					<Col
 						style={{
 							padding: "0.5rem",
 							display: "flex",
-							justifyContent: "center",
+							alignItems: "center", // vertical
+							justifyContent: "center", // horizontal
+							height: "77px", // mesmo valor do Row
 						}}
 					>
-						<Link to="/">
+						<Link
+							to="/"
+							style={{
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
 							<CustomImage
 								src={IMAGE_FILENAMES.logos.color.tunafe}
 								alt="TUNAFE"
-							// style={{
-							//   maxHeight: "60px",
-							//   height: "100%",
-							//   width: "auto",
-							//   objectFit: "contain",
-							// }}
+								style={{
+									width: "100px",
+									margin: "auto"
+								}}
+								imgStyle={{
+									objectFit: "contain",
+									height: "100%",
+									width: "100%"
+								}}
 							/>
+
+
 						</Link>
 					</Col>
 					<Col id="siteMenu">
@@ -54,16 +70,24 @@ const Header = ({ siteTitle = '' }) => {
 							show={dropdownOpen} // Controls visibility based on state
 							onToggle={toggleDropdown} // Toggle dropdown on click
 						>
-							<Dropdown.Toggle className="dropdown-toggle" onClick={toggleDropdown}>
+							<Dropdown.Toggle
+								className="dropdown-toggle"
+								onClick={toggleDropdown}
+							>
 								Sobre Nós
 							</Dropdown.Toggle>
 
 							<Dropdown.Menu className="dropdown-menu">
-								<Dropdown.Item className="dropdown-item" href="/aboutus/history">Historial</Dropdown.Item>
+								<Dropdown.Item
+									className="dropdown-item"
+									href="/about-us#historial"
+								>
+									Historial
+								</Dropdown.Item>
 								<Dropdown.Item href="/members/active">Membros</Dropdown.Item>
-								<Dropdown.Item href="/404">Padrinhos</Dropdown.Item>
-								<Dropdown.Item href="/404">Tudo Isto É Tuna</Dropdown.Item>
-								<Dropdown.Item href="/404">Ensaios</Dropdown.Item>
+								<Dropdown.Item href="/about-us#padrinhos">Padrinhos</Dropdown.Item>
+								<Dropdown.Item href="/about-us#tiet">Tudo Isto É Tuna</Dropdown.Item>
+								<Dropdown.Item href="/about-us#ensaios">Ensaios</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
 						<HeaderLink link="/events" context="Eventos" />
@@ -85,7 +109,7 @@ const Header = ({ siteTitle = '' }) => {
 				</Row>
 			</Container>
 		</header>
-	);
-};
+	)
+}
 
-export default Header;
+export default Header

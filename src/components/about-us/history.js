@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import CustomImage from "../images/image";
-import MultiImageCarousel from "../multi-image-carousel";
+import MultiImageCarousel from "../carousels/multi-image-carousel";
 
 const History = ({ title, citation, watermark, image, carousel, html }) => (
     <div style={{

@@ -3,8 +3,32 @@ import { graphql, useStaticQuery } from "gatsby";
 import { formatMembers } from "../../utils/utils";
 import Members from "../../components/members/members";
 
-export const inactiveMembers = graphql`
+export const inactiveMembersQuery = graphql`
 	query InactiveMembersQuery {
+		inactiveMembers: markdownRemark(frontmatter: {fileName: {eq: "membrosAntigos" } }) {
+			frontmatter {
+				title
+				background {
+					color
+					image {
+						src
+						alt
+					}
+				}
+				icon {
+					src
+					alt
+				}
+				subtitles {
+					text
+					anchor
+					icon {
+						src
+						alt
+					}
+				}
+			}
+		}
 		fundadoras: allMarkdownRemark(
 			filter: {fileAbsolutePath: {regex: "/sobre-nos/membros/antigas/fundadoras/"}}
 		) {
@@ -72,7 +96,7 @@ export const inactiveMembers = graphql`
 `;
 
 const InactiveMembers = () => {
-    const { fundadoras, mestreTunas, tunas, caloiras } = useStaticQuery(inactiveMembers);
+    const { inactiveMembers, fundadoras, mestreTunas, tunas, caloiras } = useStaticQuery(inactiveMembersQuery);
 	
 	const sections = [
 		{
@@ -98,7 +122,14 @@ const InactiveMembers = () => {
 	];
 
 	return (
-		<Members subtitle="Sempre Tunafas" sections={sections} />
+		<Members
+			title={inactiveMembers.frontmatter.title}
+			subtitles={inactiveMembers.frontmatter.subtitles}
+			icon={inactiveMembers.frontmatter.icon}
+			backgroundImage={inactiveMembers.frontmatter.background.image}
+			backgroundColor={inactiveMembers.frontmatter.background.color}
+			sections={sections}
+		/>
 	);
 };
 

@@ -5,6 +5,30 @@ import Members from "../../components/members/members";
 
 export const activeMembersQuery = graphql`
 	query ActiveMembersQuery {
+		activeMembers: markdownRemark(frontmatter: {fileName: {eq: "membrosAtuais" } }) {
+			frontmatter {
+				title
+				background {
+					color
+					image {
+						src
+						alt
+					}
+				}
+				icon {
+					src
+					alt
+				}
+				subtitles {
+					text
+					anchor
+					icon {
+						src
+						alt
+					}
+				}
+			}
+		}
 		magister: allMarkdownRemark(
 			filter: {fileAbsolutePath: {regex: "/sobre-nos/membros/atuais/magister/"}}
 		) {
@@ -72,8 +96,9 @@ export const activeMembersQuery = graphql`
 `;
 
 const ActiveMembers = () => {
-	const { magister, mestreTunas, tunas, caloiras } = useStaticQuery(activeMembersQuery);
-	
+	const { activeMembers, magister, mestreTunas, tunas, caloiras } = useStaticQuery(activeMembersQuery);
+	console.log("[activeMembers]");
+	console.log(activeMembers);
 	const sections = [
 		{
 			collapsible: true,
@@ -102,7 +127,14 @@ const ActiveMembers = () => {
 	];
 
 	return (
-		<Members subtitle="Atualmente" sections={sections} />
+		<Members
+			title={activeMembers.frontmatter.title}
+			subtitles={activeMembers.frontmatter.subtitles}
+			icon={activeMembers.frontmatter.icon}
+			backgroundImage={activeMembers.frontmatter.background.image}
+			backgroundColor={activeMembers.frontmatter.background.color}
+			sections={sections}
+		/>
 	);
 }
 

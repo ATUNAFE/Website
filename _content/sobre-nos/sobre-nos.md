@@ -4,7 +4,7 @@ title: "Sobre Nós"
 background:
   color: "#2A2A2A"
   image:
-    src: "IMG_4101.jpg"
+    src: "banners/about-us.jpg"
     alt: ""
 icon:
   src: "instruments/magister.png"
