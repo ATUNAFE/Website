@@ -51,7 +51,7 @@ const Homepage = () => {
 		<Layout>
 			<Seo title="Home" />
 			
-			<HeroSection
+			{/* <HeroSection
 				title={homepage.frontmatter.title}
 				description={homepage.frontmatter.description}
 				backgroundImage={homepage.frontmatter.background.image}
@@ -71,7 +71,7 @@ const Homepage = () => {
 				<NextEvents
 					events={homepage.frontmatter.nextEvents}
 				/>
-			</div>
+			</div> */}
 		</Layout>
 	)
 }
