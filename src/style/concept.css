@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root {
+    --dark-green: #00893B;
+    --light-green: #6DB28B;
+    --dark-engineer: #892B18;
+    --light-engineer: #995345;
+    --dark-neutral: #2A2A2A;
+    --light-neutral: #F0F0F0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body, p, span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+}
+
+.custom-button {
+    background-color: var(--light-green) !important;
+    border: none !important;
+    color: var(--light-neutral) !important;
+    font-size: x-large !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem !important;
+    border-radius: 15px !important;
+    margin: 10px auto;
+}
+
+.custom-carousel-icon {
+    color: var(--light-neutral);
+    font-size: 2.5rem;
+    background: var(--dark-neutral);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.custom-carousel-icon-inverted {
+    color: var(--dark-neutral);
+    font-size: 2.5rem;
+    background: var(--light-neutral);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.custom-carousel-prev {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-carousel-next {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+
+    .custom-carousel-prev,
+    .custom-carousel-next {
+        left: 10px !important;
+        right: 10px !important;
+    }
+}

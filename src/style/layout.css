@@ -1,0 +1,183 @@
+@import "concept.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+#___gatsby, #gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.content-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--dark-neutral) !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.25rem !important;
+}
+
+.dropdown-menu {
+  margin-top: 15.5px !important;
+  background-color: rgba(245, 245, 245, 0.5) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--dark-neutral) !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;  /* Shows the dropdown menu when the parent is hovered */
+  visibility: visible !important; /* Ensures visibility */
+  opacity: 1 !important; /* Ensures the dropdown is visible */
+}
+
+/* Remove the dropdown arrow */
+.dropdown-toggle::after {
+  display: none !important; /* Hides the arrow icon */
+}
+
+.dropdown-item:active{
+  color: var(--light-neutral) !important;
+  background-color: var(--dark-neutral) !important;
+}
+
+.dropdown-item:hover{
+  color: var(--dark-neutral) !important;
+  background-color: var(--light-neutral) !important;
+}
+
+#siteMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center; 
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#mobileMenu {
+  display: none;
+}
+
+#menuIcon {
+  background-color: transparent;
+  color: var(--dark-grey);
+  border: 0;
+}
+#menuIcon:hover {
+  background-color: var(--dark-grey);
+  color: var(--tunafe-light);
+}
+#menuIcon.dropdown-toggle::after {
+  display: none;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  min-width: 8rem;
+  min-height: 10rem;
+  margin-top: 1.43rem;
+  background-color: var(--tunafe-light);
+  border: 0;
+}
+
+header, #menu {
+  box-shadow: 0 5px 5px 0px #000;
+}
+
+.headerLink {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-weight: bold;
+  font-size: larger;
+}
+.headerLink:hover {
+  text-decoration: none;
+  color: var(--engineer);
+}
+
+footer {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font: 0.8rem;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+#pageContent {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 3.5rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.banner {
+  height: calc(100vh - 88px);
+  width: 100%;
+}
+
+#HomepageBanner h1 {
+  position: absolute;
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  font-size: 3rem;
+  color: #FFFFFF;
+  text-shadow: 2px 2px var(--dark-grey);
+  text-transform: uppercase;
+  text-align: right;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+#HomepageBanner h1:hover {
+  /* opcional: efeitos no hover */
+}
+
+/* Responsive menu */
+@media only screen and (max-width: 890px) {
+  #siteMenu {
+    display: none;
+  }
+  #mobileMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

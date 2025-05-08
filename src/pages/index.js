@@ -1,8 +1,11 @@
-import React from "react"
-import HomePage from "./homepage"
+import React from "react";
+import HomePage from "./homepage";
+import "../style/concept.css";
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const IndexPage = () => <HomePage />
+const Website = () => (
+	<HomePage />
+);
 
-export default IndexPage
+export default Website;
