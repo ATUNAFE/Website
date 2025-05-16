@@ -1,19 +1,45 @@
-import React, { useState } from "react"
-import { Dropdown, Col, Row, Container } from "react-bootstrap"
-import { Link } from "gatsby"
-import { FaBars } from "react-icons/fa"
+import React, { useState } from "react";
+import { Dropdown, Col, Row, Container } from "react-bootstrap";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { FaBars } from "react-icons/fa";
 
-import HeaderLink from "./header-link"
-import "../../style/layout.css"
-import CustomImage from "../images/image"
-import { IMAGE_FILENAMES } from "../../utils/constants"
-
-const backgroundColor = "rgba(245, 245, 245, 0.5)"
+import HeaderLink from "./header-link";
+import "../../style/layout.css";
+import CustomImage from "../images/image";
 
 const Header = ({ siteTitle = "" }) => {
-	const [dropdownOpen, setDropdownOpen] = useState(false)
+	const [dropdownOpen, setDropdownOpen] = useState(false);
 
-	const toggleDropdown = () => setDropdownOpen(prevState => !prevState) // Toggle dropdown open/close
+	const toggleDropdown = () => setDropdownOpen(prevState => !prevState)
+
+	const data = useStaticQuery(graphql`
+		{
+			markdownRemark(frontmatter: {id: {regex: "/header/"}}) {
+				frontmatter {
+					id
+					title {
+						text
+					}
+					image
+					backgroundColor
+					color
+					menu {
+						type
+						text
+						link
+						items {
+							text
+							link
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const content = data.markdownRemark;
+
+	if (!content) return <p>⚠️ Content not found for header.</p>;
 
 	return (
 		<header>
@@ -25,7 +51,8 @@ const Header = ({ siteTitle = "" }) => {
 						height: "77px",
 						width: "100%",
 						position: "fixed",
-						backgroundColor,
+						backgroundColor: content.frontmatter.backgroundColor,
+						color: content.frontmatter.color,
 						zIndex: 10,
 						transition: "backgroundColor 0.5s ease",
 					}}
@@ -49,7 +76,7 @@ const Header = ({ siteTitle = "" }) => {
 							}}
 						>
 							<CustomImage
-								src={IMAGE_FILENAMES.logos.color.tunafe}
+								src={content.frontmatter.image}
 								alt="TUNAFE"
 								style={{
 									width: "100px",
@@ -66,32 +93,37 @@ const Header = ({ siteTitle = "" }) => {
 						</Link>
 					</Col>
 					<Col id="siteMenu">
-						<Dropdown
-							show={dropdownOpen} // Controls visibility based on state
-							onToggle={toggleDropdown} // Toggle dropdown on click
-						>
-							<Dropdown.Toggle
-								className="dropdown-toggle"
-								onClick={toggleDropdown}
-							>
-								Sobre Nós
-							</Dropdown.Toggle>
-
-							<Dropdown.Menu className="dropdown-menu">
-								<Dropdown.Item
-									className="dropdown-item"
-									href="/about-us#historial"
-								>
-									Historial
-								</Dropdown.Item>
-								<Dropdown.Item href="/about-us#membros">Membros</Dropdown.Item>
-								<Dropdown.Item href="/about-us#padrinhos">Padrinhos</Dropdown.Item>
-								<Dropdown.Item href="/about-us#tiet">Tudo Isto É Tuna</Dropdown.Item>
-								<Dropdown.Item href="/about-us#ensaios">Ensaios</Dropdown.Item>
-							</Dropdown.Menu>
-						</Dropdown>
-						<HeaderLink link="/events" context="Eventos" />
-						<HeaderLink link="/music" context="Música" />
+						{content.frontmatter.menu.map((section, index) => (
+							section.type === "link" ?
+								(
+									<HeaderLink key={index} link={section.link} context={section.text} />
+								) :
+								section.type === "dropdown" ?
+									(
+										<Dropdown
+											show={dropdownOpen}
+											onToggle={toggleDropdown}
+										>
+											<Dropdown.Toggle
+												key={index}
+												className="dropdown-toggle"
+											>
+												{section.text}
+											</Dropdown.Toggle>
+											<Dropdown.Menu className="dropdown-menu">
+												{section.items.map((item, idx) => (
+													<Dropdown.Item
+														key={idx}
+														className="dropdown-item"
+														href={item.link}
+													>
+														{item.text}
+													</Dropdown.Item>
+												))}
+											</Dropdown.Menu>
+										</Dropdown>
+									) : null
+						))}
 					</Col>
 					<Col id="mobileMenu">
 						<Dropdown>
@@ -100,9 +132,9 @@ const Header = ({ siteTitle = "" }) => {
 							</Dropdown.Toggle>
 
 							<Dropdown.Menu id="menu">
-								<HeaderLink link="/about-us" context="Sobre Nós" />
-								<HeaderLink link="/events" context="Eventos" />
-								<HeaderLink link="/music" context="Música" />
+								{content.frontmatter.menu.map((section, index) =>
+									<HeaderLink key={index} link={section.link} context={section.text} />
+								)}
 							</Dropdown.Menu>
 						</Dropdown>
 					</Col>
