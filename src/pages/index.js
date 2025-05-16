@@ -1,11 +1,14 @@
 import React from "react";
-import HomePage from "./homepage";
 import "../style/concept.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Website = () => (
-	<HomePage />
+	<>
+	<h1>Hello</h1>
+	<h1>World</h1>
+	</>
+	// <HomePage />
 );
 
 export default Website;

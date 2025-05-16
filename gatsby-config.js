@@ -12,7 +12,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `pages`,
-				path: `${__dirname}/content/pages`,
+				path: `${__dirname}/_content/pages`,
 			},
 		},
 
@@ -21,7 +21,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/content/images`,
+				path: `${__dirname}/_content/images`,
 			},
 		},
 
@@ -57,7 +57,7 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `content/images/logos/tunafe.png`,
+				icon: `_content/images/logos/tunafe.png`,
 			},
 		},
 

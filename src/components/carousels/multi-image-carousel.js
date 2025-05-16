@@ -30,8 +30,7 @@ const MultiImageCarousel = ({ images }) => {
                             {group.map((image, i) => (
                                 <Col xs={4} md={2} key={i} className="d-flex justify-content-center">
                                     <CustomImage
-                                        src={image.src}
-                                        alt={image.alt}
+                                        src={image}
                                         style={{
                                             width: '100%',
                                             height: '200px', // Definição de altura fixa para o carousel
