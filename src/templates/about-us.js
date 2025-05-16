@@ -5,6 +5,13 @@ import History from "../components/about-us/history";
 import TIET from "../components/about-us/tiet";
 import Rehearsals from "../components/about-us/rehearsals";
 import AllMembers from "../components/about-us/all-members";
+import HeroSection from "../components/homepage/hero-section";
+import FollowUsSection from "../components/homepage/follow-us-section";
+import PhotoAlbum from "../components/homepage/photo-album";
+import NextEvents from "../components/homepage/next-events";
+
+import "../style/concept.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const componentMap = {
     Banner,
@@ -12,18 +19,16 @@ const componentMap = {
     AllMembers,
     History,
     TIET,
-    Rehearsals
+    Rehearsals,
+    HeroSection,
+    FollowUsSection,
+    PhotoAlbum,
+    NextEvents
 };
 
 const AboutUs = ({ pageContext }) => {
-    const { data } = pageContext;
-    console.log(data);
-    const { frontmatter } = data.markdownRemark;
-    console.log("[FRONTMATTER]");
-    console.log(frontmatter);
-    // const { layout, history, godparents } = data;
-    // console.log("history:");
-    // console.log(history);
+    const { frontmatter } = pageContext.data;
+
     return (
         <main>            
             <div className="d-flex flex-column">

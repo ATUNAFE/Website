@@ -15,7 +15,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const result = await graphql(
         `
         {
-            markdownRemark(frontmatter: {id: {eq: "aboutUsPage"}}) {
+            home: markdownRemark(frontmatter: {id: {eq: "page-home"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
+            aboutUs: markdownRemark(frontmatter: {id: {eq: "page-aboutUs"}}) {
                 frontmatter {
                     slug
                     components {
@@ -35,11 +44,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const pageTemplate = path.resolve(`./src/templates/about-us.js`);
 
+    const { home, aboutUs } = result.data;
+
     createPage({
-        path: result.data.markdownRemark.frontmatter.slug,
+        path: home.frontmatter.slug,
         component: pageTemplate,
         context: {
-            data: result.data
+            data: home
+        },
+    });
+
+    createPage({
+        path: aboutUs.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: aboutUs
         },
     });
 }

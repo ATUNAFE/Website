@@ -1,5 +1,5 @@
 ---
-id: "aboutUsPage"
+id: "page-aboutUs"
 slug: "sobre-nos"
 title:
   text: "Sobre Nós"

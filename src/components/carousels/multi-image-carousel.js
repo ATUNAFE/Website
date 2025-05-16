@@ -13,7 +13,7 @@ const chunkArray = (arr, size) => {
 };
 
 const MultiImageCarousel = ({ images }) => {
-    const imageGroups = chunkArray(images, 6); // Group images into sets of 6
+    const imageGroups = chunkArray(images, 6);
 
     return (
         <Carousel
@@ -33,10 +33,10 @@ const MultiImageCarousel = ({ images }) => {
                                         src={image}
                                         style={{
                                             width: '100%',
-                                            height: '200px', // Definição de altura fixa para o carousel
+                                            height: '200px',
                                         }}
                                         imgStyle={{
-                                            objectFit: 'contain', // Sem distorcer
+                                            objectFit: 'contain',
                                         }}
                                     />
                                 </Col>

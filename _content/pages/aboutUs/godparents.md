@@ -1,6 +1,6 @@
 ---
 id: "godparents-aboutUs"
-title: 
+title:
   text: "Padrinhos"
 image: "logos/teup.png"
 button:
