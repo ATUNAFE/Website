@@ -51,6 +51,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     }
                 }
             }
+            music: markdownRemark(frontmatter: {id: {eq: "page-music"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
         }
         `
     );
@@ -62,7 +71,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const pageTemplate = path.resolve(`./src/templates/pageTemplate.js`);
 
-    const { home, aboutUs, activeMembers, inactiveMembers } = result.data;
+    const { home, aboutUs, activeMembers, inactiveMembers, music } = result.data;
 
     createPage({
         path: home.frontmatter.slug,
@@ -93,6 +102,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: pageTemplate,
         context: {
             data: inactiveMembers
+        },
+    });
+
+    createPage({
+        path: music.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: music
         },
     });
 }

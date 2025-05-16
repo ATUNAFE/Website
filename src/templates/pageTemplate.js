@@ -11,6 +11,7 @@ import PhotoAlbum from "../components/homepage/photo-album";
 import NextEvents from "../components/homepage/next-events";
 import Layout from "../components/layout";
 import Members from "../components/members/members";
+import Discography from "../components/music/discography";
 
 import "../style/concept.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +27,8 @@ const componentMap = {
     FollowUsSection,
     PhotoAlbum,
     NextEvents,
-    Members
+    Members,
+    Discography
 };
 
 const AboutUs = ({ pageContext }) => {
