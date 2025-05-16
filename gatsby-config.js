@@ -6,23 +6,48 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
+
+		// Markdown files
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `content`,
-				path: `${__dirname}/_content`,
+				name: `pages`,
+				path: `${__dirname}/_content/pages`,
 			},
 		},
+
+		// Images (referenciadas nos markdowns)
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/src/images`,
+				path: `${__dirname}/_content/images`,
 			},
 		},
-		`gatsby-plugin-image`
+
+		// Transformer for Markdown
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 800,
+							linkImagesToOriginal: false,
+							withWebp: true,
+						},
+					},
+				],
+			},
+		},
+
+		// Image processing
+		`gatsby-plugin-image`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+
+		// Manifest
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
@@ -32,15 +57,13 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/logos/tunafe.png`, // This path is relative to the root of the site.
+				icon: `_content/images/logos/tunafe.png`,
 			},
 		},
-		// other plugins
+
+		// Other plugins
 		`gatsby-adapter-netlify`,
 		`gatsby-plugin-decap-cms`,
-		`gatsby-transformer-remark`,
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
 	],
 }

@@ -15,8 +15,7 @@ const SingleImageCarousel = ({ images, withControls = true, withIndicators = fal
         {images.map((image, index) => (
             <Carousel.Item key={index} style={{ height: "600px" }}>
                 <CustomImage
-                    src={image.src}
-                    alt={image.alt}
+                    src={image}
                     style={{
                         width: "100%",
                         height: "100%",

@@ -13,7 +13,7 @@ const chunkArray = (arr, size) => {
 };
 
 const MultiImageCarousel = ({ images }) => {
-    const imageGroups = chunkArray(images, 6); // Group images into sets of 6
+    const imageGroups = chunkArray(images, 6);
 
     return (
         <Carousel
@@ -30,14 +30,13 @@ const MultiImageCarousel = ({ images }) => {
                             {group.map((image, i) => (
                                 <Col xs={4} md={2} key={i} className="d-flex justify-content-center">
                                     <CustomImage
-                                        src={image.src}
-                                        alt={image.alt}
+                                        src={image}
                                         style={{
                                             width: '100%',
-                                            height: '200px', // Definição de altura fixa para o carousel
+                                            height: '200px',
                                         }}
                                         imgStyle={{
-                                            objectFit: 'contain', // Sem distorcer
+                                            objectFit: 'contain',
                                         }}
                                     />
                                 </Col>

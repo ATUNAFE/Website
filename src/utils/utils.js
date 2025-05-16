@@ -8,8 +8,8 @@ export const formatMembers = (members) =>
         nameC: member.frontmatter.nameC,
         course: member.frontmatter.course,
         godmother: member.frontmatter.godmother,
-        picture: member.frontmatter.picture,
-        instruments: formatInstruments(member.frontmatter.instruments),
+        image: member.frontmatter.image,
+        instruments: member.frontmatter.instruments,
         
     })
 );
