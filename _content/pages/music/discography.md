@@ -3,6 +3,8 @@ id: "discography-music"
 title:
   text: "Discografia"
 watermark: "pages/cd-black.png"
+color: "#2A2A2A"
+backgroundColor: "#F0F0F0"
 button:
   text: "Ouve-nos no Spotify!"
   link: "https://open.spotify.com/artist/60Hg2AzIe678S9Q8Guw1hI"

@@ -15,6 +15,8 @@ const Discography = ({ id }) => {
                             text
                         }
                         watermark
+                        color
+                        backgroundColor
                         button {
                             text
                             link
@@ -39,7 +41,8 @@ const Discography = ({ id }) => {
             id={id}
             style={{
                 position: "relative",
-                backgroundColor: "var(--light-neutral)"
+                backgroundColor: content.frontmatter.backgroundColor,
+                color: content.frontmatter.color
             }}
         >
             <CustomImage

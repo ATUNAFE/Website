@@ -12,6 +12,7 @@ import NextEvents from "../components/homepage/next-events";
 import Layout from "../components/layout";
 import Members from "../components/members/members";
 import Discography from "../components/music/discography";
+import Repertoire from "../components/music/repertoire";
 
 import "../style/concept.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,7 +29,8 @@ const componentMap = {
     PhotoAlbum,
     NextEvents,
     Members,
-    Discography
+    Discography,
+    Repertoire
 };
 
 const AboutUs = ({ pageContext }) => {

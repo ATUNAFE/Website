@@ -142,7 +142,7 @@ const Members = ({ id }) => {
                 <Row className="justify-content-center">
                     <Col xs={12} md={10} lg={8}>
                         {sections.map((section, index) =>
-                            <CollapsibleSection key={index} title={section.title} enabled={section.collapsible}>
+                            <CollapsibleSection key={index} title={section.title} color="var(--light-neutral)" backgroundColor="var(--dark-neutral)" enabled={section.collapsible}>
                                 {renderMembers(section.members || [])}
                             </CollapsibleSection>
                         )}

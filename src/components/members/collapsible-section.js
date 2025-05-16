@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Collapse, Row, Col } from "react-bootstrap";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
-const CollapsibleSection = ({ title, children, enabled = true }) => {
+const CollapsibleSection = ({ title, color, backgroundColor, children, enabled = true }) => {
     const [open, setOpen] = useState(true);
 
     return (
@@ -11,8 +11,8 @@ const CollapsibleSection = ({ title, children, enabled = true }) => {
                 onClick={() => enabled && setOpen(!open)}
                 style={{
                     cursor: enabled ? "pointer" : "default",
-                    backgroundColor: "var(--mid-green)",
-                    color: "var(--light-neutral)",
+                    backgroundColor,
+                    color,
                     borderBottom: "none",
                     display: "inline-flex",
                     alignItems: "center",

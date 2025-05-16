@@ -8,4 +8,6 @@ components:
     id: "banner-music"
   - type: Discography
     id: "discography-music"
+  - type: Repertoire
+    id: "repertoire-music"
 ---
