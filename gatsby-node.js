@@ -60,6 +60,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     }
                 }
             }
+            tiet: markdownRemark(frontmatter: {id: {eq: "page-tiet"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
+            events: markdownRemark(frontmatter: {id: {eq: "page-events"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
         }
         `
     );
@@ -71,7 +89,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const pageTemplate = path.resolve(`./src/templates/pageTemplate.js`);
 
-    const { home, aboutUs, activeMembers, inactiveMembers, music } = result.data;
+    const { home, aboutUs, activeMembers, inactiveMembers, music, tiet, events } = result.data;
 
     createPage({
         path: home.frontmatter.slug,
@@ -110,6 +128,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: pageTemplate,
         context: {
             data: music
+        },
+    });
+
+    createPage({
+        path: tiet.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: tiet
+        },
+    });
+
+    createPage({
+        path: events.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: events
         },
     });
 }
