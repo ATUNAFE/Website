@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return;
     }
 
-    const pageTemplate = path.resolve(`./src/templates/about-us.js`);
+    const pageTemplate = path.resolve(`./src/templates/pageTemplate.js`);
 
     const { home, aboutUs } = result.data;
 
