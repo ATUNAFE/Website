@@ -24,6 +24,7 @@ const Banner = ({ id }) => {
 								icon
 								link
 							}
+							text
 						}
 					}
 				}
@@ -33,8 +34,8 @@ const Banner = ({ id }) => {
 
 	const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
 
-    if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
-	
+	if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
+
 	return (
 		<>
 			<div
@@ -91,53 +92,59 @@ const Banner = ({ id }) => {
 					</Container>
 				</div>
 			</div>
-			{content.frontmatter.sections.map((section, index) => {
-				if (section.type === "navigation") {
-					return (
-						<Container
-							key={index}
-							fluid
-							className="d-flex justify-content-center align-items-center py-5"
-							style={{
-								backgroundColor: section.backgroundColor,
-								color: "var(--light-neutral)",
-							}}
-						>
-							{section.items.map((item, idx) => (
-								<Row
-									key={idx}
-									className="w-100 align-items-center justify-content-center"
-									onClick={() => {
-										const el = document.getElementById(item.link)
-										if (el) {
-											const yOffset = -75
-											const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
 
-											window.scrollTo({ top: y, behavior: "smooth" })
-										}
-									}}
+			{content.frontmatter.sections.map((section, index) => (
+				<Container
+					key={index}
+					fluid
+					className="d-flex justify-content-center align-items-center py-5"
+					style={{
+						backgroundColor: section.backgroundColor,
+						color: section.color,
+					}}
+				>
+					{
+						section.type === "navigation" ? (
+							<>
+								{
+									section.items.map((item, idx) => (
+										<Row
+											key={idx}
+											className="w-100 align-items-center justify-content-center"
+											onClick={() => {
+												const el = document.getElementById(item.link)
+												if (el) {
+													const yOffset = -75
+													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
 
-									style={{ cursor: "pointer" }}
-								>
-									<Col xs="auto" className="d-flex align-items-center justify-content-center">
-										<CustomImage
-											src={item.icon}
-											style={{ width: "40px", height: "40px" }}
-											imgStyle={{ objectFit: "cover" }}
-										/>
-									</Col>
-									<Col xs="auto" className="d-flex align-items-center justify-content-center">
-										<h4 className="mb-0">{item.title}</h4>
-									</Col>
-								</Row>
-							))}
-						</Container>
-					)
-				}
-				else {
-					return null
-				}
-			})}
+													window.scrollTo({ top: y, behavior: "smooth" })
+												}
+											}}
+
+											style={{ cursor: "pointer" }}
+										>
+											<Col xs="auto" className="d-flex align-items-center justify-content-center">
+												<CustomImage
+													src={item.icon}
+													style={{ width: "40px", height: "40px" }}
+													imgStyle={{ objectFit: "cover" }}
+												/>
+											</Col>
+											<Col xs="auto" className="d-flex align-items-center justify-content-center">
+												<h4 className="mb-0">{item.title}</h4>
+											</Col>
+										</Row>
+									))
+								}
+							</>
+						) :
+							section.type === "text" ? (
+								<h3>{section.text}</h3>
+							) : null
+					}
+				</Container>
+			))
+			}
 		</>
 	);
 };

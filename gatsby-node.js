@@ -33,6 +33,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     }
                 }
             }
+            activeMembers: markdownRemark(frontmatter: {id: {eq: "page-activeMembers"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
+            inactiveMembers: markdownRemark(frontmatter: {id: {eq: "page-inactiveMembers"}}) {
+                frontmatter {
+                    slug
+                    components {
+                        type
+                        id
+                    }
+                }
+            }
         }
         `
     );
@@ -44,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const pageTemplate = path.resolve(`./src/templates/pageTemplate.js`);
 
-    const { home, aboutUs } = result.data;
+    const { home, aboutUs, activeMembers, inactiveMembers } = result.data;
 
     createPage({
         path: home.frontmatter.slug,
@@ -59,6 +77,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: pageTemplate,
         context: {
             data: aboutUs
+        },
+    });
+
+    createPage({
+        path: activeMembers.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: activeMembers
+        },
+    });
+
+    createPage({
+        path: inactiveMembers.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+            data: inactiveMembers
         },
     });
 }

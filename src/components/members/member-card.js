@@ -1,11 +1,10 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import noPicture from "../../images/SemFoto.png";
 
 import { IMAGE_FILENAMES } from "../../utils/constants";
 import CustomImage from "../images/image";
 
-const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) => {
+const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
     return (
         <Card
             className="mb-3 border-0"
@@ -19,7 +18,7 @@ const MemberCard = ({ name, nameC, course, godmother, picture, instruments }) =>
                     <Card.Img
                         variant="top"
                         className="rounded-0"
-                        src={picture || noPicture}
+                        src={image || IMAGE_FILENAMES.pages.semFoto}
                         style={{
                             width: "150px",
                             height: "150px",
