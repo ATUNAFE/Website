@@ -70,27 +70,28 @@ const Members = ({ id }) => {
                 }
             }
         }
-        inactiveMestreTunas: allMarkdownRemark(
-            filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna/"}}}
-        ) {
-            nodes {
-                frontmatter {
-                    id
-                    title {
-                        text
-                    }
-                    date
-                    name
-                    nameC
-                    course
-                    godmother
-                    instruments
-                    image
-                }
-            }
-        }
     }
     `);
+
+    // inactiveMestreTunas: allMarkdownRemark(
+    //         filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna/"}}}
+    //     ) {
+    //         nodes {
+    //             frontmatter {
+    //                 id
+    //                 title {
+    //                     text
+    //                 }
+    //                 date
+    //                 name
+    //                 nameC
+    //                 course
+    //                 godmother
+    //                 instruments
+    //                 image
+    //             }
+    //         }
+    //     }
 
     let content = {};
 
@@ -101,7 +102,7 @@ const Members = ({ id }) => {
         };
     } else if (id === MEMBERS_ID.inactive) {
         content = {
-            mestreTunas: data.inactiveMestreTunas
+            // mestreTunas: data.inactiveMestreTunas
         };
     } else {
         content = null;

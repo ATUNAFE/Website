@@ -5,7 +5,7 @@ title:
 button:
   text: "Descobre mais eventos!"
   link: "/"
-events:
+nextEvents:
   - name: "Evento X"
     date: "xx/xx/xxxx"
     local: "Local X"

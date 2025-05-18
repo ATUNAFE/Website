@@ -19,7 +19,7 @@ const NextEvents = ({ id }) => {
                             text
                             link
                         }
-                        events {
+                        nextEvents {
                             name
                             date
                             local
@@ -50,7 +50,7 @@ const NextEvents = ({ id }) => {
             </Row>
 
             <Row>
-                {content.frontmatter.events.map((event, index) => (
+                {content.frontmatter.nextEvents.map((event, index) => (
                     <Col
                         key={index}
                         xs={6}

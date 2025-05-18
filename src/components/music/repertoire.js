@@ -22,7 +22,7 @@ const Repertoire = ({ id }) => {
                     }
                 }
             }
-            allSongs: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/music-song/"}}}) {
+            allSongs: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/music-/"}}}) {
                 nodes {
                     html
                     frontmatter {
@@ -36,8 +36,6 @@ const Repertoire = ({ id }) => {
             }
         }
     `);
-    console.log("DATA:");
-    console.log(data);
 
     const repertoire = data.repertoire.nodes.find((node) => node.frontmatter.id === id);
 
@@ -46,10 +44,6 @@ const Repertoire = ({ id }) => {
     const songs = repertoire.frontmatter.songs.map((songId) =>
         data.allSongs.nodes.find((song) => song.frontmatter.id === songId)
     );
-    console.log("REPERTOIRE:");
-    console.log(repertoire);
-    console.log("SONGS:");
-    console.log(songs);
 
     return (
         <div

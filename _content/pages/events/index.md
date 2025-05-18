@@ -6,4 +6,6 @@ title:
 components:
   - type: Banner
     id: "banner-events"
+  - type: Events
+    id: "data-events"
 ---

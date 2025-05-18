@@ -2,7 +2,7 @@
 id: "members-aboutUs"
 title:
   text: "Membros"
-watermark: "membros-white.png"
+watermark: "pages/membros-white.png"
 buttons:
   - text: "Atualmente"
     link: "/atualmente"
