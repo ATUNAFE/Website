@@ -1,5 +1,5 @@
 ---
-id: "events-portuscalle24"
+id: "event-portuscalle24"
 title:
   text: "Portuscalle'24"
 date: "xx/xx/2024"

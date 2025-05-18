@@ -16,7 +16,7 @@ const Events = ({ id }) => {
                     }
                 }
             }
-            allEvents: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/events-/"}}}) {
+            allEvents: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/event-/"}}}) {
                 nodes {
                     html
                     frontmatter {

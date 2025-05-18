@@ -67,6 +67,8 @@ const PhotoAlbum = ({ id }) => {
                             }}
                             onMouseEnter={e => (e.target.style.textDecoration = "underline")}
                             onMouseLeave={e => (e.target.style.textDecoration = "none")}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             {content.frontmatter.button.text}
                         </a>

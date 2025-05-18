@@ -11,7 +11,7 @@ darkTheme:
   color: "#F0F0F0"
   backgroundColor: "#995345"
 events:
-  - "events-portuscalle22"
-  - "events-portuscalle23"
-  - "events-portuscalle24"
+  - "event-portuscalle22"
+  - "event-portuscalle23"
+  - "event-portuscalle24"
 ---

@@ -14,6 +14,7 @@ import Members from "../components/members/members";
 import Discography from "../components/music/discography";
 import Repertoire from "../components/music/repertoire";
 import Events from "../components/events/events";
+import TietEditions from "../components/tiet/tietEditions";
 
 import "../style/concept.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,7 +33,8 @@ const componentMap = {
     Members,
     Discography,
     Repertoire,
-    Events
+    Events,
+    TietEditions
 };
 
 const AboutUs = ({ pageContext }) => {

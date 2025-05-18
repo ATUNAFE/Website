@@ -81,7 +81,7 @@ const Discography = ({ id }) => {
                                 style={{ width: "50%" }}
                             />
                             <div className="mt-3">
-                                <h5>{cd.name}</h5>
+                                <h5 className="fw-bold">{cd.name}</h5>
                                 <p>{cd.year}</p>
                             </div>
                         </Col>

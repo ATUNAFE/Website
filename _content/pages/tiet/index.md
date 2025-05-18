@@ -6,4 +6,6 @@ title:
 components:
   - type: Banner
     id: "banner-tiet"
+  - type: TietEditions
+    id: "editions-tiet"
 ---

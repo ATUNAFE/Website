@@ -4,7 +4,7 @@ title:
   text: ""
 button:
   text: "Acompanha-nos!"
-  link: "/"
+  link: "https://www.facebook.com/tunafe/photos_albums"
 carousel:
   - "yearly/1992.jpg"
   - "yearly/1999.jpg"

@@ -4,7 +4,7 @@ title:
   text: "Próximos Eventos"
 button:
   text: "Descobre mais eventos!"
-  link: "/"
+  link: "/eventos"
 nextEvents:
   - name: "Evento X"
     date: "xx/xx/xxxx"

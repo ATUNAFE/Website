@@ -6,7 +6,7 @@ image: "logos/tiet-white.png"
 watermark: "pages/tiet-white.png"
 button:
   text: "Edições"
-  link: "/"
+  link: "/tudo-isto-é-tuna"
 ---
 Com um nome sólido e tradicional, inspirado no hino da mui nobre TUNAFE que o criou, o “Tudo Isto é Tuna” é um festival de Tunas Femininas que já conquistou o seu lugar no panorama musical. Desde 1997+1 a Tunafe organiza o seu festival com o objectivo de juntar as Tunas Femininas num convívio de boa disposição e exaltação na alegria de ser estudante.
 
