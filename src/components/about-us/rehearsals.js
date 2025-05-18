@@ -40,7 +40,7 @@ const Rehearsals = ({ id }) => {
             }}
         >
             <CustomImage
-                src={content.frontmatterwatermark}
+                src={content.frontmatter.watermark}
                 style={{
                     position: "absolute",
                     top: "50%",
