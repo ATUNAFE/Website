@@ -12,7 +12,6 @@
     "decap-cms-app": "^3.0.4",
     "gatsby": "^5.13.7",
     "gatsby-adapter-netlify": "^1.0.4",
-    "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-image": "^3.11.0",
