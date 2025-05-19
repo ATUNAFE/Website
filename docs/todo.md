@@ -54,3 +54,7 @@ Este ficheiro descreve aquilo que ainda falta ajustar/desenvolver no website. De
 ### Sempre Tunafas
 
 - Recolher a informação em falta relativa aos membros atuais, garantindo que a ordem está correta (através do campo `date` nos ficheiros markdown).
+
+## Tudo Isto É Tuna - Edições
+
+- Atualizar a página com as informações das diferentes edições do Tudo Isto É Tuna.
