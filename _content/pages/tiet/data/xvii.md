@@ -2,32 +2,31 @@
 id: "edition-xvii"
 title:
   text: "XVII Tudo Isto é Tuna"
-date: "8 e 9 de março de 2019"
+date: "9 de janeiro de 2021"
 local: "Grande Auditório da FEUP"
-image: "CartazXVII.png"
+image: "tiet/xvii.png"
 participants:
-  - "Cientuna - Tuna Feminina de Ciências do Porto"
+  - "Atituna – Tuna  Feminina da Faculdade de Psicologia e Ciências da Educação da U.P."
   - "Legislatuna - Tuna Feminina da Faculdade de Direito da UP"
   - "TFB - Tuna Feminina de Biomédicas"
-  - "TUFEMED - Tuna Feminina de Medicina do Porto"
+  - "TAFNUP - Tuna Académica Feminina de Nutrição da Universidade do Porto"
 extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
+guests:
+  - "Grupo de Fados de Engenharia"
 awards:
-  - "Tuna mais Solidária – TUFEMED"
-  - "Melhor Tema – Legislatuna"
+  - "Melhor Claque - TAFNUP"
+  - "Tuna mais Solidária – TAFNUP"
+  - "Tuna mais Tuga – Legislatuna"
   - "Melhor Pandeireta – Legislatuna"
-  - "Melhor Porta-Estandarte – Cientuna"
-  - "Melhor Instrumental – Cientuna"
-  - "Melhor Solista – TFB"
-  - "Tuna mais Tuna – Cientuna"
+  - "Melhor Porta-Estandarte – TFB"
+  - "Melhor Instrumental – TFB"
+  - "Melhor Solista – Legislatuna"
+  - "Tuna mais Tuna – Atituna"
   - "Melhor Tuna – Legislatuna"
 jury:
-  - "Paulo Nunes"
-  - "Professor Augusto Sousa"
-  - "Pedro Matos"
-  - "Ângela Pinheiro (Brilho)"
-  - "João Paulo Pereira"
+  - ""
 host:
-  - Beatriz Gosta
+  - "Pedro \"Rodas\" Silva"
 ---

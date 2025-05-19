@@ -2,9 +2,9 @@
 id: "edition-xvi"
 title:
   text: "XVII Tudo Isto é Tuna"
-date: "27 de novembro de 2021"
+date: "27 de novembro de 2019"
 local: "Auditório da Casa de Vilar"
-image: "CartazXVII.png"
+image: "tiet/xvi.jpg"
 participants:
   - "Cientuna - Tuna Feminina de Ciências do Porto"
   - "Legislatuna - Tuna Feminina da Faculdade de Direito da UP"
@@ -29,5 +29,5 @@ jury:
   - "Ângela Pinheiro (Brilho)"
   - "João Paulo Pereira"
 host:
-  - Beatriz Gosta
+  - "Beatriz Gosta"
 ---

@@ -2,32 +2,30 @@
 id: "edition-xv"
 title:
   text: "XVII Tudo Isto é Tuna"
-date: "27 de novembro de 2021"
-local: "Auditório da Casa de Vilar"
-image: "CartazXVII.png"
+date: "1 de abril de 2017"
+local: "Seminário de Vilar"
+image: "tiet/xv.png"
 participants:
-  - "Cientuna - Tuna Feminina de Ciências do Porto"
-  - "Legislatuna - Tuna Feminina da Faculdade de Direito da UP"
-  - "TFB - Tuna Feminina de Biomédicas"
+  - "Legislatuna – Tuna  Feminina da Faculdade de Direito da U.P."
+  - "Sirigaitas – Tuna Feminina da Faculdade de Farmácia da U.P."
+  - "TeSuna - Tuna Feminina da Escola Superior de Saúde do Porto"
   - "TUFEMED - Tuna Feminina de Medicina do Porto"
 extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
+guests:
+  - "Ensemble Vocal 7ª Arte"
 awards:
-  - "Tuna mais Solidária – TUFEMED"
-  - "Melhor Tema – Legislatuna"
+  - "Melhor Claque - Legislatuna"
+  - "Melhor Banda Sonora – TeSuna"
   - "Melhor Pandeireta – Legislatuna"
-  - "Melhor Porta-Estandarte – Cientuna"
-  - "Melhor Instrumental – Cientuna"
-  - "Melhor Solista – TFB"
-  - "Tuna mais Tuna – Cientuna"
+  - "Melhor Porta-Estandarte – Legislatuna"
+  - "Melhor Instrumental – TeSuna"
+  - "Melhor Solista – TeSuna"
+  - "Tuna mais Tuna – TUFEMED"
   - "Melhor Tuna – Legislatuna"
 jury:
-  - "Paulo Nunes"
-  - "Professor Augusto Sousa"
-  - "Pedro Matos"
-  - "Ângela Pinheiro (Brilho)"
-  - "João Paulo Pereira"
+  - ""
 host:
-  - Beatriz Gosta
+  - ""
 ---

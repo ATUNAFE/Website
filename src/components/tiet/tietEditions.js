@@ -5,7 +5,7 @@ import TietEdition from "./tietEdition";
 const TietEditions = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            editions: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/editions-tiet/"}}}) {
+            tietEditions: allMarkdownRemark(filter: {frontmatter: {id: {regex: "/editions-tiet/"}}}) {
                 nodes {
                     frontmatter {
                         id
@@ -27,6 +27,7 @@ const TietEditions = ({ id }) => {
                         image
                         participants
                         extras
+                        guests
                         awards
                         jury
                         host
@@ -36,7 +37,7 @@ const TietEditions = ({ id }) => {
         }
     `);
 
-    const editions = data.editions.nodes.find((node) => node.frontmatter.id === id);
+    const editions = data.tietEditions.nodes.find((node) => node.frontmatter.id === id);
 
     if (!editions) return <p>⚠️ Content not found for “{id}”.</p>;
 
