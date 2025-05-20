@@ -29,11 +29,11 @@ const Members = ({ id }) => {
             ))}
         </div>
     );
-    
+
     const data = useStaticQuery(graphql`
         {
         magister: allMarkdownRemark(
-            filter: {frontmatter: {id: {regex: "/activeMembers-magister/"}}}
+            filter: {frontmatter: {id: {regex: "/^activeMembers-magister-/"}}}
         ) {
             nodes {
             frontmatter {
@@ -52,7 +52,7 @@ const Members = ({ id }) => {
         }
     }
         activeMestreTunas: allMarkdownRemark(
-            filter: {frontmatter: {id: {regex: "/activeMembers-mestreTuna/"}}}
+            filter: {frontmatter: {id: {regex: "/^activeMembers-mestreTuna-/"}}}
         ) {
             nodes {
                 frontmatter {
@@ -70,65 +70,187 @@ const Members = ({ id }) => {
                 }
             }
         }
+        activeTunas: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/^activeMembers-tuna-/"}}}
+        ) {
+            nodes {
+                frontmatter {
+                    id
+                    title {
+                        text
+                    }
+                    date
+                    name
+                    nameC
+                    course
+                    godmother
+                    instruments
+                    image
+                }
+            }
+        }
+        activeCaloiras: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/^activeMembers-caloira-/"}}}
+        ) {
+            nodes {
+                frontmatter {
+                    id
+                    title {
+                        text
+                    }
+                    date
+                    name
+                    nameC
+                    course
+                    godmother
+                    instruments
+                    image
+                }
+            }
+        }
+            fundadoras: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/inactiveMembers-fundadora-/"}}}
+        ) {
+            nodes {
+            frontmatter {
+                id
+                title {
+                    text
+                }
+                date
+                name
+                nameC
+                course
+                godmother
+                instruments
+                image
+            }
+        }
+    }   
+        inactiveMestreTunas: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna-/"}}}
+        ) {
+            nodes {
+            frontmatter {
+                id
+                title {
+                    text
+                }
+                date
+                name
+                nameC
+                course
+                godmother
+                instruments
+                image
+            }
+        }
+    }
+    inactiveTunas: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/inactiveMembers-tuna-/"}}}
+        ) {
+            nodes {
+            frontmatter {
+                id
+                title {
+                    text
+                }
+                date
+                name
+                nameC
+                course
+                godmother
+                instruments
+                image
+            }
+        }
+    }
+        inactiveCaloiras: allMarkdownRemark(
+            filter: {frontmatter: {id: {regex: "/inactiveMembers-caloira-/"}}}
+        ) {
+            nodes {
+            frontmatter {
+                id
+                title {
+                    text
+                }
+                date
+                name
+                nameC
+                course
+                godmother
+                instruments
+                image
+            }
+        }
+    }
+            
     }
     `);
-
-    // inactiveMestreTunas: allMarkdownRemark(
-    //         filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna/"}}}
-    //     ) {
-    //         nodes {
-    //             frontmatter {
-    //                 id
-    //                 title {
-    //                     text
-    //                 }
-    //                 date
-    //                 name
-    //                 nameC
-    //                 course
-    //                 godmother
-    //                 instruments
-    //                 image
-    //             }
-    //         }
-    //     }
 
     let content = {};
 
     if (id === MEMBERS_ID.active) {
         content = {
             magister: data.magister,
-            mestreTunas: data.activeMestreTunas
+            mestreTunas: data.activeMestreTunas,
+            tunas: data.activeTunas,
+            caloiras: data.activeCaloiras
         };
     } else if (id === MEMBERS_ID.inactive) {
         content = {
-            // mestreTunas: data.inactiveMestreTunas
+            fundadoras: data.fundadoras,
+            mestreTunas: data.inactiveMestreTunas,
+            tunas: data.inactiveTunas,
+            caloiras: data.inactiveCaloiras
         };
     } else {
         content = null;
     }
-    console.log("MEMBERS CONTENT:");
-    console.log(content);
 
     if (!content) return <p>⚠️ Content not found for footer”.</p>;
 
-    const sections = [
-        {
+    let sections = [];
+
+    if (content?.magister) {
+        sections.push({
             collapsible: true,
             members: formatMembers(content.magister.nodes),
             title: "Magister"
-        },
-        {
+        });
+    }
+
+    if (content?.fundadoras) {
+        sections.push({
+            collapsible: true,
+            members: formatMembers(content.fundadoras.nodes),
+            title: "Fundadoras"
+        });
+    }
+
+    if (content?.mestreTunas) {
+        sections.push({
             collapsible: true,
             members: formatMembers(content.mestreTunas.nodes),
             title: "Mestre-Tunas"
-        },
-        {
-            collapsible: false,
-            title: "Aprendizes..."
-        }
-    ];
+        });
+    }
 
+    if (content?.tunas) {
+        sections.push({
+            collapsible: true,
+            members: formatMembers(content.tunas.nodes),
+            title: "Tunas"
+        });
+    }
+
+    if (content?.caloiras) {
+        sections.push({
+            collapsible: true,
+            members: formatMembers(content.caloiras.nodes),
+            title: "Caloiras"
+        });
+    }
 
     return (
         <div

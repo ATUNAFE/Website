@@ -2,7 +2,7 @@
 id: "activeMembers-magister-Jóquerérrius"
 title:
   text: ""
-date: "2019-05-15T00:18:48.075652"
+date: "2019-08-20T09:56:22.870072"
 name: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 nameC: "Ana Rita Marques"
 course: "Mestrado Integrado em Engenharia Mecânica"
@@ -10,7 +10,7 @@ godmother: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 instruments:
   - "magister"
   - "contrabaixo"
-  - "percussão"
+  - "percussao"
   - "bandolim"
-image: "https://i.imgur.com/lyRa3Uh.jpeg"
+image: "https://i.imgur.com/hTmw8li.jpeg"
 ---

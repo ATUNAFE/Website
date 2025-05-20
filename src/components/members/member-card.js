@@ -15,16 +15,19 @@ const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
         >
             <Row className="g-0 align-items-center">
                 <Col xs={12} sm={2} className="d-flex justify-content-center align-items-center mb-3 mb-sm-0">
-                    <Card.Img
-                        variant="top"
-                        className="rounded-0"
-                        src={image || IMAGE_FILENAMES.pages.semFoto}
-                        style={{
-                            width: "150px",
-                            height: "150px",
-                            objectFit: "contain"
-                        }}
-                    />
+                    {image ?
+                        <Card.Img
+                            variant="top"
+                            className="rounded-0"
+                            src={image}
+                            style={{
+                                width: "150px",
+                                height: "150px",
+                                objectFit: "contain"
+                            }}
+                        /> :
+                        <CustomImage src={IMAGE_FILENAMES.pages.semFoto} />
+                    }
                 </Col>
 
                 <Col xs={12} sm={10} className="ps-sm-4">

@@ -36,7 +36,7 @@ const TietEdition = ({ edition, theme }) => {
                         md={6}
                         className="d-flex flex-column justify-content-center align-items-center w-80"
                     >
-                        <div style={{ width: "80%" }}>
+                        <div>
                             <div className="mb-4">
                                 <p className="mb-2 fw-bold">{PARTICIPANTS_TITLE}</p>
                                 {edition.frontmatter.participants.map((participant, index) => (

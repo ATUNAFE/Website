@@ -62,9 +62,9 @@ const Header = ({ siteTitle = "" }) => {
 						style={{
 							padding: "0.5rem",
 							display: "flex",
-							alignItems: "center", // vertical
-							justifyContent: "center", // horizontal
-							height: "77px", // mesmo valor do Row
+							alignItems: "center",
+							justifyContent: "center",
+							height: "77px",
 						}}
 					>
 						<Link
