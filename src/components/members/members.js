@@ -52,6 +52,7 @@ const Members = ({ id }) => {
         }
     }
         activeMestreTunas: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-mestreTuna-/"}}}
         ) {
             nodes {
@@ -71,6 +72,7 @@ const Members = ({ id }) => {
             }
         }
         activeTunas: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-tuna-/"}}}
         ) {
             nodes {
@@ -90,6 +92,7 @@ const Members = ({ id }) => {
             }
         }
         activeCaloiras: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-caloira-/"}}}
         ) {
             nodes {
@@ -108,7 +111,8 @@ const Members = ({ id }) => {
                 }
             }
         }
-            fundadoras: allMarkdownRemark(
+        fundadoras: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-fundadora-/"}}}
         ) {
             nodes {
@@ -128,6 +132,7 @@ const Members = ({ id }) => {
         }
     }   
         inactiveMestreTunas: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna-/"}}}
         ) {
             nodes {
@@ -146,7 +151,8 @@ const Members = ({ id }) => {
             }
         }
     }
-    inactiveTunas: allMarkdownRemark(
+        inactiveTunas: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-tuna-/"}}}
         ) {
             nodes {
@@ -166,6 +172,7 @@ const Members = ({ id }) => {
         }
     }
         inactiveCaloiras: allMarkdownRemark(
+            sort: {frontmatter: {date: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-caloira-/"}}}
         ) {
             nodes {
