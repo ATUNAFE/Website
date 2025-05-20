@@ -47,14 +47,13 @@ Este ficheiro descreve aquilo que ainda falta ajustar/desenvolver no website. De
 
 ## Membros
 
-### Atualmente
-
-- Recolher a informação em falta relativa aos membros atuais, garantindo que a ordem está correta (através do campo `date` nos ficheiros markdown).
+- Atualizar a ordem e as pessoas que ainda são atuais e as que já não são.
 
 ### Sempre Tunafas
 
-- Recolher a informação em falta relativa aos membros atuais, garantindo que a ordem está correta (através do campo `date` nos ficheiros markdown).
+- Obter as fotos dos membros antigos.
 
 ## Tudo Isto É Tuna - Edições
 
-- Atualizar a página com as informações das diferentes edições do Tudo Isto É Tuna.
+- Confirmar as informações da página.
+- Arranjar os cartazes das 2 primeiras edições.
