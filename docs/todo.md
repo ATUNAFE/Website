@@ -2,6 +2,16 @@
 
 Este ficheiro descreve aquilo que ainda falta ajustar/desenvolver no website. De forma a ser mais fácil situar as alterações em falta as tarefas estão organizadas por páginas e possíveis secções.
 
+## Geral
+- Responsividade, o site para telemóvel tem coisas que temos que melhorar antes de lançar:
+  - Footer (tamanho dos icones no telemovel e tablet, icones desaparecerem no tablet)
+  - Nav bar (para telemovel/ipad mini tem um espaço estranho no fundo do menu, e quando damos click fora do menu as coisas alinham em vez de desaparecerem - bug)
+  - Nav bar na pagina Sobre Nós (fica uma coluna branca à direita no iphone 12 pro)
+  - Sobre Nós (a barra com o historial/membros/TIET/... fica super squished together no iphone 12 pro, os botoes "atualmente" e "sempre tunafas" ficam desformatados)
+  - Eventos (festivais um bocado desformatados no iphone 12 pro)
+- Consistencia nos paths:
+  - Exemplo: https://{url}/sobre-nos/#rehearsals-aboutUs quando carregamos no link dos ensaios da homepage
+
 ## Homepage
 
 - Garantir que as linhas do `Banner` (verde e cor de engenharia) não desformatam ao reajustar o tamanho da janela.
