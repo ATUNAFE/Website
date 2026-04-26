@@ -38,24 +38,22 @@ const History = ({ id }) => {
                 overflow: "hidden"
             }}
         >
-            {/* Injecting CSS specifically for the Markdown output */}
+            {/* CSS for Markdown elements: Targets the quote specifically */}
             <style>{`
                 .history-content blockquote {
                     border-left: none;
-                    margin-top: 2.5rem;
+                    margin-top: 2rem;
                     padding: 0;
                     font-style: italic;
-                    color: inherit;
                 }
                 .history-content blockquote p {
                     margin-bottom: 0.5rem;
-                    text-align: justify;
                 }
-                /* Targets the last paragraph in a blockquote (the author) */
+                /* Aligns the author (last line of blockquote) to the right */
                 .history-content blockquote p:last-child {
                     text-align: right;
                     font-style: normal;
-                    margin-top: 1rem;
+                    margin-top: 10px;
                 }
             `}</style>
 
@@ -73,25 +71,33 @@ const History = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
+            
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                <Row className="mb-4">
+                {/* Title - Restored to Left Alignment */}
+                <Row className="mb-3">
                     <Col>
-                        <h2 style={{ fontWeight: "bold" }}>{content.frontmatter.title.text}</h2>
+                        <h3 style={{ fontWeight: "bold" }}>{content.frontmatter.title.text}</h3>
                     </Col>
                 </Row>
+
                 <Row className="align-items-center">
+                    {/* Logo/Crest column */}
                     <Col xs={12} md={4} className="d-flex justify-content-center mb-4 mb-md-0">
                         <CustomImage
                             src={content.frontmatter.image}
                             style={{ width: "100%", maxWidth: "300px" }}
                         />
                     </Col>
+
+                    {/* Text column - Restored to Justified/Left Alignment */}
                     <Col xs={12} md={8}>
-                        <div className="history-content">
+                        <div className="history-content" style={{ textAlign: "justify" }}>
                             <div dangerouslySetInnerHTML={{ __html: content.html }} />
                         </div>
                     </Col>
                 </Row>
+
+                {/* Carousel row */}
                 <Row className="mt-5">
                     <Col>
                         <MultiImageCarousel images={content.frontmatter.carousel} />
