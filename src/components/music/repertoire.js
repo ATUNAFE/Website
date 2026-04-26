@@ -51,7 +51,12 @@ const Repertoire = ({ id }) => {
             style={{
                 position: "relative",
                 backgroundColor: repertoire.frontmatter.backgroundColor,
-                color: repertoire.frontmatter.color
+                color: repertoire.frontmatter.color,
+                overflow: "hidden", // Ensure the watermark doesn't cause scrollbars
+                minHeight: "450px", // Set a minimum height to prevent excessive whitespace if content is short
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center"
             }}
         >
             <CustomImage
@@ -68,20 +73,31 @@ const Repertoire = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <h3>{repertoire.frontmatter.title.text}</h3>
+            {/* Changed py-4 to py-5 for better vertical spacing as per the mockup */}
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                <Row className="mb-2">
+                    <Col>
+                        <h3 style={{ fontWeight: "bold" }}>{repertoire.frontmatter.title.text}</h3>
+                    </Col>
                 </Row>
                 <Row className="mb-4">
-                    <div style={{ textAlign: "justify" }}>
-                        <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
-                    </div>
+                    <Col lg={10}>
+                        <div style={{ textAlign: "justify" }}>
+                            <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
+                        </div>
+                    </Col>
                 </Row>
                 <Row className="justify-content-start">
                     <Col xs={12} md={10} lg={8}>
                         {songs.map((song, index) =>
-                            <CollapsibleSection key={index} color={repertoire.frontmatter.color} backgroundColor={repertoire.frontmatter.backgroundColor} title={song.frontmatter.title.text} enabled={true}>
-                                <p>{song.frontmatter.author}</p>
+                            <CollapsibleSection 
+                                key={index} 
+                                color={repertoire.frontmatter.color} 
+                                backgroundColor={repertoire.frontmatter.backgroundColor} 
+                                title={song.frontmatter.title.text} 
+                                enabled={true}
+                            >
+                                <p><strong>{song.frontmatter.author}</strong></p>
                                 <div style={{ textAlign: "justify" }}>
                                     <div dangerouslySetInnerHTML={{ __html: song.html }} />
                                 </div>
@@ -94,4 +110,4 @@ const Repertoire = ({ id }) => {
     );
 };
 
-export default Repertoire
+export default Repertoire;
