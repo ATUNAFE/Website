@@ -76,6 +76,19 @@ body {
   display: none;
   position: relative;
   z-index: 1200;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+#mobileMenu .dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#mobileMenu .dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
 }
 
 #menuIcon {
@@ -98,8 +111,12 @@ body {
   border: 0;
 }
 
-header, #menu {
+header {
   box-shadow: 0 5px 5px 0px #000;
+}
+
+#menu {
+  box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.65);
 }
 
 .headerLink {
