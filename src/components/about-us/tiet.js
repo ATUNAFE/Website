@@ -81,8 +81,10 @@ const TIET = ({ id }) => {
                                     className="custom-button"
                                     onClick={() => navigate(`${content.frontmatter.button.link}`)}
                                     style={{
-                                        height: "60px",
-                                        width: "120%"
+                                        height: "75px",
+                                        width: "80%",
+                                        minWidth: "150px",
+                                        maxWidth: "300px"
                                     }}
                                 >
                                     <h5 className="button-text" style={{ margin: 0 }}>{content.frontmatter.button.text}</h5>
