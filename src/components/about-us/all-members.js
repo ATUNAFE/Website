@@ -37,6 +37,10 @@ const AllMembers = ({ id }) => {
                 position: "relative",
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                // minHeight to ensure it grows with content
+                minHeight: "fit-content", 
+                display: "flex",
+                alignItems: "center"
             }}
         >
             <CustomImage
@@ -52,32 +56,43 @@ const AllMembers = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+            {/* Changed py-4 to py-5 for more vertical spacing */}
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                <Row className="text-center mb-3">
+                    <Col>
+                        <h3>{content.frontmatter.title.text}</h3>
+                    </Col>
                 </Row>
 
-                <Row className="my-4">
-                    <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                <Row className="mb-5 text-center">
+                    <Col lg={{ span: 8, offset: 2 }}>
+                        <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    </Col>
                 </Row>
 
-                <Row>
+                {/* Added justify-content-center and gy-4 for mobile spacing */}
+                <Row className="justify-content-center gy-4">
                     {content.frontmatter.buttons.map((button, index) => (
                         <Col
                             key={index}
-                            xs={9}
-                            md={6}
-                            className="d-flex flex-column justify-content-center align-items-center"
+                            xs={10} // Wider on mobile
+                            sm={6}  
+                            md={4}  // Side by side on desktop
+                            className="d-flex justify-content-center"
                         >
                             <Button
                                 className="custom-button"
                                 onClick={() => navigate(button.link)}
                                 style={{
                                     height: "70px",
-                                    width: "30%"
+                                    width: "100%", // Let the Column control the width
+                                    maxWidth: "250px", // Prevents the button from being too wide on large screens
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
                                 }}
                             >
-                                <h5 className="button-text">{button.text}</h5>
+                                <h5 className="button-text m-0">{button.text}</h5>
                             </Button>
                         </Col>
                     ))}
