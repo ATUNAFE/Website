@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Card, Collapse, Row, Col } from "react-bootstrap";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
-const CollapsibleSection = ({ title, color, backgroundColor, children, enabled = true }) => {
-    const [open, setOpen] = useState(true);
+const CollapsibleSection = ({ title, color, backgroundColor, children, enabled = true, defaultOpen = true}) => {
+    const [open, setOpen] = useState(defaultOpen);
 
     return (
         <Card className="mb-4" style={{ backgroundColor: "var(--mid-green)", border: "none" }}>
