@@ -26,7 +26,9 @@ const AllMembers = ({ id }) => {
         } 
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        (node) => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
@@ -37,12 +39,10 @@ const AllMembers = ({ id }) => {
                 position: "relative",
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
-                // minHeight to ensure it grows with content
-                minHeight: "fit-content", 
-                display: "flex",
-                alignItems: "center"
+                padding: "60px 0"
             }}
         >
+            {/* Watermark */}
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
@@ -56,43 +56,49 @@ const AllMembers = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            {/* Changed py-4 to py-5 for more vertical spacing */}
-            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                <Row className="text-center mb-3">
+
+            <Container style={{ position: "relative", zIndex: 2 }}>
+                {/* Title */}
+                <Row>
                     <Col>
                         <h3>{content.frontmatter.title.text}</h3>
                     </Col>
                 </Row>
 
-                <Row className="mb-5 text-center">
-                    <Col lg={{ span: 8, offset: 2 }}>
-                        <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                {/* Text */}
+                <Row className="my-4">
+                    <Col>
+                        <div
+                            dangerouslySetInnerHTML={{ __html: content.html }}
+                        />
                     </Col>
                 </Row>
 
-                {/* Added justify-content-center and gy-4 for mobile spacing */}
-                <Row className="justify-content-center gy-4">
+                {/* Buttons (centered only) */}
+                <Row className="justify-content-center mt-4">
                     {content.frontmatter.buttons.map((button, index) => (
                         <Col
                             key={index}
-                            xs={10} // Wider on mobile
-                            sm={6}  
-                            md={4}  // Side by side on desktop
-                            className="d-flex justify-content-center"
+                            xs={12}
+                            md={4}
+                            className="d-flex justify-content-center mb-3"
                         >
                             <Button
                                 className="custom-button"
                                 onClick={() => navigate(button.link)}
                                 style={{
                                     height: "70px",
-                                    width: "100%", // Let the Column control the width
-                                    maxWidth: "250px", // Prevents the button from being too wide on large screens
+                                    width: "200px",
+                                    borderRadius: "15px",
+                                    border: "none",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center"
                                 }}
                             >
-                                <h5 className="button-text m-0">{button.text}</h5>
+                                <h5 className="button-text m-0">
+                                    {button.text}
+                                </h5>
                             </Button>
                         </Col>
                     ))}
