@@ -26,7 +26,9 @@ const AllMembers = ({ id }) => {
         } 
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        (node) => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
@@ -37,8 +39,10 @@ const AllMembers = ({ id }) => {
                 position: "relative",
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                padding: "60px 0"
             }}
         >
+            {/* Watermark */}
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
@@ -52,32 +56,49 @@ const AllMembers = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+
+            <Container style={{ position: "relative", zIndex: 2 }}>
+                {/* Title */}
                 <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+                    <Col>
+                        <h3>{content.frontmatter.title.text}</h3>
+                    </Col>
                 </Row>
 
+                {/* Text */}
                 <Row className="my-4">
-                    <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    <Col>
+                        <div
+                            dangerouslySetInnerHTML={{ __html: content.html }}
+                        />
+                    </Col>
                 </Row>
 
-                <Row>
+                {/* Buttons (centered only) */}
+                <Row className="justify-content-center mt-4">
                     {content.frontmatter.buttons.map((button, index) => (
                         <Col
                             key={index}
-                            xs={9}
-                            md={6}
-                            className="d-flex flex-column justify-content-center align-items-center"
+                            xs={12}
+                            md={4}
+                            className="d-flex justify-content-center mb-3"
                         >
                             <Button
                                 className="custom-button"
                                 onClick={() => navigate(button.link)}
                                 style={{
                                     height: "70px",
-                                    width: "30%"
+                                    width: "200px",
+                                    borderRadius: "15px",
+                                    border: "none",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
                                 }}
                             >
-                                <h5 className="button-text">{button.text}</h5>
+                                <h5 className="button-text m-0">
+                                    {button.text}
+                                </h5>
                             </Button>
                         </Col>
                     ))}
