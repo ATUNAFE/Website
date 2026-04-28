@@ -34,9 +34,29 @@ const History = ({ id }) => {
             id={id} 
             style={{
                 position: "relative",
-                backgroundColor: "var(--light-neutral)"
+                backgroundColor: "var(--light-neutral)",
+                overflow: "hidden"
             }}
         >
+            {/* CSS for Markdown elements: Targets the quote specifically */}
+            <style>{`
+                .history-content blockquote {
+                    border-left: none;
+                    margin-top: 2rem;
+                    padding: 0;
+                    font-style: italic;
+                }
+                .history-content blockquote p {
+                    margin-bottom: 0.5rem;
+                }
+                /* Aligns the author (last line of blockquote) to the right */
+                .history-content blockquote p:last-child {
+                    text-align: right;
+                    font-style: normal;
+                    margin-top: 10px;
+                }
+            `}</style>
+
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
@@ -51,30 +71,37 @@ const History = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+            
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                {/* Title - Restored to Left Alignment */}
+                <Row className="mb-3">
+                    <Col>
+                        <h3 style={{ fontWeight: "bold" }}>{content.frontmatter.title.text}</h3>
+                    </Col>
                 </Row>
-                <Row>
-                    <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
+
+                <Row className="align-items-center">
+                    {/* Logo/Crest column */}
+                    <Col xs={12} md={4} className="d-flex justify-content-center mb-4 mb-md-0">
                         <CustomImage
                             src={content.frontmatter.image}
+                            style={{ width: "100%", maxWidth: "300px" }}
                         />
                     </Col>
-                    <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
-                        <div style={{ textAlign: "justify" }}>
+
+                    {/* Text column - Restored to Justified/Left Alignment */}
+                    <Col xs={12} md={8}>
+                        <div className="history-content" style={{ textAlign: "justify" }}>
                             <div dangerouslySetInnerHTML={{ __html: content.html }} />
                         </div>
-                        {/* <div className="text-center">
-                        <p><i>{citation.text}</i></p>
-                    </div>
-                    <div className="text-end">
-                        <p><i>{citation.author}</i></p>
-                    </div> */}
                     </Col>
                 </Row>
-                <Row className="mt-4">
-                    <MultiImageCarousel images={content.frontmatter.carousel} />
+
+                {/* Carousel row */}
+                <Row className="mt-5">
+                    <Col>
+                        <MultiImageCarousel images={content.frontmatter.carousel} />
+                    </Col>
                 </Row>
             </Container>
         </div>
