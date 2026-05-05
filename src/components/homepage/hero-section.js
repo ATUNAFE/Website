@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-
 import CustomImage from "../images/image";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -11,15 +10,10 @@ const HeroSection = ({ id }) => {
                 nodes {
                     frontmatter {
                         id
-                        title {
-                        text
-                        }
+                        title { text }
                         backgroundImage
                         description
-                        button {
-                        text
-                        link
-                        }
+                        button { text, link }
                     }
                 }
             }
@@ -35,14 +29,12 @@ const HeroSection = ({ id }) => {
             id={id}
             style={{
                 position: "relative",
-                // Use minHeight so the section expands if the window is too short
-                minHeight: "100vh", 
+                minHeight: "100vh",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                // Add padding so text never overlaps the absolute lines
-                paddingTop: "150px", 
+                paddingTop: "150px",
                 paddingBottom: "80px",
                 overflow: "hidden",
             }}
@@ -55,7 +47,7 @@ const HeroSection = ({ id }) => {
                     left: 0, 
                     height: "100%", 
                     width: "100%",
-                    zIndex: -1 
+                    zIndex: -2 
                 }}
                 imgStyle={{
                     objectFit: "cover",
@@ -64,32 +56,21 @@ const HeroSection = ({ id }) => {
                     width: "100%",
                 }}
             />
-
-            {/* Top Line */}
-            <div
-                className="position-absolute start-50 translate-middle-x"
+            <div 
                 style={{
-                    top: "135px",
-                    width: "90%",
-                    height: "4px",
-                    backgroundColor: "var(--light-engineer)",
-                    zIndex: 1
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.7) 100%)",
+                    zIndex: -1
                 }}
             />
 
-            {/* Bottom Line */}
-            <div
-                className="position-absolute start-50 translate-middle-x"
-                style={{
-                    bottom: "60px",
-                    width: "90%",
-                    height: "4px",
-                    backgroundColor: "var(--dark-green)",
-                    zIndex: 1
-                }}
-            />
+            <div className="position-absolute start-50 translate-middle-x" style={{ top: "135px", width: "90%", height: "4px", backgroundColor: "var(--light-engineer)", zIndex: 1 }} />
+            <div className="position-absolute start-50 translate-middle-x" style={{ bottom: "60px", width: "90%", height: "4px", backgroundColor: "var(--dark-green)", zIndex: 1 }} />
 
-            {/* FIX 3: Removed position-absolute from here to let Flexbox handle centering safely */}
             <Container style={{ position: "relative", zIndex: 2 }}>
                 <Row className="text-light">
                     <Col
@@ -102,7 +83,8 @@ const HeroSection = ({ id }) => {
                                 fontWeight: "bold",
                                 color: "var(--light-neutral)",
                                 marginBottom: "1rem",
-                                fontSize: "calc(1.5rem + 2vw)" // Responsive font sizing
+                                fontSize: "calc(1.8rem + 2.5vw)",
+                                textShadow: "2px 2px 8px rgba(0,0,0,0.5)"
                             }}
                         >
                             {content.frontmatter.title.text}
@@ -117,10 +99,12 @@ const HeroSection = ({ id }) => {
                     >
                         <p
                             style={{
-                                color: "var(--dark-neutral)",
+                                color: "var(--light-neutral)",
                                 textAlign: "justify",
                                 maxWidth: "100%",
                                 marginBottom: "0.5rem",
+                                fontSize: "1.05rem",
+                                textShadow: "1px 1px 4px rgba(0,0,0,0.3)"
                             }}
                         >
                             {content.frontmatter.description}
@@ -128,7 +112,6 @@ const HeroSection = ({ id }) => {
                         <p
                             className="mt-3"
                             style={{
-                                color: "var(--dark-neutral)",
                                 fontWeight: "bold",
                             }}
                         >
@@ -138,10 +121,10 @@ const HeroSection = ({ id }) => {
                                     color: "var(--light-green)",
                                     textDecoration: "none",
                                     fontWeight: "bold",
+                                    fontSize: "1.1rem",
+                                    textShadow: "1px 1px 3px rgba(0,0,0,0.5)"
                                 }}
-                                onMouseEnter={e =>
-                                    (e.target.style.textDecoration = "underline")
-                                }
+                                onMouseEnter={e => (e.target.style.textDecoration = "underline")}
                                 onMouseLeave={e => (e.target.style.textDecoration = "none")}
                             >
                                 {content.frontmatter.button.text}
