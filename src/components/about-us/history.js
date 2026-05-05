@@ -38,7 +38,6 @@ const History = ({ id }) => {
                 overflow: "hidden"
             }}
         >
-            {/* CSS for Markdown elements: Targets the quote specifically */}
             <style>{`
                 .history-content blockquote {
                     border-left: none;
@@ -73,7 +72,6 @@ const History = ({ id }) => {
             />
             
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                {/* Title - Restored to Left Alignment */}
                 <Row className="mb-3">
                     <Col>
                         <h3 style={{ fontWeight: "bold" }}>{content.frontmatter.title.text}</h3>
@@ -81,23 +79,18 @@ const History = ({ id }) => {
                 </Row>
 
                 <Row className="align-items-center">
-                    {/* Logo/Crest column */}
                     <Col xs={12} md={4} className="d-flex justify-content-center mb-4 mb-md-0">
                         <CustomImage
                             src={content.frontmatter.image}
                             style={{ width: "100%", maxWidth: "300px" }}
                         />
                     </Col>
-
-                    {/* Text column - Restored to Justified/Left Alignment */}
                     <Col xs={12} md={8}>
                         <div className="history-content" style={{ textAlign: "justify" }}>
                             <div dangerouslySetInnerHTML={{ __html: content.html }} />
                         </div>
                     </Col>
                 </Row>
-
-                {/* Carousel row */}
                 <Row className="mt-5">
                     <Col>
                         <MultiImageCarousel images={content.frontmatter.carousel} />
