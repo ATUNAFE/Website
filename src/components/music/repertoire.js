@@ -73,7 +73,6 @@ const Repertoire = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            {/* Changed py-4 to py-5 for better vertical spacing as per the mockup */}
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
                 <Row className="mb-2">
                     <Col>
