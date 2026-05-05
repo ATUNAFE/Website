@@ -6,7 +6,7 @@ import { IMAGE_FILENAMES } from "../../utils/constants";
 
 const Contacts = ({ magister, rp, email, address }) => (
     <Container style={{ fontSize: "13px" }}>
-        <h5 className="text-start" style={{ fontWeight: "bold", marginBottom: "15px" }}>Contactos</h5>
+        <h5 className="text-start mb-4" style={{ fontWeight: "bold" }}>Contactos</h5>
 
         {/* RP */}
         <Row className="align-items-center mb-2 flex-nowrap">
