@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
-
 import CustomImage from "../images/image";
 
 const TIET = ({ id }) => {
@@ -38,6 +37,7 @@ const TIET = ({ id }) => {
                 position: "relative",
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                overflow: "hidden"
             }}
         >
             <CustomImage
@@ -47,45 +47,37 @@ const TIET = ({ id }) => {
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    width: "20%",
+                    width: "clamp(150px, 20%, 400px)",
                     opacity: 0.03,
                     zIndex: 0,
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                <Row className="mb-3">
+                    <Col><h3>{content.frontmatter.title.text}</h3></Col>
                 </Row>
-                <Row>
-                    <Col
-                        xs={6}
-                        md={4}
-                        className="d-flex flex-column justify-content-center align-items-center"
-                    >
-                        <CustomImage src={content.frontmatter.image} />
+                <Row className="align-items-center">
+                    <Col xs={12} md={4} className="d-flex justify-content-center mb-4 mb-md-0">
+                        <div style={{ maxWidth: "250px", width: "100%" }}>
+                            <CustomImage src={content.frontmatter.image} />
+                        </div>
                     </Col>
-                    <Col
-                        xs={12}
-                        md={8}
-                        className="d-flex flex-column justify-content-center align-items-center"
-                    >
-                        <Row>
-                            <div style={{ textAlign: "justify" }}>
-                                <div dangerouslySetInnerHTML={{ __html: content.html }} />
-                            </div>
-                        </Row>
-                        <Row className="d-flex justify-content-center mt-3">
-                            <Col className="d-flex justify-content-center p-0">
+                    <Col xs={12} md={8}>
+                        <div className="text-justify">
+                            <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                        </div>
+                        <Row className="mt-4">
+                            <Col className="d-flex justify-content-center justify-content-md-start">
                                 <Button
-                                    className="custom-button"
+                                    className="custom-button w-100"
                                     onClick={() => navigate(`${content.frontmatter.button.link}`)}
                                     style={{
                                         height: "60px",
-                                        width: "120%"
+                                        maxWidth: "300px"
                                     }}
                                 >
-                                    <h5 className="button-text" style={{ margin: 0 }}>{content.frontmatter.button.text}</h5>
+                                    <h5 className="button-text m-0">{content.frontmatter.button.text}</h5>
                                 </Button>
                             </Col>
                         </Row>

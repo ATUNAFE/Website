@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
-
 import CustomImage from "../images/image";
 
 const AllMembers = ({ id }) => {
@@ -37,6 +36,7 @@ const AllMembers = ({ id }) => {
                 position: "relative",
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                overflow: "hidden"
             }}
         >
             <CustomImage
@@ -46,38 +46,42 @@ const AllMembers = ({ id }) => {
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    width: "20%",
+                    width: "clamp(150px, 20%, 400px)",
                     opacity: 0.03,
                     zIndex: 0,
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                <Row className="mb-3">
+                    <Col>
+                        <h3>{content.frontmatter.title.text}</h3>
+                    </Col>
                 </Row>
 
                 <Row className="my-4">
-                    <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    <Col>
+                        <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    </Col>
                 </Row>
 
-                <Row>
+                <Row className="justify-content-center g-3">
                     {content.frontmatter.buttons.map((button, index) => (
                         <Col
                             key={index}
-                            xs={9}
+                            xs={12} 
                             md={6}
-                            className="d-flex flex-column justify-content-center align-items-center"
+                            className="d-flex justify-content-center align-items-center"
                         >
                             <Button
-                                className="custom-button"
+                                className="custom-button w-100"
                                 onClick={() => navigate(button.link)}
                                 style={{
                                     height: "70px",
-                                    width: "30%"
+                                    maxWidth: "350px"
                                 }}
                             >
-                                <h5 className="button-text">{button.text}</h5>
+                                <h5 className="button-text m-0">{button.text}</h5>
                             </Button>
                         </Col>
                     ))}
