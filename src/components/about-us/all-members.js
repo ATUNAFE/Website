@@ -25,7 +25,9 @@ const AllMembers = ({ id }) => {
         } 
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        (node) => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
@@ -39,6 +41,7 @@ const AllMembers = ({ id }) => {
                 overflow: "hidden"
             }}
         >
+            {/* Watermark */}
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
@@ -59,6 +62,7 @@ const AllMembers = ({ id }) => {
                     </Col>
                 </Row>
 
+                {/* Text */}
                 <Row className="my-4">
                     <Col>
                         <div dangerouslySetInnerHTML={{ __html: content.html }} />

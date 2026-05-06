@@ -80,7 +80,7 @@ const Repertoire = ({ id }) => {
                 <Row className="justify-content-start">
                     <Col xs={12} md={10} lg={8}>
                         {songs.map((song, index) =>
-                            <CollapsibleSection key={index} color={repertoire.frontmatter.color} backgroundColor={repertoire.frontmatter.backgroundColor} title={song.frontmatter.title.text} enabled={true}>
+                            <CollapsibleSection key={index} color={repertoire.frontmatter.color} backgroundColor={repertoire.frontmatter.backgroundColor} title={song.frontmatter.title.text} enabled={true} defaultOpen={false}>
                                 <p>{song.frontmatter.author}</p>
                                 <div style={{ textAlign: "justify" }}>
                                     <div dangerouslySetInnerHTML={{ __html: song.html }} />
