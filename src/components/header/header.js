@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dropdown, Col, Row, Container } from "react-bootstrap";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { FaBars } from "react-icons/fa";
@@ -7,11 +7,7 @@ import HeaderLink from "./header-link";
 import "../../style/layout.css";
 import CustomImage from "../images/image";
 
-const Header = ({ siteTitle = "" }) => {
-	const [dropdownOpen, setDropdownOpen] = useState(false);
-
-	const toggleDropdown = () => setDropdownOpen(prevState => !prevState)
-
+const Header = () => {
 	const data = useStaticQuery(graphql`
 		{
 			markdownRemark(frontmatter: {id: {regex: "/header/"}}) {
@@ -53,7 +49,7 @@ const Header = ({ siteTitle = "" }) => {
 						position: "fixed",
 						backgroundColor: content.frontmatter.backgroundColor,
 						color: content.frontmatter.color,
-						zIndex: 10,
+						zIndex: 1100,
 						transition: "backgroundColor 0.5s ease",
 					}}
 				>
@@ -100,10 +96,7 @@ const Header = ({ siteTitle = "" }) => {
 								) :
 								section.type === "dropdown" ?
 									(
-										<Dropdown
-											show={dropdownOpen}
-											onToggle={toggleDropdown}
-										>
+										<Dropdown className="siteDropdown">
 											<Dropdown.Toggle
 												key={index}
 												className="dropdown-toggle"
@@ -131,7 +124,7 @@ const Header = ({ siteTitle = "" }) => {
 								<FaBars />
 							</Dropdown.Toggle>
 
-							<Dropdown.Menu id="menu">
+							<Dropdown.Menu id="menu" align="end">
 								{content.frontmatter.menu.map((section, index) =>
 									<HeaderLink key={index} link={section.link} context={section.text} />
 								)}

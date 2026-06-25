@@ -85,6 +85,7 @@ const Repertoire = ({ id }) => {
                 <Row className="justify-content-start">
                     <Col xs={12} md={10} lg={8}>
                         {songs.map((song, index) =>
+
                             <CollapsibleSection 
                                 key={index} 
                                 color={repertoire.frontmatter.color} 
