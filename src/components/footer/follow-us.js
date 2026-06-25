@@ -12,8 +12,9 @@ const FollowUs = ({ socialMedia }) => {
 
     return (
         <Container>
-            <h5 className="text-start mb-4" style={{ fontWeight: "bold" }}>Segue-nos</h5>
-            <div className="d-flex flex-wrap gap-3 justify-content-start">
+            <h5 className="text-center text-md-start mb-4" style={{ fontWeight: "bold" }}>Segue-nos</h5>
+
+            <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
                 <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" style={iconStyle}>
                     <CustomImage src={IMAGE_FILENAMES.pages.white.instagram} alt="Instagram" />
                 </a>
@@ -37,5 +38,6 @@ const FollowUs = ({ socialMedia }) => {
         </Container>
     );
 };
+
 
 export default FollowUs;
