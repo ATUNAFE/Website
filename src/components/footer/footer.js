@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-
 import "../../style/concept.css";
 import Contacts from "./contacts";
 import FollowUs from "./follow-us";
@@ -8,43 +7,27 @@ import CustomImage from "../images/image";
 import { IMAGE_FILENAMES } from "../../utils/constants";
 import { useStaticQuery, graphql } from "gatsby";
 
-
 const Footer = () => {
-	const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
         {
             markdownRemark(frontmatter: {id: {regex: "/footer/"}}) {
                 frontmatter {
                     id
-                    title {
-                        text
-                    }
-                    rp {
-                        name
-                        phone
-                    }
-                    magister {
-                        name
-                        phone
-                    }
+                    title { text }
+                    rp { name, phone }
+                    magister { name, phone }
                     email
                     address
-                    socialMedia {
-                        instagram
-                        facebook
-                        youtube
-                        linkedin
-                        spotify
-                    }
+                    socialMedia { instagram, facebook, youtube, linkedin, spotify }
                 }
             }
         } 
     `);
 
-	const content = data.markdownRemark;
+    const content = data.markdownRemark;
+    if (!content) return <p>⚠️ Content not found for footer.</p>;
 
-	if (!content) return <p> Content not found for footer”.</p>;
-
-	return (
+    return (
         <footer
             id={content.frontmatter.id}
             style={{
@@ -69,10 +52,10 @@ const Footer = () => {
                         />
                     </Col>
                     
-                    {/* Logo Section Column */}
+                    {/* Logo Section */}
                     <Col xs={12} md={4} lg={3} className="d-flex flex-column align-items-center align-items-md-start">
-                        {/* Tunafe Logo + Description Group */}
-                        <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-4 w-100">
+                        {/* Tunafe Shield + Text */}
+                        <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
                             <div style={{ minWidth: "70px" }} className="me-2">
                                 <CustomImage
                                     src={IMAGE_FILENAMES.logos.color.tunafe}
@@ -87,7 +70,7 @@ const Footer = () => {
                         </div>
 
                         {/* FEUP Logo */}
-                        <div className="mb-4 text-center text-md-start w-100">
+                        <div className="mb-4 text-center text-md-start">
                             <CustomImage
                                 src={IMAGE_FILENAMES.logos.white.feup}
                                 alt="FEUP"
@@ -96,7 +79,7 @@ const Footer = () => {
                         </div>
 
                         {/* IPDJ Logo */}
-                        <div className="text-center text-md-start w-100">
+                        <div className="text-center text-md-start">
                             <CustomImage
                                 src={IMAGE_FILENAMES.logos.color.ipdj}
                                 alt="IPDJ"
