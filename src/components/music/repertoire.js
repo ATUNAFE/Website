@@ -52,11 +52,7 @@ const Repertoire = ({ id }) => {
                 position: "relative",
                 backgroundColor: repertoire.frontmatter.backgroundColor,
                 color: repertoire.frontmatter.color,
-                overflow: "hidden", // Ensure the watermark doesn't cause scrollbars
-                minHeight: "450px", // Set a minimum height to prevent excessive whitespace if content is short
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center"
+                zIndex: 1 
             }}
         >
             <CustomImage
@@ -69,18 +65,18 @@ const Repertoire = ({ id }) => {
                     width: "30%",
                     opacity: 0.05,
                     filter: "grayscale(100%)",
-                    zIndex: 0,
+                    zIndex: 0, 
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                <Row className="mb-2">
+            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+                <Row>
                     <Col>
-                        <h3 style={{ fontWeight: "bold" }}>{repertoire.frontmatter.title.text}</h3>
+                        <h3>{repertoire.frontmatter.title.text}</h3>
                     </Col>
                 </Row>
                 <Row className="mb-4">
-                    <Col lg={10}>
+                    <Col>
                         <div style={{ textAlign: "justify" }}>
                             <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
                         </div>
@@ -92,11 +88,11 @@ const Repertoire = ({ id }) => {
                             <CollapsibleSection 
                                 key={index} 
                                 color={repertoire.frontmatter.color} 
-                                backgroundColor={repertoire.frontmatter.backgroundColor} 
+                                backgroundColor="transparent" 
                                 title={song.frontmatter.title.text} 
                                 enabled={true}
                             >
-                                <p><strong>{song.frontmatter.author}</strong></p>
+                                <p>{song.frontmatter.author}</p>
                                 <div style={{ textAlign: "justify" }}>
                                     <div dangerouslySetInnerHTML={{ __html: song.html }} />
                                 </div>
