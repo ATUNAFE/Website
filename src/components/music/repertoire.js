@@ -80,10 +80,10 @@ const Repertoire = ({ id }) => {
                 <Row className="justify-content-center justify-content-md-start">
                     <Col xs={12} md={10} lg={8}>
                         {songs.map((song, index) => (
-                            <div key={index} style={{ borderBottom: `1px solid ${repertoire.frontmatter.color}22` }}>
+                            <div key={index}>
                                 <CollapsibleSection 
                                     color={repertoire.frontmatter.color} 
-                                    backgroundColor="transparent"
+                                    backgroundColor="transparent" 
                                     title={song.frontmatter.title.text} 
                                     enabled={true}
                                 >
