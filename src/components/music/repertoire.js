@@ -52,9 +52,10 @@ const Repertoire = ({ id }) => {
                 position: "relative",
                 backgroundColor: repertoire.frontmatter.backgroundColor,
                 color: repertoire.frontmatter.color,
-                zIndex: 1 
+                overflow: "hidden" 
             }}
         >
+            {/* Background Watermark */}
             <CustomImage
                 src={repertoire.frontmatter.watermark}
                 style={{
@@ -62,42 +63,60 @@ const Repertoire = ({ id }) => {
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    width: "30%",
-                    opacity: 0.05,
+                    width: "45%",
+                    opacity: 0.06,
                     filter: "grayscale(100%)",
-                    zIndex: 0, 
+                    zIndex: 0,
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
-                    <Col>
-                        <h3>{repertoire.frontmatter.title.text}</h3>
-                    </Col>
-                </Row>
+
+            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
+                {/* Header Section */}
                 <Row className="mb-4">
                     <Col>
-                        <div style={{ textAlign: "justify" }}>
+                        <h2 style={{ fontWeight: "bold", fontSize: "2.5rem" }}>
+                            {repertoire.frontmatter.title.text}
+                        </h2>
+                    </Col>
+                </Row>
+
+                {/* Description Section */}
+                <Row className="mb-5">
+                    <Col md={10} lg={8}>
+                        <div style={{ textAlign: "justify", fontSize: "1.1rem", opacity: 0.9 }}>
                             <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
                         </div>
                     </Col>
                 </Row>
-                <Row className="justify-content-start">
-                    <Col xs={12} md={10} lg={8}>
-                        {songs.map((song, index) =>
 
-                            <CollapsibleSection 
+                {/* Song List Section */}
+                <Row>
+                    <Col xs={12} md={9} lg={7}>
+                        {songs.map((song, index) =>
+                            <div 
                                 key={index} 
-                                color={repertoire.frontmatter.color} 
-                                backgroundColor="transparent" 
-                                title={song.frontmatter.title.text} 
-                                enabled={true}
+                                style={{ 
+                                    borderBottom: `1px solid ${repertoire.frontmatter.color}22`,
+                                    marginBottom: "0.5rem" 
+                                }}
                             >
-                                <p>{song.frontmatter.author}</p>
-                                <div style={{ textAlign: "justify" }}>
-                                    <div dangerouslySetInnerHTML={{ __html: song.html }} />
-                                </div>
-                            </CollapsibleSection>
+                                <CollapsibleSection 
+                                    color={repertoire.frontmatter.color} 
+                                    backgroundColor="transparent" 
+                                    title={song.frontmatter.title.text} 
+                                    enabled={true}
+                                >
+                                    <div className="ps-3 pb-4 pt-2">
+                                        <p style={{ fontWeight: "600", marginBottom: "1rem" }}>
+                                            {song.frontmatter.author}
+                                        </p>
+                                        <div style={{ textAlign: "justify", opacity: 0.85 }}>
+                                            <div dangerouslySetInnerHTML={{ __html: song.html }} />
+                                        </div>
+                                    </div>
+                                </CollapsibleSection>
+                            </div>
                         )}
                     </Col>
                 </Row>
