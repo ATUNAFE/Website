@@ -12,9 +12,7 @@ const Repertoire = ({ id }) => {
                     html
                     frontmatter {
                         id
-                        title {
-                            text
-                        }
+                        title { text }
                         watermark
                         color
                         backgroundColor
@@ -27,9 +25,7 @@ const Repertoire = ({ id }) => {
                     html
                     frontmatter {
                         id
-                        title {
-                            text
-                        }
+                        title { text }
                         author
                     }
                 }
@@ -38,7 +34,6 @@ const Repertoire = ({ id }) => {
     `);
 
     const repertoire = data.repertoire.nodes.find((node) => node.frontmatter.id === id);
-
     if (!repertoire) return <p>⚠️ Content not found for “{id}”.</p>;
 
     const songs = repertoire.frontmatter.songs.map((songId) =>
@@ -52,10 +47,9 @@ const Repertoire = ({ id }) => {
                 position: "relative",
                 backgroundColor: repertoire.frontmatter.backgroundColor,
                 color: repertoire.frontmatter.color,
-                overflow: "hidden" 
+                overflow: "hidden"
             }}
         >
-            {/* Background Watermark */}
             <CustomImage
                 src={repertoire.frontmatter.watermark}
                 style={{
@@ -70,54 +64,38 @@ const Repertoire = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                {/* Header Section */}
-                <Row className="mb-4">
-                    <Col>
-                        <h2 style={{ fontWeight: "bold", fontSize: "2.5rem" }}>
-                            {repertoire.frontmatter.title.text}
-                        </h2>
+                <Row className="mb-3">
+                    <Col className="text-center text-md-start">
+                        <h2 style={{ fontWeight: "bold" }}>{repertoire.frontmatter.title.text}</h2>
                     </Col>
                 </Row>
-
-                {/* Description Section */}
-                <Row className="mb-5">
-                    <Col md={10} lg={8}>
-                        <div style={{ textAlign: "justify", fontSize: "1.1rem", opacity: 0.9 }}>
+                <Row className="mb-5 justify-content-center justify-content-md-start">
+                    <Col xs={12} md={10} lg={8} className="text-center text-md-start">
+                        <div style={{ textAlign: "justify" }} className="text-md-start">
                             <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
                         </div>
                     </Col>
                 </Row>
-
-                {/* Song List Section */}
-                <Row>
-                    <Col xs={12} md={9} lg={7}>
-                        {songs.map((song, index) =>
-                            <div 
-                                key={index} 
-                                style={{ 
-                                    borderBottom: `1px solid ${repertoire.frontmatter.color}22`,
-                                    marginBottom: "0.5rem" 
-                                }}
-                            >
+                <Row className="justify-content-center justify-content-md-start">
+                    <Col xs={12} md={10} lg={8}>
+                        {songs.map((song, index) => (
+                            <div key={index} style={{ borderBottom: `1px solid ${repertoire.frontmatter.color}22` }}>
                                 <CollapsibleSection 
                                     color={repertoire.frontmatter.color} 
-                                    backgroundColor="transparent" 
+                                    backgroundColor="transparent"
                                     title={song.frontmatter.title.text} 
                                     enabled={true}
                                 >
-                                    <div className="ps-3 pb-4 pt-2">
-                                        <p style={{ fontWeight: "600", marginBottom: "1rem" }}>
-                                            {song.frontmatter.author}
-                                        </p>
-                                        <div style={{ textAlign: "justify", opacity: 0.85 }}>
+                                    <div className="ps-3 py-3">
+                                        <p><strong>{song.frontmatter.author}</strong></p>
+                                        <div style={{ textAlign: "justify" }}>
                                             <div dangerouslySetInnerHTML={{ __html: song.html }} />
                                         </div>
                                     </div>
                                 </CollapsibleSection>
                             </div>
-                        )}
+                        ))}
                     </Col>
                 </Row>
             </Container>
