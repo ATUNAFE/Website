@@ -56,7 +56,7 @@ const Banner = ({ id }) => {
 						width: '100%',
 					}}
 				/>
-
+				{/* Title and Icon Container */}
 				<div
 					className="position-absolute w-100"
 					style={{
@@ -96,25 +96,42 @@ const Banner = ({ id }) => {
 				<Container
 					key={index}
 					fluid
-                    // REMOVIDO: d-flex e justify-content (o Row cuidará disso agora)
-					className="py-5" 
+					className="py-5"
 					style={{
 						backgroundColor: section.backgroundColor,
 						color: section.color,
-                        overflow: "hidden"
+						overflow: "hidden"
 					}}
 				>
 					{
 						section.type === "navigation" ? (
-                            // CORREÇÃO: Uma única Row para todos os itens
-                            // flex-nowrap + overflow-auto permite scroll no mobile sem sobrepor
-							<Row className="flex-nowrap overflow-auto justify-content-md-center gx-4 px-3">
-								{
-									section.items.map((item, idx) => (
-										<Col 
-                                            key={idx} 
-                                            xs="auto" 
-                                            className="d-flex flex-column align-items-center justify-content-center"
+							<Container>
+								<style>
+									{`
+										.nav-scroll-container::-webkit-scrollbar {
+											display: none;
+										}
+										@media (min-width: 768px) {
+											.nav-scroll-container {
+												justify-content: center !important;
+											}
+										}
+									`}
+								</style>
+								<Row 
+									className="nav-scroll-container flex-nowrap overflow-auto gx-0 pb-2"
+									style={{ 
+										justifyContent: "flex-start", 
+										WebkitOverflowScrolling: "touch",
+										msOverflowStyle: "none",
+										scrollbarWidth: "none"
+									}}
+								>
+									{section.items.map((item, idx) => (
+										<Col
+											key={idx}
+											xs="auto"
+											className="d-flex flex-column align-items-center px-3"
 											onClick={() => {
 												const el = document.getElementById(item.link)
 												if (el) {
@@ -123,28 +140,40 @@ const Banner = ({ id }) => {
 													window.scrollTo({ top: y, behavior: "smooth" })
 												}
 											}}
-											style={{ cursor: "pointer", minWidth: "120px" }}
+											style={{ 
+												cursor: "pointer", 
+												flex: "0 0 auto", 
+												width: "130px" 
+											}}
 										>
-                                            <div className="mb-2">
-                                                <CustomImage
-                                                    src={item.icon}
-                                                    style={{ width: "50px", height: "50px" }}
-                                                    imgStyle={{ objectFit: "contain" }}
-                                                />
-                                            </div>
-											<h4 className="mb-0 text-center" style={{ fontSize: "1.1rem" }}>{item.title}</h4>
+											<div className="mb-2 d-flex align-items-center justify-content-center" style={{ height: "60px" }}>
+												<CustomImage
+													src={item.icon}
+													style={{ width: "45px", height: "45px" }}
+													imgStyle={{ objectFit: "contain" }}
+												/>
+											</div>
+											<h4 
+												className="mb-0 text-center" 
+												style={{ 
+													fontSize: "1rem", 
+													fontWeight: "500",
+													lineHeight: "1.2"
+												}}
+											>
+												{item.title}
+											</h4>
 										</Col>
-									))
-								}
-							</Row>
+									))}
+								</Row>
+							</Container>
 						) :
-							section.type === "text" ? (
-								<h3 className="text-center">{section.text}</h3>
-							) : null
+						section.type === "text" ? (
+							<h3 className="text-center">{section.text}</h3>
+						) : null
 					}
 				</Container>
-			))
-			}
+			))}
 		</>
 	);
 };
