@@ -56,7 +56,6 @@ const Banner = ({ id }) => {
 						width: '100%',
 					}}
 				/>
-				{/* Title and Icon Container */}
 				<div
 					className="position-absolute w-100"
 					style={{
@@ -111,9 +110,26 @@ const Banner = ({ id }) => {
 										.nav-scroll-container::-webkit-scrollbar {
 											display: none;
 										}
+										
+										/* ESTILOS DESKTOP (ÍCONES MAIORES) */
 										@media (min-width: 768px) {
 											.nav-scroll-container {
 												justify-content: center !important;
+												gap: 40px;
+											}
+											.nav-item-col {
+												width: 180px !important;
+											}
+											.nav-icon-box {
+												width: 100px !important;
+												height: 100px !important;
+											}
+											.nav-icon-img {
+												width: 80px !important;
+												height: 80px !important;
+											}
+											.nav-title-text {
+												font-size: 1.3rem !important;
 											}
 										}
 									`}
@@ -131,7 +147,7 @@ const Banner = ({ id }) => {
 										<Col
 											key={idx}
 											xs="auto"
-											className="d-flex flex-column align-items-center px-3"
+											className="nav-item-col d-flex flex-column align-items-center px-3"
 											onClick={() => {
 												const el = document.getElementById(item.link)
 												if (el) {
@@ -143,21 +159,23 @@ const Banner = ({ id }) => {
 											style={{ 
 												cursor: "pointer", 
 												flex: "0 0 auto", 
-												width: "130px" 
+												width: "125px" 
 											}}
 										>
-											<div className="mb-2 d-flex align-items-center justify-content-center" style={{ height: "60px" }}>
+											<div className="nav-icon-box mb-2 d-flex align-items-center justify-content-center" 
+												 style={{ height: "65px", width: "65px" }}>
 												<CustomImage
 													src={item.icon}
-													style={{ width: "45px", height: "45px" }}
+													className="nav-icon-img"
+													style={{ width: "45px", height: "45px" }} // base mobile
 													imgStyle={{ objectFit: "contain" }}
 												/>
 											</div>
 											<h4 
-												className="mb-0 text-center" 
+												className="nav-title-text mb-0 text-center" 
 												style={{ 
 													fontSize: "1rem", 
-													fontWeight: "500",
+													fontWeight: "600",
 													lineHeight: "1.2"
 												}}
 											>

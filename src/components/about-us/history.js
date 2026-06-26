@@ -63,8 +63,29 @@ const History = ({ id }) => {
                     </Col>
                 </Row>
                 <Row className="mt-5">
-                    <Col style={{ overflowX: "auto", display: "block", width: "100%" }}>
-                        <div style={{ minWidth: "max-content", paddingBottom: "10px" }}>
+                    <Col>
+                        <style>
+                            {`
+                                .carousel-force-row .row {
+                                    flex-wrap: nowrap !important;
+                                    overflow-x: auto !important;
+                                    padding-bottom: 20px;
+                                }
+                                .carousel-force-row .col, 
+                                .carousel-force-row [class*="col-"] {
+                                    flex: 0 0 auto !important;
+                                    width: 280px !important;
+                                }
+                                .carousel-force-row::-webkit-scrollbar {
+                                    height: 6px;
+                                }
+                                .carousel-force-row::-webkit-scrollbar-thumb {
+                                    background: var(--dark-green);
+                                    border-radius: 10px;
+                                }
+                            `}
+                        </style>
+                        <div className="carousel-force-row">
                             <MultiImageCarousel images={content.frontmatter.carousel} />
                         </div>
                     </Col>
