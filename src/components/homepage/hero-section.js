@@ -63,7 +63,7 @@ const HeroSection = ({ id }) => {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.7) 100%)",
+                    background: "var(--hero-gradient-overlay)",
                     zIndex: -1
                 }}
             />
@@ -83,8 +83,7 @@ const HeroSection = ({ id }) => {
                                 fontWeight: "bold",
                                 color: "var(--light-neutral)",
                                 marginBottom: "1rem",
-                                fontSize: "calc(1.8rem + 2.5vw)",
-                                textShadow: "2px 2px 8px rgba(0,0,0,0.5)"
+                                fontSize: "2.5rem",
                             }}
                         >
                             {content.frontmatter.title.text}
@@ -104,7 +103,6 @@ const HeroSection = ({ id }) => {
                                 maxWidth: "100%",
                                 marginBottom: "0.5rem",
                                 fontSize: "1.05rem",
-                                textShadow: "1px 1px 4px rgba(0,0,0,0.3)"
                             }}
                         >
                             {content.frontmatter.description}
@@ -122,7 +120,6 @@ const HeroSection = ({ id }) => {
                                     textDecoration: "none",
                                     fontWeight: "bold",
                                     fontSize: "1.1rem",
-                                    textShadow: "1px 1px 3px rgba(0,0,0,0.5)"
                                 }}
                                 onMouseEnter={e => (e.target.style.textDecoration = "underline")}
                                 onMouseLeave={e => (e.target.style.textDecoration = "none")}
