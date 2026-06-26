@@ -26,14 +26,17 @@ const MultiImageCarousel = ({ images }) => {
             {imageGroups.map((group, index) => (
                 <Carousel.Item key={index}>
                     <Container>
-                        <Row>
+                        {/* flex-nowrap ensures they stay on one line even on the smallest screens */}
+                        <Row className="flex-nowrap">
                             {group.map((image, i) => (
-                                <Col xs={4} md={2} key={i} className="d-flex justify-content-center">
+                                // xs={2} means 12/2 = 6 images per row on mobile
+                                // px-1 reduces horizontal padding so images don't get too tiny
+                                <Col xs={2} md={2} key={i} className="d-flex justify-content-center px-1">
                                     <CustomImage
                                         src={image}
                                         style={{
                                             width: '100%',
-                                            height: '200px',
+                                            height: '150px',
                                         }}
                                         imgStyle={{
                                             objectFit: 'contain',
