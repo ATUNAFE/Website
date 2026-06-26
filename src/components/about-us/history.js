@@ -30,6 +30,7 @@ const History = ({ id }) => {
 
     return (
         <div id={id} style={{ position: "relative", backgroundColor: "var(--light-neutral)", overflow: "hidden" }}>
+            {/* Watermark (Símbolo da Tuna ao fundo) */}
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
@@ -64,28 +65,7 @@ const History = ({ id }) => {
                 </Row>
                 <Row className="mt-5">
                     <Col>
-                        <style>
-                            {`
-                                .carousel-force-row .row {
-                                    flex-wrap: nowrap !important;
-                                    overflow-x: auto !important;
-                                    padding-bottom: 20px;
-                                }
-                                .carousel-force-row .col, 
-                                .carousel-force-row [class*="col-"] {
-                                    flex: 0 0 auto !important;
-                                    width: 280px !important;
-                                }
-                                .carousel-force-row::-webkit-scrollbar {
-                                    height: 6px;
-                                }
-                                .carousel-force-row::-webkit-scrollbar-thumb {
-                                    background: var(--dark-green);
-                                    border-radius: 10px;
-                                }
-                            `}
-                        </style>
-                        <div className="carousel-force-row">
+                        <div className="carousel-wrapper">
                             <MultiImageCarousel images={content.frontmatter.carousel} />
                         </div>
                     </Col>
