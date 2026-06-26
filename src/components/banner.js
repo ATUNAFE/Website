@@ -57,7 +57,6 @@ const Banner = ({ id }) => {
 					}}
 				/>
 
-				{/* Title and Icon Container */}
 				<div
 					className="position-absolute w-100"
 					style={{
@@ -97,49 +96,50 @@ const Banner = ({ id }) => {
 				<Container
 					key={index}
 					fluid
-					className="d-flex justify-content-center align-items-center py-5"
+                    // REMOVIDO: d-flex e justify-content (o Row cuidará disso agora)
+					className="py-5" 
 					style={{
 						backgroundColor: section.backgroundColor,
 						color: section.color,
+                        overflow: "hidden"
 					}}
 				>
 					{
 						section.type === "navigation" ? (
-							<>
+                            // CORREÇÃO: Uma única Row para todos os itens
+                            // flex-nowrap + overflow-auto permite scroll no mobile sem sobrepor
+							<Row className="flex-nowrap overflow-auto justify-content-md-center gx-4 px-3">
 								{
 									section.items.map((item, idx) => (
-										<Row
-											key={idx}
-											className="w-100 align-items-center justify-content-center"
+										<Col 
+                                            key={idx} 
+                                            xs="auto" 
+                                            className="d-flex flex-column align-items-center justify-content-center"
 											onClick={() => {
 												const el = document.getElementById(item.link)
 												if (el) {
 													const yOffset = -75
 													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-
 													window.scrollTo({ top: y, behavior: "smooth" })
 												}
 											}}
-
-											style={{ cursor: "pointer" }}
+											style={{ cursor: "pointer", minWidth: "120px" }}
 										>
-											<Col xs="auto" className="d-flex align-items-center justify-content-center">
-												<CustomImage
-													src={item.icon}
-													style={{ width: "40px", height: "40px" }}
-													imgStyle={{ objectFit: "cover" }}
-												/>
-											</Col>
-											<Col xs="auto" className="d-flex align-items-center justify-content-center">
-												<h4 className="mb-0">{item.title}</h4>
-											</Col>
-										</Row>
+                                            <div className="mb-2">
+                                                <CustomImage
+                                                    src={item.icon}
+                                                    style={{ width: "50px", height: "50px" }}
+                                                    imgStyle={{ objectFit: "contain" }}
+                                                />
+                                            </div>
+											<h4 className="mb-0 text-center" style={{ fontSize: "1.1rem" }}>{item.title}</h4>
+										</Col>
 									))
 								}
-							</>
+							</Row>
 						) :
 							section.type === "text" ? (
-								<h3>{section.text}</h3>
+								<h3 className="text-center">{section.text}</h3>
 							) : null
 					}
 				</Container>
