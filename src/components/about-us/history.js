@@ -63,8 +63,10 @@ const History = ({ id }) => {
                     </Col>
                 </Row>
                 <Row className="mt-5">
-                    <Col>
-                        <MultiImageCarousel images={content.frontmatter.carousel} />
+                    <Col style={{ overflowX: "auto", display: "block", width: "100%" }}>
+                        <div style={{ minWidth: "max-content", paddingBottom: "10px" }}>
+                            <MultiImageCarousel images={content.frontmatter.carousel} />
+                        </div>
                     </Col>
                 </Row>
             </Container>
