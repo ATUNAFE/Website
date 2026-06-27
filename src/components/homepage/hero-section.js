@@ -36,7 +36,7 @@ const HeroSection = ({ id }) => {
                 justifyContent: "center",
                 paddingTop: "150px",
                 paddingBottom: "80px",
-                overflow: "hidden",
+                overflow: "hidden"
             }}
         >
             <CustomImage
@@ -53,7 +53,7 @@ const HeroSection = ({ id }) => {
                     objectFit: "cover",
                     objectPosition: "50% 15%",
                     height: "100%",
-                    width: "100%",
+                    width: "100%"
                 }}
             />
             <div 
@@ -83,7 +83,7 @@ const HeroSection = ({ id }) => {
                                 fontWeight: "bold",
                                 color: "var(--light-neutral)",
                                 marginBottom: "1rem",
-                                fontSize: "2.5rem",
+                                fontSize: "2.5rem"
                             }}
                         >
                             {content.frontmatter.title.text}
@@ -102,7 +102,7 @@ const HeroSection = ({ id }) => {
                                 textAlign: "justify",
                                 maxWidth: "100%",
                                 marginBottom: "0.5rem",
-                                fontSize: "1.05rem",
+                                fontSize: "1.05rem"
                             }}
                         >
                             {content.frontmatter.description}
@@ -110,7 +110,7 @@ const HeroSection = ({ id }) => {
                         <p
                             className="mt-3 mb-0"
                             style={{
-                                fontWeight: "bold",
+                                fontWeight: "bold"
                             }}
                         >
                             <a
@@ -119,7 +119,7 @@ const HeroSection = ({ id }) => {
                                     color: "var(--light-green)",
                                     textDecoration: "none",
                                     fontWeight: "bold",
-                                    fontSize: "1.1rem",
+                                    fontSize: "1.1rem"
                                 }}
                                 onMouseEnter={e => (e.target.style.textDecoration = "underline")}
                                 onMouseLeave={e => (e.target.style.textDecoration = "none")}
