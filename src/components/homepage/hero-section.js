@@ -93,7 +93,7 @@ const HeroSection = ({ id }) => {
                     <Col
                         xs={12}
                         md={4}
-                        className="d-flex flex-column text-md-start text-center mt-4 mt-md-0"
+                        className="d-flex flex-column text-md-start text-center mt-4"
                         style={{ alignSelf: "flex-end" }}
                     >
                         <p
@@ -108,7 +108,7 @@ const HeroSection = ({ id }) => {
                             {content.frontmatter.description}
                         </p>
                         <p
-                            className="mt-3"
+                            className="mt-3 mb-0"
                             style={{
                                 fontWeight: "bold",
                             }}
