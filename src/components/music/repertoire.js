@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CustomImage from "../images/image";
 import CollapsibleSection from "../members/collapsible-section";
+import Watermark from "../watermark";
 
 const Repertoire = ({ id }) => {
     const data = useStaticQuery(graphql`
@@ -46,24 +46,10 @@ const Repertoire = ({ id }) => {
             style={{
                 position: "relative",
                 backgroundColor: repertoire.frontmatter.backgroundColor,
-                color: repertoire.frontmatter.color,
-                overflow: "hidden"
+                color: repertoire.frontmatter.color
             }}
         >
-            <CustomImage
-                src={repertoire.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "45%",
-                    opacity: 0.06,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
+            <Watermark src={repertoire.frontmatter.watermark} />
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
                 <Row className="mb-3">
                     <Col className="text-center text-md-start">
@@ -71,11 +57,9 @@ const Repertoire = ({ id }) => {
                     </Col>
                 </Row>
                 <Row className="mb-5 justify-content-center justify-content-md-start">
-                    <Col xs={12} md={10} lg={8} className="text-center text-md-start">
-                        <div style={{ textAlign: "justify" }} className="text-md-start">
-                            <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
-                        </div>
-                    </Col>
+                    <div style={{ textAlign: "justify" }} className="text-md-start">
+                        <div dangerouslySetInnerHTML={{ __html: repertoire.html }} />
+                    </div>
                 </Row>
                 <Row className="justify-content-center justify-content-md-start">
                     <Col xs={12} md={10} lg={8}>
@@ -85,7 +69,8 @@ const Repertoire = ({ id }) => {
                                     color={repertoire.frontmatter.color} 
                                     backgroundColor="transparent" 
                                     title={song.frontmatter.title.text} 
-                                    enabled={true}
+                                    defaultOpen={false}
+                                    enabled
                                 >
                                     <div className="ps-3 py-3">
                                         <p><strong>{song.frontmatter.author}</strong></p>

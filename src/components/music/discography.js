@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import CustomImage from "../images/image";
+import Watermark from "../watermark";
 
 const Discography = ({ id }) => {
     const data = useStaticQuery(graphql`
@@ -32,36 +33,18 @@ const Discography = ({ id }) => {
             style={{
                 position: "relative",
                 backgroundColor: content.frontmatter.backgroundColor,
-                color: content.frontmatter.color,
-                overflow: "hidden"
+                color: content.frontmatter.color
             }}
         >
-            <CustomImage
-                src={content.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "40%",
-                    opacity: 0.05,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
-            <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
-                <Row className="mb-3">
-                    <Col className="text-center text-md-start">
-                        <h2 style={{ fontWeight: "bold" }}>{content.frontmatter.title.text}</h2>
-                    </Col>
+            <Watermark src={content.frontmatter.watermark} />
+             <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+                <Row>
+                    <h3>{content.frontmatter.title.text}</h3>
                 </Row>
-                <Row className="mb-5 justify-content-center justify-content-md-start">
-                    <Col xs={12} md={10} lg={8} className="text-center text-md-start">
-                        <div style={{ textAlign: "justify" }} className="text-md-start">
-                            <div dangerouslySetInnerHTML={{ __html: content.html }} />
-                        </div>
-                    </Col>
+                <Row className="mb-4">
+                    <div style={{ textAlign: "justify" }}>
+                        <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    </div>
                 </Row>
                 <Row className="justify-content-center g-4">
                     {content.frontmatter.cds.map((cd, index) => (
@@ -71,18 +54,19 @@ const Discography = ({ id }) => {
                             md={4}
                             className="d-flex flex-column align-items-center text-center"
                         >
-                            <div style={{ width: "100%", maxWidth: "150px" }}>
-                                <CustomImage src={cd.image} style={{ width: "100%" }} />
-                            </div>
+                            <CustomImage
+                                src={cd.image}
+                                style={{ width: "50%" }}
+                            />
                             <div className="mt-3">
-                                <h6 className="fw-bold mb-1">{cd.name}</h6>
-                                <small style={{ opacity: 0.7 }}>{cd.year}</small>
+                                <h5 className="fw-bold">{cd.name}</h5>
+                                <p>{cd.year}</p>
                             </div>
                         </Col>
                     ))}
                 </Row>
                 <Row>
-                    <Col className="text-center mt-5">
+                    <Col className="text-center mt-4">
                         <h4>
                             <a
                                 href={content.frontmatter.button.link}
