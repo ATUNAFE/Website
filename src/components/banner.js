@@ -34,7 +34,7 @@ const Banner = ({ id }) => {
 
 	const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
 
-	if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
+	if (!content) return <p>⚠️ Content not found for "{id}".</p>;
 
 	return (
 		<>
@@ -48,12 +48,12 @@ const Banner = ({ id }) => {
 			>
 				<CustomImage
 					src={content.frontmatter.backgroundImage}
-					style={{ height: '100%', width: '100%' }}
+					style={{ height: "100%", width: "100%" }}
 					imgStyle={{
-						objectFit: 'cover',
-						objectPosition: 'bottom',
-						height: '100%',
-						width: '100%',
+						objectFit: "cover",
+						objectPosition: "bottom",
+						height: "100%",
+						width: "100%",
 					}}
 				/>
 				<div
@@ -105,39 +105,9 @@ const Banner = ({ id }) => {
 					{
 						section.type === "navigation" ? (
 							<Container>
-								<style>
-									{`
-										.nav-scroll-container::-webkit-scrollbar {
-											display: none;
-										}
-										
-										/* ESTILOS DESKTOP (ÍCONES MAIORES) */
-										@media (min-width: 768px) {
-											.nav-scroll-container {
-												justify-content: center !important;
-												gap: 40px;
-											}
-											.nav-item-col {
-												width: 180px !important;
-											}
-											.nav-icon-box {
-												width: 100px !important;
-												height: 100px !important;
-											}
-											.nav-icon-img {
-												width: 80px !important;
-												height: 80px !important;
-											}
-											.nav-title-text {
-												font-size: 1.3rem !important;
-											}
-										}
-									`}
-								</style>
 								<Row 
-									className="nav-scroll-container flex-nowrap overflow-auto gx-0 pb-2"
+									className="flex-nowrap overflow-auto gx-0 pb-2 justify-content-start justify-content-md-center"
 									style={{ 
-										justifyContent: "flex-start", 
 										WebkitOverflowScrolling: "touch",
 										msOverflowStyle: "none",
 										scrollbarWidth: "none"
@@ -147,34 +117,32 @@ const Banner = ({ id }) => {
 										<Col
 											key={idx}
 											xs="auto"
-											className="nav-item-col d-flex flex-column align-items-center px-3"
+											className="d-flex flex-column align-items-center px-4"
 											onClick={() => {
 												const el = document.getElementById(item.link)
 												if (el) {
-													const yOffset = -75
-													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-													window.scrollTo({ top: y, behavior: "smooth" })
+													const yOffset = -75;
+													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+													window.scrollTo({ top: y, behavior: "smooth" });
 												}
 											}}
 											style={{ 
 												cursor: "pointer", 
-												flex: "0 0 auto", 
-												width: "125px" 
+												flex: "0 0 auto"
 											}}
 										>
-											<div className="nav-icon-box mb-2 d-flex align-items-center justify-content-center" 
-												 style={{ height: "65px", width: "65px" }}>
+											<div className="mb-2 d-flex align-items-center justify-content-center" 
+												 style={{ height: "80px", width: "80px" }}>
 												<CustomImage
 													src={item.icon}
-													className="nav-icon-img"
-													style={{ width: "45px", height: "45px" }} // base mobile
+													style={{ width: "60px", height: "60px" }}
 													imgStyle={{ objectFit: "contain" }}
 												/>
 											</div>
 											<h4 
-												className="nav-title-text mb-0 text-center" 
+												className="mb-0 text-center" 
 												style={{ 
-													fontSize: "1rem", 
+													fontSize: "1.1rem", 
 													fontWeight: "600",
 													lineHeight: "1.2"
 												}}

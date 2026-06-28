@@ -30,7 +30,6 @@ const History = ({ id }) => {
 
     return (
         <div id={id} style={{ position: "relative", backgroundColor: "var(--light-neutral)", overflow: "hidden" }}>
-            {/* Watermark (Símbolo da Tuna ao fundo) */}
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{

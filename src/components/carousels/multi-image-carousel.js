@@ -53,8 +53,8 @@ const MultiImageCarousel = ({ images }) => {
                                     <CustomImage
                                         src={image}
                                         style={{
-                                            width: '100%',
-                                            height: chunkSize === 3 ? '120px' : '150px',
+                                            width: "100%",
+                                            height: chunkSize === 3 ? "120px" : "150px",
                                         }}
                                         imgStyle={{
                                             objectFit: 'contain',
