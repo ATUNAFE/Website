@@ -11,11 +11,12 @@ export const ImageProvider = ({ children }) => {
             allFile(filter: { sourceInstanceName: { eq: "images" } }) {
                 nodes {
                     relativePath
+                    publicURL
                     childImageSharp {
-						fluid(maxWidth: 1920) {
-							...GatsbyImageSharpFluid
-						}
-					}
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
                 }
             }
         }
@@ -23,7 +24,10 @@ export const ImageProvider = ({ children }) => {
 
     const imagesMap = new Map();
     data.allFile.nodes.forEach(node => {
-        imagesMap.set(node.relativePath, node.childImageSharp?.fluid);
+        imagesMap.set(node.relativePath, {
+            fluid: node.childImageSharp?.fluid,
+            publicURL: node.publicURL
+        });    
     });
 
     return (
