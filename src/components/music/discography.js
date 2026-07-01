@@ -50,13 +50,13 @@ const Discography = ({ id }) => {
                     {content.frontmatter.cds.map((cd, index) => (
                         <Col
                             key={index}
-                            xs={6}
+                            xs={10}
                             md={4}
                             className="d-flex flex-column align-items-center text-center"
                         >
                             <CustomImage
                                 src={cd.image}
-                                style={{ width: "50%" }}
+                                style={{ width: "70%" }}
                             />
                             <div className="mt-3">
                                 <h5 className="fw-bold">{cd.name}</h5>
