@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CustomImage from "../images/image";
 import MultiImageCarousel from "../carousels/multi-image-carousel";
 import { useStaticQuery, graphql } from "gatsby";
+import "../../style/concept.css";
 
 const History = ({ id }) => {
     const data = useStaticQuery(graphql`
@@ -38,24 +39,6 @@ const History = ({ id }) => {
                 overflow: "hidden"
             }}
         >
-            <style>{`
-                .history-content blockquote {
-                    border-left: none;
-                    margin-top: 2rem;
-                    padding: 0;
-                    font-style: italic;
-                }
-                .history-content blockquote p {
-                    margin-bottom: 0.5rem;
-                }
-                /* Aligns the author (last line of blockquote) to the right */
-                .history-content blockquote p:last-child {
-                    text-align: right;
-                    font-style: normal;
-                    margin-top: 10px;
-                }
-            `}</style>
-
             <CustomImage
                 src={content.frontmatter.watermark}
                 style={{
