@@ -24,3 +24,7 @@ Acima de qualquer norma ou regra é essencial a paixão pelo conjunto que a tuna
 É este o espírito vivido na Tuna Feminina de Engenharia e que marcou todas as suas gerações.
 
 Ousamos então usufruir do direito de citar tão sábias palavras.
+
+> "Se, ser estudante, é ter ânsia em saber e espírito jovem, ser tuno será exaltar em música e canto o ânimo de ser estudante e o vigor da juventude, virtudes a deverem ser permanentes e sem idade!"
+>
+> — Aureliano da Fonseca
