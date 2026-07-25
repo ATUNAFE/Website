@@ -42,9 +42,10 @@ const Event = ({ event, theme }) => {
                         md={8}
                         className="d-flex flex-column justify-content-center align-items-center"
                     >
-                        <div className="event-card-content-wrapper">
-                            <h3 className="w-100 text-start">{event.frontmatter.title.text}</h3>
-                            <p className="w-100 text-start">{event.frontmatter.date}</p>
+                        <div className="event-card-content-wrapper w-100">
+                            <h3 className="w-100 text-center text-md-start">{event.frontmatter.title.text}</h3>
+                            <p className="w-100 text-center text-md-start">{event.frontmatter.date}</p>
+                            
                             <div style={{ textAlign: "justify" }} className="mt-4">
                                 <div dangerouslySetInnerHTML={{ __html: event.html }} />
                             </div>
