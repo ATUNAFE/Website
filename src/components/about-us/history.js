@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CustomImage from "../images/image";
 import MultiImageCarousel from "../carousels/multi-image-carousel";
+import Watermark from "../watermark";
 import { useStaticQuery, graphql } from "gatsby";
 
 const History = ({ id }) => {
@@ -30,20 +31,7 @@ const History = ({ id }) => {
 
     return (
         <div id={id} style={{ position: "relative", backgroundColor: "var(--light-neutral)", overflow: "hidden" }}>
-            <CustomImage
-                src={content.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "clamp(200px, 30%, 500px)",
-                    opacity: 0.05,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
+            <Watermark src={content.frontmatter.watermark} opacity={0.05} />
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
                 <Row className="mb-3">
                     <Col>

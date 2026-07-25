@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CustomImage from "../images/image";
+import Watermark from "../watermark";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Rehearsals = ({ id }) => {
@@ -32,19 +32,7 @@ const Rehearsals = ({ id }) => {
 
     return (
         <div id={id} style={{ position: "relative", backgroundColor: "var(--light-neutral)", overflow: "hidden" }}>
-            <CustomImage
-                src={content.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "clamp(150px, 20%, 400px)",
-                    opacity: 0.05,
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
+            <Watermark src={content.frontmatter.watermark} opacity={0.05} />
             <Container className="py-5" style={{ position: "relative", zIndex: 2 }}>
                 <Row>
                     <Col><h3>{content.frontmatter.title.text}</h3></Col>
