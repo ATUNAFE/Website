@@ -11,13 +11,13 @@ button:
 cds:
   - name: "Tudo Isto É Tuna"
     year: "1998"
-    image: "SemFoto.png"
+    image: "cds/cd-tiet.png"
   - name: "O Porto Adormece a Sonhar"
     year: "2014"
-    image: "SemFoto.png"
+    image: "cds/cd-o-porto.png"
   - name: "As Muitas Que sou"
     year: "2022"
-    image: "SemFoto.png"
+    image: "cds/cd-as-muitas.png"
 ---
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus.
 
