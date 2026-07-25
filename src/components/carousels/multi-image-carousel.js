@@ -1,39 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 import CustomImage from '../images/image';
 
-const chunkArray = (arr, size) => {
-    const chunked = [];
-    for (let i = 0; i < arr.length; i += size) {
-        chunked.push(arr.slice(i, i + size));
-    }
-    return chunked;
-};
-
 const MultiImageCarousel = ({ images }) => {
-    const imageGroups = chunkArray(images, 6);
+    const [chunkSize, setChunkSize] = useState(6);
+
+    useEffect(() => {
+        const updateSize = () => {
+            if (window.innerWidth < 768) {
+                setChunkSize(3);
+            } else {
+                setChunkSize(6);
+            }
+        };
+
+        updateSize();
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+
+    const chunkArray = (arr, size) => {
+        const chunked = [];
+        for (let i = 0; i < arr.length; i += size) {
+            chunked.push(arr.slice(i, i + size));
+        }
+        return chunked;
+    };
+
+    const imageGroups = chunkArray(images, chunkSize);
 
     return (
         <Carousel
-            interval={3000}
+            interval={5000}
             controls={true}
             indicators={false}
-            prevIcon={<FaChevronLeft className="custom-carousel-icon custom-carousel-prev" />}
-            nextIcon={<FaChevronRight className="custom-carousel-icon custom-carousel-next" />}
+            prevIcon={<FaChevronLeft className="custom-carousel-icon text-dark" style={{ fontSize: '2rem' }} />}
+            nextIcon={<FaChevronRight className="custom-carousel-icon text-dark" style={{ fontSize: '2rem' }} />}
         >
             {imageGroups.map((group, index) => (
                 <Carousel.Item key={index}>
-                    <Container>
-                        <Row>
+                    <Container className="px-5"> 
+                        <Row className="justify-content-center">
                             {group.map((image, i) => (
-                                <Col xs={4} md={2} key={i} className="d-flex justify-content-center">
+                                <Col 
+                                    key={i} 
+                                    xs={4} 
+                                    md={2} 
+                                    className="d-flex justify-content-center px-1"
+                                >
                                     <CustomImage
                                         src={image}
                                         style={{
-                                            width: '100%',
-                                            height: '200px',
+                                            width: "100%",
+                                            height: chunkSize === 3 ? "120px" : "150px",
                                         }}
                                         imgStyle={{
                                             objectFit: 'contain',
