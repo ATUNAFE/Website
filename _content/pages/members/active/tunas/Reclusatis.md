@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 instruments:
   - "contrabaixo"
-image: "https://i.imgur.com/6EQXfaQ.jpeg"
+image: "/images/members/6EQXfaQ.webp"
 ---

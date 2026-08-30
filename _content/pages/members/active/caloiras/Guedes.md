@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Balanceatis AltoAstraLis FramisPascalius Hecaτis"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/IZAINmA.jpeg"
+image: "/images/members/IZAINmA.webp"
 ---

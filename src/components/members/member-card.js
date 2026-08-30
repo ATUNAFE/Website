@@ -4,13 +4,15 @@ import { Card, Col, Row } from "react-bootstrap";
 import { IMAGE_FILENAMES } from "../../utils/constants";
 import CustomImage from "../images/image";
 
-const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
+const MemberCard = ({ name, nameC, course, godmother, image, instruments, loading = "lazy" }) => {
     return (
         <Card
             className="mb-3 border-0"
             style={{
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                contentVisibility: "auto",
+                containIntrinsicSize: "auto 200px",
             }}
         >
             <Row className="g-0 align-items-center">
@@ -20,13 +22,24 @@ const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
                             variant="top"
                             className="rounded-0"
                             src={image}
+                            alt={name}
+                            width="150"
+                            height="150"
+                            loading={loading}
+                            decoding="async"
                             style={{
                                 width: "150px",
                                 height: "150px",
                                 objectFit: "contain"
                             }}
                         /> :
-                        <CustomImage src={IMAGE_FILENAMES.pages.semFoto} />
+                        <CustomImage
+                            src={IMAGE_FILENAMES.pages.semFoto}
+                            alt="Sem fotografia"
+                            loading={loading}
+                            sizes="150px"
+                            style={{ width: "150px", height: "150px" }}
+                        />
                     }
                 </Col>
 

@@ -79,7 +79,11 @@ const Godparents = ({ id }) => {
                         md={4}
                         className="d-flex flex-column justify-content-center align-items-center"
                     >
-                        <CustomImage src={content.frontmatter.image} />
+                        <CustomImage
+                            src={content.frontmatter.image}
+                            alt="Tuna de Engenharia da Universidade do Porto"
+                            sizes="(min-width: 768px) 33vw, 50vw"
+                        />
                     </Col>
                 </Row>
             </Container>

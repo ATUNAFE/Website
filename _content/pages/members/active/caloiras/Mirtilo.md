@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Química"
 godmother: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/T31UMgg.jpeg"
+image: "/images/members/T31UMgg.webp"
 ---

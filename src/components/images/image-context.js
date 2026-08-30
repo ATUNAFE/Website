@@ -1,7 +1,7 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useMemo } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-const ImageContext = createContext();
+const ImageContext = createContext(new Map());
 
 export const useImageMap = () => useContext(ImageContext);
 
@@ -12,23 +12,31 @@ export const ImageProvider = ({ children }) => {
                 nodes {
                     relativePath
                     childImageSharp {
-						fluid(maxWidth: 1920) {
-							...GatsbyImageSharpFluid
-						}
-					}
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            width: 1600
+                            quality: 68
+                            placeholder: DOMINANT_COLOR
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
                 }
             }
         }
     `);
 
-    const imagesMap = new Map();
-    data.allFile.nodes.forEach(node => {
-        imagesMap.set(node.relativePath, node.childImageSharp?.fluid);
-    });
+    const imagesMap = useMemo(() => {
+        const map = new Map();
+        data.allFile.nodes.forEach(node => {
+            const imageData = node.childImageSharp?.gatsbyImageData;
+            if (imageData) map.set(node.relativePath, imageData);
+        });
+        return map;
+    }, [data]);
 
     return (
         <ImageContext.Provider value={imagesMap}>
             {children}
         </ImageContext.Provider>
     );
-}
+};

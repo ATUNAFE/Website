@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia dos Materiais"
 godmother: "Rucatis Sonatae Pluvia∈Sforzandus Vidalis"
 instruments:
   - "guitarra"
-image: "https://i.imgur.com/mqV50uQ.jpeg"
+image: "/images/members/mqV50uQ.webp"
 ---

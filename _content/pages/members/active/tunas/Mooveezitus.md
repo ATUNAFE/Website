@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Doryae C♯ius OptiPeculiaris P⭘lyphónicus"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/L2KEfbp.jpeg"
+image: "/images/members/L2KEfbp.webp"
 ---

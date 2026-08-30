@@ -10,5 +10,5 @@ godmother: "Pandorkus Loricatvvσ ArchimedisPerpetuum"
 instruments:
   - "estandarte"
   - "pandeireta"
-image: "https://i.imgur.com/chYbiR9.jpeg"
+image: "/images/members/chYbiR9.webp"
 ---

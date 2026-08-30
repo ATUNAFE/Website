@@ -10,5 +10,5 @@ godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "flauta"
   - "acordeao"
-image: "https://i.imgur.com/bjdxE14.jpeg"
+image: "/images/members/bjdxE14.webp"
 ---

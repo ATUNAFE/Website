@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "pandeireta"
   - "cavaquinho"
-image: "https://i.imgur.com/fioUndj.jpeg"
+image: "/images/members/fioUndj.webp"
 ---

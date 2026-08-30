@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Balanceatis AltoAstraLis FramisPascalius Hecaτis"
 instruments:
   - "guitarra"
-image: "https://i.imgur.com/oig5zBk.jpeg"
+image: "/images/members/oig5zBk.webp"
 ---

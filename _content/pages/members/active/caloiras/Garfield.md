@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
 instruments:
   - "violino"
-image: "https://i.imgur.com/r6eiTD4.jpeg"
+image: "/images/members/r6eiTD4.webp"
 ---

@@ -41,6 +41,8 @@ const Rehearsals = ({ id }) => {
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                alt=""
+                sizes="20vw"
                 style={{
                     position: "absolute",
                     top: "50%",

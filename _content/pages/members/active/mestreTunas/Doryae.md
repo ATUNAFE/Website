@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "bandolim"
   - "contrabaixo"
-image: "https://i.imgur.com/kBLRH4F.jpeg"
+image: "/images/members/kBLRH4F.webp"
 ---

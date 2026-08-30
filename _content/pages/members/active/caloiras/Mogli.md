@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Flyers [Perlimpimpins]⁷ LacriNIffleriae"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/wpUdOBT.jpeg"
+image: "/images/members/wpUdOBT.webp"
 ---

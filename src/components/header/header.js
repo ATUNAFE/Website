@@ -78,6 +78,7 @@ const Header = ({ siteTitle = "" }) => {
 							<CustomImage
 								src={content.frontmatter.image}
 								alt="TUNAFE"
+								loading="eager"
 								style={{
 									width: "100px",
 									margin: "auto"

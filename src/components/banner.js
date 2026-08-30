@@ -48,6 +48,10 @@ const Banner = ({ id }) => {
 			>
 				<CustomImage
 					src={content.frontmatter.backgroundImage}
+					alt=""
+					className="critical-image"
+					priority
+					sizes="100vw"
 					style={{ height: '100%', width: '100%' }}
 					imgStyle={{
 						objectFit: 'cover',
@@ -71,6 +75,8 @@ const Banner = ({ id }) => {
 							<Col xs="auto" className="d-flex align-items-center gap-3">
 								<CustomImage
 									src={content.frontmatter.title.icon}
+									alt=""
+									loading="eager"
 									style={{
 										width: "100px",
 										height: "100px",
@@ -126,6 +132,7 @@ const Banner = ({ id }) => {
 											<Col xs="auto" className="d-flex align-items-center justify-content-center">
 												<CustomImage
 													src={item.icon}
+													alt=""
 													style={{ width: "40px", height: "40px" }}
 													imgStyle={{ objectFit: "cover" }}
 												/>

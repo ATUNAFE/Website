@@ -12,6 +12,8 @@ const Event = ({ event, theme }) => {
         >
             <CustomImage
                 src={theme.watermark}
+                alt=""
+                sizes="25vw"
                 style={{
                     position: "absolute",
                     top: "50%",
@@ -31,7 +33,12 @@ const Event = ({ event, theme }) => {
                         md={4}
                         className="d-flex flex-column justify-content-center align-items-center"
                     >
-                        <CustomImage style={{ width: "80%" }} src={event.frontmatter.image} />
+                        <CustomImage
+                            src={event.frontmatter.image}
+                            alt={event.frontmatter.title.text}
+                            sizes="(min-width: 768px) 27vw, 40vw"
+                            style={{ width: "80%" }}
+                        />
                     </Col>
                     <Col
                         xs={12}

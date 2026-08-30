@@ -59,6 +59,8 @@ const NextEvents = ({ id }) => {
                     >
                         <CustomImage
                             src={event.image}
+                            alt={event.name}
+                            sizes="(min-width: 768px) 17vw, 25vw"
                             style={{ width: "50%" }}
                         />
                         <div className="mt-3">

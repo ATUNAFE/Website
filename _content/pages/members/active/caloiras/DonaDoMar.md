@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Civil"
 godmother: "Conchititas Calíopialis Phalaenopsis"
 instruments:
   - "guitarra"
-image: "https://i.imgur.com/AF7zY0X.jpeg"
+image: "/images/members/AF7zY0X.webp"
 ---

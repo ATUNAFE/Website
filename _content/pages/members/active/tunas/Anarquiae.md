@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia Biomédica"
 godmother: "Radaris Pizzitaiti∫ â3lotropicus HopV7erdis"
 instruments:
   - "guitarra"
-image: "https://i.imgur.com/0f1P15J.jpeg"
+image: "/images/members/0f1P15J.webp"
 ---

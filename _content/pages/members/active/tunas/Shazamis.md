@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia de Serviços e Gestão"
 godmother: "Ludmillae BatuqueEstouradus LuxDispersus a₵ústicus"
 instruments:
   - "guitarra"
-image: "https://i.imgur.com/0shOfmA.jpeg"
+image: "/images/members/0shOfmA.webp"
 ---

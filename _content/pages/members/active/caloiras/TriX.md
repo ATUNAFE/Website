@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Flyers [Perlimpimpins]⁷ LacriNIffleriae"
 instruments:
   - "percussao"
-image: "https://i.imgur.com/ERi05qd.jpeg"
+image: "/images/members/ERi05qd.webp"
 ---

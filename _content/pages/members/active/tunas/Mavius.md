@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Lazulis BeTeaninius LarisBiscainhus Ven⊥usRσsae"
 instruments:
   - "estandarte"
-image: "https://i.imgur.com/tbWps2q.jpeg"
+image: "/images/members/tbWps2q.webp"
 ---
