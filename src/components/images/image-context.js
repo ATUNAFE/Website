@@ -16,7 +16,7 @@ export const ImageProvider = ({ children }) => {
                             layout: CONSTRAINED
                             width: 1600
                             quality: 68
-                            placeholder: DOMINANT_COLOR
+                            placeholder: NONE
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
