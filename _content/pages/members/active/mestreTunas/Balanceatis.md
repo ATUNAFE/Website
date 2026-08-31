@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Ludmillae BatuqueEstouradus LuxDispersus a₵ústicus"
 instruments:
   - "pandeireta"
-image: "https://i.imgur.com/91vRJhy.jpeg"
+image: "/images/members/91vRJhy.webp"
 ---

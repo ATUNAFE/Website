@@ -10,5 +10,5 @@ godmother: "DaOris Jiminymancius QVartzoDrapeadus TriboSentidus"
 instruments:
   - "acordeao"
   - "cavaquinho"
-image: "https://i.imgur.com/BXTKdTK.jpeg"
+image: "/images/members/BXTKdTK.webp"
 ---

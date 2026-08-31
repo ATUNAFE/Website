@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Conchititas Calíopialis Phalaenopsis"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/DpADLbY.jpeg"
+image: "/images/members/DpADLbY.webp"
 ---

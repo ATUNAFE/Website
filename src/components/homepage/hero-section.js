@@ -42,6 +42,10 @@ const HeroSection = ({ id }) => {
         >
             <CustomImage
                 src={content.frontmatter.backgroundImage}
+                alt=""
+                className="critical-image"
+                priority
+                sizes="100vw"
                 style={{ height: "100%", width: "100%" }}
                 imgStyle={{
                     objectFit: "cover",

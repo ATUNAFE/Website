@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "DaOris Jiminymancius QVartzoDrapeadus TriboSentidus"
 instruments:
   - "pandeireta"
-image: "https://i.imgur.com/DxjkVnO.jpeg"
+image: "/images/members/DxjkVnO.webp"
 ---

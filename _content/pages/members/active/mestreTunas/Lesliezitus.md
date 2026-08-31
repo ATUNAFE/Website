@@ -10,5 +10,5 @@ godmother: "sMartis AstriöDeimus [Tantrantan]²tátis £eanius"
 instruments:
   - "estandarte"
   - "pandeireta"
-image: "https://i.imgur.com/c5pnelq.jpeg"
+image: "/images/members/c5pnelq.webp"
 ---

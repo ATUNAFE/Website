@@ -14,7 +14,7 @@ const MEMBERS_ID = {
 
 const Members = ({ id }) => {
 
-    const renderMembers = (members) => (
+    const renderMembers = (members, prioritizeFirst) => (
         <div className="d-flex flex-column gap-3">
             {members.map((member, index) => (
                 <MemberCard
@@ -25,6 +25,7 @@ const Members = ({ id }) => {
                     godmother={member.godmother}
                     image={member.image}
                     instruments={member.instruments}
+                    loading={prioritizeFirst && index === 0 ? "eager" : "lazy"}
                 />
             ))}
         </div>
@@ -273,7 +274,7 @@ const Members = ({ id }) => {
                     <Col xs={12} md={10} lg={8}>
                         {sections.map((section, index) =>
                             <CollapsibleSection key={index} title={section.title} color="var(--light-neutral)" backgroundColor="var(--dark-neutral)" enabled={section.collapsible}>
-                                {renderMembers(section.members || [])}
+                                    {renderMembers(section.members || [], index === 0)}
                             </CollapsibleSection>
                         )}
                     </Col>

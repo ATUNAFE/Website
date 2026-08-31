@@ -10,5 +10,5 @@ godmother: "Playzitus JovialisPatronum p+ragmáticus PrestoConvvictus"
 instruments:
   - "guitarra"
   - "pandeireta"
-image: "https://i.imgur.com/BivkF8U.jpeg"
+image: "/images/members/BivkF8U.webp"
 ---

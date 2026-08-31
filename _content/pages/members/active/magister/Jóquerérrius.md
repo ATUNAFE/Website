@@ -12,5 +12,5 @@ instruments:
   - "contrabaixo"
   - "percussao"
   - "bandolim"
-image: "https://i.imgur.com/hTmw8li.jpeg"
+image: "/images/members/hTmw8li.webp"
 ---

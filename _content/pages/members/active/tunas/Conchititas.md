@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Mecânica"
 godmother: "Bambinis aRhabescus ⌬pusMILis DeliriumTremen$ae"
 instruments:
   - "pandeireta"
-image: "https://i.imgur.com/8cSpjqd.jpeg"
+image: "/images/members/8cSpjqd.webp"
 ---

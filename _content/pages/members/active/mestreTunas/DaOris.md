@@ -10,5 +10,5 @@ godmother: "Éxertus Metalicadus Stompis PhoenixInundatis"
 instruments:
   - "estandarte"
   - "guitarra"
-image: "https://i.imgur.com/F1N3V1C.jpeg"
+image: "/images/members/F1N3V1C.webp"
 ---

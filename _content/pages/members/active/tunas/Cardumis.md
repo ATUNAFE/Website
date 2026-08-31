@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Moizás MalhadusEx.ímius PaxVigilantis vSinfonicus"
 instruments:
   - "estandarte"
-image: "https://i.imgur.com/JWtr1uz.jpeg"
+image: "/images/members/JWtr1uz.webp"
 ---

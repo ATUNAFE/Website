@@ -28,6 +28,13 @@ body {
   height: auto;
 }
 
+/* LCP safety net: gatsby-plugin-image reveals an eager image via an inline
+   onload handler. If the image is already cached that handler can miss, so
+   force the critical (preloaded) image visible regardless. */
+.critical-image [data-main-image] {
+  opacity: 1 !important;
+}
+
 .dropdown-toggle {
   background-color: transparent !important;
   border: none !important;

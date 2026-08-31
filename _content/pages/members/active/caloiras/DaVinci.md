@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
 instruments:
   - "acordeao"
-image: "https://i.imgur.com/OSrmQOe.jpeg"
+image: "/images/members/OSrmQOe.webp"
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "sMartis AstriöDeimus [Tantrantan]²tátis £eanius"
 instruments:
   - "cavaquinho"
-image: "https://i.imgur.com/oFjFD56.jpeg"
+image: "/images/members/oFjFD56.webp"
 ---

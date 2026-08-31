@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Polegarzinhus RoyalisFirm@is SelenisPrimaverilis √¢amelliae"
 instruments:
   - "percussao"
-image: "https://i.imgur.com/ehaRm8N.jpeg"
+image: "/images/members/ehaRm8N.webp"
 ---

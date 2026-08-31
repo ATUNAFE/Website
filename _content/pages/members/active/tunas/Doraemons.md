@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Química"
 godmother: "So₂nics PathosAMParatis Laboralis⇌Absintae Nitrogéni∡us"
 instruments:
   - "cavaquinho"
-image: "https://i.imgur.com/VRGW9xh.jpeg"
+image: "/images/members/VRGW9xh.webp"
 ---

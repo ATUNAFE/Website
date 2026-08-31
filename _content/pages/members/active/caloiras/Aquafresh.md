@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "SERACius VertitTempus FactũmArktikalis"
 instruments:
   - "bandolim"
-image: "https://i.imgur.com/W4vVabD.jpeg"
+image: "/images/members/W4vVabD.webp"
 ---
