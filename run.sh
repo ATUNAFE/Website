@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [[ -z "$(docker ps -a -q -f name="gatsby")" ]]; then
-    docker build -f Dockerfile.dev . -t gatsby:1.0
-    docker run -d -p 8000:8000 --name website gatsby:1.0
-else
-    docker start website
-fi
+set -e
+
+docker compose up --build dev
+
+echo "Gatsby is running at http://localhost:8000"
+echo "View logs with: docker compose logs -f dev"
