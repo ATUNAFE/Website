@@ -4,11 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Event = ({ event, theme }) => {
     return (
-        <div style={{
-            position: "relative",
-            color: theme.color,
-            backgroundColor: theme.backgroundColor
-        }}
+        <div
+            className="event-card"
+            style={{
+                position: "relative",
+                color: theme.color,
+                backgroundColor: theme.backgroundColor
+            }}
         >
             <CustomImage
                 src={theme.watermark}
@@ -25,27 +27,29 @@ const Event = ({ event, theme }) => {
                 }}
             />
             <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
-                <Row>
+                <Row className="gx-4 gy-4 align-items-center justify-content-center">
                     <Col
-                        xs={6}
+                        xs={12}
                         md={4}
-                        className="d-flex flex-column justify-content-center align-items-center"
+                        className="d-flex justify-content-center"
                     >
-                        <CustomImage style={{ width: "80%" }} src={event.frontmatter.image} />
+                        <div className="event-card-image-wrapper">
+                            <CustomImage style={{ width: "100%", height: "auto" }} src={event.frontmatter.image} />
+                        </div>
                     </Col>
                     <Col
                         xs={12}
                         md={8}
-                        className="d-flex flex-column justify-content-center align-items-center w-80"
+                        className="d-flex flex-column justify-content-center align-items-center"
                     >
-                        <div style={{ width: "80%" }}>
-                            <h3 className="w-100 text-start">{event.frontmatter.title.text}</h3>
-                            <p className="w-100 text-start">{event.frontmatter.date}</p>
+                        <div className="event-card-content-wrapper w-100">
+                            <h3 className="w-100 text-center text-md-start">{event.frontmatter.title.text}</h3>
+                            <p className="w-100 text-center text-md-start">{event.frontmatter.date}</p>
+                            
                             <div style={{ textAlign: "justify" }} className="mt-4">
                                 <div dangerouslySetInnerHTML={{ __html: event.html }} />
                             </div>
                         </div>
-
                     </Col>
                 </Row>
             </Container>
