@@ -7,6 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - ./src:/app/src
+      - ./_content:/app/_content
       - ./gatsby-config.js:/app/gatsby-config.js
       - ./gatsby-node.js:/app/gatsby-node.js
       - /app/node_modules
