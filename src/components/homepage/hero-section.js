@@ -14,7 +14,10 @@ const HeroSection = ({ id }) => {
                         title { text }
                         backgroundImage
                         description
-                        button { text, link }
+                        buttons {
+                            text
+                            link
+                        }
                     }
                 }
             }
@@ -68,21 +71,16 @@ const HeroSection = ({ id }) => {
                             gap={3}
                             className="flex-wrap justify-content-center justify-content-md-start"
                         >
-                            <Button
-                                href={content.frontmatter.button.link}
-                                variant="primary"
-                                className="rounded-pill px-4 py-3 fw-bold"
-                            >
-                                {content.frontmatter.button.text}
-                            </Button>
-
-                            <Button
-                                href="/eventos"
-                                variant="outline-light"
-                                className="rounded-pill px-4 py-3 fw-bold"
-                            >
-                                Próximos eventos
-                            </Button>
+                            {content.frontmatter.buttons.map((button, index) => (
+                                <Button
+                                    key={button.link}
+                                    href={button.link}
+                                    variant={index === 0 ? "primary" : "outline-light"}
+                                    className="rounded-pill px-4 py-3 fw-bold"
+                                >
+                                    {button.text}
+                                </Button>
+                            ))}
                         </Stack>
                     </Col>
                 </Row>
