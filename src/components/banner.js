@@ -34,7 +34,7 @@ const Banner = ({ id }) => {
 
 	const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
 
-	if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
+	if (!content) return <p>⚠️ Content not found for "{id}".</p>;
 
 	return (
 		<>
@@ -48,16 +48,14 @@ const Banner = ({ id }) => {
 			>
 				<CustomImage
 					src={content.frontmatter.backgroundImage}
-					style={{ height: '100%', width: '100%' }}
+					style={{ height: "100%", width: "100%" }}
 					imgStyle={{
-						objectFit: 'cover',
-						objectPosition: 'bottom',
-						height: '100%',
-						width: '100%',
+						objectFit: "cover",
+						objectPosition: "bottom",
+						height: "100%",
+						width: "100%",
 					}}
 				/>
-
-				{/* Title and Icon Container */}
 				<div
 					className="position-absolute w-100"
 					style={{
@@ -97,54 +95,71 @@ const Banner = ({ id }) => {
 				<Container
 					key={index}
 					fluid
-					className="d-flex justify-content-center align-items-center py-5"
+					className="py-5"
 					style={{
 						backgroundColor: section.backgroundColor,
 						color: section.color,
+						overflow: "hidden"
 					}}
 				>
 					{
 						section.type === "navigation" ? (
-							<>
-								{
-									section.items.map((item, idx) => (
-										<Row
+							<Container>
+								<Row 
+									className="flex-nowrap overflow-auto gx-0 pb-2 justify-content-start justify-content-md-center"
+									style={{ 
+										WebkitOverflowScrolling: "touch",
+										msOverflowStyle: "none",
+										scrollbarWidth: "none"
+									}}
+								>
+									{section.items.map((item, idx) => (
+										<Col
 											key={idx}
-											className="w-100 align-items-center justify-content-center"
+											xs="auto"
+											className="d-flex flex-column align-items-center px-4"
 											onClick={() => {
 												const el = document.getElementById(item.link)
 												if (el) {
-													const yOffset = -75
-													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-													window.scrollTo({ top: y, behavior: "smooth" })
+													const yOffset = -75;
+													const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+													window.scrollTo({ top: y, behavior: "smooth" });
 												}
 											}}
-
-											style={{ cursor: "pointer" }}
+											style={{ 
+												cursor: "pointer", 
+												flex: "0 0 auto"
+											}}
 										>
-											<Col xs="auto" className="d-flex align-items-center justify-content-center">
+											<div className="mb-2 d-flex align-items-center justify-content-center" 
+												 style={{ height: "80px", width: "80px" }}>
 												<CustomImage
 													src={item.icon}
-													style={{ width: "40px", height: "40px" }}
-													imgStyle={{ objectFit: "cover" }}
+													style={{ width: "60px", height: "60px" }}
+													imgStyle={{ objectFit: "contain" }}
 												/>
-											</Col>
-											<Col xs="auto" className="d-flex align-items-center justify-content-center">
-												<h4 className="mb-0">{item.title}</h4>
-											</Col>
-										</Row>
-									))
-								}
-							</>
+											</div>
+											<h4 
+												className="mb-0 text-center" 
+												style={{ 
+													fontSize: "1.1rem", 
+													fontWeight: "600",
+													lineHeight: "1.2"
+												}}
+											>
+												{item.title}
+											</h4>
+										</Col>
+									))}
+								</Row>
+							</Container>
 						) :
-							section.type === "text" ? (
-								<h3>{section.text}</h3>
-							) : null
+						section.type === "text" ? (
+							<h3 className="text-center">{section.text}</h3>
+						) : null
 					}
 				</Container>
-			))
-			}
+			))}
 		</>
 	);
 };
