@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import CustomImage from "../images/image";
+import Watermark from "../watermark";
 
 const Discography = ({ id }) => {
     const data = useStaticQuery(graphql`
@@ -11,21 +12,12 @@ const Discography = ({ id }) => {
                     html
                     frontmatter {
                         id
-                        title {
-                            text
-                        }
+                        title { text }
                         watermark
                         color
                         backgroundColor
-                        button {
-                            text
-                            link
-                        }
-                        cds {
-                            name
-                            year
-                            image
-                        }
+                        button { text, link }
+                        cds { name, year, image }
                     }
                 }
             }
@@ -33,7 +25,6 @@ const Discography = ({ id }) => {
     `);
 
     const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
-
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
     return (
@@ -45,21 +36,8 @@ const Discography = ({ id }) => {
                 color: content.frontmatter.color
             }}
         >
-            <CustomImage
-                src={content.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "30%",
-                    opacity: 0.05,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+            <Watermark src={content.frontmatter.watermark} />
+             <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
                 <Row>
                     <h3>{content.frontmatter.title.text}</h3>
                 </Row>
@@ -68,17 +46,17 @@ const Discography = ({ id }) => {
                         <div dangerouslySetInnerHTML={{ __html: content.html }} />
                     </div>
                 </Row>
-                <Row>
+                <Row className="justify-content-center g-4">
                     {content.frontmatter.cds.map((cd, index) => (
                         <Col
                             key={index}
-                            xs={6}
+                            xs={10}
                             md={4}
-                            className="d-flex flex-column align-items-center justify-content-start text-center"
+                            className="d-flex flex-column align-items-center text-center"
                         >
                             <CustomImage
                                 src={cd.image}
-                                style={{ width: "50%" }}
+                                style={{ width: "70%" }}
                             />
                             <div className="mt-3">
                                 <h5 className="fw-bold">{cd.name}</h5>
@@ -88,24 +66,24 @@ const Discography = ({ id }) => {
                     ))}
                 </Row>
                 <Row>
-                    <h4 className="d-flex align-items-center justify-content-center mt-4">
-                        <a
-                            href={content.frontmatter.button.link}
-                            style={{
-                                color: "var(--light-green)",
-                                textDecoration: "none",
-                                fontWeight: "bold",
-                            }}
-                            onMouseEnter={e =>
-                                (e.target.style.textDecoration = "underline")
-                            }
-                            onMouseLeave={e => (e.target.style.textDecoration = "none")}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            {content.frontmatter.button.text}
-                        </a>
-                    </h4>
+                    <Col className="text-center mt-4">
+                        <h4>
+                            <a
+                                href={content.frontmatter.button.link}
+                                style={{
+                                    color: "var(--light-green)",
+                                    textDecoration: "none",
+                                    fontWeight: "bold",
+                                }}
+                                onMouseEnter={e => (e.target.style.textDecoration = "underline")}
+                                onMouseLeave={e => (e.target.style.textDecoration = "none")}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {content.frontmatter.button.text}
+                            </a>
+                        </h4>
+                    </Col>
                 </Row>
             </Container>
         </div>
