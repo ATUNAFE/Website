@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Miau"
 title:
   text: ""
-date: "2019-08-22T10:26:14.511151"
+order: 30
 name: "Miau"
 nameC: "Mafalda Pinto"
 course: "Eng. Civil"

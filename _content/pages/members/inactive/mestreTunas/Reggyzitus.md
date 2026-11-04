@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Reggyzitus"
 title:
   text: ""
-date: "2019-10-25T10:12:08.839043"
+order: 670
 name: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 nameC: "Tatiana Teixeira"
 course: "Mestrado Integrado em Engenharia do Ambiente"

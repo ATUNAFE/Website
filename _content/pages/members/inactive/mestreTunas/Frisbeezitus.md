@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Frisbeezitus"
 title:
   text: ""
-date: "2019-11-28T10:12:08.846453"
+order: 1030
 name: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 nameC: "Luana Queiroz"
 course: "Mestrado Integrado em Engenharia Química"

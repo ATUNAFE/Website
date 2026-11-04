@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-Bluís"
 title:
   text: ""
-date: "2019-09-06T10:21:15.373417"
+order: 180
 name: "Bluís 4PatizAcompanhadus Replicatis"
 nameC: "Ana Rita Ferreira"
 course: "Mestrado Integrado em Bioengenharia"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Rainchus"
 title:
   text: ""
-date: "2019-09-15T10:12:08.835060"
+order: 270
 name: "Rainchus GallusElectricus SorrisoAssiduos Impostus"
 nameC: "Andreia Miranda"
 course: "Eng. Quí­mica"

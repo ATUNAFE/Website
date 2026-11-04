@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Pepsi"
 title:
   text: ""
-date: "2019-10-14T10:26:14.516126"
+order: 560
 name: "Pepsi"
 nameC: "Carlota Aragão"
 course: "Mestrado Integrado em Engenharia Civil"

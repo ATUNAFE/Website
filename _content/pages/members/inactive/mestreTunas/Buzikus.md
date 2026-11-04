@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Buzikus"
 title:
   text: ""
-date: "2019-09-30T10:12:08.836368"
+order: 420
 name: "Buzikus XtraHumorónikus IReviratis Sensatus"
 nameC: "Ana Sofia Silva"
 course: "Mestrado Integrado em Engenharia Civil"

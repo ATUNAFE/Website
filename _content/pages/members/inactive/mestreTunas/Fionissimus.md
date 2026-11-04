@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Fionissimus"
 title:
   text: ""
-date: "2019-10-19T10:12:08.838472"
+order: 610
 name: "Fionissimus Astutus ÇAVÁquinhus EGOderisis"
 nameC: "Rita Lopes"
 course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"

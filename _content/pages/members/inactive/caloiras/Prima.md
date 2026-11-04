@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Prima"
 title:
   text: ""
-date: "2019-09-15T10:26:14.513560"
+order: 270
 name: "Prima"
 nameC: "Joana Queiroz"
 course: "Mestrado Integrado em Bioengenharia"

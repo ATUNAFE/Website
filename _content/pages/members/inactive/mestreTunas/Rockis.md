@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Rockis"
 title:
   text: ""
-date: "2019-10-23T10:12:08.838857"
+order: 650
 name: "Rockis Parabolicuzzz BofiasDisparatis DiracSins"
 nameC: "Maria Beatriz Magalhaes"
 course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"

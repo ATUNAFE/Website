@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Sportus"
 title:
   text: ""
-date: "2019-10-11T10:12:08.837291"
+order: 530
 name: "Sportus CordóManiakus Snobis √ -1nspirantis"
 nameC: "Sofia Braga"
 course: "Mestrado Integrado em Engenharia Civil"

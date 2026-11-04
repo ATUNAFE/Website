@@ -2,7 +2,7 @@
 id: "activeMembers-mestreTuna-Doryae"
 title:
   text: ""
-date: "2019-08-22T09:56:22.870468"
+order: 10
 name: "Doryae C♯ius OptiPeculiaris P⭘lyphónicus"
 nameC: "Ângela Coelho"
 course: "Mestrado Integrado em Engenharia Informática e Computação"
@@ -11,5 +11,6 @@ instruments:
   - "magister"
   - "bandolim"
   - "contrabaixo"
+  - "sopros"
 image: "https://i.imgur.com/kBLRH4F.jpeg"
 ---

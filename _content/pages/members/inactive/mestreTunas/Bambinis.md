@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Bambinis"
 title:
   text: ""
-date: "2019-11-27T10:12:08.846377"
+order: 1020
 name: "Bambinis aRhabescus ⌬pusMILis DeliriumTremen$ae"
 nameC: "Ana Beatriz Marques"
 course: "Mestrado Integrado em Engenharia Química"

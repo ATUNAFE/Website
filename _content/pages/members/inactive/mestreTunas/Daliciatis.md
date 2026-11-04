@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Daliciatis"
 title:
   text: ""
-date: "2019-09-26T10:12:08.836024"
+order: 380
 name: "Daliciatis PinqueChoquis PupilaLacrimae MiLavorus"
 nameC: "Alicia Meireles"
 course: "Mestrado Integrado em Engenharia Civil"

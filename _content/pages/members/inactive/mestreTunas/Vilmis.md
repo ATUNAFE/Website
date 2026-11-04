@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Vilmis"
 title:
   text: ""
-date: "2019-09-23T10:12:08.835768"
+order: 350
 name: "Vilmis SôMinhuNaturalis Prontux NanoFervus"
 nameC: "Cláudia Alves"
 course: "Mestrado Integrado em Engenharia Química"

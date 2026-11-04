@@ -1,0 +1,13 @@
+---
+id: "activeMembers-caloira-Millie"
+title:
+  text: ""
+order: 90
+name: "Millie"
+nameC: "Carolina Dias"
+course: "Licenciatura em Bioengenharia"
+godmother: ":Doraemons TessellariS Magnificantis Matri<iae"
+instruments:
+  - "cavaquinho"
+image: ""
+---

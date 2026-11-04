@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-TuxaTuxátis"
 title:
   text: ""
-date: "2019-09-05T10:21:15.372437"
+order: 170
 name: "TuxaTuxátis Fotoxénikus PandeiretaDesconxentratis"
 nameC: "Patrícia Santos"
 course: "Mestrado Integrado em Engenharia Civil"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Leiae"
 title:
   text: ""
-date: "2019-11-30T10:12:08.846617"
+order: 1060
 name: "Leiae Esmerldis BadaladusCristalis PhosphoRe:scentis"
 nameC: "Leonor Aguiar"
 course: "Mestrado Integrado em Bioengenharia"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Kapaka"
 title:
   text: ""
-date: "2019-09-06T10:26:14.512489"
+order: 180
 name: "Kapaka"
 nameC: "Vera Almeida"
 course: "Engenharia e Gestão do Ambiente"

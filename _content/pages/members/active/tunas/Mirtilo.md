@@ -1,0 +1,14 @@
+---
+id: "activeMembers-tuna-Mirtilo"
+title:
+  text: ""
+order: 30
+name: "Mirtilum Fujisanis ApisIshigamis"
+nameC: "Joana Silva"
+course: "Licenciatura em Engenharia Química"
+godmother: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
+instruments:
+  - "bandolim"
+  - "percussao"
+image: ""
+---

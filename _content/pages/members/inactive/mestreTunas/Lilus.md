@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Lilus"
 title:
   text: ""
-date: "2019-11-01T10:12:08.841428"
+order: 740
 name: "Lilus QuinadusCompassadus Camaleónicus PixelBorealis"
 nameC: "Samanta Correia"
 course: "Mestrado em Multimédia"

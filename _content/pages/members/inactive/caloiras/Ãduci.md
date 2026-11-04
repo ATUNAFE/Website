@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Ãduci"
 title:
   text: ""
-date: "2019-09-03T10:26:14.512243"
+order: 150
 name: "Ãduci"
 nameC: "Dulce Almeida"
 course: "Eng. Electrotécnica e de Computadores"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Letrae"
 title:
   text: ""
-date: "2019-11-04T10:12:08.843466"
+order: 770
 name: "Letrae Éolis LÁtusInfindábilis MorFinu5"
 nameC: "Daniela Domingues"
 course: "Mestrado Integrado em Bioengenharia"

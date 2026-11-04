@@ -33,6 +33,7 @@ const Members = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
         magister: allMarkdownRemark(
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-magister-/"}}}
         ) {
             nodes {
@@ -41,7 +42,7 @@ const Members = ({ id }) => {
                 title {
                     text
                 }
-                date
+                order
                 name
                 nameC
                 course
@@ -52,7 +53,7 @@ const Members = ({ id }) => {
         }
     }
         activeMestreTunas: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-mestreTuna-/"}}}
         ) {
             nodes {
@@ -61,7 +62,7 @@ const Members = ({ id }) => {
                     title {
                         text
                     }
-                    date
+                    order
                     name
                     nameC
                     course
@@ -72,7 +73,7 @@ const Members = ({ id }) => {
             }
         }
         activeTunas: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-tuna-/"}}}
         ) {
             nodes {
@@ -81,7 +82,7 @@ const Members = ({ id }) => {
                     title {
                         text
                     }
-                    date
+                    order
                     name
                     nameC
                     course
@@ -92,7 +93,7 @@ const Members = ({ id }) => {
             }
         }
         activeCaloiras: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/^activeMembers-caloira-/"}}}
         ) {
             nodes {
@@ -101,7 +102,7 @@ const Members = ({ id }) => {
                     title {
                         text
                     }
-                    date
+                    order
                     name
                     nameC
                     course
@@ -112,7 +113,7 @@ const Members = ({ id }) => {
             }
         }
         fundadoras: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-fundadora-/"}}}
         ) {
             nodes {
@@ -121,7 +122,7 @@ const Members = ({ id }) => {
                 title {
                     text
                 }
-                date
+                order
                 name
                 nameC
                 course
@@ -132,7 +133,7 @@ const Members = ({ id }) => {
         }
     }   
         inactiveMestreTunas: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-mestreTuna-/"}}}
         ) {
             nodes {
@@ -141,7 +142,7 @@ const Members = ({ id }) => {
                 title {
                     text
                 }
-                date
+                order
                 name
                 nameC
                 course
@@ -152,7 +153,7 @@ const Members = ({ id }) => {
         }
     }
         inactiveTunas: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-tuna-/"}}}
         ) {
             nodes {
@@ -161,7 +162,7 @@ const Members = ({ id }) => {
                 title {
                     text
                 }
-                date
+                order
                 name
                 nameC
                 course
@@ -172,7 +173,7 @@ const Members = ({ id }) => {
         }
     }
         inactiveCaloiras: allMarkdownRemark(
-            sort: {frontmatter: {date: ASC}}
+            sort: {frontmatter: {order: ASC}}
             filter: {frontmatter: {id: {regex: "/inactiveMembers-caloira-/"}}}
         ) {
             nodes {
@@ -181,7 +182,7 @@ const Members = ({ id }) => {
                 title {
                     text
                 }
-                date
+                order
                 name
                 nameC
                 course

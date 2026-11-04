@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Brandys"
 title:
   text: ""
-date: "2019-11-21T10:12:08.845770"
+order: 940
 name: "Brandys dBellius FlickaVanguardis NichusRe:sponsivus"
 nameC: "Mariana Santos"
 course: "Mestrado Integrado em Bioengenharia"

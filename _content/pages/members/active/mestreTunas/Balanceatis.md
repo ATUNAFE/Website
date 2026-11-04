@@ -2,7 +2,7 @@
 id: "activeMembers-mestreTuna-Balanceatis"
 title:
   text: ""
-date: "2019-08-25T09:56:22.870858"
+order: 20
 name: "Balanceatis AltoAstraLis FramisPascalius Hecaτis"
 nameC: "Adelaide Santos"
 course: "Mestrado Integrado em Engenharia Informática e Computação"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-Pandorkus"
 title:
   text: ""
-date: "2019-09-17T10:21:15.376176"
+order: 290
 name: "Pandorkus Loricatvvσ ArchimedisPerpetuum"
 nameC: "Leonor Mota Mendes"
 course: "Mestrado Integrado em Engenharia Civil"

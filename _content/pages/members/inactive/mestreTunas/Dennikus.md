@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Dennikus"
 title:
   text: ""
-date: "2019-09-29T10:12:08.836284"
+order: 410
 name: "Dennikus TásTármarÓParvalhonikus Póstatis Indignátis"
 nameC: "Cátia Martins"
 course: "Mestrado Integrado em Engenharia Civil"

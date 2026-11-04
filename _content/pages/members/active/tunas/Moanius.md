@@ -2,7 +2,7 @@
 id: "activeMembers-tuna-Moanius"
 title:
   text: ""
-date: "2019-09-12T09:56:22.872799"
+order: 10
 name: "Moanius Sakurae Ec//ipsisVibrântis"
 nameC: "Sofia Cruz"
 course: "Licenciatura em Engenharia Informática e Computação"

@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-Anaíssis"
 title:
   text: ""
-date: "2019-09-14T10:21:15.375597"
+order: 260
 name: "Anaíssis Sonecus HohnerEnamoradus"
 nameC: "Ana Inês Silva"
 course: "Mestrado Integrado em Engenharia Química"

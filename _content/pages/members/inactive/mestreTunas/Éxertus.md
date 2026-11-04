@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Éxertus"
 title:
   text: ""
-date: "2019-11-07T10:12:08.844067"
+order: 800
 name: "Éxertus Metalicadus Stompis PhoenixInundatis"
 nameC: "Margarida Varandas"
 course: "Mestrado Integrado em Engenharia do Ambiente"
