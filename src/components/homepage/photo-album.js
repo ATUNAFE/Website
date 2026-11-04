@@ -41,10 +41,12 @@ const PhotoAlbum = ({ id }) => {
             <Row className="py-5">
                 <SingleImageCarousel
                     images={content.frontmatter.carousel}
-                    withControls={true}
-                    withIndicators={true}
-                    invertedColors={true}
-                />
+                    activeColor="var(--dark-engineer)"
+                    inactiveColor="var(--light-engineer)"
+                    arrowIconColor="var(--light-neutral)"
+                    arrowBackgroundColor="rgba(0, 0, 0, 0.35)"
+                    arrowBorderColor="rgba(240, 240, 240, 0.25)"
+                    />
             </Row>
             <Row
                 className="w-100 align-items-center justify-content-center pb-5"

@@ -74,18 +74,16 @@ const Header = () => {
 						transition: "backgroundColor 0.5s ease",
 					}}
 				>
-					<Col></Col>
 					<Col
+						className="d-flex align-items-center"
 						style={{
 							padding: "0.5rem",
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
 							height: "77px",
 						}}
 					>
 						<Link
 							to="/"
+							className={`d-flex align-items-center ${styles.logoLink}`}
 							onClick={(event) => {
 								if (
 									event.button !== 0 ||
@@ -101,18 +99,13 @@ const Header = () => {
 								event.preventDefault();
 								window.scrollTo({ top: 0, behavior: "smooth" });
 							}}
-							style={{
-								display: "flex",
-								alignItems: "center",
-								justifyContent: "center",
-							}}
 						>
 							<CustomImage
 								src={content.frontmatter.image}
 								alt="TUNAFE"
 								style={{
-									width: "100px",
-									margin: "auto"
+									width: "90px",
+									margin: "0",
 								}}
 								imgStyle={{
 									objectFit: "contain",
@@ -124,6 +117,7 @@ const Header = () => {
 
 						</Link>
 					</Col>
+					<Col></Col>
 					<Col id="siteMenu" className={styles.siteMenu}>
 						{content.frontmatter.menu.map((section, index) => (
 							section.type === "link" ?

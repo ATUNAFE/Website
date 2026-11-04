@@ -58,7 +58,7 @@ const HeroSection = ({ id }) => {
                         md={7}
                         className={`${styles.heroContent} d-flex flex-column align-items-center align-items-md-start text-center text-md-start`}
                     >
-                        <h1 className={`${styles.title} display-6 fw-bold lh-sm text-white`}>
+                        <h1 className={`${styles.title} display-5 fw-bold lh-sm text-white`}>
                             {content.frontmatter.title.text}
                         </h1>
 

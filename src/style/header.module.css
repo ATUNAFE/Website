@@ -53,6 +53,10 @@
     font-weight: bolder;
 }
 
+.logoLink {
+    margin-left: 4rem;
+}
+
 .mobileMenu {
     display: none;
     position: relative;
@@ -114,6 +118,14 @@
 }
 
 @media only screen and (max-width: 890px) {
+    .logoLink {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: 0;
+        transform: translate(-50%, -50%);
+    }
+
     .siteMenu {
         display: none;
     }

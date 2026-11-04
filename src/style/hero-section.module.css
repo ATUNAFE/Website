@@ -5,10 +5,10 @@
 }
 
 .background {
-    top: -30%;
-    left: -10%;
+    top: -60%;
+    left: -15%;
     width: 115%;
-    height: 130%;
+    height: 160%;
     z-index: -2;
 }
 
@@ -55,8 +55,8 @@
 
     .background {
         top: 0;
-        left: -22%;
-        width: 132%;
+        left: -60%;
+        width: 160%;
         height: 100%;
     }
 

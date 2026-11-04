@@ -3,8 +3,8 @@ id: "footer"
 title:
   text: ""
 rp:
-  name: "Beatriz Remondes"
-  phone: "933 937 075"
+  name: "Inês Martin Soares"
+  phone: "931 64 1830"
 magister:
   name: "Ana Rita Marques"
   phone: "932 795 810"
