@@ -12,5 +12,5 @@ instruments:
   - "bandolim"
   - "contrabaixo"
   - "sopros"
-image: "https://i.imgur.com/kBLRH4F.jpeg"
+image: /images/members/Doryae.webp
 ---

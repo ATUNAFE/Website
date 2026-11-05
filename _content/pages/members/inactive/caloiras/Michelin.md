@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Reclusatis Simensis {CoRioli}Staccatus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Michelin.webp
 ---

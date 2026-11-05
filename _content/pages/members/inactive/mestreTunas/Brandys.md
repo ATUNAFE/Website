@@ -10,5 +10,5 @@ godmother: "Jackis IrisInquietus BOOMbonis Néonicus"
 instruments:
   - "estandarte"
   - "pandeireta"
-image: ""
+image: /images/members/Brandys.webp
 ---

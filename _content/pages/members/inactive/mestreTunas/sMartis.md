@@ -10,5 +10,5 @@ godmother: "AndôrBiuletus kPlumis Recatadus SNR!us"
 instruments:
   - "pandeireta"
   - "cavaquinho"
-image: ""
+image: /images/members/sMartis.webp
 ---

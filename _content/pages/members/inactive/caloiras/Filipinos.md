@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Bisis Hardys WiNegabilis benElbrus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Filipinos.webp
 ---

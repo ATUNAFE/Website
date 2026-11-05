@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Mooveezitus Mεrakis UnmeiBonsae"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/sPrint.webp
 ---

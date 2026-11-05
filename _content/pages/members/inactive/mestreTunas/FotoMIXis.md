@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "guitarra"
   - "estandarte"
-image: ""
+image: /images/members/FotoMIXis.webp
 ---

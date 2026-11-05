@@ -10,5 +10,5 @@ godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "magister"
   - "guitarra"
-image: ""
+image: /images/members/Vilmis.webp
 ---

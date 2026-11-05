@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Mecanica"
 godmother: "Bibátis DusJólhosCantatis Brigantinus Chiribitátátátátis"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Mikas.webp
 ---

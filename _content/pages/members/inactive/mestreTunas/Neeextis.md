@@ -10,5 +10,5 @@ godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "bandolim"
   - "sopros"
-image: ""
+image: /images/members/Neeextis.webp
 ---

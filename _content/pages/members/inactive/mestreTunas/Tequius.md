@@ -9,5 +9,5 @@ course: "Eng. Electrotécnica e de Computadores"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Tequius.webp
 ---

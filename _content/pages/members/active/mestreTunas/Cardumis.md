@@ -10,5 +10,5 @@ godmother: "Moizás MalhadusEx.ímius PaxVigilantis vSinfonicus"
 instruments:
   - "estandarte"
   - "bandolim"
-image: ""
+image: /images/members/Cardumis.webp
 ---

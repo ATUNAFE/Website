@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Espanquius Latinus PausaRequisitatis PepsoDentuçus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Daliciatis.webp
 ---

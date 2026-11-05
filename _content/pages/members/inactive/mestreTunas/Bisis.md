@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Bisis.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Osmobilis Anecoicus T-Covalentis Luau$"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Nigiris.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia Biomédica"
 godmother: "Corellis TEDxis Er:Dermae"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Okays.webp
 ---

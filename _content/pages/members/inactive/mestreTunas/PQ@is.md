@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/PQ@is.webp
 ---

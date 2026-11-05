@@ -9,5 +9,5 @@ course: "Eng. Civil"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Dazeirius.webp
 ---

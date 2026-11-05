@@ -9,5 +9,6 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Tiriririris.webp
+
 ---

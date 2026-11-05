@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Metalúrgica e de Materiais"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Tianãtius.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Dipelom@is.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFons"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Krepe.webp
 ---

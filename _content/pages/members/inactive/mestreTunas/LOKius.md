@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Rockis Parabolicuzzz BofiasDisparatis DiracSins"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/LOKius.webp
 ---

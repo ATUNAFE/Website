@@ -10,5 +10,5 @@ godmother: "PQ@is Metamorfosis BitsImpavidus Subtealatus"
 instruments:
   - "bandolim"
   - "contrabaixo"
-image: ""
+image: /images/members/ZÉNis.webp
 ---

@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "TriXis Vulpi++s IlumṼirtuosus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Cûpcãke.webp
 ---

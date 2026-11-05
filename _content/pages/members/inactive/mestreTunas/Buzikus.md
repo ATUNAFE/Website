@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Mexilhónikus AutoEsfor@is Frechadus RepsólicusAnónimus"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Buzikus.webp
 ---

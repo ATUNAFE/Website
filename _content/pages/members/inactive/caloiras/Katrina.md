@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Industrial e Gestão"
 godmother: "Rainchus GallusElectricus SorrisoAssiduos Impostus"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Katrina.webp
 ---

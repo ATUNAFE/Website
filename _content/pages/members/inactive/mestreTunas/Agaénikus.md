@@ -10,5 +10,5 @@ godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "magister"
   - "guitarra"
-image: ""
+image: /images/members/Agaénikus.webp
 ---

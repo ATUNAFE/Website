@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "Nobis ArsDonum YOSarcóMinuciosus Assertivus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Osmobilis.webp
 ---

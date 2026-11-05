@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Eu!ropius Rhapsodis KazoosKenae"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Sandes.webp
 ---

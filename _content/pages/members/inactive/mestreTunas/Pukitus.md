@@ -10,5 +10,5 @@ godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "pandeireta"
   - "bandolim"
-image: ""
+image: /images/members/Pukitus.webp
 ---

@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "TriXis Vulpi++s IlumṼirtuosus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Drift.webp
 ---

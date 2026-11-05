@@ -60,6 +60,7 @@ const Footer = () => {
                                 <CustomImage
                                     src={IMAGE_FILENAMES.logos.color.tunafe}
                                     alt="TUNAFE"
+                                    sizes="70px"
                                     style={{ width: "70px", height: "auto" }}
                                 />
                             </div>
@@ -74,6 +75,7 @@ const Footer = () => {
                             <CustomImage
                                 src={IMAGE_FILENAMES.logos.white.feup}
                                 alt="FEUP"
+                                sizes="160px"
                                 style={{ width: "160px", height: "auto" }}
                             />
                         </div>
@@ -83,6 +85,7 @@ const Footer = () => {
                             <CustomImage
                                 src={IMAGE_FILENAMES.logos.color.ipdj}
                                 alt="IPDJ"
+                                sizes="180px"
                                 style={{ width: "180px", height: "auto" }}
                             />
                         </div>

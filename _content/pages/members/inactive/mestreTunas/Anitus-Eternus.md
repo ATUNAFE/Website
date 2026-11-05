@@ -9,5 +9,5 @@ course: "Eng. Metalurgica e de Materiais"
 godmother: "Claudius Cantatis Desafinatis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Anitus-Eternus.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Dipelom@is Negritus BaixoTimbradus TUNAlizadu$"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Rockis.webp
 ---

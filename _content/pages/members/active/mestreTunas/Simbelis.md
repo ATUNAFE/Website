@@ -10,5 +10,5 @@ godmother: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 instruments:
   - "cavaquinho"
   - "contrabaixo"
-image: ""
+image: /images/members/Simbelis.webp
 ---

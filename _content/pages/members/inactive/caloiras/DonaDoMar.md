@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Civil"
 godmother: "Conchititas Calíopialis Phalaenopsis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/DonaDoMar.webp
 ---

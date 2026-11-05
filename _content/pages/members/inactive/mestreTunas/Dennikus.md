@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Agaénikus AgudoAceleratis ViciadusLaró SantinhoXizénikus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Dennikus.webp
 ---

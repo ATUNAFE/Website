@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Eletrotécnica e de Computadores"
 godmother: "StOOris 100bpmis OmniPrestábilis SerpentIIadus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Benner.webp
 ---

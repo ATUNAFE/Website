@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia e Gestão Industrial"
 godmother: "Fionissimus Astutus ÇAVÁquinhus EGOderisis"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/First.webp
 ---

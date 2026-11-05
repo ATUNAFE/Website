@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "LOKius Tagarelius VitoriosusLIGAdus Inhu$Vitrae"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Pikachus.webp
 ---

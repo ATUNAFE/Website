@@ -42,6 +42,7 @@ const TIET = ({ id }) => {
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                sizes="20vw"
                 style={{
                     position: "absolute",
                     top: "50%",
@@ -63,7 +64,11 @@ const TIET = ({ id }) => {
                         md={4}
                         className="d-flex flex-column justify-content-center align-items-center"
                     >
-                        <CustomImage src={content.frontmatter.image} />
+                        <CustomImage
+                            src={content.frontmatter.image}
+                            alt={content.frontmatter.title.text}
+                            sizes="(min-width: 768px) 33vw, 50vw"
+                        />
                     </Col>
                     <Col
                         xs={12}

@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia Biomédica"
 godmother: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNaoEstroncatis"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Valbom.webp
 ---

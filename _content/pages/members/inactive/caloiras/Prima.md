@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Prima.webp
 ---

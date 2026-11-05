@@ -10,5 +10,5 @@ godmother: "Dennikus TásTármaróParvalhonikus Póstatis Indignátis"
 instruments:
   - "estandarte"
   - "cavaquinho"
-image: ""
+image: /images/members/Tempuratis.webp
 ---

@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia dos Materiais"
 godmother: "Rucatis Sonatae Pluvia∈Sforzandus Vidalis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Daphnius.webp
 ---

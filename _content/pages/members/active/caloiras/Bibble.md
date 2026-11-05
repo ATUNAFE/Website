@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Mooveezitus Mεrakis UnmeiBonsae"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Bibble.webp
 ---

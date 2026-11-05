@@ -9,5 +9,5 @@ course: "Eng. Mecânica"
 godmother: "Mizécus IdeiaFixus Respondorum"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Odetus.webp
 ---

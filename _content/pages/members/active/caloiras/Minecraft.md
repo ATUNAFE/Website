@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Reclusatis Simensis {CoRioli}Staccatus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Minecraft.webp
 ---

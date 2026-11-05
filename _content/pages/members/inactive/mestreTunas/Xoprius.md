@@ -9,5 +9,5 @@ course: "Eng. Civil"
 godmother: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNãoEstroncatis"
 instruments:
   - "sopros"
-image: ""
+image: /images/members/Xoprius.webp
 ---

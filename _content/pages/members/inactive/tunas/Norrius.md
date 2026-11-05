@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia e Gestão Industrial"
 godmother: "Doryae C♯ius OptiPeculiaris P⭘lyphónicus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Norrius.webp
 ---

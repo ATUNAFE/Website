@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Quí­mica"
 godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Dapatixius.webp
 ---

@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Gretcheniae CoRoastius AmethystusBugadus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Lorde.webp
 ---

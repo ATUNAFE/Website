@@ -9,5 +9,5 @@ course: "Eng. Informática e Computação"
 godmother: "Galegus Couvus Irrequietus SemCaracolis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Marianus.webp
 ---

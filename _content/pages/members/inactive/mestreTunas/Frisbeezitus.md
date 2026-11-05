@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Frisbeezitus.webp
 ---

@@ -10,5 +10,5 @@ godmother: "Dapatixius É-assimConstantis Violalentus Arquibadus"
 instruments:
   - "estandarte"
   - "percussao"
-image: ""
+image: /images/members/Bluís.webp
 ---

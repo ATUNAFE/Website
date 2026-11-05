@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Mexilhónikus AutoEsfor@is Frechadus RepsólicusAnónimus"
 instruments:
   - "sopros"
-image: ""
+image: /images/members/Fritinhas.webp
 ---

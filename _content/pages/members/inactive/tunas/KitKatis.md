@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Jackis IrisInquietus BOOMbonis Néonicus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/KitKatis.webp
 ---

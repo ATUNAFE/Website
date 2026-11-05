@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia do Ambiente"
 godmother: "Playzitus JovialisPatronum p+ragmáticus PrestoConvvictus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Standart.webp
 ---

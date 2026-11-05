@@ -13,7 +13,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                 {/* RP Section */}
                 <div className="d-flex align-items-center mb-3">
                     <div style={{ width: "25px", marginRight: "10px", flexShrink: 0 }}>
-                        <CustomImage src={IMAGE_FILENAMES.pages.white.telefone} alt="Phone" />
+                        <CustomImage src={IMAGE_FILENAMES.pages.white.telefone} alt="Phone" sizes="25px" />
                     </div>
                     <div>
                         <p className="mb-0">{`${rp.name} (Relações Públicas)`}</p>
@@ -24,7 +24,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                 {/* Magister Section */}
                 <div className="d-flex align-items-center mb-3">
                     <div style={{ width: "25px", marginRight: "10px", flexShrink: 0 }}>
-                        <CustomImage src={IMAGE_FILENAMES.pages.white.telefone} alt="Phone" />
+                        <CustomImage src={IMAGE_FILENAMES.pages.white.telefone} alt="Phone" sizes="25px" />
                     </div>
                     <div>
                         <p className="mb-0">{`${magister.name} (Magister)`}</p>
@@ -35,7 +35,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                 {/* E-mail Section */}
                 <div className="d-flex align-items-center mb-3">
                     <div style={{ width: "25px", marginRight: "10px", flexShrink: 0 }}>
-                        <CustomImage src={IMAGE_FILENAMES.pages.white.mail} alt="Mail" />
+                        <CustomImage src={IMAGE_FILENAMES.pages.white.mail} alt="Mail" sizes="25px" />
                     </div>
                     <div>
                         <p className="mb-0">{email}</p>
@@ -45,7 +45,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                 {/* Address Section */}
                 <div className="d-flex align-items-start">
                     <div style={{ width: "25px", marginRight: "10px", flexShrink: 0 }} className="pt-1">
-                        <CustomImage src={IMAGE_FILENAMES.pages.white.morada} alt="Address" />
+                        <CustomImage src={IMAGE_FILENAMES.pages.white.morada} alt="Address" sizes="25px" />
                     </div>
                     <div>
                         {address.split("\n").map((line, index) => (

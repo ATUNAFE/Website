@@ -10,5 +10,6 @@ godmother: "Belikus Azarentus Mamanitus IdeaFixus"
 instruments:
   - "magister"
   - "pandeireta"
-image: ""
+image: /images/members/Lousinhus.webp
+
 ---

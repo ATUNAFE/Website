@@ -9,5 +9,5 @@ course: "Eng. Electrotécnica e de Computadores"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/MaryJoPum.webp
 ---

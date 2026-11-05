@@ -10,5 +10,5 @@ godmother: "Dipelom@is Negritus BaixoTimbradus TUNAlizadu$"
 instruments:
   - "pandeireta"
   - "acordeao"
-image: ""
+image: /images/members/Katy.webp
 ---

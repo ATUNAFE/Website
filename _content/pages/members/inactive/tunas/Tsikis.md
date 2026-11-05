@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia de Serviços e Gestão"
 godmother: "Sportus CordóManiakus Snobis √ -1nspirantis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Tsikis.webp
 ---

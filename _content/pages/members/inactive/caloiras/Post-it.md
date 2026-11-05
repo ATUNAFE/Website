@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia Biomédica"
 godmother: "Neeextis Vivaldis IgniChromáticus M·u·p·i·s"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Post-it.webp
 ---

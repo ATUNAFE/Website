@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Eulálius ΔquilesNíveae MercalliVs Alicerci$"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Pidgey.webp
 ---

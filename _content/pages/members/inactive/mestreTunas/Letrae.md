@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Letrae.webp
 ---

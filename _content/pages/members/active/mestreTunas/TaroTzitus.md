@@ -11,5 +11,5 @@ instruments:
   - "acordeao"
   - "cavaquinho"
   - "guitarra"
-image: ""
+image: /images/members/TaroTzitus.webp
 ---

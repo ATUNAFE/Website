@@ -9,5 +9,5 @@ course: "Eng. Química"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Lilicus.webp
 ---

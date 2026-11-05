@@ -10,5 +10,5 @@ godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "sopros"
   - "acordeao"
-image: ""
+image: /images/members/Gretcheniae.webp
 ---

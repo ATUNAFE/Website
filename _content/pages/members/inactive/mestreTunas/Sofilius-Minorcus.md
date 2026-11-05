@@ -9,5 +9,5 @@ course: "Eng. de Minas e Geoambiente"
 godmother: "Marianus Mocadus Descompassadus Cigarrilhus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Sofilius-Minorcus.webp
 ---

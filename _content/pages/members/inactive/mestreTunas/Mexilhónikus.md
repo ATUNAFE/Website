@@ -10,5 +10,5 @@ godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "magister"
   - "bandolim"
-image: ""
+image: /images/members/Mexilhónikus.webp
 ---

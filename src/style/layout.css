@@ -29,6 +29,11 @@ body {
   height: auto;
 }
 
+/* Ensure cached LCP images are visible even if Gatsby's reveal handler misses. */
+.critical-image [data-main-image] {
+  opacity: 1 !important;
+}
+
 footer {
   background-color: var(--dark-grey);
   color: var(--white);
@@ -72,4 +77,3 @@ main {
   transition: 0.5s;
   opacity: 0.6;
 }
-

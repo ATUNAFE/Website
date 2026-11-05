@@ -10,5 +10,5 @@ godmother: "KitKatis luMièR²Ius SemiCyonis"
 instruments:
   - "percussao"
   - "guitarra"
-image: ""
+image: /images/members/Ludmillae.webp
 ---

@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "SERACius VertitTempus FactũmArktikalis -Séne¢atis-"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Tom.webp
 ---

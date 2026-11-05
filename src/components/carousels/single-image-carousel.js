@@ -19,6 +19,13 @@ const SingleImageCarousel = ({
 }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
+	const nextIndex = images.length
+		? (activeIndex + 1) % images.length
+		: -1;
+
+	const isEager = index =>
+		index === 0 || index === activeIndex || index === nextIndex;
+
 	const handleSelect = (selectedIndex) => {
 		setActiveIndex(selectedIndex);
 	};
@@ -67,6 +74,8 @@ const SingleImageCarousel = ({
 							<CustomImage
 								src={image}
 								alt=""
+								loading={isEager(index) ? "eager" : "lazy"}
+								sizes="100vw"
 								style={{
 									width: "100%",
 									height: "100%",

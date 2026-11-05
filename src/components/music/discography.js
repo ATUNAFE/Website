@@ -47,6 +47,7 @@ const Discography = ({ id }) => {
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                sizes="30vw"
                 style={{
                     position: "absolute",
                     top: "50%",
@@ -78,6 +79,8 @@ const Discography = ({ id }) => {
                         >
                             <CustomImage
                                 src={cd.image}
+                                alt={cd.name}
+                                sizes="(min-width: 768px) 17vw, 25vw"
                                 style={{ width: "50%" }}
                             />
                             <div className="mt-3">

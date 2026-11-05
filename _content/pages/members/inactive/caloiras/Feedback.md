@@ -10,5 +10,5 @@ godmother: "Radaris Pizzitaiti∫ â3lotropicus HopV7erdis"
 instruments:
   - "contrabaixo"
   - "violino"
-image: ""
+image: /images/members/Feedback.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Mecânica"
 godmother: "Arnaldinhus MarufasRecheadus Catxauzus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Pokerérrius.webp
 ---

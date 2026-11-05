@@ -10,5 +10,5 @@ godmother: "Caricaturatis 32Albus AtlasDiónicus piperisRefinadus"
 instruments:
   - "bandolim"
   - "violino"
-image: ""
+image: /images/members/ßasmatis….webp
 ---

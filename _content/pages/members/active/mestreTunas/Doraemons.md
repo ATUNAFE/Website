@@ -10,5 +10,5 @@ godmother: "So₂nics PathosAMParatis Laboralis⇌Absintae Nitrogéni∡us"
 instruments:
   - "cavaquinho"
   - "bandolim"
-image: ""
+image: /images/members/Doraemons.webp
 ---

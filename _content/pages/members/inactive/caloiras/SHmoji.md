@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia de Serviços e Gestão"
 godmother: "ßasmatis… SamuraisHumilis MitoC21H30O5ndriae"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/SHmoji.webp
 ---

@@ -10,5 +10,5 @@ godmother: "Bubbalicious HéyliusGlitteratis exponenZIaLLis +Polaroidis-"
 instruments:
   - "percussao"
   - "pandeireta"
-image: ""
+image: /images/members/Allizitus.webp
 ---

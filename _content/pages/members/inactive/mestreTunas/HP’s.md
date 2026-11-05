@@ -10,5 +10,5 @@ godmother: "Fionissimus Astutus ÇAVÁquinhus EGOderisis"
 instruments:
   - "estandarte"
   - "cavaquinho"
-image: ""
+image: /images/members/HP’s.webp
 ---

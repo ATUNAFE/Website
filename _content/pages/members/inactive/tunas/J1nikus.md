@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Mariakeiritus McRosadinhus ProActivius Buoooostis"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/J1nikus.webp
 ---

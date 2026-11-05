@@ -26,7 +26,11 @@ const TietEdition = ({ edition, theme }) => {
                         md={5}
                         className="d-flex flex-column justify-content-center align-items-center py-4"
                     >
-                        <CustomImage src={edition.frontmatter.image} />
+                        <CustomImage
+                            src={edition.frontmatter.image}
+                            alt={edition.frontmatter.title.text}
+                            sizes="(min-width: 768px) 42vw, 67vw"
+                        />
                         <p className="mt-4 mb-0 fw-bold">{edition.frontmatter.date}</p>
                         <p className="fw-bold">{edition.frontmatter.local}</p>
 

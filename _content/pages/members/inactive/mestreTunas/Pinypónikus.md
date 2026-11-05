@@ -10,5 +10,5 @@ godmother: "Rosinhus Col€ccionatis EstandarteCharmosus"
 instruments:
   - "pandeireta"
   - "percussao"
-image: ""
+image: /images/members/Pinypónikus.webp
 ---

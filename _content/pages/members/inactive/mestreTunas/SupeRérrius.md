@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Metalúrgica e de Materiais"
 godmother: "Espanquius Latinus PausaRequisitatis PepsoDentuçus"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/SupeRérrius.webp
 ---

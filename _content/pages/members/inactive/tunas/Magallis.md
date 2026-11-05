@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Industrial e Gestão"
 godmother: "Vilmis SóMinhuNaturalis Prontux NanoFervus"
 instruments:
   - "sopros"
-image: ""
+image: /images/members/Magallis.webp
 ---

@@ -9,5 +9,5 @@ course: "Eng. Quí­mica"
 godmother: "Sandrus Viseensos Fadistus Violatus NÃOVenditus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Paulus.webp
 ---

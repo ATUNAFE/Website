@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "cavaquinho"
   - "pandeireta"
-image: ""
+image: /images/members/AndôrBiuletus.webp
 ---

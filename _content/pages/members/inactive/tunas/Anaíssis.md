@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Anaíssis.webp
 ---

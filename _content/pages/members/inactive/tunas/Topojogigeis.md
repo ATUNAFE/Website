@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Industrial e Gestão"
 godmother: "Belikus Azarentus Mamanitus IdeaFixus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Topojogigeis.webp
 ---

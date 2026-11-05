@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "SERACius VertitTempus FactũmArktikalis -Séne¢atis-"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Atchim.webp
 ---

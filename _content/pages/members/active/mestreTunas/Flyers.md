@@ -10,5 +10,5 @@ godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "cavaquinho"
   - "acordeao"
-image: ""
+image: /images/members/Flyers.webp
 ---

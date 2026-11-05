@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Mavius ∇NoctuaTurbus Perolatis FiusAᴵrpeggium"
 instruments:
   - "sopros"
-image: ""
+image: /images/members/Spencer.webp
 ---

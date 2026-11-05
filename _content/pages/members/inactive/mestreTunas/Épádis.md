@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Dennikus TásTármaróParvalhonikus Póstatis Indignátis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Épádis.webp
 ---

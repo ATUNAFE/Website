@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Lousinhus Respondorum Tortelhus Amitxis"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/PikyKipis.webp
 ---

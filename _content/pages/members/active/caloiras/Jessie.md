@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Moanius Sakurae Ec//ipsisVibrântis"
 instruments:
   - "violino"
-image: ""
+image: /images/members/Jessie.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Stalker.webp
 ---

@@ -9,5 +9,5 @@ course: "Eng. Electrotécnica e de Computadores"
 godmother: ""
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Rosarius.webp
 ---

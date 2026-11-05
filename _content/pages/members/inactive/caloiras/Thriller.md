@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia e Gestão Industrial"
 godmother: "Playzitus JovialisPatronum p+ragmáticus PrestoConvvictus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Thriller.webp
 ---

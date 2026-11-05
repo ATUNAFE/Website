@@ -10,5 +10,5 @@ godmother: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 instruments:
   - "contrabaixo"
   - "sopros"
-image: "https://i.imgur.com/6EQXfaQ.jpeg"
+image: /images/members/Reclusatis.webp
 ---

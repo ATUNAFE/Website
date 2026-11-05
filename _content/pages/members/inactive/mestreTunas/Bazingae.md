@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Osmobilis Anecoicus T-Covalentis Luau$"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Bazingae.webp
 ---

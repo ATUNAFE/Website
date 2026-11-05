@@ -10,5 +10,5 @@ godmother: "Ludmillae BatuqueEstouradus LuxDispersus a₵ústicus"
 instruments:
   - "percussao"
   - "bandolim"
-image: ""
+image: /images/members/SERACius.webp
 ---

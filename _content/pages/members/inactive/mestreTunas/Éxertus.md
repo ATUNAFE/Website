@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia do Ambiente"
 godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Éxertus.webp
 ---

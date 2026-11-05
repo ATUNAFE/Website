@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Pukitus DeduXuxatis TudoKestionatis ONOFFONus"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Pistolinhas.webp
 ---

@@ -10,5 +10,5 @@ godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "guitarra"
   - "percussao"
-image: ""
+image: /images/members/Moizás.webp
 ---

@@ -10,5 +10,5 @@ godmother: "ßasmatis… SamuraisHumilis MitoC21H30O5ndriae"
 instruments:
   - "bandolim"
   - "estandarte"
-image: ""
+image: /images/members/Jamwisis.webp
 ---

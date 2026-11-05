@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/So₂nics.webp
 ---

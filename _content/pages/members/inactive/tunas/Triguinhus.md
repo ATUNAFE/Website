@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Belikus Azarentus Mamanitus IdeaFixus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Triguinhus.webp
 ---

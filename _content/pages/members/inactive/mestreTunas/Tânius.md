@@ -10,5 +10,5 @@ godmother: "Sandrus Viseensos Fadistus Violatus NãoVenditus"
 instruments:
   - "guitarra"
   - "cavaquinho"
-image: ""
+image: /images/members/Tânius.webp
 ---

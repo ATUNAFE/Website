@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia do Ambiente"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/LusseTOULussis.webp
 ---

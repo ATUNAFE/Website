@@ -9,5 +9,5 @@ course: "Eng. Minas e Geoambiente"
 godmother: "Ritus Altius FêCêPortus EncolhidoIticatis Pistolorum"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Espanquius.webp
 ---

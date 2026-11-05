@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Doryae C♯ius OptiPeculiaris P⭘lyphónicus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Mooveezitus.webp
 ---

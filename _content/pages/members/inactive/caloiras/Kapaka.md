@@ -9,5 +9,5 @@ course: "Engenharia e Gestão do Ambiente"
 godmother: "Rainchus GallusElectricus SorrisoAssiduos Impostus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Kapaka.webp
 ---

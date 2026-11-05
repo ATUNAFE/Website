@@ -10,5 +10,5 @@ godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "contrabaixo"
   - "guitarra"
-image: ""
+image: /images/members/Xavézitus.webp
 ---

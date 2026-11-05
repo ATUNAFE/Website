@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Neeextis Vivaldis IgniChromáticus M·u·p·i·s"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Rocherérrius.webp
 ---

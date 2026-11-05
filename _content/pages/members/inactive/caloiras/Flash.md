@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "ÉMizzus IRenius CapereAurae"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Flash.webp
 ---

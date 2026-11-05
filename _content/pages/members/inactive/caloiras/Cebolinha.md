@@ -9,5 +9,5 @@ course: "Eng. Química"
 godmother: ""
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Cebolinha.webp
 ---

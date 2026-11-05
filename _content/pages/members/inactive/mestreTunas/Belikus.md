@@ -10,5 +10,5 @@ godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "contrabaixo"
   - "pandeireta"
-image: ""
+image: /images/members/Belikus.webp
 ---

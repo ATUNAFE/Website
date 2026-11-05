@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Civil"
 godmother: "Allizitus Cromogéniciae FlavumLotus Tricot∆Htis"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/TNT.webp
 ---

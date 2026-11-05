@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "PQ@is Metamorfosis BitsImpavidus Subtealatus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Playzitus.webp
 ---

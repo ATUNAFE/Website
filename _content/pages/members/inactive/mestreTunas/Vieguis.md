@@ -9,5 +9,5 @@ course: "Eng. Civil"
 godmother: "Marianus Mocadus Descompassadus Cigarrilhus"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Vieguis.webp
 ---

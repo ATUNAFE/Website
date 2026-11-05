@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "Lilus QuinadusCompassadus Camaleónicus PixelBorealis"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Caricaturatis.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Brandys dBellius FlickaVanguardis NichusRe:sponsivus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Leiae.webp
 ---

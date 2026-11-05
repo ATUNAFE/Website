@@ -10,5 +10,5 @@ godmother: "Playzitus JovialisPatronum p+ragmáticus PrestoConvvictus"
 instruments:
   - "pandeireta"
   - "violino"
-image: ""
+image: /images/members/Bambinis.webp
 ---

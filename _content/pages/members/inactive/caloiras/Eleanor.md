@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Corellis TEDxis Er:Dermae"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Eleanor.webp
 ---

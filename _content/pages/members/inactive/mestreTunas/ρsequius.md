@@ -10,5 +10,5 @@ godmother: "Tequius SexyVocalis Sossegatis Berlinguius"
 instruments:
   - "magister"
   - "guitarra"
-image: ""
+image: /images/members/ρsequius.webp
 ---

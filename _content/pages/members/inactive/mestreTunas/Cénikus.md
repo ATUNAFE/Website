@@ -10,5 +10,6 @@ godmother: "SupeRérrius SonusSonorus Mistikus Apaziguátis"
 instruments:
   - "bandolim"
   - "acordeao"
-image: ""
+image: /images/members/Cénikus.webp
+
 ---

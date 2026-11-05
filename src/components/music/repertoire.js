@@ -56,6 +56,7 @@ const Repertoire = ({ id }) => {
         >
             <CustomImage
                 src={repertoire.frontmatter.watermark}
+                sizes="30vw"
                 style={{
                     position: "absolute",
                     top: "50%",

@@ -10,5 +10,5 @@ godmother: "Éxertus Metalicadus Stompis PhoenixInundatis"
 instruments:
   - "estandarte"
   - "guitarra"
-image: ""
+image: /images/members/DaOris.webp
 ---

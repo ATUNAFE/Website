@@ -9,5 +9,5 @@ course: "Eng. Electrotécnica e de Computadores"
 godmother: "Belikus Azarentus Mamanitus IdeaFixus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Cockpitius.webp
 ---

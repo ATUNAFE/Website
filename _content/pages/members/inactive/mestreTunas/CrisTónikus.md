@@ -10,5 +10,5 @@ godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "bandolim"
   - "violino"
-image: ""
+image: /images/members/CrisTónikus.webp
 ---

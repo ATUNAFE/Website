@@ -9,5 +9,5 @@ course: "Eng. Quí­mica"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Rainchus.webp
 ---

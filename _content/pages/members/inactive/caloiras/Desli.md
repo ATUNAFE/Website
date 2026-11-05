@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "FotoMIXis Chill-autus CXIIis areSTus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Desli.webp
 ---

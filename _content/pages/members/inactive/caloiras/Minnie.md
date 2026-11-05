@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "SupeRérrius SonusSonorus Mistikus Apaziguátis"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Minnie.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Dibuguis Sisudus DiscretusAplicatis e-lectrificatis"
 instruments:
   - "sopros"
-image: ""
+image: /images/members/Pifas.webp
 ---

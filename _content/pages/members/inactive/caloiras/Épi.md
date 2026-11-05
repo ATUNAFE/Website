@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Épi.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "Xavézitus Ofuscadus LorealPKEuMereçus AgriDocis"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Tola.webp
 ---

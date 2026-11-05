@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "J1nikus REservaDus TalentusEsvoaçadus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Vitti.webp
 ---

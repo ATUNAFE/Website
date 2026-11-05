@@ -10,5 +10,5 @@ godmother: "Xoprius DoceGomatis CompassosAjustatis Gaffensaiáticus"
 instruments:
   - "acordeao"
   - "cavaquinho"
-image: ""
+image: /images/members/Xunkuikus.webp
 ---

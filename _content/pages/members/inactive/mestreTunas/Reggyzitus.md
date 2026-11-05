@@ -10,5 +10,5 @@ godmother: "Sportus CordóManiakus Snobis √ -1nspirantis"
 instruments:
   - "magister"
   - "contrabaixo"
-image: ""
+image: /images/members/Reggyzitus.webp
 ---

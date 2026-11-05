@@ -39,6 +39,7 @@ const History = ({ id }) => {
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                sizes="30vw"
                 style={{
                     position: "absolute",
                     top: "50%",
@@ -59,6 +60,8 @@ const History = ({ id }) => {
                     <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
                         <CustomImage
                             src={content.frontmatter.image}
+                            alt={content.frontmatter.title.text}
+                            sizes="(min-width: 768px) 33vw, 50vw"
                         />
                     </Col>
                     <Col xs={12} md={8} className="d-flex flex-column justify-content-center">

@@ -10,5 +10,5 @@ godmother: "ZÉNis Staterátis EruditusSussurradus Matrio$kus"
 instruments:
   - "violino"
   - "contrabaixo"
-image: ""
+image: /images/members/Radaris.webp
 ---

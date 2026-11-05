@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Lolitus Incontornatis TrinadusVaidosus EntropiusGiaaaus"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Nobis.webp
 ---

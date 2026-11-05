@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Pukitus DeduXuxatis TudoKestionatis ONOFFONus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/TuxaTuxátis.webp
 ---

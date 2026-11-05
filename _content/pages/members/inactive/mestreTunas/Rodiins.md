@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Caricaturatis 32Albus AtlasDiónicus piperisRefinadus"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Rodiins.webp
 ---

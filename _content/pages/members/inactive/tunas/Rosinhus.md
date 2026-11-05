@@ -9,5 +9,5 @@ course: "Eng. Química"
 godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Rosinhus.webp
 ---

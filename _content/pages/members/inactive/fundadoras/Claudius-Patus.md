@@ -9,5 +9,5 @@ course: "Eng. Civil"
 godmother: ""
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Claudius-Patus.webp
 ---

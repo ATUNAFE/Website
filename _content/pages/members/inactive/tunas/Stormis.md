@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia do Ambiente"
 godmother: "Rosinhus Col€ccionatis EstandarteCharmosus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Stormis.webp
 ---

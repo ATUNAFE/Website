@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Civil"
 godmother: "Mavius ∇NoctuaTurbus Perolatis FiusAᴵrpeggium"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/ZéLda..webp
 ---

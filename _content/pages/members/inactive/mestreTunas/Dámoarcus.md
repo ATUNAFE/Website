@@ -10,5 +10,5 @@ godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "sopros"
   - "pandeireta"
-image: ""
+image: /images/members/Dámoarcus.webp
 ---

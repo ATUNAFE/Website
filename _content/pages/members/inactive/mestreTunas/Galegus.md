@@ -9,5 +9,5 @@ course: "Eng. Civil"
 godmother: ""
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Galegus.webp
 ---

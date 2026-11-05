@@ -10,5 +10,5 @@ godmother: "Pandorkus Loricatvvσ ArchimedisPerpetuum"
 instruments:
   - "estandarte"
   - "pandeireta"
-image: ""
+image: /images/members/TikTokius.webp
 ---

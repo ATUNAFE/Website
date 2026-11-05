@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Xavézitus Ofuscadus LorealPKEuMereçus AgriDocis"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Rrrola.webp
 ---

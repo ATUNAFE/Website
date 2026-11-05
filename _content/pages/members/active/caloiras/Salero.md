@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Aquafreshius CoraliⓊs HermisKernel"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Salero.webp
 ---

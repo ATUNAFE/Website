@@ -9,5 +9,6 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Pinypónikus CalMobilizatis VocálisRevelítihihis Amnésikus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Dibuguis.webp
+
 ---

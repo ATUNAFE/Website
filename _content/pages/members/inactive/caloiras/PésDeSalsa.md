@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Cockpitius TactusMagnéticus Enciclopedius Uh-Hus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/PésDeSalsa.webp
 ---

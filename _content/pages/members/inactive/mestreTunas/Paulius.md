@@ -9,5 +9,5 @@ course: "Eng. Química"
 godmother: ""
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Paulius.webp
 ---

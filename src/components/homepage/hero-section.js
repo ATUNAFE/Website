@@ -36,6 +36,9 @@ const HeroSection = ({ id }) => {
             <div className={`${styles.background} position-absolute`}>
                 <CustomImage
                     src={content.frontmatter.backgroundImage}
+                    className="critical-image"
+                    priority
+                    sizes="100vw"
                     style={{
                         position: "absolute",
                         inset: 0,

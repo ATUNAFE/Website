@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "Corellis TEDxis Er:Dermae"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Bubbalicious.webp
 ---

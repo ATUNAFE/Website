@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: "Simbelis Floreadu𝄽 HolosThéveninis Alg▷ritMus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Storyteller.webp
 ---

@@ -10,5 +10,5 @@ godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "magister"
   - "acordeao"
-image: ""
+image: /images/members/IDis.webp
 ---

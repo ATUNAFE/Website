@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Araryus rand(Gomenasaius) TxicaTxicaMiraboolantis Palađinu$"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/MissRuffle.webp
 ---

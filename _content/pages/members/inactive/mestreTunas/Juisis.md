@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "bandolim"
   - "percussao"
-image: ""
+image: /images/members/Juisis.webp
 ---

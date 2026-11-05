@@ -12,5 +12,5 @@ instruments:
   - "sopros"
   - "acordeao"
   - "estandarte"
-image: ""
+image: /images/members/DéjàVus.webp
 ---

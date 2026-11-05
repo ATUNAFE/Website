@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Mecânica"
 godmother: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/ÉMizzus.webp
 ---

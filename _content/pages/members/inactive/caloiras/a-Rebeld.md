@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "AndôrBiuletus kPlumis Recatadus SNR!us"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/a-Rebeld.webp
 ---

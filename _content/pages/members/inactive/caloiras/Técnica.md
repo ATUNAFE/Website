@@ -9,5 +9,5 @@ course: "Licenciatura em Gestão Industrial"
 godmother: ":Doraemons TessellariS Magnificantis Matri<iae"
 instruments:
   - "contrabaixo"
-image: ""
+image: /images/members/Técnica.webp
 ---

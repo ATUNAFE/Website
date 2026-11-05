@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Dipelom@is Negritus BaixoTimbradus TUNAlizadu$"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Treliça.webp
 ---

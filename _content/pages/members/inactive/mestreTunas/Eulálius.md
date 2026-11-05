@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "pandeireta"
   - "cavaquinho"
-image: ""
+image: /images/members/Eulálius.webp
 ---

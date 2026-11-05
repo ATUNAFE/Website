@@ -10,5 +10,5 @@ godmother: "Sportus CordóManiakus Snobis √ -1nspirantis"
 instruments:
   - "percussao"
   - "cavaquinho"
-image: ""
+image: /images/members/StOOris.webp
 ---

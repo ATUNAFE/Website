@@ -11,5 +11,5 @@ instruments:
   - "estandarte"
   - "cavaquinho"
   - "sopros"
-image: ""
+image: /images/members/Mavius.webp
 ---

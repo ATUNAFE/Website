@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Civil"
 godmother: "Cardumis MomenTu²m PrismAltímetrus Vendaʌalkɨus"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/PãTosta.webp
 ---

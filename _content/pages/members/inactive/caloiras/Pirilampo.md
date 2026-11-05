@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "FotoMIXis Chill-autus CXIIis areSTus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Pirilampo.webp
 ---

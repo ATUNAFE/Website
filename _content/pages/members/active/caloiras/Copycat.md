@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Química"
 godmother: "Flyers [Perlimpimpins]⁷ LacriNIffleriae PhysA₉rum"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Copycat.webp
 ---

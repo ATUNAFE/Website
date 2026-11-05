@@ -10,5 +10,5 @@ godmother: "LusseTOULussis Rezingadus PocoObscenus LogValerianus"
 instruments:
   - "pandeireta"
   - "sopros"
-image: ""
+image: /images/members/Brilhus.webp
 ---

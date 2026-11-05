@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "AndôrBiuletus kPlumis Recatadus SNR!us"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Corellis.webp
 ---

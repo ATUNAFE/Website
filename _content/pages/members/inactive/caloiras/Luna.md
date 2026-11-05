@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia do Ambiemte"
 godmother: "Épádis Médius AbraçusXLis SaitenPacientis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Luna.webp
 ---

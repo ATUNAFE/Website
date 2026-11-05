@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e de Computação"
 godmother: "PikyKipis DesiMaggd@is QuickyRespostus Esq.GIFus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Caracolinhus.webp
 ---

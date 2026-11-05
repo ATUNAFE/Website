@@ -10,5 +10,5 @@ godmother: "Anitus Engenhocus PandeiretaConstantis Acordionicus Vitimatis"
 instruments:
   - "magister"
   - "contrabaixo"
-image: ""
+image: /images/members/Techus.webp
 ---

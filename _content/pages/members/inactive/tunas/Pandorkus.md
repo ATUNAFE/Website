@@ -10,5 +10,5 @@ godmother: "ZÉNis Staterátis EruditusSussurradus Matrio$kus"
 instruments:
   - "estandarte"
   - "bandolim"
-image: ""
+image: /images/members/Pandorkus.webp
 ---

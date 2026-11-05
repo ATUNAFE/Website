@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Mecânica"
 godmother: "Shazamis Espirituosos TriPendlum Makanikoae"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Shego.webp
 ---

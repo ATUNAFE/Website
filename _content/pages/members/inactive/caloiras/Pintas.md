@@ -10,5 +10,5 @@ godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "bandolim"
   - "estandarte"
-image: ""
+image: /images/members/Pintas.webp
 ---

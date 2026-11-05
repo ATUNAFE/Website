@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Química"
 godmother: "Tianãtius Palhatrancitus BaixosColadus EssémessreXIadus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Djóbitis.webp
 ---

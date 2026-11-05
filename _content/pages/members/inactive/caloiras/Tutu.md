@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Bioengenharia"
 godmother: "Moizás MalhadusEx.ímius PaxVigilantis vSinfonicus"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Tutu.webp
 ---

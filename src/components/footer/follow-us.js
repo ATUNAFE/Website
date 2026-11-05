@@ -16,23 +16,23 @@ const FollowUs = ({ socialMedia }) => {
 
             <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
                 <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.instagram} alt="Instagram" />
+                    <CustomImage src={IMAGE_FILENAMES.pages.white.instagram} alt="Instagram" sizes="40px" />
                 </a>
 
                 <a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.facebook} alt="Facebook" />
+                    <CustomImage src={IMAGE_FILENAMES.pages.white.facebook} alt="Facebook" sizes="40px" />
                 </a>
 
                 <a href={socialMedia.youtube} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.youtube} alt="Youtube" />
+                    <CustomImage src={IMAGE_FILENAMES.pages.white.youtube} alt="Youtube" sizes="40px" />
                 </a>
 
                 <a href={socialMedia.linkedin} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.linkedin} alt="Linkedin" />
+                    <CustomImage src={IMAGE_FILENAMES.pages.white.linkedin} alt="Linkedin" sizes="40px" />
                 </a>
 
                 <a href={socialMedia.spotify} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.spotify} alt="Spotify" />
+                    <CustomImage src={IMAGE_FILENAMES.pages.white.spotify} alt="Spotify" sizes="40px" />
                 </a>
             </div>
         </Container>

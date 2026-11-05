@@ -10,5 +10,5 @@ godmother: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 instruments:
   - "pandeireta"
   - "sopros"
-image: ""
+image: /images/members/Raya.webp
 ---

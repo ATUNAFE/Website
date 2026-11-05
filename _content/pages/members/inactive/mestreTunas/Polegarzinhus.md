@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Rocherérrius Adipèrtiis OfíciusUmbrae Alopsis"
 instruments:
   - "percussao"
-image: ""
+image: /images/members/Polegarzinhus.webp
 ---

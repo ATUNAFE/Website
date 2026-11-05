@@ -10,5 +10,5 @@ godmother: "sMartis AstriöDeimus [Tantrantan]²tátis £eanius"
 instruments:
   - "estandarte"
   - "pandeireta"
-image: ""
+image: /images/members/Lesliezitus.webp
 ---

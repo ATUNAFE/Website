@@ -10,5 +10,6 @@ godmother: "Kuriskátis Carismátikus Insularis Dedilhadus#Mináticus"
 instruments:
   - "contrabaixo"
   - "guitarra"
-image: ""
+image: /images/members/Sportus.webp
+
 ---

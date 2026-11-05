@@ -9,5 +9,5 @@ course: "Eng. de Minas e Geoambiente"
 godmother: "Anitus Engenhocus PandeiretaConstantis Acordionicus Vitimatis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Tchuca.webp
 ---

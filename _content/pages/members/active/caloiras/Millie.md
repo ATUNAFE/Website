@@ -9,5 +9,5 @@ course: "Licenciatura em Bioengenharia"
 godmother: ":Doraemons TessellariS Magnificantis Matri<iae"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Millie.webp
 ---

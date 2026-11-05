@@ -9,5 +9,5 @@ course: "Gestão e Engenharia Industrial"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "pandeireta"
-image: ""
+image: /images/members/Roquette.webp
 ---

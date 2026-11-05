@@ -10,5 +10,5 @@ godmother: "HP’s μAcanhadus MuitoBeins GnaYniYs"
 instruments:
   - "pandeireta"
   - "estandarte"
-image: ""
+image: /images/members/Jackis.webp
 ---

@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Industrial e Gestão"
 godmother: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNãoEstroncatis"
 instruments:
   - "violino"
-image: ""
+image: /images/members/Natátis.webp
 ---

@@ -103,6 +103,7 @@ const Header = () => {
 							<CustomImage
 								src={content.frontmatter.image}
 								alt="TUNAFE"
+								sizes="90px"
 								style={{
 									width: "90px",
 									margin: "0",

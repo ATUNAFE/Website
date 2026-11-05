@@ -90,6 +90,7 @@ const NextEvents = ({ id }) => {
                                                 <CustomImage
                                                     src={event.image}
                                                     alt={event.name}
+                                                    sizes="280px"
                                                     style={{
                                                         width: "100%",
                                                         height: "auto",
@@ -128,6 +129,7 @@ const NextEvents = ({ id }) => {
                                                                         <CustomImage
                                                                             src="pages/eventos-black-filled.png"
                                                                             alt=""
+                                                                            sizes="18px"
                                                                             style={{
                                                                                 width: "18px",
                                                                                 height: "18px",
@@ -156,6 +158,7 @@ const NextEvents = ({ id }) => {
                                                                         <CustomImage
                                                                             src="pages/local-black.png"
                                                                             alt=""
+                                                                            sizes="18px"
                                                                             style={{
                                                                                 width: "18px",
                                                                                 height: "18px",

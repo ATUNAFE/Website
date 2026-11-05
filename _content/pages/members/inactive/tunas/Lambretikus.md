@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Mecânica"
 godmother: "Kuriskátis Carismátikus Insularis Dedilhadus#Mináticus"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Lambretikus.webp
 ---

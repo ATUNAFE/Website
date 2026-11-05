@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "KitKatis luMièR²Ius SemiCyonis"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Araryus.webp
 ---

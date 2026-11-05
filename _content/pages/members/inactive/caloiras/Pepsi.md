@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Civil"
 godmother: "Araryus rand(Gomenasaius) TxicaTxicaMiraboolantis Palađinu$"
 instruments:
   - "bandolim"
-image: ""
+image: /images/members/Pepsi.webp
 ---

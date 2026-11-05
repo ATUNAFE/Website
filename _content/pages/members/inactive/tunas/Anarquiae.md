@@ -9,5 +9,5 @@ course: "Mestrado em Engenharia Biomédica"
 godmother: "Radaris Pizzitaiti∫ â3lotropicus HopV7erdis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Anarquiae.webp
 ---

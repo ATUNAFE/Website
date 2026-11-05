@@ -4,33 +4,55 @@ import { Card, Col, Row } from "react-bootstrap";
 import { IMAGE_FILENAMES } from "../../utils/constants";
 import CustomImage from "../images/image";
 
-const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
+const MemberCard = ({ name, nameC, course, godmother, image, instruments, loading = "lazy" }) => {
     return (
         <Card
             className="mb-3 border-0"
             style={{
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
+                contentVisibility: "auto",
+                containIntrinsicSize: "auto 200px",
             }}
         >
             <Row className="g-0 align-items-center">
-                <Col xs={12} sm={2} className="d-flex justify-content-center align-items-center mb-3 mb-sm-0">
-                    {image ?
-                        <Card.Img
-                            variant="top"
-                            className="rounded-0"
-                            src={image}
-                            style={{
-                                width: "150px",
-                                height: "150px",
-                                objectFit: "contain"
-                            }}
-                        /> :
-                        <CustomImage src={IMAGE_FILENAMES.pages.semFoto} />
-                    }
+                <Col xs={12} sm="auto" className="d-flex justify-content-center align-items-center mb-3 mb-sm-0">
+                    <div style={{ width: "150px", height: "150px", flex: "0 0 150px" }}>
+                        {image ?
+                            <Card.Img
+                                variant="top"
+                                className="rounded-0"
+                                src={image}
+                                alt={name}
+                                width="150"
+                                height="150"
+                                loading={loading}
+                                decoding="async"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                    objectPosition: "center",
+                                }}
+                            /> :
+                            <CustomImage
+                                src={IMAGE_FILENAMES.pages.semFoto}
+                                alt="Sem fotografia"
+                                loading={loading}
+                                sizes="150px"
+                                style={{ width: "100%", height: "100%" }}
+                                imgStyle={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "contain",
+                                    objectPosition: "center",
+                                }}
+                            />
+                        }
+                    </div>
                 </Col>
 
-                <Col xs={12} sm={10} className="ps-sm-4">
+                <Col xs={12} sm className="ps-sm-4">
                     <Card.Body className="d-flex flex-column h-100 text-break">
                         <Card.Title className="fw-bold">{name}</Card.Title>
                         <div className="mt-auto">
@@ -50,6 +72,8 @@ const MemberCard = ({ name, nameC, course, godmother, image, instruments }) => {
                                         key={index}
                                         src={IMAGE_FILENAMES.instruments.color[instrument]}
                                         alt={instrument}
+                                        variant="instrument"
+                                        sizes="30px"
                                         style={{
                                             width: "30px",
                                             height: "30px",

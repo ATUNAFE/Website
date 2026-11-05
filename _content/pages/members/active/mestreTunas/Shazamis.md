@@ -10,5 +10,5 @@ godmother: "Ludmillae BatuqueEstouradus LuxDispersus a₵ústicus"
 instruments:
   - "guitarra"
   - "violino"
-image: ""
+image: /images/members/Shazamis.webp
 ---

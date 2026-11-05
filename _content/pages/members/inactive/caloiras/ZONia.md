@@ -9,5 +9,5 @@ course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
 godmother: "Tiriririris PermanentusZen LeBiánikus AjaxExpeditus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/ZONia.webp
 ---

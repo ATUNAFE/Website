@@ -10,5 +10,5 @@ godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "magister"
   - "bandolim"
-image: ""
+image: /images/members/Lolitus.webp
 ---

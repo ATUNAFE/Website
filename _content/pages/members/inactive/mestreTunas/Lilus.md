@@ -10,5 +10,5 @@ godmother: "Fionissimus Astutus ÇAVÁquinhus EGOderisis"
 instruments:
   - "percussao"
   - "estandarte"
-image: ""
+image: /images/members/Lilus.webp
 ---
