@@ -14,12 +14,11 @@ participants:
 extras:
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 awards:
-  - "Melhor Claque - Egitúnica"
+  - "Tuna mais Tuna - Egitúnica"
   - "Melhor Interpretação Musical - TAFUÉ"
   - "Melhor Pandeireta - TFUCP"
   - "Melhor Porta-Estandarte - TFISMAI"
   - "Melhor Solista - TAFUÉ"
-  - "Tuna mais Tuna - Egitúnica"
   - "Melhor Tuna - TAFUÉ"
 jury:
   - "João Limão"

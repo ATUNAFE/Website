@@ -1,8 +1,19 @@
 module.exports = {
     siteMetadata: {
         title: `TUNAFE`,
-        description: `Site oficial da TUNAFE`,
-        author: `@TUNAFE`,
+        description: `Site oficial da Tuna Feminina de Engenharia da Universidade do Porto (TUNAFE). Conhece a Tuna, a história, os eventos, a discografia e o repertório.`,
+        author: `@tunafe`,
+        siteUrl: `https://tunafe.netlify.app`,
+        locale: `pt_PT`,
+        keywords: [
+            "TUNAFE",
+            "Tuna Feminina de Engenharia",
+            "Universidade do Porto",
+            "FEUP",
+            "tuna académica",
+            "tuna feminina",
+            "Porto",
+        ],
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -51,19 +62,21 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `TUNAFE - Tuna Feminina de Engenharia da Universidade do Porto`,
+                short_name: `TUNAFE`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#2A2A2A`,
+                theme_color: `#00893B`,
                 display: `minimal-ui`,
                 icon: `_content/images/logos/tunafe.png`,
+                lang: `pt`,
             },
         },
 
         // Other plugins
         `gatsby-adapter-netlify`,
         `gatsby-plugin-decap-cms`,
+        // SEO/sitemap handled in gatsby-node onPostBuild + static/robots.txt (avoids plugin install in container)
         // `gatsby-plugin-offline`,
     ],
 };

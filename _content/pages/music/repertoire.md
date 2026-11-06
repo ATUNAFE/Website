@@ -29,4 +29,4 @@ songs:
   - "music-tudoIstoETuna"
   - "music-tuSiSabesQuererme"
 ---
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus.
+O repertório da TUNAFE reúne músicas que fazem parte das nossas atuações, encontros e momentos de partilha. Explora as canções para conhecer letras, autores e temas que acompanham a Tuna Feminina de Engenharia da Universidade do Porto.

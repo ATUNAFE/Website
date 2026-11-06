@@ -119,7 +119,8 @@ const Footer = () => {
                 <Row className="text-center mt-5">
                     <Col>
                         <small style={{ opacity: 0.7 }}>
-                            © {new Date().getFullYear()} TUNAFE. Todos os direitos reservados.
+                            © {new Date().getFullYear()} TUNAFE. Todos os
+                            direitos reservados.
                         </small>
                     </Col>
                 </Row>

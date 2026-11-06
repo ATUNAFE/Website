@@ -9,6 +9,8 @@ darkTheme:
   color: "#F0F0F0"
   backgroundColor: "#995345"
 editions:
+  - "edition-xix"
+  - "edition-xviii"
   - "edition-xvii"
   - "edition-xvi"
   - "edition-xv"

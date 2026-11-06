@@ -93,10 +93,10 @@ const Discography = ({ id }) => {
                 </Row>
 
                 {content.html && (
-                    <Row className="justify-content-center mb-4">
+                    <Row className="mb-4">
                         <Col xs={12} lg={8}>
                             <div
-                                className="text-center lh-lg"
+                                className="lh-lg text-start"
                                 dangerouslySetInnerHTML={{
                                     __html: content.html,
                                 }}

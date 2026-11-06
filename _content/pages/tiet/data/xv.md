@@ -14,18 +14,22 @@ extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 guests:
-  - "Ensemble Vocal 7ª Arte"
+  - ""
 awards:
   - "Melhor Claque - Legislatuna"
+  - "Tuna mais Tuna – TUFEMED"
   - "Melhor Banda Sonora – TeSuna"
   - "Melhor Pandeireta – Legislatuna"
   - "Melhor Porta-Estandarte – Legislatuna"
   - "Melhor Instrumental – TeSuna"
   - "Melhor Solista – TeSuna"
-  - "Tuna mais Tuna – TUFEMED"
   - "Melhor Tuna – Legislatuna"
 jury:
-  - ""
+  - "Sofia Braga"
+  - "Cristhian Caldeira"
+  - "Pedro Matos"
+  - "Professor Luís Melo"
+  - "Simão Ribeiro"
 host:
-  - ""
+  - "Ensemble Vocal 7ª Arte"
 ---

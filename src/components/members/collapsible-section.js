@@ -46,8 +46,10 @@ const CollapsibleSection = ({
                     className="collapsible-section-heading"
                     style={{
                         display: "flex",
-                        alignItems: "baseline",
-                        gap: "0.6rem",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        gap: subtitle ? "0.15rem" : 0,
+                        minWidth: 0,
                     }}
                 >
                     <h3
