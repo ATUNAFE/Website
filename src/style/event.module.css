@@ -72,6 +72,12 @@
     opacity: 0.78;
 }
 
+@media (max-width: 767px) {
+    .date {
+        text-align: center;
+    }
+}
+
 .body {
     margin-top: 1rem;
     line-height: 1.7;
