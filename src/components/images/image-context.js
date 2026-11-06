@@ -16,7 +16,7 @@ export const ImageProvider = ({ children }) => {
                             layout: CONSTRAINED
                             width: 1200
                             quality: 58
-                            placeholder: DOMINANT_COLOR
+                            placeholder: BLURRED
                             formats: [AUTO, WEBP]
                         )
                     }
@@ -42,12 +42,36 @@ export const ImageProvider = ({ children }) => {
                     }
                 }
             }
+            iconImages: allFile(
+                filter: {
+                    sourceInstanceName: { eq: "images" }
+                    relativePath: { regex: "/^(pages|logos)/" }
+                }
+            ) {
+                nodes {
+                    relativePath
+                    childImageSharp {
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            width: 500
+                            quality: 90
+                            placeholder: NONE
+                            formats: [AUTO, WEBP]
+                        )
+                    }
+                }
+            }
         }
     `);
 
     const imagesMap = useMemo(() => {
         const map = new Map();
         data.allFile.nodes.forEach(node => {
+            const image = node.childImageSharp?.gatsbyImageData;
+            if (image) map.set(node.relativePath, image);
+        });
+
+        data.iconImages.nodes.forEach(node => {
             const image = node.childImageSharp?.gatsbyImageData;
             if (image) map.set(node.relativePath, image);
         });

@@ -67,7 +67,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                     >
                         <CustomImage
                             src={IMAGE_FILENAMES.pages.white.mail}
-                            alt="Mail"
+                            alt="E-mail"
                             sizes="25px"
                         />
                     </div>
@@ -88,7 +88,7 @@ const Contacts = ({ magister, rp, email, address }) => (
                     >
                         <CustomImage
                             src={IMAGE_FILENAMES.pages.white.morada}
-                            alt="Address"
+                            alt="Morada"
                             sizes="25px"
                         />
                     </div>

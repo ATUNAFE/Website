@@ -6,6 +6,14 @@ export const wrapRootElement = ({ element }) => (
     <ImageProvider>{element}</ImageProvider>
 );
 
+const ROUTE_LOADER_ID = "route-loading-overlay";
+
+const hideRouteLoader = () => {
+    if (!isBrowser) return;
+    const el = document.getElementById(ROUTE_LOADER_ID);
+    if (el) el.hidden = true;
+};
+
 const isBrowser =
     typeof window !== "undefined" && typeof document !== "undefined";
 
@@ -148,8 +156,14 @@ const scrollToHash = hash => {
         const nav = document.querySelector("[data-section-nav]");
         const navH =
             nav?.getBoundingClientRect().height ?? nav?.offsetHeight ?? 0;
+        const heading = el.querySelector("h3, h2, h4");
+        const base = heading ?? el;
         const y =
-            el.getBoundingClientRect().top + window.pageYOffset - 77 - navH;
+            base.getBoundingClientRect().top +
+            window.pageYOffset -
+            77 -
+            navH -
+            (heading ? 4 : 0);
         const se = document.scrollingElement ?? document.documentElement;
         const prev = se.style.scrollBehavior;
         se.style.scrollBehavior = "auto";
@@ -182,6 +196,13 @@ const scrollToHash = hash => {
 export const onClientEntry = () => {
     if (isBrowser && "scrollRestoration" in window.history) {
         window.history.scrollRestoration = "manual";
+    }
+};
+
+export const onPreRouteUpdate = ({ location, prevLocation }) => {
+    if (!isBrowser) return;
+    if (location?.pathname !== prevLocation?.pathname) {
+        showLoader();
     }
 };
 
@@ -228,8 +249,17 @@ export const shouldUpdateScroll = args => {
     return false;
 };
 
+const PAGE_LOADER_ID = "tunafe-ssr-loader";
 const LOADER_ID = "route-loading-bar";
 const LOADER_STYLE_ID = "route-loading-style";
+
+const hidePageLoader = () => {
+    if (!isBrowser) return;
+    const el = document.getElementById(PAGE_LOADER_ID);
+    if (!el) return;
+    el.setAttribute("hidden", "");
+    el.style.display = "none";
+};
 
 const ensureLoader = () => {
     if (!isBrowser) return null;
@@ -277,11 +307,13 @@ export const onRouteUpdateDelayed = () => {
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
     if (!isBrowser) return;
+    hidePageLoader();
     hideLoader();
+    hideRouteLoader();
     if (location?.pathname === "/admin/") netlifyIdentity.init();
     if (location?.hash) {
         const hash = location.hash;
-        const clean = location.pathname || "/";
+        const clean = window.location.pathname || "/";
         try {
             window.history.replaceState(window.history.state, "", clean);
         } catch (_) {}
@@ -304,6 +336,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
 export const onInitialClientRender = () => {
     if (!isBrowser) return;
+    hidePageLoader();
     hideLoader();
     focusWrapperNoScroll();
     if (window.location.hash) {

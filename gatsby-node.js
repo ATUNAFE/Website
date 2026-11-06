@@ -136,9 +136,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     create(home, {
         seo: {
-            title: "TUNAFE - Tuna Feminina de Engenharia da Universidade do Porto",
+            title: "TUNAFE | Tuna Feminina de Engenharia da Universidade do Porto",
             description:
-                "Site oficial da TUNAFE, a Tuna Feminina de Engenharia da Universidade do Porto. Conhece a história, os eventos, a música e a tuna.",
+                "Site oficial da TUNAFE, a Tuna Feminina de Engenharia da Universidade do Porto (FEUP). Conhece a história, os eventos, a música e a Tuna.",
             pathname: "/",
         },
     });

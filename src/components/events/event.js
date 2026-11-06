@@ -21,18 +21,23 @@ const Event = ({ event, theme }) => {
             }}
         >
             {theme.watermark ? (
-                <CustomImage
-                    src={theme.watermark}
-                    sizes="20vw"
+                <div
                     className={`${styles.watermark}${
                         isDark ? ` ${styles.watermarkDark}` : ""
                     }`}
-                    imgStyle={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "contain",
-                    }}
-                />
+                    aria-hidden="true"
+                >
+                    <CustomImage
+                        src={theme.watermark}
+                        sizes="(max-width: 768px) 60vw, 260px"
+                        style={{ width: "100%", height: "100%" }}
+                        imgStyle={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain",
+                        }}
+                    />
+                </div>
             ) : null}
             <Container className={styles.inner}>
                 <Row className="g-4 g-lg-5 align-items-center">

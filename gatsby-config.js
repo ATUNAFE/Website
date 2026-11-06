@@ -1,18 +1,18 @@
 module.exports = {
     siteMetadata: {
         title: `TUNAFE`,
-        description: `Site oficial da Tuna Feminina de Engenharia da Universidade do Porto (TUNAFE). Conhece a Tuna, a história, os eventos, a discografia e o repertório.`,
+        description: `Site oficial da TUNAFE – Tuna Feminina de Engenharia da Universidade do Porto (FEUP). Conhece a história, os membros, a discografia, o repertório e os eventos da tuna.`,
         author: `@tunafe`,
         siteUrl: `https://tunafe.netlify.app`,
         locale: `pt_PT`,
         keywords: [
             "TUNAFE",
-            "Tuna Feminina de Engenharia",
-            "Universidade do Porto",
-            "FEUP",
-            "tuna académica",
-            "tuna feminina",
-            "Porto",
+            "Tuna Feminina de Engenharia da Universidade do Porto",
+            "FEUP tuna",
+            "tuna académica Porto",
+            "tuna feminina universitária",
+            "tuna universitária Porto",
+            "música académica portuguesa",
         ],
     },
     plugins: [

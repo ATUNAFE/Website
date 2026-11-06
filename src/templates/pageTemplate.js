@@ -51,12 +51,19 @@ const Page = ({ pageContext }) => {
         return Component ? <Component key={index} id={component.id} /> : null;
     });
 
-    const structuredData = {
+    const siteUrl = "https://tunafe.netlify.app";
+    const canonical = seo.pathname ? `${siteUrl}${seo.pathname}` : `${siteUrl}/`;
+    const logoUrl = `${siteUrl}/icons/icon-512x512.png`;
+
+    const organizationData = {
         "@context": "https://schema.org",
-        "@type": "MusicGroup",
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
         name: "TUNAFE",
         alternateName: "Tuna Feminina de Engenharia da Universidade do Porto",
-        url: "https://tunafe.netlify.app/",
+        url: `${siteUrl}/`,
+        logo: logoUrl,
+        image: logoUrl,
         description: pageDescription,
         sameAs: [
             "https://www.instagram.com/tunafe",
@@ -65,6 +72,50 @@ const Page = ({ pageContext }) => {
             "https://pt.linkedin.com/company/tunafe",
             "https://open.spotify.com/artist/60Hg2AzIe678S9Q8Guw1hI",
         ],
+    };
+
+    const webSiteData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        name: "TUNAFE",
+        alternateName: "Tuna Feminina de Engenharia da Universidade do Porto",
+        url: `${siteUrl}/`,
+        inLanguage: "pt-PT",
+        publisher: { "@id": `${siteUrl}/#organization` },
+    };
+
+    const pageData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: pageTitle,
+        description: pageDescription,
+        url: canonical,
+        inLanguage: "pt-PT",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${siteUrl}/#organization` },
+    };
+
+    const musicGroupData = {
+        "@context": "https://schema.org",
+        "@type": ["MusicGroup", "PerformingGroup"],
+        "@id": `${siteUrl}/#musicgroup`,
+        name: "TUNAFE",
+        alternateName: "Tuna Feminina de Engenharia da Universidade do Porto",
+        url: `${siteUrl}/`,
+        description: pageDescription,
+        genre: ["Tuna académica", "Música académica portuguesa"],
+        foundingDate: "1994",
+        location: {
+            "@type": "Place",
+            name: "Faculdade de Engenharia da Universidade do Porto",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Porto",
+                addressCountry: "PT",
+            },
+        },
+        parentOrganization: { "@id": `${siteUrl}/#organization` },
     };
 
     return (
@@ -81,7 +132,16 @@ const Page = ({ pageContext }) => {
                 ]}
             />
             <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
+                {JSON.stringify(organizationData)}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify(webSiteData)}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify(pageData)}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify(musicGroupData)}
             </script>
             {children}
         </Layout>

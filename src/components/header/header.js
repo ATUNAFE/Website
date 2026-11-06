@@ -312,12 +312,22 @@ const Header = () => {
                                                                                 .height ??
                                                                             nav?.offsetHeight ??
                                                                             0;
+                                                                        const heading =
+                                                                            el.querySelector(
+                                                                                "h3, h2, h4"
+                                                                            );
+                                                                        const base =
+                                                                            heading ??
+                                                                            el;
                                                                         const y =
-                                                                            el.getBoundingClientRect()
+                                                                            base.getBoundingClientRect()
                                                                                 .top +
                                                                             window.pageYOffset -
                                                                             77 -
-                                                                            navH;
+                                                                            navH -
+                                                                            (heading
+                                                                                ? 4
+                                                                                : 0);
                                                                         const scroller =
                                                                             document.scrollingElement ??
                                                                             document.documentElement;
