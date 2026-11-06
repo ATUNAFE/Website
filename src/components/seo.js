@@ -123,6 +123,10 @@ function Seo({ description, lang, meta, title, image, pathname }) {
                     name: `twitter:image`,
                     content: imageUrl,
                 },
+                {
+                    name: `google-site-verification`,
+                    content: `b384c527a2c25196`,
+                },
             ].concat(meta)}
         />
     );
