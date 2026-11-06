@@ -34,20 +34,18 @@ const componentMap = {
     Discography,
     Repertoire,
     Events,
-    TietEditions
+    TietEditions,
 };
 
 const AboutUs = ({ pageContext }) => {
     const { frontmatter } = pageContext.data;
-    
+
     const children = frontmatter.components.map((component, index) => {
         const Component = componentMap[component.type];
         return Component ? <Component key={index} id={component.id} /> : null;
     });
 
-    return (
-        <Layout children={children} />
-    );
-}
+    return <Layout children={children} />;
+};
 
 export default AboutUs;

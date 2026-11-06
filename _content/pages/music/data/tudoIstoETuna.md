@@ -2,7 +2,8 @@
 id: "music-tudoIstoETuna"
 title:
   text: "Tudo Isto É Tuna"
-author: "Amália Rodrigues – Adap. TUNAFE"
+author: "Amália Rodrigues - Adaptação TUNAFE"
+description: "O nosso hino. Aqui resume-se o que é ser estudante e tunante. É a música que melhor define a nossa essência."
 ---
 Perguntaste-me outro dia,  
 O que era a faculdade  

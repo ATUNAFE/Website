@@ -1,79 +1,98 @@
 @import "concept.css";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+html {
+    height: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(77px + 56px);
 }
 
-#___gatsby, #gatsby-focus-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@media (max-width: 576px) {
+    html {
+        scroll-padding-top: calc(77px + 48px);
+    }
 }
 
 body {
-  position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    position: relative;
 }
 
 .content {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .content-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Ensure cached LCP images are visible even if Gatsby's reveal handler misses. */
 .critical-image [data-main-image] {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 footer {
-  background-color: var(--dark-grey);
-  color: var(--white);
-  font: 0.8rem;
-  text-align: center;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    font: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer p {
-  margin: 0;
+    margin: 0;
 }
 
 #pageContent {
-  padding: 0;
-  margin: 0;
-  padding-bottom: 3.5rem;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 3.5rem;
 }
 
 main {
-  flex-grow: 1;
+    flex-grow: 1;
+}
+
+/* When the sticky section nav is visible, make the header opaque for visual consistency */
+html.nav-active header .row {
+    background-color: rgba(245, 245, 245, 1) !important;
 }
 
 .banner {
-  height: calc(100vh - 88px);
-  width: 100%;
+    height: calc(100vh - 88px);
+    width: 100%;
 }
 
 #HomepageBanner h1 {
-  position: absolute;
-  margin: 0;
-  margin-right: 1rem;
-  padding: 0;
-  font-size: 3rem;
-  color: #FFFFFF;
-  text-shadow: 2px 2px var(--dark-grey);
-  text-transform: uppercase;
-  text-align: right;
-  transition: 0.5s;
-  opacity: 0.6;
+    position: absolute;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px var(--dark-grey);
+    text-transform: uppercase;
+    text-align: right;
+    transition: 0.5s;
+    opacity: 0.6;
 }

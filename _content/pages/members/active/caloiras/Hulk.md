@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Informática e Computação"
 godmother: "Eu!ropius Rhapsodis KazoosKenae"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Hulk.webp
 ---

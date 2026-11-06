@@ -11,7 +11,7 @@ menu:
     link: "/sobre-nos"
     items:
       - text: "Historial"
-        link: "/sobre-nos#history-aboutUs"
+        link: "/sobre-nos#historial"
       - text: "Membros"
         link: "/sobre-nos#members-aboutUs"
       - text: "Padrinhos"

@@ -11,7 +11,6 @@ darkTheme:
   color: "#F0F0F0"
   backgroundColor: "#995345"
 events:
-  - "event-portuscalle22"
-  - "event-portuscalle23"
-  - "event-portuscalle24"
+  - "event-xii-invictus"
+  - "event-xxx-trovas"
 ---

@@ -2,7 +2,8 @@
 id: "music-serenataAoPorto"
 title:
   text: "Serenata ao Porto"
-author: "Ana Correia (Original Tunafe)"
+author: "Original da Tuna Feminina de Engenharia da Universidade do Porto"
+description: "Em honra à cidade que nos acolhe. Uma música que ecoa pelas pedras da Ribeira e pelos Clérigos, transbordando o amor e a gratidão que sentimos pela Invicta e pela casa que aqui encontramos."
 ---
 Os segredos e a Tuna a cantar.  
 

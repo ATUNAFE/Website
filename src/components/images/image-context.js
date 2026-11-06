@@ -12,34 +12,34 @@ export const ImageProvider = ({ children }) => {
                 nodes {
                     relativePath
                     childImageSharp {
-						gatsbyImageData(
-							layout: CONSTRAINED
-							width: 1200
-							quality: 58
-							placeholder: DOMINANT_COLOR
-							formats: [AUTO, WEBP]
-						)
-					}
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            width: 1200
+                            quality: 58
+                            placeholder: DOMINANT_COLOR
+                            formats: [AUTO, WEBP]
+                        )
+                    }
                 }
             }
             instrumentIcons: allFile(
                 filter: {
-					sourceInstanceName: { eq: "images" }
-					relativePath: { regex: "/^instruments/" }
+                    sourceInstanceName: { eq: "images" }
+                    relativePath: { regex: "/^instruments/" }
                 }
             ) {
                 nodes {
-					relativePath
-					childImageSharp {
-					    gatsbyImageData(
-					        layout: FIXED
-					        width: 150
-					        height: 150
-					        quality: 100
-					        placeholder: NONE
-					        formats: [PNG]
-					    )
-					}
+                    relativePath
+                    childImageSharp {
+                        gatsbyImageData(
+                            layout: FIXED
+                            width: 150
+                            height: 150
+                            quality: 100
+                            placeholder: NONE
+                            formats: [PNG]
+                        )
+                    }
                 }
             }
         }
@@ -66,4 +66,4 @@ export const ImageProvider = ({ children }) => {
             {children}
         </ImageContext.Provider>
     );
-}
+};

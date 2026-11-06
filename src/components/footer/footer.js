@@ -10,18 +10,32 @@ import { useStaticQuery, graphql } from "gatsby";
 const Footer = () => {
     const data = useStaticQuery(graphql`
         {
-            markdownRemark(frontmatter: {id: {regex: "/footer/"}}) {
+            markdownRemark(frontmatter: { id: { regex: "/footer/" } }) {
                 frontmatter {
                     id
-                    title { text }
-                    rp { name, phone }
-                    magister { name, phone }
+                    title {
+                        text
+                    }
+                    rp {
+                        name
+                        phone
+                    }
+                    magister {
+                        name
+                        phone
+                    }
                     email
                     address
-                    socialMedia { instagram, facebook, youtube, linkedin, spotify }
+                    socialMedia {
+                        instagram
+                        facebook
+                        youtube
+                        linkedin
+                        spotify
+                    }
                 }
             }
-        } 
+        }
     `);
 
     const content = data.markdownRemark;
@@ -51,9 +65,14 @@ const Footer = () => {
                             socialMedia={content.frontmatter.socialMedia}
                         />
                     </Col>
-                    
+
                     {/* Logo Section */}
-                    <Col xs={12} md={4} lg={3} className="d-flex flex-column align-items-center align-items-md-start">
+                    <Col
+                        xs={12}
+                        md={4}
+                        lg={3}
+                        className="d-flex flex-column align-items-center align-items-md-start"
+                    >
                         {/* Tunafe Shield + Text */}
                         <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
                             <div style={{ minWidth: "70px" }} className="me-2">
@@ -64,8 +83,13 @@ const Footer = () => {
                                     style={{ width: "70px", height: "auto" }}
                                 />
                             </div>
-                            <div style={{ fontSize: "12px", lineHeight: "1.2" }} className="text-start">
-                                <p className="mb-0">Tuna Feminina de Engenharia</p>
+                            <div
+                                style={{ fontSize: "12px", lineHeight: "1.2" }}
+                                className="text-start"
+                            >
+                                <p className="mb-0">
+                                    Tuna Feminina de Engenharia
+                                </p>
                                 <p className="mb-0">da Universidade do Porto</p>
                             </div>
                         </div>
@@ -94,7 +118,9 @@ const Footer = () => {
 
                 <Row className="text-center mt-5">
                     <Col>
-                        <small style={{ opacity: 0.7 }}>TUNAFE - Desde 1991+1</small>
+                        <small style={{ opacity: 0.7 }}>
+                            © {new Date().getFullYear()} TUNAFE. Todos os direitos reservados.
+                        </small>
                     </Col>
                 </Row>
             </Container>

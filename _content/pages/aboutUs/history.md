@@ -1,5 +1,6 @@
 ---
 id: "history-aboutUs"
+anchor: "historial"
 title:
   text: "Historial"
 image: "logos/tunafe.png"
@@ -11,8 +12,8 @@ carousel:
   - "yearly/2011.jpg"
   - "yearly/2015.jpg"
   - "yearly/2022.jpg"
-  - "logos/tunafe.png"
 ---
+
 A Tuna Feminina de Engenharia da Universidade do Porto foi fundada a 3 de Novembro de 1991+1 por um grupo de alunas da Faculdade de Engenharia da Universidade do Porto que tinham em comum o gosto pela música e pela boémia estudantil. Constituída por alunas dos vários cursos ministrados na FEUP, a TUNAFE conjuga o respeito pela tradição académica com a alegria em fazer música e a irreverência estudantil. Representa para todos os elementos desta Tuna uma oportunidade de crescimento pessoal e um escape para uma vida universitária, por vezes tão exigente.
 
 Desde a sua estreia no V Sarau Cultural de Engenharia, a TUNAFE já percorreu todo o país cantando e encantando quem a escuta e dignificando o bom nome da Faculdade de Engenharia e da Cidade do Porto. Para além das inúmeras viagens em Portugal, a TUNAFE tem, nos últimos anos, ultrapassado fronteiras realizando digressões por toda a Europa. Estas são fruto de muito trabalho e dedicação, com o objetivo de partilhar a alegria de ser estudante e difundir a cultura portuguesa por onde passa. Desde a primeira digressão em Setembro de 1999 ao Arquipélago da Madeira, a TUNAFE cantou e encantou em destinos como Alemanha, Áustria, Holanda, Inglaterra, Liechtenstein, Açores, Suíça, Bélgica, Espanha e França.
@@ -24,3 +25,7 @@ Acima de qualquer norma ou regra é essencial a paixão pelo conjunto que a tuna
 É este o espírito vivido na Tuna Feminina de Engenharia e que marcou todas as suas gerações.
 
 Ousamos então usufruir do direito de citar tão sábias palavras.
+
+> "Se, ser estudante, é ter ânsia em saber e espírito jovem, ser tuno será exaltar em música e canto o ânimo de ser estudante e o vigor da juventude, virtudes a deverem ser permanentes e sem idade!"
+>
+> <p style="text-align: right;"> — Aureliano da Fonseca </p>

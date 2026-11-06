@@ -1,0 +1,26 @@
+.followLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-engineer);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s ease, transform 0.15s ease;
+    transform-origin: right center;
+    will-change: transform;
+}
+
+.followLink:hover,
+.followLink:focus-visible {
+    color: var(--light-engineer);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.followLink svg,
+.arrowIcon {
+    width: 0.85em;
+    height: 0.85em;
+    flex-shrink: 0;
+    display: block;
+}

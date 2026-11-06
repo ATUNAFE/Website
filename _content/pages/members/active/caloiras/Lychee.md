@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia de Materiais"
 godmother: "Toyotis Ninjutsus RedisQuehe²rcus"
 instruments:
   - "cavaquinho"
-image: ""
+image: /images/members/Lychee.webp
 ---

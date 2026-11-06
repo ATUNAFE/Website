@@ -11,7 +11,7 @@ export const IMAGE_FILENAMES = {
             magister: "instruments/magister-color.png",
             pandeireta: "instruments/pandeireta-color.png",
             percussao: "instruments/percussao-color.png",
-            violino: "instruments/violino-color.png"
+            violino: "instruments/violino-color.png",
         },
 
         white: {
@@ -25,9 +25,8 @@ export const IMAGE_FILENAMES = {
             magister: "instruments/magister.png",
             pandeireta: "instruments/pandeireta.png",
             percussao: "instruments/percussao.png",
-            violino: "instruments/violino.png"
-        }
-
+            violino: "instruments/violino.png",
+        },
     },
 
     logos: {
@@ -35,17 +34,17 @@ export const IMAGE_FILENAMES = {
             ipdj: "logos/ipdj.png",
             teup: "logos/teup.png",
             tunafe: "logos/tunafe.png",
-            tunafeEng: "logos/tunafe-eneg.png"
+            tunafeEng: "logos/tunafe-eneg.png",
         },
 
         black: {
-            tiet: "logos/tiet-black.png"
+            tiet: "logos/tiet-black.png",
         },
-        
+
         white: {
             tiet: "logos/tiet-white.png",
             feup: "logos/feup-white.png",
-            tunafe: "logos/tunafe-white.png"
+            tunafe: "logos/tunafe-white.png",
         },
     },
 
@@ -67,11 +66,11 @@ export const IMAGE_FILENAMES = {
             telefone: "pages/telefone-black.png",
             teup: "pages/teup-black.png",
             tiet: "pages/tiet-black.png",
-            youtube: "pages/youtube-black.png"
+            youtube: "pages/youtube-black.png",
         },
 
         white: {
-            cd: "pages/cd-black.png-white.png",
+            cd: "pages/cd-white.png",
             ensaios: "pages/ensaios-white.png",
             eventos: "pages/eventos-white.png",
             facebook: "pages/facebook-white.png",
@@ -87,9 +86,27 @@ export const IMAGE_FILENAMES = {
             telefone: "pages/telefone-white.png",
             teup: "pages/teup-white.png",
             tiet: "pages/tiet-white.png",
-            youtube: "pages/youtube-white.png"
+            youtube: "pages/youtube-white.png",
         },
 
-        semFoto: "pages/sem-foto.png"
-    }
-}
+        semFoto: "pages/sem-foto.png",
+    },
+};
+
+export const INSTRUMENT_LABELS = {
+    acordeao: "Acordeão",
+    bandolim: "Bandolim",
+    cavaquinho: "Cavaquinho",
+    contrabaixo: "Contrabaixo",
+    estandarte: "Estandarte",
+    guitarra: "Guitarra",
+    magister: "Magister",
+    pandeireta: "Pandeireta",
+    percussao: "Percussão",
+    sopros: "Sopros",
+    violino: "Violino",
+};
+
+export const instrumentLabel = key =>
+    INSTRUMENT_LABELS[key] ||
+    (key ? key.charAt(0).toUpper() + key.slice(1) : "");

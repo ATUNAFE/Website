@@ -9,4 +9,6 @@ tunaRoom: "B045"
 startTime: "19h"
 finishTime: "21h"
 ---
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+Vem assistir a um dos nossos ensaios e fica a conhecer a nossa Tuna!
+
+Não é necessário ter conhecimentos musicais, apenas boa disposição e energia! É simples, é só querer, aparecer e nós ajudamos! Aqui, descobrirás o prazer de viver e o gosto pela música e tradição académica.

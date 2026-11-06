@@ -3,7 +3,7 @@ id: "nextEvents-home"
 title:
   text: "Próximos Eventos"
 button:
-  text: "Descobre mais eventos!"
+  text: "Explora eventos passados"
   link: "/eventos"
 nextEvents:
   - name: "XIV Tun'elaS"

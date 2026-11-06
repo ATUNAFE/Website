@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia de Materiais"
 godmother: "Moglius Fulguris ClavusRubiae"
 instruments:
   - "estandarte"
-image: ""
+image: /images/members/Malhoa.webp
 ---

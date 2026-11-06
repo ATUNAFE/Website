@@ -7,11 +7,15 @@ import * as styles from "../../style/hero-section.module.css";
 const HeroSection = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/heroSection/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/heroSection/" } } }
+            ) {
                 nodes {
                     frontmatter {
                         id
-                        title { text }
+                        title {
+                            text
+                        }
                         backgroundImage
                         description
                         buttons {
@@ -21,10 +25,12 @@ const HeroSection = ({ id }) => {
                     }
                 }
             }
-        }    
+        }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
@@ -52,7 +58,9 @@ const HeroSection = ({ id }) => {
                 />
             </div>
 
-            <div className={`${styles.overlay} position-absolute top-0 start-0 w-100 h-100`} />
+            <div
+                className={`${styles.overlay} position-absolute top-0 start-0 w-100 h-100`}
+            />
 
             <Container className="position-relative z-1 px-3 px-md-4">
                 <Row>
@@ -61,7 +69,9 @@ const HeroSection = ({ id }) => {
                         md={7}
                         className={`${styles.heroContent} d-flex flex-column align-items-center align-items-md-start text-center text-md-start`}
                     >
-                        <h1 className={`${styles.title} display-5 fw-bold lh-sm text-white`}>
+                        <h1
+                            className={`${styles.title} display-5 fw-bold lh-sm text-white`}
+                        >
                             {content.frontmatter.title.text}
                         </h1>
 
@@ -74,22 +84,28 @@ const HeroSection = ({ id }) => {
                             gap={3}
                             className="flex-wrap justify-content-center justify-content-md-start"
                         >
-                            {content.frontmatter.buttons.map((button, index) => (
-                                <Button
-                                    key={button.link}
-                                    href={button.link}
-                                    variant={index === 0 ? "primary" : "outline-light"}
-                                    className="rounded-pill px-4 py-3 fw-bold"
-                                >
-                                    {button.text}
-                                </Button>
-                            ))}
+                            {content.frontmatter.buttons.map(
+                                (button, index) => (
+                                    <Button
+                                        key={button.link}
+                                        href={button.link}
+                                        variant={
+                                            index === 0
+                                                ? "primary"
+                                                : "outline-light"
+                                        }
+                                        className="rounded-pill px-4 py-3 fw-bold"
+                                    >
+                                        {button.text}
+                                    </Button>
+                                )
+                            )}
                         </Stack>
                     </Col>
                 </Row>
             </Container>
         </section>
     );
-}
+};
 
 export default HeroSection;

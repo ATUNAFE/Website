@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Eletrotécnica e de Computadores"
 godmother: "Moglius Fulguris ClavusRubiae"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/Phineas.webp
 ---

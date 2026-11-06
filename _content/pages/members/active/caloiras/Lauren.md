@@ -9,5 +9,5 @@ course: "Licenciatura em Engenharia Química"
 godmother: "DaVincius Violetis p[Origamis]₄₀₄"
 instruments:
   - "acordeao"
-image: ""
+image: /images/members/Lauren.webp
 ---

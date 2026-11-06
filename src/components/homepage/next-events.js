@@ -1,13 +1,19 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import { Link } from "gatsby";
+import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 
 import CustomImage from "../images/image";
 import { graphql, useStaticQuery } from "gatsby";
+import CustomHeading from "../custom-heading";
+import * as styles from "../../style/next-events.module.css";
 
 const NextEvents = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/nextEvents/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/nextEvents/" } } }
+            ) {
                 nodes {
                     html
                     frontmatter {
@@ -35,181 +41,248 @@ const NextEvents = ({ id }) => {
         }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
+    const [active, setActive] = useState(0);
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
-    const events = content.frontmatter.nextEvents;
+    const events = content.frontmatter.nextEvents ?? [];
+    const multi = events.length > 1;
+    const button = content.frontmatter.button;
+    const buttonIsExternal = button?.link
+        ? /^https?:\/\//.test(button.link)
+        : false;
 
-    return (
-        <Container
-            id={id}
-            fluid
-            className="py-5"
-            style={{
-                backgroundColor: "var(--light-neutral)"
-            }}
-        >
-            <Row className="pb-5 px-3 px-md-4 text-center">
-                <Col>
-                    <h3>
-                        {content.frontmatter.title.text}
-                    </h3>
-                    <div 
-                        className="mx-auto mt-2" 
-                        style={{ width: "50px", height: "3px", backgroundColor: "var(--light-green)", borderRadius: "2px" }}
-                    />
-                </Col>
-            </Row>
+    const go = dir => {
+        setActive(i => (i + dir + events.length) % events.length);
+    };
 
-            <Container>
-                <Row className="g-4 justify-content-center">
-                    {events.map((event, index) => {
-                        const schedule = event.schedule?.length
-                            ? event.schedule
-                            : [{
-                                date: event.date,
-                                title: null,
-                                local: event.local,
-                            }];
+    const moreLink =
+        button?.link &&
+        (buttonIsExternal ? (
+            <a
+                href={button.link}
+                className={`d-inline-flex align-items-center gap-2 ${styles.moreLink}`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {button.text}
+                <FaArrowRight aria-hidden="true" className={styles.moreArrow} />
+            </a>
+        ) : (
+            <Link
+                to={button.link}
+                className={`d-inline-flex align-items-center gap-2 ${styles.moreLink}`}
+            >
+                {button.text}
+                <FaArrowRight aria-hidden="true" className={styles.moreArrow} />
+            </Link>
+        ));
 
-                        return (
-                            <Col xs={12} lg={10} xl={8} key={event.name ?? index}>
-                                <div 
-                                    className="bg-white rounded-4 border p-4 p-md-5"
-                                    style={{ 
-                                        margin: "0 auto",
-                                        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                                        borderColor: "var(--dark-neutral)",
-                                    }}
-                                >
-                                    <Row className="g-4 align-items-center">
+    const renderCard = event => {
+        const schedule = event.schedule?.length
+            ? event.schedule
+            : [
+                  {
+                      date: event.date,
+                      title: null,
+                      local: event.local,
+                  },
+              ];
 
-                                        <Col xs={12} md={5} lg={5} className="text-center">
-                                            <div className="position-relative overflow-hidden rounded-3 shadow-sm mx-auto" style={{ maxWidth: "280px" }}>
+        return (
+            <div className={styles.eventCard}>
+                <div className="row g-0 align-items-stretch">
+                    <div className="col-12 col-md-4">
+                        <div className={styles.imageWrap}>
+                            <CustomImage
+                                src={event.image}
+                                alt={event.name}
+                                sizes="(min-width: 768px) 280px, 100vw"
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    minHeight: "220px",
+                                    display: "block",
+                                }}
+                                imgStyle={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                    objectPosition: "center",
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="col-12 col-md-8">
+                        <div className={styles.content}>
+                            <div className={styles.header}>
+                                <h3 className={styles.eventName}>
+                                    {event.name}
+                                </h3>
+                                {event.organization ? (
+                                    <p className={styles.organization}>
+                                        {event.organization}
+                                    </p>
+                                ) : null}
+                            </div>
+
+                            <div className={styles.schedule}>
+                                {schedule.map((item, itemIndex) => (
+                                    <div
+                                        key={itemIndex}
+                                        className={styles.scheduleItem}
+                                    >
+                                        <div className={styles.scheduleMain}>
+                                            <CustomImage
+                                                src="pages/eventos-black-filled.png"
+                                                alt=""
+                                                sizes="18px"
+                                                style={{
+                                                    width: "18px",
+                                                    height: "18px",
+                                                    flexShrink: 0,
+                                                    marginTop: "2px",
+                                                }}
+                                                imgStyle={{
+                                                    objectFit: "contain",
+                                                }}
+                                            />
+                                            <div>
+                                                <div className={styles.date}>
+                                                    {item.date}
+                                                </div>
+                                                {item.title ? (
+                                                    <div
+                                                        className={
+                                                            styles.itemTitle
+                                                        }
+                                                    >
+                                                        {item.title}
+                                                    </div>
+                                                ) : null}
+                                            </div>
+                                        </div>
+                                        {item.local ? (
+                                            <div className={styles.local}>
                                                 <CustomImage
-                                                    src={event.image}
-                                                    alt={event.name}
-                                                    sizes="280px"
+                                                    src="pages/local-black.png"
+                                                    alt=""
+                                                    sizes="16px"
                                                     style={{
-                                                        width: "100%",
-                                                        height: "auto",
-                                                        display: "block",
+                                                        width: "16px",
+                                                        height: "16px",
+                                                        flexShrink: 0,
                                                     }}
                                                     imgStyle={{
-                                                        width: "100%",
-                                                        height: "100%",
-                                                        objectFit: "cover",
-                                                        objectPosition: "center",
+                                                        objectFit: "contain",
                                                     }}
                                                 />
+                                                <span>{item.local}</span>
                                             </div>
-                                        </Col>
+                                        ) : null}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
-                                        <Col xs={12} md={7} lg={7}>
-                                            <div className="ps-md-3">
-                                                <h3 className="fw-bold fs-2 mb-1 text-dark">
-                                                    {event.name}
-                                                </h3>
+    return (
+        <div id={id} style={{ backgroundColor: "var(--light-neutral)" }}>
+            <Container className="py-5">
+                <div className={styles.headerRow}>
+                    <CustomHeading className="mb-0">
+                        {content.frontmatter.title.text}
+                    </CustomHeading>
+                    {moreLink ? (
+                        <div className={styles.headerLink}>{moreLink}</div>
+                    ) : null}
+                </div>
 
-                                                <p className="text-muted fst-italic mb-4">
-                                                    {event.organization}
-                                                </p>
-
-                                                <div className="d-flex flex-column gap-3">
-                                                    {schedule.map((item, itemIndex) => (
-                                                        <div
-                                                            key={itemIndex}
-                                                            className={`pb-3 ${itemIndex !== schedule.length - 1 ? 'border-bottom' : ''}`}
-                                                        >
-                                                            <Row className="g-2 align-items-center">
-
-                                                                <Col xs={12} sm={7}>
-                                                                    <div className="d-flex align-items-start gap-2">
-                                                                        <CustomImage
-                                                                            src="pages/eventos-black-filled.png"
-                                                                            alt=""
-                                                                            sizes="18px"
-                                                                            style={{
-                                                                                width: "18px",
-                                                                                height: "18px",
-                                                                                flexShrink: 0,
-                                                                                marginTop: "3px"
-                                                                            }}
-                                                                            imgStyle={{
-                                                                                objectFit: "contain",
-                                                                            }}
-                                                                        />
-                                                                        <div>
-                                                                            <span className="fw-bold text-dark d-block">
-                                                                                {item.date}
-                                                                            </span>
-                                                                            {item.title && (
-                                                                                <span className="text-muted small d-block">
-                                                                                    {item.title}
-                                                                                </span>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-                                                                </Col>
-
-                                                                <Col xs={12} sm={5}>
-                                                                    <div className="d-flex align-items-center gap-2 text-secondary">
-                                                                        <CustomImage
-                                                                            src="pages/local-black.png"
-                                                                            alt=""
-                                                                            sizes="18px"
-                                                                            style={{
-                                                                                width: "18px",
-                                                                                height: "18px",
-                                                                                flexShrink: 0,
-                                                                            }}
-                                                                            imgStyle={{
-                                                                                objectFit: "contain",
-                                                                            }}
-                                                                        />
-                                                                        <span className="small fw-medium">{item.local}</span>
-                                                                    </div>
-                                                                </Col>
-                                                            </Row>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                        );
-                    })}
-                </Row>
-            </Container>
-
-            <Row className="w-100 align-items-center justify-content-center pt-5 m-0">
-                <Col xs="auto">
-                    <a
-                        href={content.frontmatter.button.link}
-                        className="btn px-4 py-2 rounded-pill fw-bold shadow-sm"
-                        style={{
-                            backgroundColor: "var(--light-green)",
-                            color: "var(--light-neutral)",
-                            border: "none",
-                            transition: "all 0.3s ease"
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.opacity = "0.9";
-                            e.currentTarget.style.transform = "translateY(-2px)";
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.opacity = "1";
-                            e.currentTarget.style.transform = "translateY(0)";
-                        }}
+                {multi ? (
+                    <div
+                        className={styles.carousel}
+                        aria-roledescription="carousel"
                     >
-                        {content.frontmatter.button.text}
-                    </a>
-                </Col>
-            </Row>
-        </Container>
+                        <button
+                            type="button"
+                            className={`${styles.navButton} ${styles.navPrev}`}
+                            aria-label="Evento anterior"
+                            onClick={() => go(-1)}
+                        >
+                            <FaChevronLeft />
+                        </button>
+
+                        <div className={styles.viewport}>
+                            <div
+                                className={styles.track}
+                                style={{
+                                    transform: `translateX(-${active * 100}%)`,
+                                }}
+                            >
+                                {events.map((event, index) => (
+                                    <div
+                                        key={event.name ?? index}
+                                        className={styles.slide}
+                                        aria-hidden={index !== active}
+                                    >
+                                        <div className={styles.slideInner}>
+                                            {renderCard(event)}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <button
+                            type="button"
+                            className={`${styles.navButton} ${styles.navNext}`}
+                            aria-label="Próximo evento"
+                            onClick={() => go(1)}
+                        >
+                            <FaChevronRight />
+                        </button>
+                    </div>
+                ) : events[0] ? (
+                    <div className={styles.single}>
+                        <div className={styles.singleSlide}>
+                            {renderCard(events[0])}
+                        </div>
+                    </div>
+                ) : null}
+
+                {multi && (
+                    <div
+                        className={styles.dots}
+                        role="tablist"
+                        aria-label="Eventos"
+                    >
+                        {events.map((event, index) => (
+                            <button
+                                key={event.name ?? index}
+                                type="button"
+                                role="tab"
+                                aria-selected={index === active}
+                                aria-label={`Evento ${index + 1}`}
+                                className={`${styles.dot}${
+                                    index === active
+                                        ? ` ${styles.dotActive}`
+                                        : ""
+                                }`}
+                                onClick={() => setActive(index)}
+                            />
+                        ))}
+                    </div>
+                )}
+            </Container>
+        </div>
     );
 };
 

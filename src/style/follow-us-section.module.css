@@ -1,0 +1,20 @@
+.rehearsalsLink {
+    display: inline-block;
+    color: var(--light-neutral);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(240, 240, 240, 0.55);
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1.5px;
+    transition: transform 0.15s ease, text-decoration-color 0.15s ease,
+        color 0.15s ease;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.rehearsalsLink:hover,
+.rehearsalsLink:focus-visible {
+    transform: scale(1.06);
+    text-decoration-color: rgba(240, 240, 240, 0.95);
+    color: var(--light-neutral);
+}

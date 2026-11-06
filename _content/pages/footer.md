@@ -2,12 +2,12 @@
 id: "footer"
 title:
   text: ""
-rp:
-  name: "Inês Martin Soares"
-  phone: "931 64 1830"
 magister:
   name: "Ana Rita Marques"
   phone: "932 795 810"
+rp:
+  name: "Inês Martin Soares"
+  phone: "931 64 1830"
 email: "tunafe@fe.up.pt"
 address: "Tunafe, Faculdade de Engenharia,\n Rua Dr. Roberto Frias, s/n 4200-465\n Porto – Portugal"
 socialMedia:
