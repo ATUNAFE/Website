@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CustomImage from "../images/image";
+import CustomHeading from "../custom-heading";
+import * as styles from "../../style/discography.module.css";
 
 const Discography = ({ id }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/discography/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/discography/" } } }
+            ) {
                 nodes {
                     html
                     frontmatter {
@@ -17,14 +24,11 @@ const Discography = ({ id }) => {
                         watermark
                         color
                         backgroundColor
-                        button {
-                            text
-                            link
-                        }
                         cds {
                             name
                             year
                             image
+                            spotifyId
                         }
                     }
                 }
@@ -32,83 +36,200 @@ const Discography = ({ id }) => {
         }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
-    if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
+    if (!content) {
+        return (
+            <Container className="py-5">
+                <p className="mb-0">Conteúdo não encontrado para “{id}”.</p>
+            </Container>
+        );
+    }
+
+    const { title, watermark, color, backgroundColor } = content.frontmatter;
+
+    const albums = content.frontmatter.cds ?? [];
+    const currentIndex = albums.length ? activeIndex % albums.length : 0;
+    const activeCd = albums[currentIndex];
+
+    const selectPrevious = () => {
+        if (albums.length < 2) return;
+
+        setActiveIndex(index => (index - 1 + albums.length) % albums.length);
+    };
+
+    const selectNext = () => {
+        if (albums.length < 2) return;
+
+        setActiveIndex(index => (index + 1) % albums.length);
+    };
 
     return (
-        <div
+        <section
             id={id}
-            style={{
-                position: "relative",
-                backgroundColor: content.frontmatter.backgroundColor,
-                color: content.frontmatter.color
-            }}
+            className="position-relative overflow-hidden"
+            style={{ backgroundColor, color }}
         >
-            <CustomImage
-                src={content.frontmatter.watermark}
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "30%",
-                    opacity: 0.05,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+            {watermark && (
+                <div className={styles.watermark} aria-hidden="true">
+                    <CustomImage
+                        src={watermark}
+                        sizes="280px"
+                        style={{ width: "100%" }}
+                    />
+                </div>
+            )}
+
+            <Container
+                className="position-relative pt-4 pb-5"
+                style={{ zIndex: 1 }}
+            >
                 <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+                    <Col>
+                        <CustomHeading>{title.text}</CustomHeading>
+                    </Col>
                 </Row>
-                <Row className="mb-4">
-                    <div style={{ textAlign: "justify" }}>
-                        <div dangerouslySetInnerHTML={{ __html: content.html }} />
-                    </div>
-                </Row>
-                <Row>
-                    {content.frontmatter.cds.map((cd, index) => (
-                        <Col
-                            key={index}
-                            xs={6}
-                            md={4}
-                            className="d-flex flex-column align-items-center justify-content-start text-center"
-                        >
-                            <CustomImage
-                                src={cd.image}
-                                style={{ width: "50%" }}
+
+                {content.html && (
+                    <Row className="mb-4">
+                        <Col xs={12} lg={8}>
+                            <div
+                                className="lh-lg text-start"
+                                dangerouslySetInnerHTML={{
+                                    __html: content.html,
+                                }}
                             />
-                            <div className="mt-3">
-                                <h5 className="fw-bold">{cd.name}</h5>
-                                <p>{cd.year}</p>
-                            </div>
                         </Col>
-                    ))}
-                </Row>
-                <Row>
-                    <h4 className="d-flex align-items-center justify-content-center mt-4">
-                        <a
-                            href={content.frontmatter.button.link}
-                            style={{
-                                color: "var(--light-green)",
-                                textDecoration: "none",
-                                fontWeight: "bold",
-                            }}
-                            onMouseEnter={e =>
-                                (e.target.style.textDecoration = "underline")
-                            }
-                            onMouseLeave={e => (e.target.style.textDecoration = "none")}
-                            target="_blank"
-                            rel="noreferrer"
+                    </Row>
+                )}
+
+                {albums.length > 0 && (
+                    <>
+                        <div
+                            className={styles.carousel}
+                            role="region"
+                            aria-label="Álbuns da discografia"
                         >
-                            {content.frontmatter.button.text}
-                        </a>
-                    </h4>
-                </Row>
+                            <div className={styles.stage}>
+                                {albums.map((cd, index) => {
+                                    const offset =
+                                        (index - currentIndex + albums.length) %
+                                        albums.length;
+
+                                    const isActive = offset === 0;
+
+                                    const isHidden =
+                                        offset !== 0 &&
+                                        offset !== 1 &&
+                                        offset !== albums.length - 1;
+
+                                    const positionClass = isActive
+                                        ? styles.active
+                                        : offset === 1
+                                        ? styles.next
+                                        : offset === albums.length - 1
+                                        ? styles.previous
+                                        : styles.hidden;
+
+                                    return (
+                                        <button
+                                            key={
+                                                cd.spotifyId ||
+                                                `${cd.name}-${index}`
+                                            }
+                                            type="button"
+                                            className={`${styles.cover} ${positionClass}`}
+                                            aria-label={`Selecionar ${cd.name}, ${cd.year}`}
+                                            aria-pressed={isActive}
+                                            tabIndex={isHidden ? -1 : 0}
+                                            onClick={() =>
+                                                setActiveIndex(index)
+                                            }
+                                        >
+                                            <img
+                                                src={cd.image}
+                                                alt=""
+                                                loading={
+                                                    isActive ? "eager" : "lazy"
+                                                }
+                                            />
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                            {albums.length > 1 && (
+                                <div className="d-flex align-items-center justify-content-center gap-4 mb-4">
+                                    <button
+                                        type="button"
+                                        className={styles.navigationButton}
+                                        aria-label="Álbum anterior"
+                                        onClick={selectPrevious}
+                                    >
+                                        <FaChevronLeft aria-hidden="true" />
+                                    </button>
+
+                                    <span className="small">
+                                        {currentIndex + 1} / {albums.length}
+                                    </span>
+
+                                    <button
+                                        type="button"
+                                        className={styles.navigationButton}
+                                        aria-label="Álbum seguinte"
+                                        onClick={selectNext}
+                                    >
+                                        <FaChevronRight aria-hidden="true" />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+
+                        {activeCd && (
+                            <Row className="justify-content-center">
+                                <Col xs={12} md={10} lg={7}>
+                                    <header
+                                        className="text-center mb-4"
+                                        aria-live="polite"
+                                        aria-atomic="true"
+                                    >
+                                        <h3 className="h4 mb-1">
+                                            {activeCd.name}
+                                        </h3>
+
+                                        <p className="small mb-0">
+                                            {activeCd.year}
+                                        </p>
+                                    </header>
+
+                                    {activeCd.spotifyId && (
+                                        <div
+                                            className={
+                                                styles.spotifyListViewport
+                                            }
+                                        >
+                                            <iframe
+                                                key={activeCd.spotifyId}
+                                                src={`https://open.spotify.com/embed/album/${activeCd.spotifyId}?utm_source=generator`}
+                                                title={`Faixas de ${activeCd.name} no Spotify`}
+                                                width="100%"
+                                                height="552"
+                                                className={styles.spotifyPlayer}
+                                                loading="lazy"
+                                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                    )}
+                                </Col>
+                            </Row>
+                        )}
+                    </>
+                )}
             </Container>
-        </div>
+        </section>
     );
 };
 

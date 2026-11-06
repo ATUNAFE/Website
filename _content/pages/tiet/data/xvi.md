@@ -14,19 +14,19 @@ extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 awards:
+  - "Tuna mais Tuna – Cientuna"
   - "Tuna mais Solidária – TUFEMED"
   - "Melhor Tema – Legislatuna"
   - "Melhor Pandeireta – Legislatuna"
   - "Melhor Porta-Estandarte – Cientuna"
   - "Melhor Instrumental – Cientuna"
   - "Melhor Solista – TFB"
-  - "Tuna mais Tuna – Cientuna"
   - "Melhor Tuna – Legislatuna"
 jury:
   - "Paulo Nunes"
   - "Professor Augusto Sousa"
   - "Pedro Matos"
-  - "Ângela Pinheiro (Brilho)"
+  - "Ângela Pinheiro"
   - "João Paulo Pereira"
 host:
   - "Beatriz Gosta"

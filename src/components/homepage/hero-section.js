@@ -1,137 +1,111 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Button, Col, Container, Row, Stack } from "react-bootstrap";
 import CustomImage from "../images/image";
 import { graphql, useStaticQuery } from "gatsby";
+import * as styles from "../../style/hero-section.module.css";
 
 const HeroSection = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/heroSection/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/heroSection/" } } }
+            ) {
                 nodes {
                     frontmatter {
                         id
-                        title { text }
+                        title {
+                            text
+                        }
                         backgroundImage
                         description
-                        button { text, link }
+                        buttons {
+                            text
+                            link
+                        }
                     }
                 }
             }
-        }    
+        }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
     return (
-        <div
+        <section
             id={id}
-            style={{
-                position: "relative",
-                minHeight: "100vh",
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                paddingTop: "150px",
-                paddingBottom: "80px",
-                overflow: "hidden"
-            }}
+            className={`${styles.heroSection} position-relative d-flex align-items-center overflow-hidden text-white`}
         >
-            <CustomImage
-                src={content.frontmatter.backgroundImage}
-                style={{ 
-                    position: "absolute", 
-                    top: 0, 
-                    left: 0, 
-                    height: "100%", 
-                    width: "100%",
-                    zIndex: -2 
-                }}
-                imgStyle={{
-                    objectFit: "cover",
-                    objectPosition: "50% 15%",
-                    height: "100%",
-                    width: "100%"
-                }}
-            />
-            <div 
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    background: "var(--hero-gradient-overlay)",
-                    zIndex: -1
-                }}
+            <div className={`${styles.background} position-absolute`}>
+                <CustomImage
+                    src={content.frontmatter.backgroundImage}
+                    className="critical-image"
+                    priority
+                    sizes="100vw"
+                    style={{
+                        position: "absolute",
+                        inset: 0,
+                        transform: "scaleX(-1)",
+                    }}
+                    imgStyle={{
+                        objectFit: "cover",
+                        height: "100%",
+                        width: "100%",
+                    }}
+                />
+            </div>
+
+            <div
+                className={`${styles.overlay} position-absolute top-0 start-0 w-100 h-100`}
             />
 
-            <div className="position-absolute start-50 translate-middle-x" style={{ top: "135px", width: "90%", height: "4px", backgroundColor: "var(--light-engineer)", zIndex: 1 }} />
-            <div className="position-absolute start-50 translate-middle-x" style={{ bottom: "60px", width: "90%", height: "4px", backgroundColor: "var(--dark-green)", zIndex: 1 }} />
-
-            <Container style={{ position: "relative", zIndex: 2 }}>
-                <Row className="text-light">
+            <Container className="position-relative z-1 px-3 px-md-4">
+                <Row>
                     <Col
                         xs={12}
-                        md={8}
-                        className="d-flex flex-column justify-content-start text-md-start text-center"
+                        md={7}
+                        className={`${styles.heroContent} d-flex flex-column align-items-center align-items-md-start text-center text-md-start`}
                     >
                         <h1
-                            style={{
-                                fontWeight: "bold",
-                                color: "var(--light-neutral)",
-                                marginBottom: "1rem",
-                                fontSize: "2.5rem"
-                            }}
+                            className={`${styles.title} display-5 fw-bold lh-sm text-white`}
                         >
                             {content.frontmatter.title.text}
                         </h1>
-                    </Col>
 
-                    <Col
-                        xs={12}
-                        md={4}
-                        className="d-flex flex-column text-md-start text-center mt-4"
-                        style={{ alignSelf: "flex-end" }}
-                    >
-                        <p
-                            style={{
-                                color: "var(--light-neutral)",
-                                textAlign: "justify",
-                                maxWidth: "100%",
-                                marginBottom: "0.5rem",
-                                fontSize: "1.05rem"
-                            }}
-                        >
+                        <p className={`${styles.description} text-white mb-4`}>
                             {content.frontmatter.description}
                         </p>
-                        <p
-                            className="mt-3 mb-0"
-                            style={{
-                                fontWeight: "bold"
-                            }}
+
+                        <Stack
+                            direction="horizontal"
+                            gap={3}
+                            className="flex-wrap justify-content-center justify-content-md-start"
                         >
-                            <a
-                                href={content.frontmatter.button.link}
-                                style={{
-                                    color: "var(--light-green)",
-                                    textDecoration: "none",
-                                    fontWeight: "bold",
-                                    fontSize: "1.1rem"
-                                }}
-                                onMouseEnter={e => (e.target.style.textDecoration = "underline")}
-                                onMouseLeave={e => (e.target.style.textDecoration = "none")}
-                            >
-                                {content.frontmatter.button.text}
-                            </a>
-                        </p>
+                            {content.frontmatter.buttons.map(
+                                (button, index) => (
+                                    <Button
+                                        key={button.link}
+                                        href={button.link}
+                                        variant={
+                                            index === 0
+                                                ? "primary"
+                                                : "outline-light"
+                                        }
+                                        className="rounded-pill px-4 py-3 fw-bold"
+                                    >
+                                        {button.text}
+                                    </Button>
+                                )
+                            )}
+                        </Stack>
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </section>
     );
-}
+};
 
 export default HeroSection;

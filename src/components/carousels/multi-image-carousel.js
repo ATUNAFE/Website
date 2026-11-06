@@ -1,51 +1,84 @@
-import React from 'react';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import React, { useRef, useState, useCallback } from "react";
+import CustomImage from "../images/image";
 
-import CustomImage from '../images/image';
+const MultiImageCarousel = ({ images, autoScroll = true }) => {
+    const trackRef = useRef(null);
+    const [paused, setPaused] = useState(false);
 
-const chunkArray = (arr, size) => {
-    const chunked = [];
-    for (let i = 0; i < arr.length; i += size) {
-        chunked.push(arr.slice(i, i + size));
-    }
-    return chunked;
-};
+    const pause = useCallback(() => setPaused(true), []);
+    const resume = useCallback(() => setPaused(false), []);
 
-const MultiImageCarousel = ({ images }) => {
-    const imageGroups = chunkArray(images, 6);
+    if (!images?.length) return null;
+
+    const canScroll = autoScroll && images.length > 1;
+    const loopImages = canScroll ? [...images, ...images] : images;
+    const duration = Math.max(18, images.length * 6);
 
     return (
-        <Carousel
-            interval={3000}
-            controls={true}
-            indicators={false}
-            prevIcon={<FaChevronLeft className="custom-carousel-icon custom-carousel-prev" />}
-            nextIcon={<FaChevronRight className="custom-carousel-icon custom-carousel-next" />}
+        <div
+            className="photo-strip"
+            role="region"
+            aria-label="Galeria de fotografias"
+            style={{
+                overflowX: "auto",
+                overflowY: "hidden",
+                width: "100%",
+                maxWidth: "100%",
+                padding: "0.125rem 0 0.5rem",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                WebkitOverflowScrolling: "touch",
+            }}
         >
-            {imageGroups.map((group, index) => (
-                <Carousel.Item key={index}>
-                    <Container>
-                        <Row>
-                            {group.map((image, i) => (
-                                <Col xs={4} md={2} key={i} className="d-flex justify-content-center">
-                                    <CustomImage
-                                        src={image}
-                                        style={{
-                                            width: '100%',
-                                            height: '200px',
-                                        }}
-                                        imgStyle={{
-                                            objectFit: 'contain',
-                                        }}
-                                    />
-                                </Col>
-                            ))}
-                        </Row>
-                    </Container>
-                </Carousel.Item>
-            ))}
-        </Carousel>
+            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+            <div
+                ref={trackRef}
+                className={canScroll ? "photo-strip-track" : undefined}
+                onMouseEnter={pause}
+                onMouseLeave={resume}
+                onFocusCapture={pause}
+                onBlurCapture={() => window.setTimeout(resume, 300)}
+                onTouchStart={pause}
+                onTouchEnd={() => window.setTimeout(resume, 1500)}
+                style={{
+                    display: "flex",
+                    gap: "0.75rem",
+                    width: "max-content",
+                    ...(canScroll
+                        ? {
+                              animationDuration: `${duration}s`,
+                              animationPlayState: paused ? "paused" : "running",
+                          }
+                        : {}),
+                }}
+            >
+                {loopImages.map((image, i) => (
+                    <div
+                        key={`${image}-${i}`}
+                        aria-hidden={i >= images.length ? "true" : undefined}
+                        style={{
+                            flex: "0 0 auto",
+                            width: "clamp(200px, 32vw, 300px)",
+                            height: "clamp(200px, 24vw, 260px)",
+                            borderRadius: "8px",
+                            overflow: "hidden",
+                        }}
+                    >
+                        <CustomImage
+                            src={image}
+                            loading={i < images.length ? "eager" : "lazy"}
+                            sizes="(min-width: 768px) 32vw, 200px"
+                            style={{ width: "100%", height: "100%" }}
+                            imgStyle={{
+                                objectFit: "cover",
+                                height: "100%",
+                                width: "100%",
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 

@@ -2,7 +2,7 @@
 id: "inactiveMembers-caloira-Excelsa"
 title:
   text: ""
-date: "2019-08-23T10:26:14.511248"
+order: 40
 name: "Excelsa"
 nameC: "Manuela"
 course: ""

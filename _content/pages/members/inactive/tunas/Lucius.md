@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-Lucius"
 title:
   text: ""
-date: "2019-08-25T10:21:15.363615"
+order: 60
 name: "Lucius Passarinhus Sambatis"
 nameC: "Lúcia Brandão"
 course: "Eng. Quí­mica"

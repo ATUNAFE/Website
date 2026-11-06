@@ -11,7 +11,7 @@ sections:
     items:
       - title: "Historial"
         icon: "pages/historial-white.png"
-        link: "history-aboutUs"
+        link: "historial"
       - title: "Membros"
         icon: "pages/membros-white.png"
         link: "members-aboutUs"

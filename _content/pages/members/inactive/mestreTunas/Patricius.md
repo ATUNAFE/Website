@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Patricius"
 title:
   text: ""
-date: "2019-09-05T10:12:08.834163"
+order: 170
 name: "Patricius Encaracolatis InstitutoAssiduos Praxis Offus"
 nameC: "Patrícia Faria"
 course: "Eng. Quí­mica"

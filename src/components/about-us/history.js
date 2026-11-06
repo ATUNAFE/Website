@@ -4,11 +4,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import CustomImage from "../images/image";
 import MultiImageCarousel from "../carousels/multi-image-carousel";
 import { useStaticQuery, graphql } from "gatsby";
+import CustomHeading from "../custom-heading";
 
 const History = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/history/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/history/" } } }
+            ) {
                 nodes {
                     html
                     frontmatter {
@@ -25,20 +28,25 @@ const History = ({ id }) => {
         }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
     return (
-        <div 
-            id={id} 
+        <div
+            id="historial"
+            data-about-section="historial"
             style={{
+                scrollMarginTop: "calc(77px + 56px)",
                 position: "relative",
-                backgroundColor: "var(--light-neutral)"
+                backgroundColor: "var(--light-neutral)",
             }}
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                sizes="30vw"
                 style={{
                     position: "absolute",
                     top: "50%",
@@ -51,30 +59,69 @@ const History = ({ id }) => {
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+            <Container
+                className="py-5"
+                style={{
+                    position: "relative",
+                    zIndex: 2,
+                    minHeight: "320px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    color: "var(--dark-neutral)",
+                }}
+            >
                 <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+                    <Col>
+                        <CustomHeading>
+                            {content.frontmatter.title.text}
+                        </CustomHeading>
+                    </Col>
                 </Row>
-                <Row>
-                    <Col xs={6} md={4} className="d-flex flex-column justify-content-center align-items-center">
-                        <CustomImage
-                            src={content.frontmatter.image}
+                <Row className="align-items-center g-4 g-lg-5">
+                    <Col
+                        xs={12}
+                        md={5}
+                        lg={5}
+                        className="d-flex justify-content-center"
+                    >
+                        <div style={{ width: "100%", maxWidth: "360px" }}>
+                            <CustomImage
+                                src={content.frontmatter.image}
+                                alt={content.frontmatter.title.text}
+                                sizes="(min-width: 992px) 360px, (min-width: 768px) 38vw, 80vw"
+                                style={{
+                                    width: "100%",
+                                    height: "auto",
+                                    display: "block",
+                                }}
+                                imgStyle={{
+                                    width: "100%",
+                                    height: "auto",
+                                    objectFit: "contain",
+                                }}
+                            />
+                        </div>
+                    </Col>
+                    <Col
+                        xs={12}
+                        md={7}
+                        lg={7}
+                        className="d-flex flex-column justify-content-center"
+                    >
+                        <div
+                            className="html-content"
+                            style={{ textAlign: "justify" }}
+                            dangerouslySetInnerHTML={{ __html: content.html }}
                         />
                     </Col>
-                    <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
-                        <div style={{ textAlign: "justify" }}>
-                            <div dangerouslySetInnerHTML={{ __html: content.html }} />
-                        </div>
-                        {/* <div className="text-center">
-                        <p><i>{citation.text}</i></p>
-                    </div>
-                    <div className="text-end">
-                        <p><i>{citation.author}</i></p>
-                    </div> */}
-                    </Col>
                 </Row>
-                <Row className="mt-4">
-                    <MultiImageCarousel images={content.frontmatter.carousel} />
+                <Row className="pt-4">
+                    <Col xs={12}>
+                        <MultiImageCarousel
+                            images={content.frontmatter.carousel}
+                        />
+                    </Col>
                 </Row>
             </Container>
         </div>

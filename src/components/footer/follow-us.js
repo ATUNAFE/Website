@@ -7,37 +7,86 @@ const FollowUs = ({ socialMedia }) => {
     const iconStyle = {
         width: "40px",
         height: "auto",
-        display: "block"
+        display: "block",
     };
 
     return (
         <Container>
-            <h5 className="text-center text-md-start mb-4" style={{ fontWeight: "bold" }}>Segue-nos</h5>
+            <h5
+                className="text-center text-md-start mb-4"
+                style={{ fontWeight: "bold" }}
+            >
+                Segue-nos
+            </h5>
 
             <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
-                <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.instagram} alt="Instagram" />
+                <a
+                    href={socialMedia.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={iconStyle}
+                >
+                    <CustomImage
+                        src={IMAGE_FILENAMES.pages.white.instagram}
+                        alt="Instagram"
+                        sizes="40px"
+                    />
                 </a>
 
-                <a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.facebook} alt="Facebook" />
+                <a
+                    href={socialMedia.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={iconStyle}
+                >
+                    <CustomImage
+                        src={IMAGE_FILENAMES.pages.white.facebook}
+                        alt="Facebook"
+                        sizes="40px"
+                    />
                 </a>
 
-                <a href={socialMedia.youtube} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.youtube} alt="Youtube" />
+                <a
+                    href={socialMedia.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={iconStyle}
+                >
+                    <CustomImage
+                        src={IMAGE_FILENAMES.pages.white.youtube}
+                        alt="Youtube"
+                        sizes="40px"
+                    />
                 </a>
 
-                <a href={socialMedia.linkedin} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.linkedin} alt="Linkedin" />
+                <a
+                    href={socialMedia.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={iconStyle}
+                >
+                    <CustomImage
+                        src={IMAGE_FILENAMES.pages.white.linkedin}
+                        alt="Linkedin"
+                        sizes="40px"
+                    />
                 </a>
 
-                <a href={socialMedia.spotify} target="_blank" rel="noopener noreferrer" style={iconStyle}>
-                    <CustomImage src={IMAGE_FILENAMES.pages.white.spotify} alt="Spotify" />
+                <a
+                    href={socialMedia.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={iconStyle}
+                >
+                    <CustomImage
+                        src={IMAGE_FILENAMES.pages.white.spotify}
+                        alt="Spotify"
+                        sizes="40px"
+                    />
                 </a>
             </div>
         </Container>
     );
 };
-
 
 export default FollowUs;

@@ -7,9 +7,9 @@ local: "Teatro Sá da Bandeira"
 image: ""
 participants:
   - "TFFLUP - Tuna Feminina da Faculdade de Letras da U.P."
-  - "TFP - Tuna Feminina da Pessoa"
-  - "TFEP - Tuna Feminina de Economia do Porto"
-  - "Tuna Feminina do ISCA de Aveiro"
+  - "TFP - Tuna Feminina da Universidade Fernando Pessoa"
+  - "TFEP - Tuna Feminina de Economia da U.P"
+  - "Tuna Feminina do I.S.C.A. Aveiro"
 extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."

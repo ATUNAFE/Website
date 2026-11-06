@@ -1,40 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
-    --dark-green: #00893B;
-    --light-green: #6DB28B;
-    --dark-engineer: #892B18;
+    --dark-green: #00893b;
+    --light-green: #6db28b;
+    --dark-engineer: #892b18;
     --light-engineer: #995345;
-    --dark-neutral: #2A2A2A;
-    --light-neutral: #F0F0F0;
-    --hero-gradient-overlay: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.7) 100%);
+    --dark-neutral: #2a2a2a;
+    --light-neutral: #f0f0f0;
+    --hero-gradient-overlay: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.4) 60%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Libre Baskerville', serif;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Libre Baskerville", serif;
 }
 
 h5 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
-body, p, span {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: lighter;
+body,
+p,
+span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+}
+
+.html-content strong,
+.html-content b {
+    font-weight: 700;
+}
+
+.html-content blockquote {
+    margin: 1.25rem 0 0;
+    padding: 0;
+    border: 0;
+    font-style: italic;
+}
+
+.html-content blockquote p {
+    margin: 0 0 0.25rem;
+}
+
+.html-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Remove default top margin on first paragraph of rendered markdown content */
+.html-content > p:first-child {
+    margin-top: 0;
+}
+.html-content > p:last-child {
+    margin-bottom: 0;
+}
+
+.link-underline-hover {
+    text-decoration: none;
+}
+.link-underline-hover:hover,
+.link-underline-hover:focus-visible {
+    text-decoration: underline;
 }
 
 .custom-button {
     background-color: var(--light-green) !important;
     border: none !important;
     color: var(--light-neutral) !important;
-    font-size: x-large !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0.5rem !important;
-    border-radius: 15px !important;
+    padding: 0.75rem 1.75rem !important;
+    border-radius: 50rem !important;
     margin: 10px auto;
+    text-decoration: none !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.custom-button:hover,
+.custom-button:focus-visible {
+    background-color: var(--dark-green) !important;
+    color: var(--light-neutral) !important;
+    text-decoration: none !important;
+}
+
+/* Hide the photo strip scrollbar */
+.photo-strip {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.photo-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-strip-track {
+    animation-name: multi-carousel-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+@keyframes multi-carousel-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .photo-strip-track {
+        animation: none !important;
+        transform: none !important;
+    }
 }
 
 .custom-carousel-icon {
@@ -72,7 +160,6 @@ body, p, span {
 }
 
 @media (max-width: 768px) {
-
     .custom-carousel-prev,
     .custom-carousel-next {
         left: 10px !important;

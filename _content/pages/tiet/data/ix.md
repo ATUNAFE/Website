@@ -14,11 +14,11 @@ extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 awards:
+  - "Tuna mais Tuna - TFB"
   - "Melhor Instrumental- Gatuna"
   - "Melhor Pandeireta - TFB"
   - "Melhor Porta-Estandarte - TFEnfP"
   - "Melhor Solista - Gatuna"
-  - "Tuna mais Tuna - TFB"
   - "Melhor Tuna - TFEnfP"
 jury:
   - "Celina da Piedade"

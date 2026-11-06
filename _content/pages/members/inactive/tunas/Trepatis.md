@@ -2,7 +2,7 @@
 id: "inactiveMembers-tuna-Trepatis"
 title:
   text: ""
-date: "2019-08-27T10:21:15.365471"
+order: 80
 name: "Trepatis Tuítis SempreOcupatis"
 nameC: "Luí­sa Soares"
 course: "Eng. Minas e Geoambiente"

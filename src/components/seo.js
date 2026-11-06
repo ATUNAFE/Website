@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function Seo({ description, lang, meta, title, image, pathname }) {
     const { site } = useStaticQuery(graphql`
         query {
             site {
@@ -18,28 +18,65 @@ function SEO({ description, lang, meta, title }) {
                     title
                     description
                     author
+                    siteUrl
+                    locale
+                    keywords
                 }
             }
         }
     `);
 
-    const metaDescription = description || site.siteMetadata.description;
+    const metaDescription = description || site.siteMetadata.description || "";
+    const canonical =
+        pathname && site.siteMetadata.siteUrl
+            ? `${site.siteMetadata.siteUrl.replace(/\/$/, "")}${pathname}`
+            : site.siteMetadata.siteUrl;
+    const imageUrl =
+        image && site.siteMetadata.siteUrl && !/^https?:\/\//i.test(image)
+            ? `${site.siteMetadata.siteUrl.replace(/\/$/, "")}${image}`
+            : image;
+    const fullTitle = title || site.siteMetadata.title;
+    const ogTitle = title
+        ? `${title} | ${site.siteMetadata.title}`
+        : site.siteMetadata.title;
 
     return (
         <Helmet
             htmlAttributes={{
                 lang,
             }}
-            title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            title={fullTitle}
+            titleTemplate={title ? `%s | ${site.siteMetadata.title}` : `%s`}
+            link={
+                canonical
+                    ? [
+                          {
+                              rel: "canonical",
+                              href: canonical,
+                          },
+                      ]
+                    : []
+            }
             meta={[
                 {
                     name: `description`,
                     content: metaDescription,
                 },
                 {
+                    name: `keywords`,
+                    content: (site.siteMetadata.keywords || []).join(", "),
+                },
+                {
+                    name: `robots`,
+                    content: `index,follow,max-image-preview:large`,
+                },
+                {
+                    property: `og:site_name`,
+                    content: site.siteMetadata.title,
+                },
+                {
                     property: `og:title`,
-                    content: title,
+                    content: ogTitle,
                 },
                 {
                     property: `og:description`,
@@ -49,17 +86,37 @@ function SEO({ description, lang, meta, title }) {
                     property: `og:type`,
                     content: `website`,
                 },
+                ...(canonical
+                    ? [
+                          {
+                              property: `og:url`,
+                              content: canonical,
+                          },
+                      ]
+                    : []),
+                {
+                    property: `og:locale`,
+                    content: site.siteMetadata.locale || `pt_PT`,
+                },
+                ...(imageUrl
+                    ? [
+                          {
+                              property: `og:image`,
+                              content: imageUrl,
+                          },
+                          {
+                              name: `twitter:image`,
+                              content: imageUrl,
+                          },
+                      ]
+                    : []),
                 {
                     name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
+                    content: imageUrl ? `summary_large_image` : `summary`,
                 },
                 {
                     name: `twitter:title`,
-                    content: title,
+                    content: ogTitle,
                 },
                 {
                     name: `twitter:description`,
@@ -68,19 +125,24 @@ function SEO({ description, lang, meta, title }) {
             ].concat(meta)}
         />
     );
-};
+}
 
-SEO.defaultProps = {
-    lang: `en`,
+Seo.defaultProps = {
+    lang: `pt`,
     meta: [],
     description: ``,
+    title: ``,
+    image: ``,
+    pathname: ``,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
     description: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    image: PropTypes.string,
+    pathname: PropTypes.string,
 };
 
-export default SEO;
+export default Seo;

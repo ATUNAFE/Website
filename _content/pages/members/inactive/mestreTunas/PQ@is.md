@@ -2,12 +2,12 @@
 id: "inactiveMembers-mestreTuna-PQ@is"
 title:
   text: ""
-date: "2019-11-08T10:12:08.844198"
+order: 810
 name: "PQ@is Metamorfosis BitsImpavidus Subtealatus"
 nameC: "Joana Beleza"
 course: "Mestrado Integrado em Engenharia Informática e Computação"
 godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "guitarra"
-image: ""
+image: /images/members/PQ@is.webp
 ---

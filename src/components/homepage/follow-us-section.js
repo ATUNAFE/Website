@@ -1,11 +1,16 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+
+import * as styles from "../../style/follow-us-section.module.css";
 
 const FollowUsSection = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/followUsSection/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/followUsSection/" } } }
+            ) {
                 nodes {
                     frontmatter {
                         id
@@ -19,48 +24,49 @@ const FollowUsSection = ({ id }) => {
                     }
                 }
             }
-        }    
+        }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
+    const to = content.frontmatter.button.link;
+    const isExternal = /^https?:\/\//.test(to);
+    const label = content.frontmatter.button.text.replace(/\.$/, "");
+
     return (
-        <Container
+        <div
             id={id}
-            fluid
-            className="d-flex justify-content-center align-items-center py-5"
             style={{
                 backgroundColor: "var(--light-engineer)",
                 color: "var(--light-neutral)",
             }}
         >
-            <Row className="w-100 align-items-center justify-content-center">
-                <Col
-                    xs="auto"
-                    className="d-flex align-items-center justify-content-center"
+            <Container className="py-4 py-md-5">
+                <p
+                    className="m-0 text-center mx-auto"
+                    style={{
+                        fontSize: "clamp(1.05rem, 2.2vw, 1.3rem)",
+                        lineHeight: 1.5,
+                        maxWidth: "860px",
+                    }}
                 >
-                    <h4 className="mb-0">
-                        {content.frontmatter.title.text}{" "}
-                        <a
-                            href={content.frontmatter.button.link}
-                            style={{
-                                color: "var(--light-green)",
-                                textDecoration: "none",
-                                fontWeight: "bold",
-                            }}
-                            onMouseEnter={e =>
-                                (e.target.style.textDecoration = "underline")
-                            }
-                            onMouseLeave={e => (e.target.style.textDecoration = "none")}
-                        >
-                            {content.frontmatter.button.text}
+                    {content.frontmatter.title.text}{" "}
+                    {isExternal ? (
+                        <a href={to} className={styles.rehearsalsLink}>
+                            {label}!
                         </a>
-                    </h4>
-                </Col>
-            </Row>
-        </Container>
+                    ) : (
+                        <Link to={to} className={styles.rehearsalsLink}>
+                            {label}!
+                        </Link>
+                    )}
+                </p>
+            </Container>
+        </div>
     );
 };
 

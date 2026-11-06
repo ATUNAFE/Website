@@ -1,0 +1,120 @@
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(35%, 280px);
+    transform: translate(-50%, -50%);
+    opacity: 0.035;
+    filter: grayscale(100%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+}
+
+.stage {
+    position: relative;
+    height: clamp(19rem, 52vw, 29rem);
+    overflow: hidden;
+    perspective: 900px;
+}
+
+.cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(12rem, 38vw, 22rem);
+    aspect-ratio: 1;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 350ms ease, opacity 350ms ease, filter 350ms ease;
+}
+
+.cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    z-index: 3;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+}
+
+.previous,
+.next {
+    z-index: 2;
+    opacity: 0.55;
+    filter: saturate(0.75);
+}
+
+.previous {
+    transform: translate(-125%, -50%) rotateY(22deg) scale(0.78);
+}
+
+.next {
+    transform: translate(25%, -50%) rotateY(-22deg) scale(0.78);
+}
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.navigationButton {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navigationButton:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.cover:focus-visible,
+.navigationButton:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cover {
+        transition: none;
+    }
+}
+
+.spotifyListViewport {
+    --spotify-header-height: 200px;
+    --spotify-list-height: 352px;
+
+    width: 100%;
+    height: var(--spotify-list-height);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.spotifyPlayer {
+    display: block;
+    width: 100%;
+    height: calc(var(--spotify-list-height) + var(--spotify-header-height));
+    border: 0;
+    transform: translateY(calc(-1 * var(--spotify-header-height)));
+}

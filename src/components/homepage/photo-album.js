@@ -1,13 +1,18 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
-
-import SingleImageCarousel from "../carousels/single-image-carousel";
+import { Container } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
+import { FaArrowRight } from "react-icons/fa";
+
+import MultiImageCarousel from "../carousels/multi-image-carousel";
+import CustomHeading from "../custom-heading";
+import * as styles from "../../style/photo-album.module.css";
 
 const PhotoAlbum = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/photoAlbum/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/photoAlbum/" } } }
+            ) {
                 nodes {
                     html
                     frontmatter {
@@ -23,60 +28,59 @@ const PhotoAlbum = ({ id }) => {
                     }
                 }
             }
-        }    
+        }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
+    const to = content.frontmatter.button.link;
+    const isExternal = /^https?:\/\//.test(to);
+
     return (
-        <Container
-            fluid
+        <div
+            id={id}
             style={{
                 backgroundColor: "var(--dark-neutral)",
                 color: "var(--light-neutral)",
             }}
         >
-            <Row className="py-5">
-                <SingleImageCarousel
-                    images={content.frontmatter.carousel}
-                    withControls={true}
-                    withIndicators={true}
-                    invertedColors={true}
-                />
-            </Row>
-            <Row
-                className="w-100 align-items-center justify-content-center pb-5"
-                style={{
-                    color: "var(--dark-engineer)",
-                }}
-            >
-                <Col
-                    xs="auto"
-                    className="d-flex align-items-center justify-content-center"
-                >
-                    {/* TODO: Adicionar link para página do facebook com albums */}
-                    <h4>
+            <Container className="py-5">
+                <div className="d-flex align-items-end justify-content-between gap-3 mb-4 flex-wrap">
+                    <CustomHeading
+                        background="dark"
+                        ruleColor="var(--dark-engineer)"
+                        className="mb-0"
+                    >
+                        {content.frontmatter.title?.text ||
+                            "A TUNAFE pelo palco e pelo mundo"}
+                    </CustomHeading>
+                    {to && (
                         <a
-                            href={content.frontmatter.button.link}
-                            style={{
-                                color: "var(--dark-engineer)",
-                                textDecoration: "none",
-                                fontWeight: "bold",
-                            }}
-                            onMouseEnter={e => (e.target.style.textDecoration = "underline")}
-                            onMouseLeave={e => (e.target.style.textDecoration = "none")}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={to}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            className={`d-inline-flex align-items-center gap-2 text-nowrap ${styles.followLink}`}
                         >
                             {content.frontmatter.button.text}
+                            <FaArrowRight
+                                aria-hidden="true"
+                                className={styles.arrowIcon}
+                            />
                         </a>
-                    </h4>
-                </Col>
-            </Row>
-        </Container>
+                    )}
+                </div>
+
+                <MultiImageCarousel
+                    images={content.frontmatter.carousel}
+                    autoScroll
+                />
+            </Container>
+        </div>
     );
-}
+};
 
 export default PhotoAlbum;

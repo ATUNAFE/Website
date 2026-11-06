@@ -1,7 +1,7 @@
 ---
 id: "photoAlbum-home"
 title:
-  text: ""
+  text: "A TUNAFE pelo palco e pelo mundo"
 button:
   text: "Acompanha-nos!"
   link: "https://www.facebook.com/tunafe/photos_albums"

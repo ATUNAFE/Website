@@ -7,7 +7,6 @@ local: "Grande Auditório da FEUP"
 image: "tiet/xii.jpg"
 participants:
   - "Levadas da Broca – Tuna  Feminina da Faculdade de Medicina Dentária da U.P."
-  - "Atituna – Tuna  Feminina da Faculdade de Psicologia e Ciências da Educação da U.P."
   - "TFEP – Tuna Feminina de Economia do Porto"
   - "TUFEMED - Tuna Feminina de Medicina do Porto"
   - "TFUCP - Tuna Feminina da Universidade Católica Portuguesa"
@@ -16,11 +15,11 @@ extras:
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 awards:
   - "Melhor Claque - TFEP"
-  - "Melhor Instrumental- "
+  - "Tuna mais Tuna - TUFEMED"
+  - "Melhor Instrumental - "
   - "Melhor Pandeireta - TFEP"
   - "Melhor Porta-Estandarte - TUFEMED"
   - "Melhor Solista - Levadas da Broca"
-  - "Tuna mais Tuna - TUFEMED"
   - "Melhor Tuna - Levadas da Broca"
 jury:
   - "Juliana Esteves"

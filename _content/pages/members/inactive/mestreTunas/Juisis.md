@@ -2,7 +2,7 @@
 id: "inactiveMembers-mestreTuna-Juisis"
 title:
   text: ""
-date: "2019-10-06T10:12:08.836895"
+order: 480
 name: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 nameC: "Luísa Fernandes"
 course: "Mestrado Integrado em Engenharia Metalúrgica e de Materiais"
@@ -11,5 +11,5 @@ instruments:
   - "magister"
   - "bandolim"
   - "percussao"
-image: ""
+image: /images/members/Juisis.webp
 ---

@@ -1,0 +1,95 @@
+.container {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    max-width: 1140px;
+}
+
+.repertoire-intro {
+    max-width: 900px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: inherit; /* Garante que herda a cor definida no componente pai */
+}
+
+.repertoire-intro p {
+    margin-bottom: 0.5rem;
+}
+
+.repertoire-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.song {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.song :global(.card-header) {
+    display: flex !important;
+    align-items: flex-start !important;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+    gap: 0.35rem;
+    background-color: transparent !important;
+    color: inherit !important; /* Força a cor do texto a vir de cima */
+    border: 0;
+}
+
+.song :global(.collapsible-section-heading) {
+    flex: 0 1 auto;
+    color: inherit !important;
+}
+
+.song :global(.card-body) {
+    padding: 0.75rem 0;
+    background-color: transparent !important;
+    color: inherit !important; /* Força a cor do texto a vir de cima */
+}
+
+.song :global(.collapsible-section-subtitle) {
+    margin-top: 0.1rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    opacity: 0.9; /* Aumentado ligeiramente para melhor leitura */
+}
+
+.song :global(.collapsible-section-summary) {
+    width: 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    opacity: 0.9;
+}
+
+.lyrics {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: inherit;
+}
+
+.lyrics :global(p) {
+    margin: 0;
+}
+
+.lyrics :global(p + p) {
+    margin-top: 0.5rem;
+}
+
+.lyrics :global(p:last-child) {
+    margin-bottom: 0;
+}
+
+.lyrics :global(strong),
+.lyrics :global(b) {
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+    }
+}

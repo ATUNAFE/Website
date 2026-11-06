@@ -1,13 +1,16 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import CustomImage from "../images/image";
 import { graphql, useStaticQuery } from "gatsby";
+import CustomHeading from "../custom-heading";
 
 const Rehearsals = ({ id }) => {
     const data = useStaticQuery(graphql`
         {
-            allMarkdownRemark(filter: {frontmatter: {id: {regex: "/rehearsals/"}}}) {
+            allMarkdownRemark(
+                filter: { frontmatter: { id: { regex: "/rehearsals/" } } }
+            ) {
                 nodes {
                     html
                     frontmatter {
@@ -24,58 +27,124 @@ const Rehearsals = ({ id }) => {
                     }
                 }
             }
-        } 
+        }
     `);
 
-    const content = data.allMarkdownRemark.nodes.find((node) => node.frontmatter.id === id);
+    const content = data.allMarkdownRemark.nodes.find(
+        node => node.frontmatter.id === id
+    );
 
     if (!content) return <p>⚠️ Content not found for “{id}”.</p>;
 
     return (
         <div
             id={id}
+            data-about-section="ensaios"
             style={{
+                scrollMarginTop: "calc(77px + 56px)",
                 position: "relative",
-                backgroundColor: "var(--light-neutral)"
+                backgroundColor: "var(--light-neutral)",
+                color: "var(--dark-neutral)",
             }}
         >
             <CustomImage
                 src={content.frontmatter.watermark}
+                sizes="20vw"
                 style={{
                     position: "absolute",
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                     width: "20%",
+                    maxWidth: "220px",
                     opacity: 0.05,
                     zIndex: 0,
                     pointerEvents: "none",
                 }}
             />
-            <Container className="py-4" style={{ position: "relative", zIndex: 2 }}>
+            <Container
+                className="py-5"
+                style={{
+                    position: "relative",
+                    zIndex: 2,
+                    minHeight: "320px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                }}
+            >
                 <Row>
-                    <h3>{content.frontmatter.title.text}</h3>
+                    <Col>
+                        <CustomHeading>
+                            {content.frontmatter.title.text}
+                        </CustomHeading>
+                    </Col>
                 </Row>
                 <Row>
-                    <div dangerouslySetInnerHTML={{ __html: content.html }} />
+                    <div
+                        className="html-content"
+                        style={{ color: "var(--dark-neutral)" }}
+                        dangerouslySetInnerHTML={{ __html: content.html }}
+                    />
                 </Row>
-                <Row className="justify-content-center align-items-center my-4">
-                    <h2 className="text-center">
-                        <span>{`${content.frontmatter.weekDays} das ${content.frontmatter.startTime} às ${content.frontmatter.finishTime}`}</span>
-                    </h2>
+                <Row className="justify-content-center mb-2">
+                    <Col xs={12}>
+                        <div
+                            className="text-center"
+                            style={{
+                                marginTop: "1.5rem",
+                                fontSize: "1.2rem",
+                                lineHeight: 1.5,
+                            }}
+                        >
+                            <div style={{ fontWeight: 600 }}>
+                                {content.frontmatter.weekDays}
+                            </div>
+                            <div style={{ marginTop: "0.15rem" }}>
+                                {content.frontmatter.startTime}–
+                                {content.frontmatter.finishTime}
+                            </div>
+                            <div
+                                style={{
+                                    marginTop: "0.9rem",
+                                    color: "inherit",
+                                }}
+                            >
+                                Sala{" "}
+                                <span
+                                    style={{
+                                        color: "var(--light-engineer)",
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    {content.frontmatter.rehearsalRoom}
+                                </span>{" "}
+                                ou{" "}
+                                <span
+                                    style={{
+                                        color: "var(--light-engineer)",
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    {content.frontmatter.tunaRoom}
+                                </span>
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
-                <Row className="justify-content-center align-items-center mb-4" style={{ fontWeight: "bold" }}>
-                    <h2 className="text-center">
-                        <span>Aparece na sala </span>
-                        <span style={{ color: "var(--light-engineer)" }}>{content.frontmatter.rehearsalRoom}</span>
-                        <span> ou na </span>
-                        <span style={{ color: "var(--light-engineer)" }}>{content.frontmatter.tunaRoom}</span>
-                    </h2>
-                </Row>
-                <Row className="justify-content-center align-items-center mb-4">
-                    <h2 className="text-center">
-                        <span>Esperamos por ti!</span>
-                    </h2>
+                <Row className="justify-content-center mt-3 mb-2">
+                    <Col xs="auto">
+                        <p
+                            className="text-center m-0"
+                            style={{
+                                fontStyle: "italic",
+                                fontSize: "1.05rem",
+                                opacity: 0.7,
+                            }}
+                        >
+                            Esperamos por ti!
+                        </p>
+                    </Col>
                 </Row>
             </Container>
         </div>

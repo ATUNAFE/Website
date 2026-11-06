@@ -98,7 +98,15 @@ Contain the content and metadata for a specific React component. The structure a
 Used for dynamic lists or items (e.g., events, music pieces). Placed in `data/` subfolders.
 
 #### 2.4. Member Markdown Files
-Used for individual member profiles, grouped by status and type.
+Used for individual member profiles, grouped by status and type. The `id` prefix determines the status and displayed group, so keep it consistent with the member's folder (for example, `activeMembers-tuna-...` or `inactiveMembers-tuna-...`).
+
+Member profiles use an integer `order` field to control their position within that group. Lower values appear first. Leave gaps (for example, `10`, `20`, `30`) so a member can be moved between two others by changing only their `order`.
+
+```yaml
+order: 20
+```
+
+When adding a member, set `order` relative to the other profiles in the same group.
 
 ---
 

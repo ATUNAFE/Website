@@ -15,11 +15,11 @@ extras:
   - "TEUP - Tuna de Engenharia da U.P."
   - "TUNAFE - Tuna Feminina de Engenharia da U.P."
 awards:
+  - "Tuna mais Tuna - A Feminina"
   - "Melhor Instrumental- As Fans"
   - "Melhor Pandeireta - TFEnfP"
   - "Melhor Porta-Estandarte - TFEnfP"
   - "Melhor Solista - Tunaite"
-  - "Tuna mais Tuna - A Feminina"
   - "Melhor Tuna - TFEnfP"
 jury:
   - "Ana Correia"
