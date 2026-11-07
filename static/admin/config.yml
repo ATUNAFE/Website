@@ -1,18 +1,1065 @@
 backend:
   name: git-gateway
-  repo: TUNAFE/Website
-  # Path to your Github repository (blanked out on purpose)
   branch: master
 
-publish_mode: editorial_workflow
-media_folder: "src/pages"
-public_folder: "pages"
+media_folder: "_content/images"
+public_folder: ""
+
+locale: pt
 
 collections:
-  - name: "empty"
-    label: "Empty"
-    folder: "src/pages"
+  # ── Definições do Site ──────────────────────────────────────────────────────
+  - name: definicoes
+    label: "Definições do Site"
+    files:
+      - name: header
+        label: "Cabeçalho (Header)"
+        file: "_content/pages/header.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: image, label: "Logótipo", widget: image }
+          - { name: backgroundColor, label: "Cor de Fundo", widget: string, hint: "Suporta rgba — ex: rgba(245, 245, 245, 0.5)" }
+          - { name: color, label: "Cor do Texto", widget: color }
+          - name: menu
+            label: "Menu de Navegação"
+            widget: list
+            types:
+              - name: link
+                label: "Link Direto"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: link }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: link, label: URL, widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: link, label: "URL do Cabeçalho do Dropdown", widget: string, required: false }
+                  - name: items
+                    label: "Itens do Dropdown"
+                    widget: list
+                    fields:
+                      - { name: text, label: Texto, widget: string }
+                      - { name: link, label: URL, widget: string }
+
+      - name: footer
+        label: "Rodapé (Footer)"
+        file: "_content/pages/footer.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: magister
+            label: Magister
+            widget: object
+            fields:
+              - { name: name, label: Nome, widget: string }
+              - { name: phone, label: Telefone, widget: string, required: false }
+          - name: rp
+            label: "Relações Públicas (RP)"
+            widget: object
+            fields:
+              - { name: name, label: Nome, widget: string }
+              - { name: phone, label: Telefone, widget: string, required: false }
+          - { name: email, label: Email, widget: string }
+          - { name: address, label: Morada, widget: text }
+          - name: socialMedia
+            label: "Redes Sociais"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: instagram, label: "Instagram URL", widget: string, required: false }
+              - { name: facebook, label: "Facebook URL", widget: string, required: false }
+              - { name: youtube, label: "YouTube URL", widget: string, required: false }
+              - { name: linkedin, label: "LinkedIn URL", widget: string, required: false }
+              - { name: spotify, label: "Spotify URL", widget: string, required: false }
+
+  # ── Página Inicial ──────────────────────────────────────────────────────────
+  - name: pagina-inicial
+    label: "Página Inicial"
+    files:
+      - name: hero
+        label: "Secção Hero"
+        file: "_content/pages/homepage/heroSection.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: description, label: Descrição, widget: text }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: buttons
+            label: Botões
+            widget: list
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+
+      - name: follow-us
+        label: "Secção Segue-nos"
+        file: "_content/pages/homepage/followUsSection.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: button
+            label: Botão
+            widget: object
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+
+      - name: proximos-eventos-home
+        label: "Próximos Eventos (Página Inicial)"
+        file: "_content/pages/homepage/nextEvents.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: button
+            label: Botão
+            widget: object
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+          - name: nextEvents
+            label: "Próximos Eventos"
+            widget: list
+            fields:
+              - { name: name, label: "Nome do Evento", widget: string }
+              - { name: organization, label: Organização, widget: string }
+              - { name: image, label: Imagem, widget: image }
+              - name: schedule
+                label: "Sessões/Horários"
+                widget: list
+                fields:
+                  - { name: date, label: Data, widget: string, hint: "Ex: 13 de novembro" }
+                  - { name: title, label: "Título da Sessão", widget: string }
+                  - { name: local, label: Local, widget: string }
+
+      - name: album-fotos
+        label: "Álbum de Fotografias"
+        file: "_content/pages/homepage/photoAlbum.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: button
+            label: Botão
+            widget: object
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+          - name: carousel
+            label: "Imagens do Carrossel"
+            widget: list
+            field: { name: image, label: Imagem, widget: image }
+
+  # ── Sobre Nós ───────────────────────────────────────────────────────────────
+  - name: sobre-nos
+    label: "Sobre Nós"
+    files:
+      - name: banner-sobre-nos
+        label: "Banner — Sobre Nós"
+        file: "_content/pages/aboutUs/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string, hint: "ID da secção destino, ex: historial" }
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+
+      - name: historial
+        label: Historial
+        file: "_content/pages/aboutUs/history.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - { name: anchor, label: "Âncora (não alterar)", widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: image, label: "Logótipo", widget: image }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - name: carousel
+            label: "Carrossel — Fotos por Ano"
+            widget: list
+            field: { name: image, label: Imagem, widget: image }
+          - { name: body, label: "Texto do Historial", widget: markdown }
+
+      - name: membros-sobre
+        label: "Secção Membros"
+        file: "_content/pages/aboutUs/members.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - name: buttons
+            label: Botões
+            widget: list
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+          - { name: body, label: Texto, widget: markdown }
+
+      - name: padrinhos
+        label: Padrinhos
+        file: "_content/pages/aboutUs/godparents.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: image, label: Imagem, widget: image }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - name: button
+            label: Botão
+            widget: object
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+          - { name: body, label: Texto, widget: markdown }
+
+      - name: ensaios
+        label: Ensaios
+        file: "_content/pages/aboutUs/rehearsals.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - { name: weekDays, label: "Dias da Semana", widget: string, hint: "Ex: Segundas e Quartas-feiras" }
+          - { name: rehearsalRoom, label: "Sala de Ensaio", widget: string, hint: "Ex: B116" }
+          - { name: tunaRoom, label: "Sala da Tuna", widget: string, hint: "Ex: B045" }
+          - { name: startTime, label: "Hora de Início", widget: string, hint: "Ex: 19h" }
+          - { name: finishTime, label: "Hora de Fim", widget: string, hint: "Ex: 21h" }
+          - { name: body, label: Texto, widget: markdown }
+
+      - name: tiet-sobre
+        label: "Tudo Isto É Tuna — Sobre Nós"
+        file: "_content/pages/aboutUs/tiet.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: image, label: Imagem, widget: image }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - name: button
+            label: Botão
+            widget: object
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: link, label: URL, widget: string }
+          - { name: body, label: Texto, widget: markdown }
+
+  # ── Eventos ─────────────────────────────────────────────────────────────────
+  - name: eventos-config
+    label: "Eventos — Configuração"
+    files:
+      - name: banner-eventos
+        label: "Banner — Eventos"
+        file: "_content/pages/events/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+
+      - name: eventos-secao
+        label: "Secção de Eventos"
+        file: "_content/pages/events/events.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: lightTheme
+            label: "Tema Claro"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: watermark, label: "Marca de Água", widget: image }
+              - { name: color, label: "Cor do Texto", widget: color }
+              - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: darkTheme
+            label: "Tema Escuro"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: watermark, label: "Marca de Água", widget: image }
+              - { name: color, label: "Cor do Texto", widget: color }
+              - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: events
+            label: "Eventos (por ordem de apresentação)"
+            widget: relation
+            collection: eventos-data
+            value_field: id
+            display_fields: ["title.text", "date"]
+            search_fields: ["title.text", "id"]
+            multiple: true
+
+  - name: eventos-data
+    label: "Eventos"
+    folder: "_content/pages/events/data"
     create: true
-    slug: ""
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: id
+    summary: "{{title.text}}"
     fields:
-      - {label: "Title" ,name: "title", widget:"string" , required:"true" }
+      - { name: id, label: ID, widget: string, hint: "Identificador único sem espaços, ex: event-xii-invictus" }
+      - name: title
+        label: Título
+        widget: object
+        fields:
+          - { name: text, label: Texto, widget: string }
+      - { name: date, label: Data, widget: string, hint: "Ex: 24 de outubro de 2026" }
+      - { name: image, label: Imagem, widget: image }
+      - { name: body, label: "Descrição do Evento", widget: markdown, required: false }
+
+  # ── Música ──────────────────────────────────────────────────────────────────
+  - name: musica-config
+    label: "Música — Configuração"
+    files:
+      - name: banner-musica
+        label: "Banner — Música"
+        file: "_content/pages/music/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string }
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+
+      - name: discografia
+        label: Discografia
+        file: "_content/pages/music/discography.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - { name: color, label: "Cor do Texto", widget: color }
+          - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: cds
+            label: "Álbuns"
+            widget: list
+            fields:
+              - { name: name, label: Nome, widget: string }
+              - { name: year, label: Ano, widget: string }
+              - { name: image, label: "URL da Capa", widget: string, hint: "URL da imagem no Spotify CDN" }
+              - { name: spotifyId, label: "ID Spotify do Álbum", widget: string, hint: "Ex: 4zZrK91xxf4NEilHRAiQof" }
+          - { name: body, label: Texto, widget: markdown, required: false }
+
+      - name: repertorio
+        label: Repertório
+        file: "_content/pages/music/repertoire.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - { name: watermark, label: "Marca de Água", widget: image }
+          - { name: color, label: "Cor do Texto", widget: color }
+          - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: songs
+            label: "Músicas (por ordem de apresentação)"
+            widget: relation
+            collection: musicas-data
+            value_field: id
+            display_fields: ["title.text", "author"]
+            search_fields: ["title.text", "author", "id"]
+            multiple: true
+          - { name: body, label: Texto, widget: markdown, required: false }
+
+  - name: musicas-data
+    label: "Músicas"
+    folder: "_content/pages/music/data"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: id
+    summary: "{{title.text}} — {{author}}"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Identificador único sem espaços, ex: music-aDois" }
+      - name: title
+        label: Título
+        widget: object
+        fields:
+          - { name: text, label: "Título da Música", widget: string }
+      - { name: author, label: "Autor/Compositor", widget: string }
+      - { name: description, label: Descrição, widget: text, required: false }
+      - { name: body, label: Letra, widget: markdown, required: false }
+
+  # ── TIET — Tudo Isto É Tuna ─────────────────────────────────────────────────
+  - name: tiet-config
+    label: "TIET — Configuração"
+    files:
+      - name: banner-tiet
+        label: "Banner — TIET"
+        file: "_content/pages/tiet/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string }
+
+      - name: tiet-edicoes-config
+        label: "Secção de Edições TIET"
+        file: "_content/pages/tiet/editions.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: Título
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+          - name: lightTheme
+            label: "Tema Claro"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: color, label: "Cor do Texto", widget: color }
+              - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: darkTheme
+            label: "Tema Escuro"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: color, label: "Cor do Texto", widget: color }
+              - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+          - name: editions
+            label: "Edições (mais recente primeiro)"
+            widget: relation
+            collection: tiet-data
+            value_field: id
+            display_fields: ["title.text", "date"]
+            search_fields: ["title.text", "date", "id"]
+            multiple: true
+
+  - name: tiet-data
+    label: "TIET — Edições"
+    folder: "_content/pages/tiet/data"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: id
+    summary: "{{title.text}} ({{date}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Identificador único, ex: edition-xix" }
+      - name: title
+        label: Título
+        widget: object
+        fields:
+          - { name: text, label: Texto, widget: string }
+      - { name: date, label: Data, widget: string, hint: "Ex: 23 de abril de 1998" }
+      - { name: local, label: Local, widget: string, required: false }
+      - { name: image, label: Imagem, widget: image, required: false }
+      - name: participants
+        label: "Tunas Participantes"
+        widget: list
+        required: false
+        field: { name: name, label: Nome, widget: string }
+      - name: extras
+        label: "Tunas Convidadas/Extra"
+        widget: list
+        required: false
+        field: { name: name, label: Nome, widget: string }
+      - name: awards
+        label: "Prémios"
+        widget: list
+        required: false
+        field: { name: award, label: Prémio, widget: string }
+      - name: jury
+        label: "Júri"
+        widget: list
+        required: false
+        field: { name: name, label: Nome, widget: string }
+      - name: host
+        label: "Apresentadores"
+        widget: list
+        required: false
+        field: { name: name, label: Nome, widget: string }
+
+  # ── Membros Ativos ───────────────────────────────────────────────────────────
+  - name: membros-ativos-config
+    label: "Membros Ativos — Configuração"
+    files:
+      - name: banner-ativos
+        label: "Banner — Membros Ativos"
+        file: "_content/pages/members/active/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+
+  - name: membros-ativos-caloiras
+    label: "Membros Ativos — Caloiras"
+    folder: "_content/pages/members/active/caloiras"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-caloira-Arenbelle" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100, hint: "Número menor = aparece primeiro" }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-ativos-tunas
+    label: "Membros Ativos — Tunas"
+    folder: "_content/pages/members/active/tunas"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-tuna-Aindatis" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-ativos-mestras
+    label: "Membros Ativos — Mestre-Tunas"
+    folder: "_content/pages/members/active/mestreTunas"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-mestreTuna-Balanceatis" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-ativos-magister
+    label: "Membros Ativos — Magister"
+    folder: "_content/pages/members/active/magister"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-magister-Jóquerérrius" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 10 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  # ── Membros Inativos (Sempre Tunafas) ────────────────────────────────────────
+  - name: membros-inativos-config
+    label: "Membros Inativos — Configuração"
+    files:
+      - name: banner-inativos
+        label: "Banner — Membros Inativos"
+        file: "_content/pages/members/inactive/banner.md"
+        fields:
+          - { name: id, label: ID, widget: hidden }
+          - name: title
+            label: "Título do Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: text, label: Texto, widget: string }
+              - { name: icon, label: Ícone, widget: image, required: false }
+          - { name: backgroundImage, label: "Imagem de Fundo", widget: image }
+          - name: sections
+            label: "Secções do Banner"
+            widget: list
+            types:
+              - name: text
+                label: "Texto Simples"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: text }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+              - name: navigation
+                label: "Barra de Navegação"
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: navigation }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    fields:
+                      - { name: title, label: Título, widget: string }
+                      - { name: icon, label: Ícone, widget: image, required: false }
+                      - { name: link, label: "ID da Secção", widget: string }
+              - name: dropdown
+                label: Dropdown
+                widget: object
+                fields:
+                  - { name: type, widget: hidden, default: dropdown }
+                  - { name: backgroundColor, label: "Cor de Fundo", widget: color }
+                  - { name: color, label: "Cor do Texto", widget: color }
+                  - { name: text, label: Texto, widget: string }
+                  - { name: label, label: "Rótulo do Dropdown", widget: string }
+                  - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
+
+  - name: membros-inativos-caloiras
+    label: "Membros Inativos — Caloiras"
+    folder: "_content/pages/members/inactive/caloiras"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-caloira-Vitti" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string, required: false }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-inativos-tunas
+    label: "Membros Inativos — Tunas"
+    folder: "_content/pages/members/inactive/tunas"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-tuna-Anarquiae" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string, required: false }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-inativos-mestras
+    label: "Membros Inativos — Mestre-Tunas"
+    folder: "_content/pages/members/inactive/mestreTunas"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-mestreTuna-NomeTuna" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string, required: false }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
+
+  - name: membros-inativos-fundadoras
+    label: "Membros Inativos — Fundadoras"
+    folder: "_content/pages/members/inactive/fundadoras"
+    create: true
+    delete: true
+    slug: "{{name}}"
+    identifier_field: name
+    summary: "{{name}} ({{nameC}})"
+    fields:
+      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-fundadora-Ana-Isabel" }
+      - name: title
+        label: Título
+        widget: object
+        collapsed: true
+        fields:
+          - { name: text, label: Texto, widget: string, default: "", required: false }
+      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: name, label: "Nome Tuna/Civil", widget: string }
+      - { name: nameC, label: "Nome Civil", widget: string }
+      - { name: course, label: Curso, widget: string, required: false }
+      - { name: godmother, label: Madrinha, widget: string, required: false }
+      - name: instruments
+        label: Instrumentos
+        widget: list
+        field: { name: instrument, label: Instrumento, widget: string }
+      - name: image
+        label: Fotografia
+        widget: image
+        media_folder: "/static/images/members"
+        public_folder: "/images/members"
+        required: false
