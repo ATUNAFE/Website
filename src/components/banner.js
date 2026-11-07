@@ -69,6 +69,9 @@ const Banner = ({ id }) => {
     `);
 
     const content = data.banners.nodes.find(node => node.frontmatter.id === id);
+    const navBg = content?.frontmatter.sections?.find(
+        s => s.type === "navigation" || s.type === "dropdown"
+    )?.backgroundColor;
 
     const editionItems = (() => {
         const config = data.tietConfig.nodes.find(
@@ -236,11 +239,14 @@ const Banner = ({ id }) => {
                 0,
                 scrollingEl.scrollHeight - window.innerHeight
             );
+            const heading = el.querySelector("h3, h2, h4");
+            const base = heading ?? el;
+            const gap = heading ? -4 : 3;
             const y =
-                el.getBoundingClientRect().top +
+                base.getBoundingClientRect().top +
                 window.pageYOffset -
                 getStickyOffset() +
-                3;
+                gap;
             const target = Math.max(0, Math.min(Math.round(y), maxTop));
             scrollingEl.scrollTo({
                 top: target,
@@ -280,6 +286,7 @@ const Banner = ({ id }) => {
                     height: "50vh",
                     overflow: "hidden",
                     width: "100%",
+                    backgroundColor: navBg ?? "transparent",
                 }}
             >
                 <CustomImage

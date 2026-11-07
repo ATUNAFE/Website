@@ -4,11 +4,18 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+
+const withSiteUrl = (siteUrl, value) => {
+    if (!value) return "";
+    if (/^https?:\/\//i.test(value)) return value;
+    const base = (siteUrl || "").replace(/\/$/, "");
+    const path = value.startsWith("/") ? value : `/${value}`;
+    return base ? `${base}${path}` : path;
+};
 
 function Seo({ description, lang, meta, title, image, pathname }) {
     const { site } = useStaticQuery(graphql`
@@ -26,19 +33,17 @@ function Seo({ description, lang, meta, title, image, pathname }) {
         }
     `);
 
-    const metaDescription = description || site.siteMetadata.description || "";
-    const canonical =
-        pathname && site.siteMetadata.siteUrl
-            ? `${site.siteMetadata.siteUrl.replace(/\/$/, "")}${pathname}`
-            : site.siteMetadata.siteUrl;
-    const imageUrl =
-        image && site.siteMetadata.siteUrl && !/^https?:\/\//i.test(image)
-            ? `${site.siteMetadata.siteUrl.replace(/\/$/, "")}${image}`
-            : image;
-    const fullTitle = title || site.siteMetadata.title;
-    const ogTitle = title
-        ? `${title} | ${site.siteMetadata.title}`
-        : site.siteMetadata.title;
+    const metaDescription =
+        description || site.siteMetadata.description || "";
+    const canonical = withSiteUrl(site.siteMetadata.siteUrl, pathname);
+    const imageUrl = withSiteUrl(
+        site.siteMetadata.siteUrl,
+        image || "/icons/icon-512x512.png"
+    );
+    const isHome = pathname === "/";
+    const fullTitle =
+        title || "TUNAFE | Tuna Feminina de Engenharia da Universidade do Porto";
+    const ogTitle = isHome ? fullTitle : `${fullTitle} | ${site.siteMetadata.title}`;
 
     return (
         <Helmet
@@ -46,7 +51,7 @@ function Seo({ description, lang, meta, title, image, pathname }) {
                 lang,
             }}
             title={fullTitle}
-            titleTemplate={title ? `%s | ${site.siteMetadata.title}` : `%s`}
+            titleTemplate={isHome ? `%s` : `%s | ${site.siteMetadata.title}`}
             link={
                 canonical
                     ? [
@@ -98,21 +103,13 @@ function Seo({ description, lang, meta, title, image, pathname }) {
                     property: `og:locale`,
                     content: site.siteMetadata.locale || `pt_PT`,
                 },
-                ...(imageUrl
-                    ? [
-                          {
-                              property: `og:image`,
-                              content: imageUrl,
-                          },
-                          {
-                              name: `twitter:image`,
-                              content: imageUrl,
-                          },
-                      ]
-                    : []),
+                {
+                    property: `og:image`,
+                    content: imageUrl,
+                },
                 {
                     name: `twitter:card`,
-                    content: imageUrl ? `summary_large_image` : `summary`,
+                    content: `summary_large_image`,
                 },
                 {
                     name: `twitter:title`,
@@ -122,13 +119,21 @@ function Seo({ description, lang, meta, title, image, pathname }) {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    name: `twitter:image`,
+                    content: imageUrl,
+                },
+                {
+                    name: `google-site-verification`,
+                    content: `b384c527a2c25196`,
+                },
             ].concat(meta)}
         />
     );
 }
 
 Seo.defaultProps = {
-    lang: `pt`,
+    lang: `pt-PT`,
     meta: [],
     description: ``,
     title: ``,

@@ -20,7 +20,7 @@ Desde a sua estreia no V Sarau Cultural de Engenharia, a TUNAFE já percorreu to
 
 Em 1998, a TUNAFE apresenta o seu festival, o I Festival de Tunas Femininas de Engenharia, tendo mantido a sua realização regular desde então. Na sua décima edição, o festival ganhou um novo nome, Tudo Isto é Tuna e após 12 edições a TUNAFE decidiu voar mais alto com organização do seu XIII Tudo Isto É Tuna no Coliseu do Porto, tornando-se a primeira Tuna Feminina a conseguir algo de tão gratificante. Não ficando por aqui, continua com muito orgulho a realizar novas edições do Tudo Isto é Tuna, trazendo música e espírito académico às mais emblemáticas salas da nossa cidade Invicta.
 
-Acima de qualquer norma ou regra é essencial a paixão pelo conjunto que a tuna representa: a vida académica, música, boémia e, especialmente, os pequenos gestos que vão solidificando as amizades encontradas a partir de um gosto comum, a exaltação à alegria de ser estudante – estudante da Faculdade de Engenharia da Universidade do Porto.
+Acima de qualquer norma ou regra é essencial a paixão pelo conjunto que a Tuna representa: a vida académica, música, boémia e, especialmente, os pequenos gestos que vão solidificando as amizades encontradas a partir de um gosto comum, a exaltação à alegria de ser estudante – estudante da Faculdade de Engenharia da Universidade do Porto.
 
 É este o espírito vivido na Tuna Feminina de Engenharia e que marcou todas as suas gerações.
 

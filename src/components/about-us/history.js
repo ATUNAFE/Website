@@ -60,7 +60,7 @@ const History = ({ id }) => {
                 }}
             />
             <Container
-                className="py-5"
+                className="py-4"
                 style={{
                     position: "relative",
                     zIndex: 2,

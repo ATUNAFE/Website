@@ -3,30 +3,11 @@
     overflow: hidden;
 }
 
-.watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: clamp(80px, 42%, 180px);
-    max-width: 220px;
-    opacity: 0.04;
-    filter: grayscale(100%);
-    z-index: 0;
-    pointer-events: none;
-}
-
-.watermarkDark {
-    opacity: 0.05;
-    filter: grayscale(100%) brightness(1.5);
-}
-
 .inner {
     position: relative;
     z-index: 1;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
@@ -34,8 +15,8 @@
 
 @media (min-width: 768px) {
     .inner {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -56,9 +37,9 @@
 
 .imageFrame {
     width: 100%;
-    max-width: clamp(220px, 34vw, 360px);
-    border-radius: 10px;
+    max-width: clamp(200px, 28vw, 300px);
     overflow: hidden;
+    border-radius: 10px;
     background: rgba(0, 0, 0, 0.04);
     padding: 0.5rem;
 }
@@ -89,6 +70,12 @@
     font-weight: 600;
     color: inherit;
     opacity: 0.78;
+}
+
+@media (max-width: 767px) {
+    .date {
+        text-align: center;
+    }
 }
 
 .body {

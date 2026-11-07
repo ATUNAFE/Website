@@ -186,7 +186,7 @@
     .mobileMenuDropdown {
         position: fixed !important;
         top: 77px !important;
-        right: 0.5rem !important;
+        right: 0 !important;
         bottom: auto !important;
         left: auto !important;
         min-height: auto;

@@ -23,19 +23,28 @@ const Event = ({ event, theme }) => {
             {theme.watermark ? (
                 <CustomImage
                     src={theme.watermark}
-                    sizes="20vw"
-                    className={`${styles.watermark}${
-                        isDark ? ` ${styles.watermarkDark}` : ""
-                    }`}
-                    imgStyle={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "contain",
+                    aria-hidden="true"
+                    sizes="(max-width: 768px) 60vw, 260px"
+                    style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: "min(260px, 35vw)",
+                        opacity: isDark ? 0.05 : 0.04,
+                        filter: `grayscale(100%)${isDark ? " brightness(1.5)" : ""}`,
+                        zIndex: 0,
+                        pointerEvents: "none",
                     }}
                 />
             ) : null}
             <Container className={styles.inner}>
-                <Row className="g-4 g-lg-5 align-items-center">
+                <Row className="g-3 g-lg-4 align-items-center">
+                    <Col xs={12} className="d-md-none">
+                        <h3 className={styles.title}>
+                            {event.frontmatter.title?.text}
+                        </h3>
+                    </Col>
                     <Col xs={12} md={5} lg={4} className={styles.mediaCol}>
                         <div className={styles.imageFrame}>
                             <CustomImage
@@ -58,7 +67,7 @@ const Event = ({ event, theme }) => {
                     </Col>
                     <Col xs={12} md={7} lg={8}>
                         <div className={styles.content}>
-                            <h3 className={styles.title}>
+                            <h3 className={`${styles.title} d-none d-md-block`}>
                                 {event.frontmatter.title?.text}
                             </h3>
                             {event.frontmatter.date ? (
