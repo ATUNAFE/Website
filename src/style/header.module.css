@@ -194,6 +194,7 @@
         margin: 0 !important;
         transform: none !important;
         z-index: 1201 !important;
+        background-color: var(--header-background, rgba(245, 245, 245, 1)) !important;
     }
 
     .mobileMenuDropdown:global(.show) {
