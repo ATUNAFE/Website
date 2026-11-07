@@ -61,6 +61,12 @@ const Header = () => {
 
     if (!content) return <p>⚠️ Content not found for header.</p>;
 
+    const rawBg = content.frontmatter.backgroundColor || "";
+    const solidBg = rawBg.replace(
+        /rgba\(\s*([^,]+,[^,]+,[^,]+),\s*[\d.]+\s*\)/,
+        "rgb($1)"
+    );
+
     return (
         <Location>
             {({ location }) => (
@@ -70,6 +76,7 @@ const Header = () => {
                         style={{ margin: "0", padding: "0", width: "100%" }}
                     >
                         <Row
+                            className={styles.headerBar}
                             style={{
                                 margin: "0",
                                 padding: "0",
@@ -80,6 +87,7 @@ const Header = () => {
                                     content.frontmatter.backgroundColor,
                                 "--header-background":
                                     content.frontmatter.backgroundColor,
+                                "--header-background-solid": solidBg,
                                 color: content.frontmatter.color,
                                 zIndex: 1100,
                                 transition: "backgroundColor 0.5s ease",
