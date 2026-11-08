@@ -70,7 +70,7 @@ const Header = () => {
     return (
         <Location>
             {({ location }) => (
-                <header className={styles.header}>
+                <header className={styles.header} style={{ height: 0, overflow: "visible" }}>
                     <Container
                         fluid
                         style={{ margin: "0", padding: "0", width: "100%" }}

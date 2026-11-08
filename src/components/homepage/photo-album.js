@@ -52,7 +52,7 @@ const PhotoAlbum = ({ id }) => {
                 <div className="d-flex align-items-end justify-content-between gap-3 mb-4 flex-wrap">
                     <CustomHeading
                         background="dark"
-                        ruleColor="var(--dark-engineer)"
+                        ruleColor="var(--light-engineer)"
                         className="mb-0"
                     >
                         {content.frontmatter.title?.text ||
