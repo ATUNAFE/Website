@@ -73,11 +73,6 @@ main {
     flex-grow: 1;
 }
 
-/* When the sticky section nav is visible, make the header opaque for visual consistency */
-html.nav-active header .row {
-    background-color: rgba(245, 245, 245, 1) !important;
-}
-
 .banner {
     height: calc(100vh - 88px);
     width: 100%;
