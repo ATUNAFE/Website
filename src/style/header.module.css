@@ -1,8 +1,11 @@
 .header {
-    box-shadow: 0 5px 5px 0 #000;
+    height: 0;
+    overflow: visible;
 }
 
-.headerBar {}
+.headerBar {
+    box-shadow: 0 5px 5px 0 #000;
+}
 
 .dropdownToggle {
     background-color: transparent !important;
