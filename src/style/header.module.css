@@ -8,7 +8,8 @@
 }
 
 :global(html.nav-active) .headerBar,
-:global(html.nav-active) .dropdownMenu {
+:global(html.nav-active) .dropdownMenu,
+:global(html.nav-active) .mobileMenuDropdown {
     background-color: rgb(245, 245, 245) !important;
 }
 
@@ -195,11 +196,11 @@
     }
 
     .headerBar {
-        background-color: rgba(245, 245, 245, 0.96) !important;
+        background-color: var(--header-background, rgba(245, 245, 245, 0.96)) !important;
     }
 
     .dropdownMenu {
-        background-color: rgb(245, 245, 245) !important;
+        background-color: var(--header-background, rgba(245, 245, 245, 0.96)) !important;
     }
 
     .mobileMenuDropdown {
@@ -210,14 +211,14 @@
         left: auto !important;
         min-height: auto;
         height: auto;
-        margin: -1px 0 0 0 !important;
+        margin: 0 !important;
         padding: 0.5rem !important;
         transform: none !important;
         z-index: 1201 !important;
         border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
-        background-color: rgb(245, 245, 245) !important;
+        background-color: var(--header-background, rgba(245, 245, 245, 0.96)) !important;
     }
 
     .mobileMenuDropdown:global(.show) {
@@ -251,5 +252,11 @@
     .mobileMenuDropdown :global(.headerLink)[aria-current="page"] {
         color: var(--light-engineer) !important;
         background-color: transparent !important;
+    }
+
+    :global(html.nav-active) .headerBar,
+    :global(html.nav-active) .dropdownMenu,
+    :global(html.nav-active) .mobileMenuDropdown {
+        background-color: rgb(245, 245, 245) !important;
     }
 }

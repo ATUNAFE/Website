@@ -44,26 +44,41 @@ const History = ({ id }) => {
                 backgroundColor: "var(--light-neutral)",
             }}
         >
-            <CustomImage
-                src={content.frontmatter.watermark}
-                sizes="30vw"
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "30%",
-                    opacity: 0.05,
-                    filter: "grayscale(100%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                }}
-            />
+            {content.frontmatter.watermark ? (
+                <div
+                    aria-hidden="true"
+                    style={{
+                        position: "absolute",
+                        inset: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        pointerEvents: "none",
+                        zIndex: 0,
+                    }}
+                >
+                    <CustomImage
+                        src={content.frontmatter.watermark}
+                        sizes="(max-width: 768px) 50vw, 420px"
+                        style={{
+                            width: "min(420px, 45vw)",
+                            height: "auto",
+                            opacity: 0.05,
+                            filter: "grayscale(100%)",
+                        }}
+                        imgStyle={{
+                            width: "100%",
+                            height: "auto",
+                            objectFit: "contain",
+                        }}
+                    />
+                </div>
+            ) : null}
             <Container
                 className="py-4"
                 style={{
                     position: "relative",
-                    zIndex: 2,
+                    zIndex: 1,
                     minHeight: "320px",
                     display: "flex",
                     flexDirection: "column",
