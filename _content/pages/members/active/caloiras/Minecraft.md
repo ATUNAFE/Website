@@ -5,7 +5,7 @@ title:
 order: 110
 name: "Minecraft"
 nameC: "Leonor Ricardo"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Reclusatis Simensis {CoRioli}Staccatus"
 instruments:
   - "estandarte"

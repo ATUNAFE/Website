@@ -5,7 +5,7 @@ title:
 order: 90
 name: "Mizécus IdeiaFixus Respondorum"
 nameC: "Maria José Ferreira"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "cavaquinho"

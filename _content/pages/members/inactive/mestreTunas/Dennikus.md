@@ -5,7 +5,7 @@ title:
 order: 410
 name: "Dennikus TásTármarÓParvalhonikus Póstatis Indignátis"
 nameC: "Cátia Martins"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Agaénikus AgudoAceleratis ViciadusLaró SantinhoXizénikus"
 instruments:
   - "guitarra"

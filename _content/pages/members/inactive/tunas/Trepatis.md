@@ -5,7 +5,7 @@ title:
 order: 80
 name: "Trepatis Tuítis SempreOcupatis"
 nameC: "Luí­sa Soares"
-course: "Eng. Minas e Geoambiente"
+course: "Engenharia Minas e Geoambiente"
 godmother: "Andreius Altamentus T2 Descascatis Espalhabrasus"
 instruments:
   - "pandeireta"

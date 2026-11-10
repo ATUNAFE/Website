@@ -5,7 +5,7 @@ title:
 order: 140
 name: "Felute"
 nameC: "Maria Costa"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "Trepatis Tuítis SempreOcupatis"
 instruments:
   - "sopros"

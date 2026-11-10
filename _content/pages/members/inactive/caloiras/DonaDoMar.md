@@ -5,7 +5,7 @@ title:
 order: 610
 name: "DonaDoMar"
 nameC: "Leonor Pereira"
-course: "Licenciatura em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Conchititas Calíopialis Phalaenopsis"
 instruments:
   - "guitarra"

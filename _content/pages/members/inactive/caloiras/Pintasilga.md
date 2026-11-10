@@ -5,7 +5,7 @@ title:
 order: 100
 name: "Pintasilga"
 nameC: "Liliana Santos"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: ""
 instruments:
   - "guitarra"

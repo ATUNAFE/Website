@@ -5,7 +5,7 @@ title:
 order: 60
 name: ":Doraemons TessellariS Magnificantis Matri<iae "
 nameC: "Mariana Pereira"
-course: "Licenciatura em Engenharia Química"
+course: "Engenharia Química/Engenharia e Ciência de Dados"
 godmother: "So₂nics PathosAMParatis Laboralis⇌Absintae Nitrogéni∡us"
 instruments:
   - "cavaquinho"

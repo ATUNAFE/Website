@@ -5,7 +5,7 @@ title:
 order: 510
 name: "OJeiz JokiSpontániuz HeySpigátiz OMMMeuCheiraARosiz"
 nameC: "Inês Pereira"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "SupeRérrius SonusSonorus Mistikus Apaziguátis"
 instruments:
   - "bandolim"

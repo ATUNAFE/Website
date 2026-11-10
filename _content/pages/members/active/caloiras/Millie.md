@@ -5,7 +5,7 @@ title:
 order: 90
 name: "Millie"
 nameC: "Carolina Dias"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: ":Doraemons TessellariS Magnificantis Matri<iae"
 instruments:
   - "cavaquinho"

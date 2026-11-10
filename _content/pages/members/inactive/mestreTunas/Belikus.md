@@ -5,7 +5,7 @@ title:
 order: 310
 name: "Belikus Azarentus Mamanitus IdeaFixus"
 nameC: "Isabel Pereira"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "contrabaixo"

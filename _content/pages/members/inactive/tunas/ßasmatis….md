@@ -5,7 +5,7 @@ title:
 order: 310
 name: "ßasmatis… SamuraisHumilis MitoC21H30O5ndriae"
 nameC: "Francisca Vieira"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Caricaturatis 32Albus AtlasDiónicus piperisRefinadus"
 instruments:
   - "bandolim"

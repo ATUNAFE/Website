@@ -5,7 +5,7 @@ title:
 order: 90
 name: "Mavius ∇NoctuaTurbus Perolatis FiusAᴵrpeggium"
 nameC: "Joana Brandão"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Lazulis BeTeaninius LarisBiscainhus Ven⊥usRσsae"
 instruments:
   - "estandarte"

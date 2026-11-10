@@ -5,7 +5,7 @@ title:
 order: 280
 name: "Corellis TEDxis Er:Dermae"
 nameC: "Alexandra Azevedo Freitas"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "AndôrBiuletus kPlumis Recatadus SNR!us"
 instruments:
   - "bandolim"

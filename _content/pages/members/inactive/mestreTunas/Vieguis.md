@@ -5,7 +5,7 @@ title:
 order: 240
 name: "Vieguis Bjinhus Rimorum CabeloRebeldis"
 nameC: "Ana Rita Oliveira"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: "Marianus Mocadus Descompassadus Cigarrilhus"
 instruments:
   - "bandolim"

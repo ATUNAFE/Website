@@ -5,7 +5,7 @@ title:
 order: 330
 name: "Dapatixius É-assimConstantis Violalentus Arquibadus"
 nameC: "Diana Paiva"
-course: "Mestrado Integrado em Engenharia Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "guitarra"

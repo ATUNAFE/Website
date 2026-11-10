@@ -5,7 +5,7 @@ title:
 order: 550
 name: "Dipelom@is Negritus BaixoTimbradus TUNAlizadu$"
 nameC: "Sónia Liquito"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "bandolim"

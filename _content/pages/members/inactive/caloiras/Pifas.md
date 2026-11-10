@@ -5,7 +5,7 @@ title:
 order: 300
 name: "Pifas"
 nameC: "Margarida Pereira"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Dibuguis Sisudus DiscretusAplicatis e-lectrificatis"
 instruments:
   - "sopros"

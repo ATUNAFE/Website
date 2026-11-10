@@ -5,7 +5,7 @@ title:
 order: 590
 name: "Tutu"
 nameC: "Maria Sousa"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Moizás MalhadusEx.ímius PaxVigilantis vSinfonicus"
 instruments:
   - "acordeao"

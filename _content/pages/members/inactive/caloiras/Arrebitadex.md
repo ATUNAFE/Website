@@ -5,7 +5,7 @@ title:
 order: 370
 name: "Arrebitadex"
 nameC: "Ana Cardoso"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Xavézitus Ofuscadus LorealPKEuMereçus AgriDocis"
 instruments:
   - "percussao"

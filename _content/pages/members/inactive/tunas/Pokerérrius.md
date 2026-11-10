@@ -5,7 +5,7 @@ title:
 order: 250
 name: "Pokerérrius Levadlomis ContraBalançatis"
 nameC: "Inês Machado"
-course: "Mestrado Integrado em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Arnaldinhus MarufasRecheadus Catxauzus"
 instruments:
   - "percussao"

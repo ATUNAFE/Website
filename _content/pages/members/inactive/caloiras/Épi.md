@@ -5,7 +5,7 @@ title:
 order: 420
 name: "Épi"
 nameC: "Joana Crespo"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 instruments:
   - "contrabaixo"

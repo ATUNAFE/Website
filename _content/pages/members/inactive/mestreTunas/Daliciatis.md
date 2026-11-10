@@ -5,7 +5,7 @@ title:
 order: 380
 name: "Daliciatis PinqueChoquis PupilaLacrimae MiLavorus"
 nameC: "Alicia Meireles"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Espanquius Latinus PausaRequisitatis PepsoDentuçus"
 instruments:
   - "pandeireta"

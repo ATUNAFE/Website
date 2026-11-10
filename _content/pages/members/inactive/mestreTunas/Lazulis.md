@@ -5,7 +5,7 @@ title:
 order: 1050
 name: "Lazulis BeTeaninius LarisBiscainhus Ven⊥usRσsae"
 nameC: "Ana Margarida Ferreira"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "sMartis AstriöDeimus [Tantrantan]²tátis £eanius"
 instruments:
   - "cavaquinho"

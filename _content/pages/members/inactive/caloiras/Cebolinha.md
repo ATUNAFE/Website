@@ -5,7 +5,7 @@ title:
 order: 90
 name: "Cebolinha"
 nameC: "Mónica Aguiar"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: ""
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 120
 name: "Marianus Mocadus Descompassadus Cigarrilhus"
 nameC: "Mariana Lopes"
-course: "Eng. Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Galegus Couvus Irrequietus SemCaracolis"
 instruments:
   - "guitarra"

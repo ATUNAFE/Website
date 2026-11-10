@@ -5,7 +5,7 @@ title:
 order: 190
 name: "Magallis CabrrritusAtrrrevidus Prrreserrrverrratis"
 nameC: "Magali Alves"
-course: "Mestrado Integrado em Engenharia Industrial e Gestão"
+course: "Engenharia Industrial e Gestão"
 godmother: "Vilmis SóMinhuNaturalis Prontux NanoFervus"
 instruments:
   - "sopros"

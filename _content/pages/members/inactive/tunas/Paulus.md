@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Paulus Joius Coroum"
 nameC: "Paula Barbosa"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "Sandrus Viseensos Fadistus Violatus NÃOVenditus"
 instruments:
   - "guitarra"

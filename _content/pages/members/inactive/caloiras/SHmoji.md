@@ -5,7 +5,7 @@ title:
 order: 580
 name: "SHmoji"
 nameC: "Rita Silva"
-course: "Mestrado em Engenharia de Serviços e Gestão"
+course: "Engenharia de Serviços e Gestão"
 godmother: "ßasmatis… SamuraisHumilis MitoC21H30O5ndriae"
 instruments:
   - "bandolim"

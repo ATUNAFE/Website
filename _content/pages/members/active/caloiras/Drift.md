@@ -5,7 +5,7 @@ title:
 order: 160
 name: "Drift"
 nameC: "Sofia Azevedo"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "TriXis Vulpi++s IlumṼirtuosus"
 instruments:
   - "percussao"

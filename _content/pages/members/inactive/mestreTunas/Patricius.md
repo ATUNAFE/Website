@@ -5,7 +5,7 @@ title:
 order: 170
 name: "Patricius Encaracolatis InstitutoAssiduos Praxis Offus"
 nameC: "Patrícia Faria"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "Anitus Engenhocus PandeiretaConstantis Acordionicus Vitimatis"
 instruments:
   - "guitarra"

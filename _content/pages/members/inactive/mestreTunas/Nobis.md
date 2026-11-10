@@ -5,7 +5,7 @@ title:
 order: 730
 name: "Nobis ArsDonum YOSarcóMinuciosus Assertivus"
 nameC: "Ana Faria"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Lolitus Incontornatis TrinadusVaidosus EntropiusGiaaaus"
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 1020
 name: "Bambinis aRhabescus ⌬pusMILis DeliriumTremen$ae"
 nameC: "Ana Beatriz Marques"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Playzitus JovialisPatronum p+ragmáticus PrestoConvvictus"
 instruments:
   - "pandeireta"

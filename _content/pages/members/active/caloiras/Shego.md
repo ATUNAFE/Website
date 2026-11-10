@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Shego"
 nameC: "Maria Guimarães"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Shazamis Espirituosos TriPendlum Makanikoae"
 instruments:
   - "guitarra"

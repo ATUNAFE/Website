@@ -5,7 +5,7 @@ title:
 order: 220
 name: "J1nikus REservaDus TalentusEsvoaçadus"
 nameC: "Inês Alves"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Mariakeiritus McRosadinhus ProActivius Buoooostis"
 instruments:
   - "estandarte"

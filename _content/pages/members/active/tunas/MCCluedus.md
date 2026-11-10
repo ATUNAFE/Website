@@ -5,7 +5,7 @@ title:
 order: 140
 name: "MCCluedus Axelum‽ BaobisPrytaneum"
 nameC: "Madga Jesus"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Cardumis MomenTu²m PrismAltímetrus Vendaʌalkɨus "
 instruments:
   - "estandarte"

@@ -5,7 +5,7 @@ title:
 order: 60
 name: "Toyotis Ninjutsus RedisQuehe²rcus"
 nameC: "Camila Correia"
-course: "Licenciatura em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Conchititas Calíopialis Phalaenopsis"
 instruments:
   - "bandolim"

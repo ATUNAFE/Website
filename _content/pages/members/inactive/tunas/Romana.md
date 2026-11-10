@@ -5,7 +5,7 @@ title:
 order: 30
 name: "Romana Rodrigues"
 nameC: "Romana Rodrigues"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "guitarra"

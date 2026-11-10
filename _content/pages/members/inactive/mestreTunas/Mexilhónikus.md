@@ -5,7 +5,7 @@ title:
 order: 290
 name: "Mexilhónikus AutoEsfor@is Frechadus RepsólicusAnónimus"
 nameC: "Mariana Figueiredo"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "magister"

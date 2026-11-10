@@ -5,7 +5,7 @@ title:
 order: 160
 name: "Txaran"
 nameC: "Joana Valente"
-course: "Eng. Mecánica"
+course: "Engenharia Mecánica"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "bandolim"

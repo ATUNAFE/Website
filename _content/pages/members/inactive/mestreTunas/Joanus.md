@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Joanus Cúzius Alapádus Sapatus Voadoris"
 nameC: "Joana Nunes"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: ""
 instruments:
   - "pandeireta"

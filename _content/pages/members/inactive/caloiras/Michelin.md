@@ -5,7 +5,7 @@ title:
 order: 660
 name: "Michelin"
 nameC: "Sofia Correia"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Reclusatis Simensis {CoRioli}Staccatus"
 instruments:
   - "guitarra"

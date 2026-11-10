@@ -5,7 +5,7 @@ title:
 order: 1040
 name: "Bubbalicious HéyliusGlitteratis exponenZIaLLis +Polaroidis-"
 nameC: "Maria Catarina Cortez"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Corellis TEDxis Er:Dermae"
 instruments:
   - "pandeireta"

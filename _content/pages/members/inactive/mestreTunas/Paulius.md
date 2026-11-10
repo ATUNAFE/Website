@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Paulius Percursionis Tocatis Vegetalis"
 nameC: "Paula Luí­s"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: ""
 instruments:
   - "pandeireta"

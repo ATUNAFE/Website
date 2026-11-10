@@ -5,7 +5,7 @@ title:
 order: 150
 name: "Stormis +kVedetus PortusGunátis"
 nameC: "Inês Oliveira"
-course: "Mestrado Integrado em Engenharia do Ambiente"
+course: "Engenharia do Ambiente"
 godmother: "Rosinhus Col€ccionatis EstandarteCharmosus"
 instruments:
   - "estandarte"

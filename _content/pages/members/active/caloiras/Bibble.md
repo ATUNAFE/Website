@@ -5,7 +5,7 @@ title:
 order: 60
 name: "Bibble"
 nameC: "Francisca Filipe"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Mooveezitus Mεrakis UnmeiBonsae"
 instruments:
   - "pandeireta"

@@ -5,7 +5,7 @@ title:
 order: 470
 name: "Bibátis DusJólhosCantatis Brigantinus Chiribitátátátátis"
 nameC: "Gabriela Fernandes"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Cockpitius TactusMagnéticus Enciclopedius Uh-Hus"
 instruments:
   - "cavaquinho"

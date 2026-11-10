@@ -5,7 +5,7 @@ title:
 order: 30
 name: "Miau"
 nameC: "Mafalda Pinto"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "guitarra"

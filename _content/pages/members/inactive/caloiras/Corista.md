@@ -5,7 +5,7 @@ title:
 order: 50
 name: "Corista"
 nameC: "Teresa Freitas"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "sopros"

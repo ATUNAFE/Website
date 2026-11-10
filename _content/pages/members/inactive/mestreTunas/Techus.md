@@ -5,7 +5,7 @@ title:
 order: 180
 name: "Techus AutoPraxis Beijokus Baixus Trapalhonikus"
 nameC: "Teresa Oliveira"
-course: "Eng. Mecánica"
+course: "Engenharia Mecánica"
 godmother: "Anitus Engenhocus PandeiretaConstantis Acordionicus Vitimatis"
 instruments:
   - "magister"

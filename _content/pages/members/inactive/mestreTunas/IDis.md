@@ -5,7 +5,7 @@ title:
 order: 560
 name: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 nameC: "Andreia Cruz"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "magister"

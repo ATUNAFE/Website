@@ -5,7 +5,7 @@ title:
 order: 510
 name: "Pidgey"
 nameC: "Inês Santos"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Eulálius ΔquilesNíveae MercalliVs Alicerci$"
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 970
 name: "Araryus rand(Gomenasaius) TxicaTxicaMiraboolantis Palađinu$"
 nameC: "Sofia Lajes"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "KitKatis luMièR²Ius SemiCyonis"
 instruments:
   - "bandolim"

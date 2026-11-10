@@ -5,7 +5,7 @@ title:
 order: 770
 name: "Letrae Éolis LÁtusInfindábilis MorFinu5"
 nameC: "Daniela Domingues"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Reggyzitus BaixusVidradus TázaGozaris Idealistus"
 instruments:
   - "contrabaixo"

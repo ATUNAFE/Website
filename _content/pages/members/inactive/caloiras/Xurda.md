@@ -5,7 +5,7 @@ title:
 order: 170
 name: "Xurda"
 nameC: "Sílvia Monteiro"
-course: "Eng. Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "guitarra"

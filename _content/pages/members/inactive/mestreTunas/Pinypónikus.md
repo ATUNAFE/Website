@@ -5,7 +5,7 @@ title:
 order: 460
 name: "Pinypónikus CalMobilizatis VocálisRevelátihihis Amnésikus"
 nameC: "Teresa Pinto"
-course: "Mestrado Integrado em Engenharia do Ambiente"
+course: "Engenharia do Ambiente"
 godmother: "Rosinhus Col€ccionatis EstandarteCharmosus"
 instruments:
   - "pandeireta"

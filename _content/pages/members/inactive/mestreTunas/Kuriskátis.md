@@ -5,7 +5,7 @@ title:
 order: 500
 name: "Kuriskátis Carismátikus Insularis Dedilhadus#Mináticus"
 nameC: "Teresa Cabral"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Cockpitius TactusMagnéticus Enciclopedius Uh-Hus"
 instruments:
   - "guitarra"

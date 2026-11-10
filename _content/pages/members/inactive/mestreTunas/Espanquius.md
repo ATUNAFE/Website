@@ -5,7 +5,7 @@ title:
 order: 230
 name: "Espanquius Latinus PausaRequisitatis PepsoDentuçus"
 nameC: "Florbela Lages"
-course: "Eng. Minas e Geoambiente"
+course: "Engenharia Minas e Geoambiente"
 godmother: "Ritus Altius FêCêPortus EncolhidoIticatis Pistolorum"
 instruments:
   - "cavaquinho"

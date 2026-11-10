@@ -5,7 +5,7 @@ title:
 order: 50
 name: "Xanius Funebrus MeninoTocatis"
 nameC: "Alexandra Sarmento"
-course: "Eng. Metalúrgica e de Materiais"
+course: "Engenharia Metalúrgica e de Materiais"
 godmother: ""
 instruments:
   - "contrabaixo"

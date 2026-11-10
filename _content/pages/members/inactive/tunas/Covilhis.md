@@ -5,7 +5,7 @@ title:
 order: 160
 name: "Covilhis Covinhus InfinitusDesbobinátis"
 nameC: "Juliana Pires"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Cockpitius TactusMagnéticus Enciclopedius Uh-Hus"
 instruments:
   - "cavaquinho"

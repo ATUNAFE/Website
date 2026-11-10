@@ -5,7 +5,7 @@ title:
 order: 640
 name: "Lolitus Incontornatis TrinadusVaidosus EntropiusGiaaaus"
 nameC: "Inês Vigário"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "magister"

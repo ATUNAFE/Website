@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Sandrius Dorminhocus GavetaVirginatis Acompanhadus"
 nameC: "Sandra Alves"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: ""
 instruments:
   - "cavaquinho"

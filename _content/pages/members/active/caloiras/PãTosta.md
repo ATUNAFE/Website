@@ -5,7 +5,7 @@ title:
 order: 40
 name: "PãTosta"
 nameC: "Ana Amorim"
-course: "Licenciatura em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Cardumis MomenTu²m PrismAltímetrus Vendaʌalkɨus"
 instruments:
   - "estandarte"

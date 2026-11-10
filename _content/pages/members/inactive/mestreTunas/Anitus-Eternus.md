@@ -5,7 +5,7 @@ title:
 order: 40
 name: "Anitus Eternus Novatus Descontrolatis"
 nameC: "Ana Queiroz"
-course: "Eng. Metalurgica e de Materiais"
+course: "Engenharia Metalurgica e de Materiais"
 godmother: "Claudius Cantatis Desafinatis"
 instruments:
   - "guitarra"

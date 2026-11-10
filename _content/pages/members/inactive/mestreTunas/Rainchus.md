@@ -5,7 +5,7 @@ title:
 order: 270
 name: "Rainchus GallusElectricus SorrisoAssiduos Impostus"
 nameC: "Andreia Miranda"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "cavaquinho"

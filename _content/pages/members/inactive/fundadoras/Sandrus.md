@@ -5,7 +5,7 @@ title:
 order: 170
 name: "Sandrus Viseensos Fadistus Violatus NÃOVenditus"
 nameC: "Sandra Coelho"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "guitarra"

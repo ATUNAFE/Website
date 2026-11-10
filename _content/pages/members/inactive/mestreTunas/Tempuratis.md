@@ -5,7 +5,7 @@ title:
 order: 620
 name: "Tempuratis HumorisOcultis Abstraidus LexisTimidus"
 nameC: "Inês Ferreira"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Dennikus TásTármaróParvalhonikus Póstatis Indignátis"
 instruments:
   - "estandarte"

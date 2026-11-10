@@ -5,7 +5,7 @@ title:
 order: 520
 name: "Cénikus INEMusAssíduos SinSeiBooolh@ Encriptadus"
 nameC: "Catarina Maria Lopes"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "SupeRérrius SonusSonorus Mistikus Apaziguátis"
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 200
 name: "Valbom"
 nameC: "Carla Valbom"
-course: "Mestrado em Engenharia Biomédica"
+course: "Engenharia Biomédica"
 godmother: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNaoEstroncatis"
 instruments:
   - "bandolim"

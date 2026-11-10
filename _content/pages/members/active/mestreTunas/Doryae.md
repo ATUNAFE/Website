@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Doryae C♯ius OptiPeculiaris P⭘lyphónicus"
 nameC: "Ângela Coelho"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Nobis ArsDonum YOSarcóMinuciosus Assertivus"
 instruments:
   - "magister"

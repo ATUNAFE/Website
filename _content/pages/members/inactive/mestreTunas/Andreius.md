@@ -5,7 +5,7 @@ title:
 order: 160
 name: "Andreius Altamentus T²Descascatis Espalhabrasus"
 nameC: "Andreia Cabral"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: "Susanus Psicológicus Afectadus Esbeltius Vocalis"
 instruments:
   - "magister"

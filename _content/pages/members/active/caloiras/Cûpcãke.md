@@ -5,7 +5,7 @@ title:
 order: 130
 name: "Cûpcãke"
 nameC: "Francisca Silva"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "TriXis Vulpi++s IlumṼirtuosus"
 instruments:
   - "percussao"

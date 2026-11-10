@@ -5,7 +5,7 @@ title:
 order: 170
 name: "TuxaTuxátis Fotoxénikus PandeiretaDesconxentratis"
 nameC: "Patrícia Santos"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Pukitus DeduXuxatis TudoKestionatis ONOFFONus"
 instruments:
   - "pandeireta"

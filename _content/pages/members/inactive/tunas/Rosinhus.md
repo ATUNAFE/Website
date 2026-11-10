@@ -5,7 +5,7 @@ title:
 order: 90
 name: "Rosinhus Col€ccionatis EstandarteCharmosus"
 nameC: "Rosa Inês Mendes"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 instruments:
   - "estandarte"

@@ -5,7 +5,7 @@ title:
 order: 1030
 name: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 nameC: "Luana Queiroz"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "estandarte"
