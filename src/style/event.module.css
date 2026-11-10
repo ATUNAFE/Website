@@ -3,6 +3,24 @@
     overflow: hidden;
 }
 
+.watermarkWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(140px, 22vw, 260px);
+    height: clamp(140px, 22vw, 260px);
+    opacity: 0.04;
+    filter: grayscale(100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.event[data-theme="dark"] .watermarkWrapper {
+    opacity: 0.05;
+    filter: grayscale(100%) brightness(1.5);
+}
+
 .inner {
     position: relative;
     z-index: 1;

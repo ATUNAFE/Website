@@ -61,25 +61,39 @@ const Header = () => {
 
     if (!content) return <p>⚠️ Content not found for header.</p>;
 
+    const rawBg = content.frontmatter.backgroundColor || "";
+    const solidBg = rawBg.replace(
+        /rgba\(\s*([^,]+,[^,]+,[^,]+),\s*[\d.]+\s*\)/,
+        "rgb($1)"
+    );
+
     return (
         <Location>
             {({ location }) => (
-                <header className={styles.header}>
+                <header
+                    className={styles.header}
+                    style={{ height: 0, overflow: "visible" }}
+                >
                     <Container
                         fluid
                         style={{ margin: "0", padding: "0", width: "100%" }}
                     >
                         <Row
+                            className={styles.headerBar}
                             style={{
                                 margin: "0",
                                 padding: "0",
                                 height: "77px",
                                 width: "100%",
                                 position: "fixed",
+                                top: "0",
+                                left: "0",
+                                right: "0",
                                 backgroundColor:
                                     content.frontmatter.backgroundColor,
                                 "--header-background":
                                     content.frontmatter.backgroundColor,
+                                "--header-background-solid": solidBg,
                                 color: content.frontmatter.color,
                                 zIndex: 1100,
                                 transition: "backgroundColor 0.5s ease",
@@ -295,6 +309,107 @@ const Header = () => {
                                                                 const cleanPath =
                                                                     path ||
                                                                     "/sobre-nos";
+                                                                let attempts = 0;
+                                                                let cancelled = false;
+                                                                let programmatic = false;
+                                                                const cleanup =
+                                                                    () => {
+                                                                        window.removeEventListener(
+                                                                            "wheel",
+                                                                            onUser,
+                                                                            {
+                                                                                passive: true,
+                                                                            }
+                                                                        );
+                                                                        window.removeEventListener(
+                                                                            "touchstart",
+                                                                            onUser,
+                                                                            {
+                                                                                passive: true,
+                                                                            }
+                                                                        );
+                                                                        window.removeEventListener(
+                                                                            "pointerdown",
+                                                                            onUser,
+                                                                            {
+                                                                                passive: true,
+                                                                            }
+                                                                        );
+                                                                        window.removeEventListener(
+                                                                            "keydown",
+                                                                            onKey,
+                                                                            true
+                                                                        );
+                                                                        window.removeEventListener(
+                                                                            "scroll",
+                                                                            onScroll,
+                                                                            true
+                                                                        );
+                                                                    };
+                                                                const onUser =
+                                                                    () => {
+                                                                        cancelled = true;
+                                                                        cleanup();
+                                                                    };
+                                                                const onScroll =
+                                                                    () => {
+                                                                        if (
+                                                                            !programmatic
+                                                                        ) {
+                                                                            cancelled = true;
+                                                                            cleanup();
+                                                                        }
+                                                                    };
+                                                                const onKey =
+                                                                    e => {
+                                                                        if (
+                                                                            [
+                                                                                "ArrowUp",
+                                                                                "ArrowDown",
+                                                                                "PageUp",
+                                                                                "PageDown",
+                                                                                "Home",
+                                                                                "End",
+                                                                                " ",
+                                                                            ].includes(
+                                                                                e.key
+                                                                            )
+                                                                        ) {
+                                                                            cancelled = true;
+                                                                            cleanup();
+                                                                        }
+                                                                    };
+                                                                window.addEventListener(
+                                                                    "wheel",
+                                                                    onUser,
+                                                                    {
+                                                                        passive: true,
+                                                                    }
+                                                                );
+                                                                window.addEventListener(
+                                                                    "touchstart",
+                                                                    onUser,
+                                                                    {
+                                                                        passive: true,
+                                                                    }
+                                                                );
+                                                                window.addEventListener(
+                                                                    "pointerdown",
+                                                                    onUser,
+                                                                    {
+                                                                        passive: true,
+                                                                    }
+                                                                );
+                                                                window.addEventListener(
+                                                                    "keydown",
+                                                                    onKey,
+                                                                    true
+                                                                );
+                                                                window.addEventListener(
+                                                                    "scroll",
+                                                                    onScroll,
+                                                                    true
+                                                                );
                                                                 const align =
                                                                     () => {
                                                                         const el =
@@ -337,6 +452,7 @@ const Header = () => {
                                                                                 .scrollBehavior;
                                                                         scroller.style.scrollBehavior =
                                                                             "auto";
+                                                                        programmatic = true;
                                                                         window.scrollTo(
                                                                             0,
                                                                             Math.max(
@@ -348,6 +464,11 @@ const Header = () => {
                                                                         );
                                                                         scroller.style.scrollBehavior =
                                                                             prev;
+                                                                        window.requestAnimationFrame(
+                                                                            () => {
+                                                                                programmatic = false;
+                                                                            }
+                                                                        );
                                                                         try {
                                                                             window.history.replaceState(
                                                                                 window
@@ -359,9 +480,14 @@ const Header = () => {
                                                                         } catch (_) {}
                                                                         return true;
                                                                     };
-                                                                let attempts = 0;
                                                                 const tick =
                                                                     () => {
+                                                                        if (
+                                                                            cancelled
+                                                                        ) {
+                                                                            cleanup();
+                                                                            return;
+                                                                        }
                                                                         if (
                                                                             !align() &&
                                                                             attempts <
@@ -374,18 +500,7 @@ const Header = () => {
                                                                             );
                                                                             return;
                                                                         }
-                                                                        [
-                                                                            120,
-                                                                            300,
-                                                                            700,
-                                                                            1200,
-                                                                        ].forEach(
-                                                                            ms =>
-                                                                                window.setTimeout(
-                                                                                    align,
-                                                                                    ms
-                                                                                )
-                                                                        );
+                                                                        cleanup();
                                                                     };
                                                                 const normalize =
                                                                     p =>

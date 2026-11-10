@@ -1,5 +1,15 @@
 .header {
-    box-shadow: 0 5px 5px 0 #000;
+    height: 0 !important;
+    overflow: visible;
+}
+
+.headerBar {
+    box-shadow: none;
+}
+
+:global(html.nav-active) .headerBar,
+:global(html.nav-active) .dropdownMenu {
+    background-color: rgb(245, 245, 245) !important;
 }
 
 .dropdownToggle {
@@ -47,7 +57,7 @@
     padding: 0.35rem 0 !important;
     background-color: var(
         --header-background,
-        rgba(245, 245, 245, 0.95)
+        rgba(245, 245, 245, 0.96)
     ) !important;
     border: none !important;
     border-radius: 0 !important;
@@ -101,6 +111,7 @@
     z-index: 1200;
     padding-right: 0 !important;
     padding-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .mobileMenu :global(.dropdown) {
@@ -113,17 +124,17 @@
     right: 0 !important;
     left: auto !important;
     min-width: 12rem;
-    margin-top: 1.43rem;
+    margin: 0 !important;
     padding: 0.5rem !important;
     background-color: var(
         --header-background,
-        rgba(245, 245, 245, 0.5)
+        rgba(245, 245, 245, 0.96)
     ) !important;
     border: none !important;
     border-radius: 0 !important;
     color: var(--dark-neutral) !important;
     font-family: "Source Sans Pro", sans-serif !important;
-    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.65);
+    box-shadow: none;
 }
 
 .menuIcon {
@@ -183,6 +194,14 @@
         z-index: 1200;
     }
 
+    .headerBar {
+        background-color: rgba(245, 245, 245, 0.96) !important;
+    }
+
+    .dropdownMenu {
+        background-color: rgb(245, 245, 245) !important;
+    }
+
     .mobileMenuDropdown {
         position: fixed !important;
         top: 77px !important;
@@ -191,9 +210,14 @@
         left: auto !important;
         min-height: auto;
         height: auto;
-        margin: 0 !important;
+        margin: -1px 0 0 0 !important;
+        padding: 0.5rem !important;
         transform: none !important;
         z-index: 1201 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background-color: rgb(245, 245, 245) !important;
     }
 
     .mobileMenuDropdown:global(.show) {

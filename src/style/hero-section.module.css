@@ -2,12 +2,14 @@
     min-height: 90vh;
     padding: 150px 0 80px;
     isolation: isolate;
+    background-color: #1f1f1f;
 }
 
 .background {
     top: -60%;
     left: -15%;
-    width: 115%;
+    right: -15%;
+    width: auto;
     height: 160%;
     z-index: -2;
 }
@@ -56,7 +58,8 @@
     .background {
         top: 0;
         left: -60%;
-        width: 160%;
+        right: -60%;
+        width: auto;
         height: 100%;
     }
 
