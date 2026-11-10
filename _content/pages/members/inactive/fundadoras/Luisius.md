@@ -5,7 +5,7 @@ title:
 order: 50
 name: "Luisius Pára-Raius"
 nameC: "Luísa Sá"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "sopros"

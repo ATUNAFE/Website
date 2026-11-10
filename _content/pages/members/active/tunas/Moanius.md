@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Moanius Sakurae Ec//ipsisVibrântis"
 nameC: "Sofia Cruz"
-course: "Licenciatura em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Polegarzinhus RoyalisFirm@is SelenisPrimaverilis √¢amelliae"
 instruments:
   - "percussao"

@@ -5,7 +5,7 @@ title:
 order: 50
 name: "Galegus Couvus Irrequietus SemCaracolis"
 nameC: "Isabel Galego"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "guitarra"

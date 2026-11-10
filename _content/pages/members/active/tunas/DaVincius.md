@@ -5,7 +5,7 @@ title:
 order: 40
 name: "DaVincius Violetis p[Origamis]₄₀₄"
 nameC: "Ana Teixeira"
-course: "Licenciatura em Bioengenharia"
+course: "Engenharia Informática e Computação"
 godmother: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
 instruments:
   - "acordeao"

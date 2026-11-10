@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Cristinus Maestrorum Pandeiretus Desritmadus"
 nameC: "Cristina Ribeiro"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: ""
 instruments:
   - "magister"

@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Eu!ropius Rhapsodis KazoosKenae"
 nameC: "Luísa Chaves"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Balanceatis AltoAstraLis FramisPascalius Hecaτis"
 instruments:
   - "guitarra"

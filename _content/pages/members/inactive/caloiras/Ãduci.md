@@ -5,7 +5,7 @@ title:
 order: 150
 name: "Ãduci"
 nameC: "Dulce Almeida"
-course: "Eng. Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Danielius Estandartus Assassinus Neoblancus"
 instruments:
   - "estandarte"

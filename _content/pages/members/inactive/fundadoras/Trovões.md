@@ -5,7 +5,7 @@ title:
 order: 40
 name: "Trovões Finissimus Ruis"
 nameC: "Graça Cândido"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: ""
 instruments:
   - "guitarra"

@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Claudius Patus Sisudus"
 nameC: "Cláudia Ribeiro"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "cavaquinho"

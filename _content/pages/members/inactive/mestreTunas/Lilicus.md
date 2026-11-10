@@ -5,7 +5,7 @@ title:
 order: 250
 name: "Lilicus Miniminimus CaloiraInconformatis SakoKodakus"
 nameC: "Liliana Santos"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "guitarra"

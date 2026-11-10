@@ -5,7 +5,7 @@ title:
 order: 820
 name: "FotoMIXis Chill-autus CXIIis areSTus"
 nameC: "Sofia Malheiro"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Brilhus UísQuivadus DelCamillis EmvolTamusicae"
 instruments:
   - "magister"

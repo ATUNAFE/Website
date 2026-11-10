@@ -5,7 +5,7 @@ title:
 order: 190
 name: "Salero"
 nameC: "Daniela Fernandes"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Aquafreshius CoraliⓊs HermisKernel"
 instruments:
   - "contrabaixo"

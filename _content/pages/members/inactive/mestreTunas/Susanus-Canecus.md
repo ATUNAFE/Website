@@ -5,7 +5,7 @@ title:
 order: 20
 name: "Susanus Canecus Bandolinis Rebeldis2"
 nameC: "Susana Saraiva"
-course: "Eng. Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Claudius Cantatis Desafinatis"
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 60
 name: "Lucius Passarinhus Sambatis"
 nameC: "Lúcia Brandão"
-course: "Eng. Quí­mica"
+course: "Engenharia Quí­mica"
 godmother: ""
 instruments:
   - "cavaquinho"

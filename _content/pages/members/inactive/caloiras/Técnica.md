@@ -5,7 +5,7 @@ title:
 order: 650
 name: "Técnica"
 nameC: "Oriana Miranda"
-course: "Licenciatura em Gestão Industrial"
+course: "Engenharia e Gestão Industrial"
 godmother: ":Doraemons TessellariS Magnificantis Matri<iae"
 instruments:
   - "contrabaixo"

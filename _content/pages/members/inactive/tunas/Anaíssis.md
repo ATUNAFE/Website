@@ -5,7 +5,7 @@ title:
 order: 260
 name: "Anaíssis Sonecus HohnerEnamoradus"
 nameC: "Ana Inês Silva"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "acordeao"

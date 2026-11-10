@@ -5,7 +5,7 @@ title:
 order: 20
 name: "Rita Saraiva"
 nameC: "Rita Saraiva"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "cavaquinho"

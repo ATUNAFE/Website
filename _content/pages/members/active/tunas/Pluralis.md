@@ -5,7 +5,7 @@ title:
 order: 120
 name: "Pluralis Bernoullius Festina>>Lentis"
 nameC: "Carolina Moreira"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Eulálius ΔquilesNíveae MercalliVs Alicerci$"
 instruments:
   - "pandeireta"

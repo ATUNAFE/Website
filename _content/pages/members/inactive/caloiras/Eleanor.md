@@ -5,7 +5,7 @@ title:
 order: 480
 name: "Eleanor"
 nameC: "Ana Teresa Silva"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Corellis TEDxis Er:Dermae"
 instruments:
   - "contrabaixo"

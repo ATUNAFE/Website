@@ -5,7 +5,7 @@ title:
 order: 890
 name: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 nameC: "Ana Patrícia Melo"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Nobis ArsDonum YOSarcóMinuciosus Assertivus"
 instruments:
   - "magister"

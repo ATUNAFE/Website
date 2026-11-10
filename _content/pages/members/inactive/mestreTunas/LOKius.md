@@ -5,7 +5,7 @@ title:
 order: 720
 name: "LOKius Tagarelius VitoriosusLIGAdus Inhu$Vitrae"
 nameC: "Madalena Gomes"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Rockis Parabolicuzzz BofiasDisparatis DiracSins"
 instruments:
   - "bandolim"

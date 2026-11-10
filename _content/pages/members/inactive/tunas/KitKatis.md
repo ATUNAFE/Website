@@ -5,7 +5,7 @@ title:
 order: 270
 name: "KitKatis luMièR²Ius SemiCyonis"
 nameC: "Sara Lemos"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Jackis IrisInquietus BOOMbonis Néonicus"
 instruments:
   - "guitarra"

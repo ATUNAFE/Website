@@ -5,7 +5,7 @@ title:
 order: 140
 name: "Spencer"
 nameC: "Ana Patrício"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Mavius ∇NoctuaTurbus Perolatis FiusAᴵrpeggium"
 instruments:
   - "sopros"

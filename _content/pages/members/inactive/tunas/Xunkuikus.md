@@ -5,7 +5,7 @@ title:
 order: 120
 name: "Xunkuikus Oranginus Megafónikus"
 nameC: "Joana Magalhães"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Xoprius DoceGomatis CompassosAjustatis Gaffensaiáticus"
 instruments:
   - "acordeao"

@@ -5,7 +5,7 @@ title:
 order: 300
 name: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNãoEstroncatis"
 nameC: "Cristina Santos"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: "Techus Autopraxis Beijokus Baixus Trapalhonikus"
 instruments:
   - "bandolim"

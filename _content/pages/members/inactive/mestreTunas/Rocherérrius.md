@@ -5,7 +5,7 @@ title:
 order: 930
 name: "Rocherérrius Adipèrtiis OfíciusUmbrae Alopsis"
 nameC: "Catarina Almeida"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Neeextis Vivaldis IgniChromáticus M·u·p·i·s"
 instruments:
   - "percussao"

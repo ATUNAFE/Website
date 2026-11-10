@@ -5,7 +5,7 @@ title:
 order: 380
 name: "Krepe"
 nameC: "Bruna Ávila"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFons"
 instruments:
   - "cavaquinho"

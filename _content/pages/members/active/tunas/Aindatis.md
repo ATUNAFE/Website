@@ -5,7 +5,7 @@ title:
 order: 130
 name: "Aindatis Arautus MuranumPlatinae"
 nameC: "Maria Mendonça"
-course: "Licenciatura em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Mavius ∇NoctuaTurbus Perolatis FiusAᴵrpeggium"
 instruments:
   - "estandarte"

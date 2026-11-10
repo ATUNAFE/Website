@@ -5,7 +5,7 @@ title:
 order: 380
 name: "Joulius AudaxCometum Yenicus"
 nameC: "Catarina Viana"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "DaOris Jiminymancius QVartzoDrapeadus TriboSentidus"
 instruments:
   - "pandeireta"

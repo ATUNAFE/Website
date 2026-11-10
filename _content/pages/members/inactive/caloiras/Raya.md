@@ -5,7 +5,7 @@ title:
 order: 570
 name: "Raya"
 nameC: "Carolina Martinho"
-course: "Mestrado Integrado em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 instruments:
   - "pandeireta"

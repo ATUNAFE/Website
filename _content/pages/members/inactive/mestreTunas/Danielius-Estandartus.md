@@ -5,7 +5,7 @@ title:
 order: 210
 name: "Danielius Estandartus Assassinus2 Neoblancus"
 nameC: "Daniela Sousa"
-course: "Eng. Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Andreius Altamentus T2 Descascatis Espalhabrasus"
 instruments:
   - "estandarte"

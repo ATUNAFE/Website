@@ -5,7 +5,7 @@ title:
 order: 210
 name: "Katrina"
 nameC: "Ana Catarina Cardão"
-course: "Mestrado Integrado em Engenharia Industrial e Gestão"
+course: "Engenharia Industrial e Gestão"
 godmother: "Rainchus GallusElectricus SorrisoAssiduos Impostus"
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 340
 name: "Xoprius DoceGomatis CompassosAjustatis Gaffensaiáticus"
 nameC: "Juliana Esteves"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: "CrisTónikus OuvidoApuratis GuiaRecuatis EsmorizNãoEstroncatis"
 instruments:
   - "sopros"

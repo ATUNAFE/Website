@@ -5,7 +5,7 @@ title:
 order: 690
 name: "Xikérrimus AcordesBarradus π/4Lunáticus OQFP€rfectus"
 nameC: "Ana Sofia Silva"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Juisis Rumoris MiniMorcegus JugralisFonFonFonFons"
 instruments:
   - "guitarra"

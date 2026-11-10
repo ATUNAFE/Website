@@ -5,7 +5,7 @@ title:
 order: 30
 name: "Marilius Trombonus Violatis"
 nameC: "Marília de Sousa"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "guitarra"

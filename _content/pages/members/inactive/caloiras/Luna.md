@@ -5,7 +5,7 @@ title:
 order: 410
 name: "Luna"
 nameC: "Inês Gomes"
-course: "Mestrado Integrado em Engenharia do Ambiemte"
+course: "Engenharia do Ambiemte"
 godmother: "Épádis Médius AbraçusXLis SaitenPacientis"
 instruments:
   - "guitarra"

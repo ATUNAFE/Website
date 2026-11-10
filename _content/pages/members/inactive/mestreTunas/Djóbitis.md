@@ -5,7 +5,7 @@ title:
 order: 570
 name: "Djóbitis CascusLuxuosus TOPEscandalosus ReactÃflitus"
 nameC: "Ana Catarina Fernandes"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Tianãtius Palhatrancitus BaixosColadus EssémessreXIadus"
 instruments:
   - "guitarra"

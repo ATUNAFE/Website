@@ -5,7 +5,7 @@ title:
 order: 220
 name: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 nameC: "Mª João Machado"
-course: "Eng. Química"
+course: "Engenharia Química"
 godmother: "Tequius SexyVocalis Sossegatis Berlinguius"
 instruments:
   - "magister"

@@ -5,7 +5,7 @@ title:
 order: 440
 name: "Mariakeiritus McRosadinhus ProActivius Buoooostis"
 nameC: "Mariana Queirós"
-course: "Mestrado Integrado em Engenharia do Ambiente"
+course: "Engenharia do Ambiente"
 godmother: "Rosinhus Col€ccionatis EstandarteCharmosus"
 instruments:
   - "estandarte"

@@ -5,7 +5,7 @@ title:
 order: 70
 name: "Melchior"
 nameC: "Cristina Fernandes"
-course: "Eng. Metalúrgica e de Materiais"
+course: "Engenharia Metalúrgica e de Materiais"
 godmother: ""
 instruments:
   - "guitarra"

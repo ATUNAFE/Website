@@ -5,7 +5,7 @@ title:
 order: 80
 name: "Baldazar"
 nameC: "Tânia Ibramogy"
-course: "Eng. Metalúrgica e de Materiais"
+course: "Engenharia Metalúrgica e de Materiais"
 godmother: ""
 instruments:
   - "guitarra"

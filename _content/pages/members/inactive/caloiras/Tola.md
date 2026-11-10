@@ -5,7 +5,7 @@ title:
 order: 310
 name: "Tola"
 nameC: "Catarina Teles"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Xavézitus Ofuscadus LorealPKEuMereçus AgriDocis"
 instruments:
   - "estandarte"

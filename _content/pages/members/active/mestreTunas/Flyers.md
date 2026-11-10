@@ -5,7 +5,7 @@ title:
 order: 40
 name: "Flyers [Perlimpimpins]⁷ LacriNIffleriae PhysA₉rum"
 nameC: "Beatriz Calçada"
-course: "Licenciatura em Engenharia Química"
+course: "Engenharia Química/Bioengenharia"
 godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "cavaquinho"

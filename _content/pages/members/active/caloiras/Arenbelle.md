@@ -5,7 +5,7 @@ title:
 order: 100
 name: "Arenbelle"
 nameC: "Beatriz Dias"
-course: "Licenciatura em Engenharia Física"
+course: "Engenharia Física"
 godmother: "Shazamis Espirituosos TriPendlum Makanikoae"
 instruments:
   - "guitarra"

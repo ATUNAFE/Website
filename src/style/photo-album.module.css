@@ -2,18 +2,15 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--dark-engineer);
+    color: var(--light-engineer);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.15s ease, transform 0.15s ease;
-    transform-origin: right center;
-    will-change: transform;
+    transition: color 0.15s ease;
 }
 
 .followLink:hover,
 .followLink:focus-visible {
-    color: var(--light-engineer);
-    transform: scale(1.05);
+    color: var(--dark-engineer);
     text-decoration: none;
 }
 

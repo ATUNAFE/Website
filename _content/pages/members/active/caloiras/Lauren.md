@@ -5,7 +5,7 @@ title:
 order: 200
 name: "Lauren"
 nameC: "Lara Teixeira"
-course: "Licenciatura em Engenharia Química"
+course: "Engenharia Química"
 godmother: "DaVincius Violetis p[Origamis]₄₀₄"
 instruments:
   - "acordeao"

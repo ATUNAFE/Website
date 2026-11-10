@@ -5,7 +5,7 @@ title:
 order: 340
 name: "Vitti"
 nameC: "Tânia Vilarinho"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "J1nikus REservaDus TalentusEsvoaçadus"
 instruments:
   - "guitarra"

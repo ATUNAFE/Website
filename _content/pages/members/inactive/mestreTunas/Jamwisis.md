@@ -5,7 +5,7 @@ title:
 order: 1110
 name: "Jamwisis P0modoris StingCertíssimus PapyrƱs"
 nameC: "Inês Calmeiro"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "ßasmatis… SamuraisHumilis MitoC21H30O5ndriae"
 instruments:
   - "bandolim"

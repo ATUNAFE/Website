@@ -5,7 +5,7 @@ title:
 order: 60
 name: "Susanus Jaffus Acordionicus"
 nameC: "Susana Moreira"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "acordeao"

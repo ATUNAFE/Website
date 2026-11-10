@@ -5,7 +5,7 @@ title:
 order: 110
 name: "Tchuca"
 nameC: "Daniela Guedes"
-course: "Eng. de Minas e Geoambiente"
+course: "Engenharia de Minas e Geoambiente"
 godmother: "Anitus Engenhocus PandeiretaConstantis Acordionicus Vitimatis"
 instruments:
   - "guitarra"

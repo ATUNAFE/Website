@@ -5,7 +5,7 @@ title:
 order: 150
 name: "Porschius Draveum TRIMValyriae"
 nameC: "Mafalda Ferreira"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Simbelis Floreadu𝄽 HolosThéveninis Alg▷ritMus "
 instruments:
   - "violino"

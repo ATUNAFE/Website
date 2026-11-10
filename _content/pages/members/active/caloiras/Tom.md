@@ -5,7 +5,7 @@ title:
 order: 80
 name: "Tom"
 nameC: "Filipa Pinho"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "SERACius VertitTempus FactũmArktikalis -Séne¢atis-"
 instruments:
   - "contrabaixo"

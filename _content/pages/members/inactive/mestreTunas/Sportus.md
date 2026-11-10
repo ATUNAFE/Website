@@ -5,7 +5,7 @@ title:
 order: 530
 name: "Sportus CordóManiakus Snobis √ -1nspirantis"
 nameC: "Sofia Braga"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "Kuriskátis Carismátikus Insularis Dedilhadus#Mináticus"
 instruments:
   - "contrabaixo"

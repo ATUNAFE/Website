@@ -5,7 +5,7 @@ title:
 order: 220
 name: "Minnie"
 nameC: "Joana Fonseca"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "SupeRérrius SonusSonorus Mistikus Apaziguátis"
 instruments:
   - "bandolim"

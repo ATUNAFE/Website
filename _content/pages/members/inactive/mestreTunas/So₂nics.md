@@ -5,7 +5,7 @@ title:
 order: 1070
 name: "So₂nics PathosAMParatis Laboralis⇌Absintae Nitrogéni∡us"
 nameC: "Raquel Belo"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "guitarra"

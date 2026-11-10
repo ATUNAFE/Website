@@ -5,7 +5,7 @@ title:
 order: 290
 name: "Pandorkus Loricatvvσ ArchimedisPerpetuum"
 nameC: "Leonor Mota Mendes"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "ZÉNis Staterátis EruditusSussurradus Matrio$kus"
 instruments:
   - "estandarte"

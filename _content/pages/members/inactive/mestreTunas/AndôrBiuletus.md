@@ -5,7 +5,7 @@ title:
 order: 760
 name: "AndôrBiuletus kPlumis Recatadus SNR!us"
 nameC: "Raquel Ribeiro"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Jackis IrisInquietus BOOMbonis Néonicus"
 instruments:
   - "magister"

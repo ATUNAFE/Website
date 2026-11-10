@@ -5,7 +5,7 @@ title:
 order: 140
 name: "Danielius Fielis Maestrorum Virtudis Esvoaçatis"
 nameC: "Daniela Sá"
-course: "Eng. Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Cristinus Maestrorum Pandeiretus Desritmadus"
 instruments:
   - "pandeireta"

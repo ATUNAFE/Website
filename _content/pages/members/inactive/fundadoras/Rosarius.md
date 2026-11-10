@@ -5,7 +5,7 @@ title:
 order: 100
 name: "Rosarius Trancosus et Vinus Portis"
 nameC: "Rosário Trancoso"
-course: "Eng. Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: ""
 instruments:
   - "pandeireta"

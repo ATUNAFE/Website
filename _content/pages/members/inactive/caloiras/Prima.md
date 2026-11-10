@@ -5,7 +5,7 @@ title:
 order: 270
 name: "Prima"
 nameC: "Joana Queiroz"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "IDis PuxóFolis NarizóPaCimus OH / ImplacáBilis"
 instruments:
   - "acordeao"

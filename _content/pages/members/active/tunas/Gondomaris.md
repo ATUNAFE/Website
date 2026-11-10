@@ -5,7 +5,7 @@ title:
 order: 160
 name: "Gondomaris KevlariusOXT Susuwataris"
 nameC: "Inês Castro"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Moanius Sakurae Ec//ipsisVibrântis"
 instruments:
   - "percussao"

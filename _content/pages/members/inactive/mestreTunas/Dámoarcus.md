@@ -5,7 +5,7 @@ title:
 order: 830
 name: "Dámoarcus PeterPanis SempreAtt3ntus ContACtus"
 nameC: "Joana Lopes"
-course: "Mestrado Integrado em Engenharia Electrotécnica e de Computadores"
+course: "Engenharia Electrotécnica e de Computadores"
 godmother: "Caracolinhus Picassus 24/7Caloirae Marsupialis"
 instruments:
   - "sopros"

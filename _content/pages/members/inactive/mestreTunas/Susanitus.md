@@ -5,7 +5,7 @@ title:
 order: 130
 name: "Susanitus Lentus Violatis Frigurificus"
 nameC: "Susana Pinho"
-course: "Eng. Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "Galegus Couvus Irrequietus SemCaracolis"
 instruments:
   - "guitarra"

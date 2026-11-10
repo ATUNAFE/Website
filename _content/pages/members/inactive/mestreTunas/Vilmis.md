@@ -5,7 +5,7 @@ title:
 order: 350
 name: "Vilmis SôMinhuNaturalis Prontux NanoFervus"
 nameC: "Cláudia Alves"
-course: "Mestrado Integrado em Engenharia Química"
+course: "Engenharia Química"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "magister"

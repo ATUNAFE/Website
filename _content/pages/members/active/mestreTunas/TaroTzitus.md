@@ -5,7 +5,7 @@ title:
 order: 30
 name: "TaroTzitus RGBAtis SonanttiLoopius S¥ntaxis"
 nameC: "Ana Santos"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "DaOris Jiminymancius QVartzoDrapeadus TriboSentidus"
 instruments:
   - "acordeao"

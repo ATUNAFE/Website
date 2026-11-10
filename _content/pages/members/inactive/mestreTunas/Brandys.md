@@ -5,7 +5,7 @@ title:
 order: 940
 name: "Brandys dBellius FlickaVanguardis NichusRe:sponsivus"
 nameC: "Mariana Santos"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Jackis IrisInquietus BOOMbonis Néonicus"
 instruments:
   - "estandarte"

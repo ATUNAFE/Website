@@ -5,7 +5,7 @@ title:
 order: 320
 name: "Dazeirius Voluntariatis DolceCaloirae AcordeonicusCupidus"
 nameC: "Paula Sá"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: "ρsequius ReGalus Rueffus RetsigamDeQuatrum"
 instruments:
   - "acordeao"

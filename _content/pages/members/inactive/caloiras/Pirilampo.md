@@ -5,7 +5,7 @@ title:
 order: 470
 name: "Pirilampo"
 nameC: "Joana Ramos"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "FotoMIXis Chill-autus CXIIis areSTus"
 instruments:
   - "guitarra"

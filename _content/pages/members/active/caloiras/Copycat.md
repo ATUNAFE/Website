@@ -5,7 +5,7 @@ title:
 order: 20
 name: "Copycat"
 nameC: "Ema Falco"
-course: "Licenciatura em Engenharia Química"
+course: "Engenharia Química"
 godmother: "Flyers [Perlimpimpins]⁷ LacriNIffleriae PhysA₉rum"
 instruments:
   - "guitarra"

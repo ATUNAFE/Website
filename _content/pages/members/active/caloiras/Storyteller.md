@@ -5,7 +5,7 @@ title:
 order: 150
 name: "Storyteller"
 nameC: "Joana Machado"
-course: "Licenciatura em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Simbelis Floreadu𝄽 HolosThéveninis Alg▷ritMus"
 instruments:
   - "pandeireta"

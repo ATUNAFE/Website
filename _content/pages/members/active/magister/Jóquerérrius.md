@@ -5,7 +5,7 @@ title:
 order: 10
 name: "Jóquerérrius Turmalinae SiriusOrbitalis Gingi𝄡Erius"
 nameC: "Ana Rita Marques"
-course: "Mestrado Integrado em Engenharia Mecânica"
+course: "Engenharia Mecânica/Engenharia Aeroespacial"
 godmother: "Frisbeezitus Abrigadeirus IguaçusHgalis AccioExcelis"
 instruments:
   - "magister"

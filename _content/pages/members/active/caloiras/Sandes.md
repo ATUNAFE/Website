@@ -5,7 +5,7 @@ title:
 order: 180
 name: "Sandes"
 nameC: "Ana Azevedo"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Eu!ropius Rhapsodis KazoosKenae"
 instruments:
   - "guitarra"

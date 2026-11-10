@@ -5,7 +5,7 @@ title:
 order: 100
 name: "Tweedledees Espelhad↺s ÆgisLeViae"
 nameC: "Bruna Amado"
-course: "Licenciatura em Engenharia Mecânica"
+course: "Engenharia Mecânica"
 godmother: "DaOris Jiminymancius QVartzoDrapeadus TriboSentidus"
 instruments:
   - "pandeireta"

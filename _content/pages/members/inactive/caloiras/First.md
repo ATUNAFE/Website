@@ -5,7 +5,7 @@ title:
 order: 360
 name: "First"
 nameC: "Rita Neves"
-course: "Mestrado Integrado em Engenharia e Gestão Industrial"
+course: "Engenharia e Gestão Industrial"
 godmother: "Fionissimus Astutus ÇAVÁquinhus EGOderisis"
 instruments:
   - "cavaquinho"

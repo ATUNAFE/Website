@@ -5,7 +5,7 @@ title:
 order: 950
 name: "Eulálius ΔquilesNíveae MercalliVs Alicerci$"
 nameC: "Ana Rita Silva"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "magister"

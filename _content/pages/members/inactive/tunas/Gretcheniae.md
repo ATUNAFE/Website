@@ -5,7 +5,7 @@ title:
 order: 330
 name: "Gretcheniae CoRoastius AmethystusBugadus"
 nameC: "Raquel Reis"
-course: "Mestrado Integrado em Engenharia Informática e Computação"
+course: "Engenharia Informática e Computação"
 godmother: "DéjàVus TitâNius CanáriusPenae TetrïsZelosus"
 instruments:
   - "sopros"

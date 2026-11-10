@@ -8,7 +8,7 @@ public_folder: ""
 locale: pt
 
 collections:
-  # ── Definições do Site ──────────────────────────────────────────────────────
+  # ── Site Settings ──────────────────────────────────────────────────────
   - name: definicoes
     label: "Definições do Site"
     files:
@@ -87,7 +87,7 @@ collections:
               - { name: linkedin, label: "LinkedIn URL", widget: string, required: false }
               - { name: spotify, label: "Spotify URL", widget: string, required: false }
 
-  # ── Página Inicial ──────────────────────────────────────────────────────────
+  # ── Home Page ──────────────────────────────────────────────────────────
   - name: pagina-inicial
     label: "Página Inicial"
     files:
@@ -183,7 +183,7 @@ collections:
             widget: list
             field: { name: image, label: Imagem, widget: image }
 
-  # ── Sobre Nós ───────────────────────────────────────────────────────────────
+  # ── About Us ───────────────────────────────────────────────────────────────
   - name: sobre-nos
     label: "Sobre Nós"
     files:
@@ -338,7 +338,7 @@ collections:
               - { name: link, label: URL, widget: string }
           - { name: body, label: Texto, widget: markdown }
 
-  # ── Eventos ─────────────────────────────────────────────────────────────────
+  # ── Events ─────────────────────────────────────────────────────────────────
   - name: eventos-config
     label: "Eventos — Configuração"
     files:
@@ -447,7 +447,7 @@ collections:
       - { name: image, label: Imagem, widget: image }
       - { name: body, label: "Descrição do Evento", widget: markdown, required: false }
 
-  # ── Música ──────────────────────────────────────────────────────────────────
+  # ── Music ──────────────────────────────────────────────────────────────────
   - name: musica-config
     label: "Música — Configuração"
     files:
@@ -700,7 +700,7 @@ collections:
         required: false
         field: { name: name, label: Nome, widget: string }
 
-  # ── Membros Ativos ───────────────────────────────────────────────────────────
+  # ── Active Members ───────────────────────────────────────────────────────────
   - name: membros-ativos-config
     label: "Membros Ativos — Configuração"
     files:
@@ -754,16 +754,28 @@ collections:
                   - { name: label, label: "Rótulo do Dropdown", widget: string }
                   - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
 
-  - name: membros-ativos-caloiras
-    label: "Membros Ativos — Caloiras"
-    folder: "_content/pages/members/active/caloiras"
+  - name: membros-ativos
+    label: "Membros Ativos"
+    label_singular: "Membro Ativo"
+    folder: "_content/pages/members/active"
     create: true
     delete: true
-    slug: "{{name}}"
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
     identifier_field: name
     summary: "{{name}} ({{nameC}})"
+    nested:
+      depth: 2
+      summary: "{{slug}}"
+      subfolders: true
+    meta:
+      path:
+        widget: string
+        label: "Pasta"
+        index_file: ""
     fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-caloira-Arenbelle" }
+      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-tuna-NomeTuna" }
       - name: title
         label: Título
         widget: object
@@ -786,103 +798,7 @@ collections:
         public_folder: "/images/members"
         required: false
 
-  - name: membros-ativos-tunas
-    label: "Membros Ativos — Tunas"
-    folder: "_content/pages/members/active/tunas"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-tuna-Aindatis" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
-      - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  - name: membros-ativos-mestras
-    label: "Membros Ativos — Mestre-Tunas"
-    folder: "_content/pages/members/active/mestreTunas"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-mestreTuna-Balanceatis" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
-      - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  - name: membros-ativos-magister
-    label: "Membros Ativos — Magister"
-    folder: "_content/pages/members/active/magister"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: activeMembers-magister-Jóquerérrius" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 10 }
-      - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  # ── Membros Inativos (Sempre Tunafas) ────────────────────────────────────────
+  # ── Inactive Members (Sempre Tunafas) ────────────────────────────────────────
   - name: membros-inativos-config
     label: "Membros Inativos — Configuração"
     files:
@@ -936,120 +852,36 @@ collections:
                   - { name: label, label: "Rótulo do Dropdown", widget: string }
                   - { name: source, label: "Fonte de Dados (não alterar)", widget: hidden }
 
-  - name: membros-inativos-caloiras
-    label: "Membros Inativos — Caloiras"
-    folder: "_content/pages/members/inactive/caloiras"
+  - name: membros-inativos
+    label: "Membros Inativos"
+    label_singular: "Membro Inativo"
+    folder: "_content/pages/members/inactive"
     create: true
     delete: true
-    slug: "{{name}}"
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
     identifier_field: name
     summary: "{{name}} ({{nameC}})"
+    nested:
+      depth: 2
+      summary: "{{slug}}"
+      subfolders: true
+    meta:
+      path:
+        widget: string
+        label: "Pasta"
+        index_file: ""
     fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-caloira-Vitti" }
+      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-tuna-NomeTuna" }
       - name: title
         label: Título
         widget: object
         collapsed: true
         fields:
           - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
+      - { name: order, label: Ordem, widget: number, default: 100, hint: "Número menor = aparece primeiro" }
       - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string, required: false }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  - name: membros-inativos-tunas
-    label: "Membros Inativos — Tunas"
-    folder: "_content/pages/members/inactive/tunas"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-tuna-Anarquiae" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
-      - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string, required: false }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  - name: membros-inativos-mestras
-    label: "Membros Inativos — Mestre-Tunas"
-    folder: "_content/pages/members/inactive/mestreTunas"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-mestreTuna-NomeTuna" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
-      - { name: name, label: "Nome Tuna", widget: string }
-      - { name: nameC, label: "Nome Civil", widget: string }
-      - { name: course, label: Curso, widget: string, required: false }
-      - { name: godmother, label: Madrinha, widget: string, required: false }
-      - name: instruments
-        label: Instrumentos
-        widget: list
-        field: { name: instrument, label: Instrumento, widget: string }
-      - name: image
-        label: Fotografia
-        widget: image
-        media_folder: "/static/images/members"
-        public_folder: "/images/members"
-        required: false
-
-  - name: membros-inativos-fundadoras
-    label: "Membros Inativos — Fundadoras"
-    folder: "_content/pages/members/inactive/fundadoras"
-    create: true
-    delete: true
-    slug: "{{name}}"
-    identifier_field: name
-    summary: "{{name}} ({{nameC}})"
-    fields:
-      - { name: id, label: ID, widget: string, hint: "Ex: inactiveMembers-fundadora-Ana-Isabel" }
-      - name: title
-        label: Título
-        widget: object
-        collapsed: true
-        fields:
-          - { name: text, label: Texto, widget: string, default: "", required: false }
-      - { name: order, label: Ordem, widget: number, default: 100 }
-      - { name: name, label: "Nome Tuna/Civil", widget: string }
       - { name: nameC, label: "Nome Civil", widget: string }
       - { name: course, label: Curso, widget: string, required: false }
       - { name: godmother, label: Madrinha, widget: string, required: false }

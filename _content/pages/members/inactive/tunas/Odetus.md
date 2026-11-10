@@ -5,7 +5,7 @@ title:
 order: 20
 name: "Odetus Ferrinhus"
 nameC: "Odete de Almeida"
-course: "Eng. Mecânica"
+course: "Engenharia Mecânica"
 godmother: "Mizécus IdeiaFixus Respondorum"
 instruments:
   - "cavaquinho"

@@ -5,7 +5,7 @@ title:
 order: 180
 name: "Bluís 4PatizAcompanhadus Replicatis"
 nameC: "Ana Rita Ferreira"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Dapatixius É-assimConstantis Violalentus Arquibadus"
 instruments:
   - "estandarte"

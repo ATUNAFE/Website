@@ -5,7 +5,7 @@ title:
 order: 40
 name: "Joanius Bandolinis Desafinatus"
 nameC: "Joana Silva"
-course: "Eng. Civil"
+course: "Engenharia Civil"
 godmother: ""
 instruments:
   - "bandolim"

@@ -5,7 +5,7 @@ title:
 order: 1090
 name: "Moizás MalhadusEx.ímius PaxVigilantis vSinfonicus"
 nameC: "Inês Martins"
-course: "Mestrado Integrado em Bioengenharia"
+course: "Bioengenharia"
 godmother: "Rodiins Sofisticadus #LitRubikus Excaliburis"
 instruments:
   - "guitarra"

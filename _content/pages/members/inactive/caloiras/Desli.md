@@ -5,7 +5,7 @@ title:
 order: 460
 name: "Desli"
 nameC: "Li Yi Hui"
-course: "Mestrado Integrado em Engenharia Civil"
+course: "Engenharia Civil"
 godmother: "FotoMIXis Chill-autus CXIIis areSTus"
 instruments:
   - "estandarte"
