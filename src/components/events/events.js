@@ -57,7 +57,7 @@ const Events = ({ id }) => {
         .filter(Boolean);
 
     return (
-        <div id={id}>
+        <div id={id} data-about-section={id}>
             {eventsData.map((event, index) => {
                 const theme =
                     index % 2 === 0

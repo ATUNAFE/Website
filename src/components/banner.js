@@ -132,21 +132,10 @@ const Banner = ({ id }) => {
                     current = sid;
                     return;
                 }
-                if (top <= offset + 4) current = sid;
+                if (top <= offset + 1) current = sid;
             });
 
             setActiveSection(current);
-
-            const navEl = document.querySelector("[data-section-nav]");
-            if (navEl) {
-                const isStuck = navEl.getBoundingClientRect().top <= 78;
-                document.documentElement.classList.toggle(
-                    "nav-active",
-                    isStuck
-                );
-            } else {
-                document.documentElement.classList.remove("nav-active");
-            }
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -182,25 +171,33 @@ const Banner = ({ id }) => {
                 if (el.getBoundingClientRect().top <= offset + 4) current = sid;
             });
             setDropdownActive(current);
-            const navEl = document.querySelector("[data-section-nav]");
-            if (navEl) {
-                const isStuck = navEl.getBoundingClientRect().top <= 78;
-                document.documentElement.classList.toggle(
-                    "nav-active",
-                    isStuck
-                );
-            } else {
-                document.documentElement.classList.remove("nav-active");
-            }
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            document.documentElement.classList.remove("nav-active");
         };
     }, [content, editionItems]);
+
+    useEffect(() => {
+        const updateNavActive = () => {
+            const navEl = document.querySelector("[data-section-nav]");
+            if (!navEl) {
+                document.documentElement.classList.remove("nav-active");
+                return;
+            }
+            const isStuck = navEl.getBoundingClientRect().top <= 78;
+            document.documentElement.classList.toggle("nav-active", isStuck);
+        };
+
+        window.addEventListener("scroll", updateNavActive, { passive: true });
+        updateNavActive();
+        return () => {
+            window.removeEventListener("scroll", updateNavActive);
+            document.documentElement.classList.remove("nav-active");
+        };
+    }, [content]);
 
     useEffect(() => {
         if (!mobileOpen) return;
@@ -597,24 +594,30 @@ const Banner = ({ id }) => {
                         );
                     })()
                 ) : section.type === "text" ? (
-                    <Container
+                    <nav
                         key={index}
-                        fluid
-                        className="d-flex justify-content-center align-items-center py-3"
+                        className={styles.stickyNav}
                         style={{
                             backgroundColor: section.backgroundColor,
                             color: section.color,
                         }}
+                        data-section-nav="true"
+                        aria-label={section.text || "Secção"}
                     >
-                        <h3
-                            className="m-0"
-                            style={{
-                                fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
-                            }}
+                        <Container
+                            fluid
+                            className="d-flex justify-content-center align-items-center py-3"
                         >
-                            {section.text}
-                        </h3>
-                    </Container>
+                            <h3
+                                className="m-0"
+                                style={{
+                                    fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
+                                }}
+                            >
+                                {section.text}
+                            </h3>
+                        </Container>
+                    </nav>
                 ) : null
             )}
         </>

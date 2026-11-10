@@ -3,7 +3,7 @@ id: "header"
 title:
   text: ""
 image: "logos/tunafe.png"
-backgroundColor: "rgba(245, 245, 245, 0.5)"
+backgroundColor: "rgba(245, 245, 245, 0.96)"
 color: "#2A2A2A"
 menu:
   - type: "dropdown"

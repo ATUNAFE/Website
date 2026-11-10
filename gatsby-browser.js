@@ -74,48 +74,28 @@ const focusWrapperNoScroll = () => {
     }
 };
 
-let guardId = 0;
-
 const stopGuard = () => {
-    guardId += 1;
     clearPadding();
 };
 
-const guardToTop = (ms = 800) => {
+const guardToTop = () => {
     if (!isBrowser) return;
-    guardId += 1;
-    const id = guardId;
+    stopGuard();
     blurActive();
     toTop();
     focusWrapperNoScroll();
     toTop();
-
-    const step = () => {
-        if (id !== guardId) return;
-        blurActive();
-        focusWrapperNoScroll();
-        toTop();
-    };
-
     window.requestAnimationFrame(() => {
-        step();
-        window.requestAnimationFrame(step);
-    });
-
-    const onScroll = () => {
-        if (id !== guardId) return;
-        if ((window.pageYOffset ?? 0) > 0) toTop();
-    };
-    window.addEventListener("scroll", onScroll, true);
-    [0, 16, 50, 100, 180, 300, 500].forEach(t => window.setTimeout(step, t));
-
-    window.setTimeout(() => {
-        window.removeEventListener("scroll", onScroll, true);
-        if (id === guardId) {
+        toTop();
+        window.requestAnimationFrame(() => {
             toTop();
             clearPadding();
-        }
-    }, ms);
+        });
+    });
+    window.setTimeout(() => {
+        toTop();
+        clearPadding();
+    }, 80);
 };
 
 const aboutSectionId = key => {
@@ -149,6 +129,48 @@ const scrollToHash = hash => {
     const id = aboutSectionId(raw) || raw;
     if (!id) return;
     let attempts = 0;
+    let cancelled = false;
+    let programmatic = false;
+
+    const cleanup = () => {
+        window.removeEventListener("wheel", onUser, { passive: true });
+        window.removeEventListener("touchstart", onUser, { passive: true });
+        window.removeEventListener("pointerdown", onUser, { passive: true });
+        window.removeEventListener("keydown", onKey, true);
+        window.removeEventListener("scroll", onScroll, true);
+    };
+    const onUser = () => {
+        cancelled = true;
+        cleanup();
+    };
+    const onScroll = () => {
+        if (!programmatic) {
+            cancelled = true;
+            cleanup();
+        }
+    };
+    const onKey = e => {
+        if (
+            [
+                "ArrowUp",
+                "ArrowDown",
+                "PageUp",
+                "PageDown",
+                "Home",
+                "End",
+                " ",
+            ].includes(e.key)
+        ) {
+            cancelled = true;
+            cleanup();
+        }
+    };
+    window.addEventListener("wheel", onUser, { passive: true });
+    window.addEventListener("touchstart", onUser, { passive: true });
+    window.addEventListener("pointerdown", onUser, { passive: true });
+    window.addEventListener("keydown", onKey, true);
+    window.addEventListener("scroll", onScroll, true);
+
     const align = () => {
         const targetId = aboutSectionId(raw) || id;
         const el = document.getElementById(targetId);
@@ -167,8 +189,12 @@ const scrollToHash = hash => {
         const se = document.scrollingElement ?? document.documentElement;
         const prev = se.style.scrollBehavior;
         se.style.scrollBehavior = "auto";
+        programmatic = true;
         window.scrollTo(0, Math.max(0, Math.round(y)));
         se.style.scrollBehavior = prev;
+        window.requestAnimationFrame(() => {
+            programmatic = false;
+        });
         if (nav) {
             document.documentElement.classList.toggle(
                 "nav-active",
@@ -178,6 +204,10 @@ const scrollToHash = hash => {
         return true;
     };
     const tick = () => {
+        if (cancelled) {
+            cleanup();
+            return;
+        }
         if (
             !aboutSectionId(raw) &&
             !document.getElementById(id) &&
@@ -187,8 +217,11 @@ const scrollToHash = hash => {
             window.setTimeout(tick, 50);
             return;
         }
-        if (!align()) return;
-        [150, 350, 700, 1200].forEach(ms => window.setTimeout(align, ms));
+        if (!align()) {
+            cleanup();
+            return;
+        }
+        cleanup();
     };
     window.requestAnimationFrame(() => window.requestAnimationFrame(tick));
 };
